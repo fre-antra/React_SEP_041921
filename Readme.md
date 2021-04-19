@@ -2,7 +2,7 @@
 
 This is a repo to record the SEP-FRE-TRAINING assignments and notes.
 
-# How to record your SEP-TRAINING assignments by using this repo:
+## How to record your SEP-TRAINING assignments by using this repo:
 
 1. Clone this repo:
 
@@ -17,7 +17,7 @@ This is a repo to record the SEP-FRE-TRAINING assignments and notes.
 - git checkout by_your_name/hw
 - implement the assignment under this feature branch
 
-# Notes:
+### Notes:
 
 - Avoid modifying the main (master) branch
 - Only commit your changes under your feature branch
