@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form class="signup-form">
+        <h1>Sign Up</h1>
+        <section class="form-input">
+            <div class="double-input">
+                <input type="text" placeholder="First Name" id="first-name" required/>
+                <input type="text" placeholder="Last Name" id="last-name" required/>
+            </div>
+            <div class="single-input">
+                <input type="tel" placeholder="Mobile No." id="mobile" required/>
+            </div>
+            <div class="single-input">
+                <input type="email" placeholder="Email Address" id="email"required/>
+            </div>
+            <div class="double-input">
+                <input type="" placeholder="Password" id="password"required/>
+                <input type="" placeholder="Confirm Password" id="confirm"required/>
+            </div>
+        </section>
+        <section class="form-ack">
+            <div class="form-ack-input">
+                <input type="checkbox" id="ack" value="ack">
+                <label for="ack">I agree</label>
+            </div>
+            <div>By clicking <span>Register</span>, you agree to the <a href="http://google.com">Terms and Conditions</a> set out by this site, including our Cookie Use.</div>
+        </section>
+        <section class="form-ctrl">
+            <button class="btn btn-register">Register</button>
+            <button class="btn btn-signin">Sign In</button>
+        </section>
+        
+    </form>
+</body>
+</html>
