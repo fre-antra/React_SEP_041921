@@ -1,0 +1,85 @@
+
+#signup-container{
+  display: flex;
+  flex-direction: column;
+  min-width: 450px;
+  max-width: 600px;
+  margin: auto;
+}
+
+#name-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+#password-container{
+  display: flex;
+  justify-content: space-between;
+}
+
+input[type=text] {
+  display: flex;
+  flex-grow: 1;
+  margin: 10px;
+  height: 40px;
+  font-size: 18px;
+  border: 1px solid grey;
+  border-radius: 5px;
+  padding-left: 10px;
+}
+
+input[type=text]:focus {
+  outline: none;
+  box-shadow: 0 0 6px rgb(35 173 255);
+  border: 1px solid rgb(35 173 255);
+}
+
+#check-box-container {
+  display: flex;
+  flex-grow: 0;
+  margin: 10px;
+  width: 30%;
+  align-self: center;
+}
+
+#agree-container {
+  display: flex;
+}
+
+#register-span {
+  position: relative;
+  top: -1px;
+  background-color: rgb(23, 112, 255);
+  border-radius: 5px;
+  padding: 2px 7px;
+  color: white;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#tc-span {
+  color: rgb(23, 112, 255);
+}
+
+#button-container {
+  display: flex;
+}
+
+button {
+  align-items: center;
+  flex-grow: 1;
+  margin: 10px;
+  height: 40px;
+  font-size: 18px;
+  border-radius: 5px;
+  padding-left: 10px;
+  color: white;
+  border: none;
+}
+
+#register-button {
+  background-color: rgb(23, 112, 255);
+}
+#sign-in-button {
+  background-color: rgb(15, 189, 81);
+}
