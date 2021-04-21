@@ -1,0 +1,41 @@
+#container {
+   align-content: center;
+   text-align: center;
+   height: 100em;
+}
+
+h1 {
+   margin-top: 3%;
+   font-family: Arial, Helvetica, sans-serif;
+   font-weight: 400;
+   font-size: 35px;
+   margin-bottom: 0%
+}
+
+button {
+   width: 25%;
+   height: 3%;
+   margin: 1%;
+   border-radius: 5px;
+   border-style: none;
+}
+
+.registerButton {
+   background-color: rgba(18, 126, 220, 0.851);
+   font-size: 18px;
+   color: white;
+}
+
+.signInButton {
+   background-color: rgba(55, 181, 21, 0.851);
+   font-size: 18px;
+   color: white;
+}
+
+input {
+   margin: 1%;
+   height: 3%;
+   border-radius: 5px;
+   font-size: large;
+   text-indent: 3%
+}
