@@ -79,3 +79,10 @@ button:hover{
 #term-conditon-text{
     color:dodgerblue;
 }
+i{
+    background-color: dodgerblue;
+    border-radius: 3px;
+    padding: 3px;
+    opacity: 0.9;
+    color: #ffffff;
+}
