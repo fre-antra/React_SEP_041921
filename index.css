@@ -1,0 +1,81 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.container{
+    text-align: center;
+    margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+    width: 40%; 
+}
+
+input{
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 10px;
+    border-radius: 5px;  
+    outline: none;
+    opacity: .8;
+    box-shadow: 0 0 3px gray;
+    border: none;
+    font-size: medium;
+    
+}
+input[type=text],input[type=password]{
+
+    width: 40.5%;
+}
+input[type=email], input[type=tel]{
+    width: 85%;
+}
+input[type=checkbox]{
+    opacity: 1;
+}
+
+label{
+    font-size: small;
+    float: inline-end;
+}
+input:focus{
+    opacity: .9;
+    box-shadow: 0 0 5px rgb(31, 31, 165);
+}
+button{
+    padding: 12px;
+    font-size: large;
+    color:  #fefefe;
+    border: none;
+    border-radius: 5px;
+    width: 42%;
+    opacity: .8;
+    
+}
+
+#login-button:focus{
+    box-shadow: 0 0 0 2px #ffffff, 0 0 3px 5px #3a97f9;
+    /* NOTE: box-shadow is invisible in Windows high-contrast mode, so we need to add a transparent outline, which actually does show up in high-contrast mode. */
+    outline: 2px dotted transparent;
+    outline-offset: 2px;
+}
+#register-button:focus{
+    box-shadow: 0 0 0 2px #ffffff, 0 0 3px 5px #3a97f9;
+    /* NOTE: box-shadow is invisible in Windows high-contrast mode, so we need to add a transparent outline, which actually does show up in high-contrast mode. */
+    outline: 2px dotted transparent;
+    outline-offset: 2px;   
+}
+
+button:hover{
+    transition: all .5s ease;
+    opacity: 1;
+}
+
+#login-button{
+    background-color: #198754;
+    transition: all .5s ease;
+}
+#register-button{
+    background-color: #0d6efd;
+    transition: all .5s ease;
+}
+
+#term-conditon-text{
+    color:dodgerblue;
+}
