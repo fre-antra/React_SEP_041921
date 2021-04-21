@@ -2,4 +2,4 @@
 
 # Think about how you are gonna implement the sign-up page in the HTML Assignment.
 
-# Topic for tomorrow: CSS
+# Topic for tomorrow: CSS etc.
