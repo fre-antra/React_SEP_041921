@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+    <style>
+      /* .box {
+        color: black;
+        border: 1px solid black;
+        box-sizing: border-box;
+      } */
+      /* #box1 {
+        background-color: green;
+      } */
+      /* div {
+        background-color: purple;
+      } */
+      /* * {
+        padding: 0;
+        margin: 0;
+      } */
+      /* div[class="box"] {
+        background-color: pink;
+      } */
+      /* body div {
+        background-color: aqua;
+      } */
+      /*Child combinator*/
+      /* body > div {
+        background-color: brown;
+      } */
+      /* .position-fixed {
+        position: fixed;
+        right: 0;
+        top: 0;
+      }
+      .position-absolute {
+        position: absolute;
+        right: 0;
+        top: 200px;
+      }
+      .position-relative {
+        position: relative;
+        top: 50px;
+        right: 20px;
+      } */
+      /* .container {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+      }
+      .box {
+        flex-grow: 1;
+        width: 30%;
+      }
+      .row {
+        display: flex;
+      } */
+      .row {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+      [class^="col"] {
+        border: 1px solid black;
+        box-sizing: border-box;
+      }
+      .col-1 {
+        width: calc(1 / 12 * 100%);
+      }
+      .col-2 {
+        width: calc(2 / 12 * 100%);
+      }
+      .col-3 {
+        width: calc(3 / 12 * 100%);
+      }
+      .col-4 {
+        width: calc(4 / 12 * 100%);
+      }
+      .col-5 {
+        width: calc(5 / 12 * 100%);
+      }
+      .col-6 {
+        width: calc(6 / 12 * 100%);
+      }
+      .col-7 {
+        width: calc(7 / 12 * 100%);
+      }
+      .col-8 {
+        width: calc(8 / 12 * 100%);
+      }
+      .col-9 {
+        width: calc(9 / 12 * 100%);
+      }
+      .col-10 {
+        width: calc(10 / 12 * 100%);
+      }
+      .col-11 {
+        width: calc(11 / 12 * 100%);
+      }
+      .col-12 {
+        width: calc(12 / 12 * 100%);
+      }
+      @media (max-width: 1000px) and (min-width: 600px) {
+        .col-md-1 {
+          width: calc(1 / 12 * 100%);
+        }
+        .col-md-2 {
+          width: calc(2 / 12 * 100%);
+        }
+        .col-md-3 {
+          width: calc(3 / 12 * 100%);
+        }
+        .col-md-4 {
+          width: calc(4 / 12 * 100%);
+        }
+        .col-md-5 {
+          width: calc(5 / 12 * 100%);
+        }
+        .col-md-6 {
+          width: calc(6 / 12 * 100%);
+        }
+        .col-md-7 {
+          width: calc(7 / 12 * 100%);
+        }
+        .col-md-8 {
+          width: calc(8 / 12 * 100%);
+        }
+        .col-md-9 {
+          width: calc(9 / 12 * 100%);
+        }
+        .col-md-10 {
+          width: calc(10 / 12 * 100%);
+        }
+        .col-md-11 {
+          width: calc(11 / 12 * 100%);
+        }
+        .col-md-12 {
+          width: calc(12 / 12 * 100%);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <!-- <div class="box position-fixed" id="box1">Box1</div>
+    <div class="box position-absolute" id="box2">Box2</div>
+    <div class="box position-relative" id="box3">Box3</div> -->
+    <!-- <div class="container">
+      <div class="row">
+        <div class="box">Box1</div>
+        <div class="box">Box2</div>
+        <div class="box">Box3</div>
+      </div>
+      <div class="row">
+        <div class="box">Box4</div>
+        <div class="box">Box5</div>
+        <div class="box">Box6</div>
+      </div>
+    </div> -->
+    <!-- Stack the columns on mobile by making one full-width and the other half-width -->
+    <div class="row">
+      <div class="col-12 col-md-8">.col-12 .col-md-8</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns start at 50% wide on mobile and bump up to 33.3% wide on desktop -->
+    <div class="row">
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+      <div class="col-6 col-md-4">.col-6 .col-md-4</div>
+    </div>
+
+    <!-- Columns are always 50% wide, on mobile and desktop -->
+    <div class="row">
+      <div class="col-6">.col-6</div>
+      <div class="col-6">.col-6</div>
+    </div>
+  </body>
+</html>
