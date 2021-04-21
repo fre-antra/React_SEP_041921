@@ -4,12 +4,12 @@
 2. HTTP request
 3. HTTP response
 4. Cookie, local storage, and session storage
-5. ${<!DOCTYPE html>}
+5. `<!DOCTYPE html>`
 6. I18N and L10M
-7. What is <head>? What is <meta>
+7. What is `<head>`? What is `<meta>`?
 8. What is name='viewport'?
-9. Why should we put <link rel='stylesheet' href='index.css'> in <head>?
-10. Why should we put <script src='index.js'></script> at the bottom of <body>?
+9. Why should we put `<link rel='stylesheet' href='index.css'>` in `<head>`?
+10. Why should we put `<script src='index.js'></script>` at the bottom of `<body>`?
 11. ECMAScript vs. JavaScript vs. Node.js
 12. block element, inline element, inline-block element
 13. Semantic HTML tags
