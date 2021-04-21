@@ -1,0 +1,60 @@
+.col-3 {
+  width: calc(3 / 12 * 100%);
+}
+.col-9 {
+  width: calc(9 / 12 * 100%);
+}
+.col-6 {
+  width: 50%;
+}
+.col-12 {
+  width: 100%;
+}
+form {
+  margin-left: 35%;
+  margin-right: 35%;
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  justify-content: space-between;
+}
+form div {
+  display: flex;
+}
+#register {
+  background-color: aqua;
+}
+#signin {
+  background-color: greenyellow;
+}
+button {
+  height: 50px;
+}
+input {
+  height: 50px;
+}
+#agree-cbx{
+    height: auto;
+}
+h1 {
+  text-align: center;
+}
+.flex {
+  display: flex;
+}
+div span {
+  background-color: cadetblue;
+}
+div p {
+  margin: 0px 0px 0px 10px;
+  text-align: justify;
+}
+.col-3 label {
+  text-align: center;
+}
+.col-6-left {
+  margin-right: 10px;
+}
+.col-6-right {
+  margin-left: 10px;
+}
