@@ -4,7 +4,7 @@
 2. HTTP request
 3. HTTP response
 4. Cookie, local storage, and session storage
-5. <!DOCTYPE html>
+5. ${<!DOCTYPE html>}
 6. I18N and L10M
 7. What is <head>? What is <meta>
 8. What is name='viewport'?
