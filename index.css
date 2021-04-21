@@ -51,13 +51,11 @@ button{
 
 #login-button:focus{
     box-shadow: 0 0 0 2px #ffffff, 0 0 3px 5px #3a97f9;
-    /* NOTE: box-shadow is invisible in Windows high-contrast mode, so we need to add a transparent outline, which actually does show up in high-contrast mode. */
     outline: 2px dotted transparent;
     outline-offset: 2px;
 }
 #register-button:focus{
     box-shadow: 0 0 0 2px #ffffff, 0 0 3px 5px #3a97f9;
-    /* NOTE: box-shadow is invisible in Windows high-contrast mode, so we need to add a transparent outline, which actually does show up in high-contrast mode. */
     outline: 2px dotted transparent;
     outline-offset: 2px;   
 }
