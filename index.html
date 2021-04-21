@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Open Sans", sans-serif;
+    }
+
+    body {
+      display: flex;
+      height: 100vh;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #71b7e6, #9b59b6);
+    }
+
+    .container {
+      max-width: 700px;
+      width: 100%;
+      padding: 25px 30px;
+      background: #fff;
+      border-radius: 1em;
+    }
+
+    .container .title {
+      display: flex;
+      justify-content: center;
+      font-size: 25px;
+      font-weight: 500;
+    }
+
+    .container form .user-info {}
+
+    input {
+      border: 1px solid #ddd;
+      border-radius: 1em;
+      padding: 10px;
+    }
+
+    form .user-info>div {
+      display: flex;
+      justify-content: space-between;
+      margin: 10px 50px 10px 50px;
+    }
+
+    .user-info .full-width input {
+      height: 30px;
+      width: 100%;
+    }
+
+    .user-info .input-box input {
+      height: 30px;
+      min-width: 45%;
+    }
+
+    .terms {
+      width: 80%;
+      color: #919191; 
+    }
+
+    .link {
+      color: #71b7e6;
+      text-decoration: none;
+    }
+
+    .text-block {
+      display: inline-block;
+      border-radius: 1em;
+      background-color: #71b7e6;
+      color: #fff;
+      padding: 0 1%;
+      font-size: 0.78em;
+    }
+
+    .user-info .check-box label {
+      font-weight: bold;
+      color: #5e5e5e
+    }
+
+    .user-info .button-box input {
+      min-width: 45%;
+    }
+
+    .btn-register {
+      background-color: #71b7e6;
+      color: #fff
+    }
+
+    .btn-signin {
+      background-color: #9b59b6;
+      color: #fff
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <div class="title">Sign Up</div>
+    <form action="#">
+      <div class="user-info">
+        <div class="input-box">
+          <input type="text" placeholder="First Name" />
+          <input type="text" placeholder="Last Name" />
+        </div>
+        <div class="input-box full-width">
+          <input type="text" placeholder="Mobile No." />
+        </div>
+        <div class="input-box full-width">
+          <input type="text" placeholder="Email Adress" />
+        </div>
+        <div class="input-box">
+          <input type="text" placeholder="Password" />
+          <input type="text" placeholder="Confirm Password" />
+        </div>
+        <div class="check-box">
+          <label for="agree">
+            <input type="checkbox" id="agree" class="agree" />
+            I Agree
+          </label>
+          <span class="terms">By clicking <a class="text-block">Register</a>, you agree to the <a class="link"
+              href="#">Terms and Conditions</a> set out by
+            this site, including our Cookie Use.</span>
+        </div>
+        <div class="button-box">
+          <input type="submit" class="btn-register" value="Register" />
+          <input type="submit" class="btn-signin" value="Sign In" />
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+</body>
+
+</html>
