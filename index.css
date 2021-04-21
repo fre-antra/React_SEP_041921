@@ -26,8 +26,9 @@ input[type=text],input[type=password]{
 input[type=email], input[type=tel]{
     width: 85%;
 }
-input[type=checkbox]{
-    opacity: 1;
+
+.check-box-div{
+    margin-left: 14.5px;
 }
 
 label{
@@ -60,7 +61,7 @@ button{
     outline-offset: 2px;   
 }
 
-button:hover{
+button, input[type=checkbox]:hover{
     transition: all .5s ease;
     opacity: 1;
 }
