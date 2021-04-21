@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+
+<div class="form-container">
+    <form action="">
+        <div class="row">
+            <h1 class="form-header">Sign Up</h1>
+        </div>
+        <div class="row">
+            <input type="text" class="col-4" id="firstName" placeholder="First Name" name="firstName"
+                aria-label="First Name">
+            <input type="text" class="col-4" id="lastName" placeholder="Last Name" name="lastName"
+                aria-label="Last Name">
+        </div>
+
+        <div class="row">
+            <input type="text" class="col-8" id="mobileNumber" placeholder="Mobile No." name="mobileNumber"
+                aria-label="Mobile Number">
+            <input type="text" class="col-8" id="email" placeholder="Email Address" name="email"
+                aria-label="Email Address">
+        </div>
+
+        <div class="row">
+            <input type="password" class="col-4" id="password" placeholder="Password" name="password"
+                aria-label="Password">
+            <input type="password" class="col-4" id="confirmPassword" placeholder="Confirm Password"
+                name="confirmPassword" aria-label="Confirm Password">
+        </div>
+
+        <div class="row">
+            <input type="checkbox" id="agree" />
+            <label for="agree" class="checkbox-indented-label col-4">I Agree</label>
+            <label for="agree" class="checkbox-indented-label-long col-6">By clicking
+                <button type="button" disabled class="aestheticButton" aria-label="register">Register</button>, you
+                agree
+                to
+                the
+                <a class="undecoratedLink" href="/">Terms and Conditions</a> set out by this site, including our Cookie
+                Use.
+            </label>
+        </div>
+
+
+        <button type="submit" class="formSubmitButton formRegisterbutton" name="register" id="register" value="Register"
+            aria-label="Register">Register</button>
+        <button type="submit" class="formSubmitButton" name="Sign In" id="signin" value="Sign In"
+            aria-label="Sign In">Sign
+            In</button>
+    </form>
+</div>
+
+<body>
+
+</body>
+
+</html>
