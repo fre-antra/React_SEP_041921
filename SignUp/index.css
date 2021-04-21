@@ -65,7 +65,7 @@ input[type=text]:focus {
   display: flex;
 }
 
-button {
+input[type="submit"] {
   align-items: center;
   flex-grow: 1;
   margin: 10px;
