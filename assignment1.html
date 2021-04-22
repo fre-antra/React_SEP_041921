@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .form{
+            width: 500px;
+        }
+        .row{
+            width: 500px;
+            display: flex;
+            justify-content: space-between;
+        }
+        .col-6{
+            box-sizing: border-box;
+            margin-top: 5px;
+            width: 45%;
+            font-size: 15px;
+          }
+        .col-12{
+            margin-top: 5px;
+            box-sizing: border-box;
+            width: 100%;
+            font-size: 15px;
+        }
+        button{
+            color: white;
+            border:0px;
+            border-radius: 5%;
+            width: 40%;
+            height:40px;
+            font-size: 20px;
+        }
+        .register{
+            background-color: deepskyblue;
+        }
+        .sign{
+            background-color: mediumseagreen;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="form">
+    <h2 style="text-align: center">Sign Up</h2>
+    <div class="row">
+    <input class = "col-6" placeholder="FirstName">
+    <input class = "col-6" placeholder="LastName">
+    </div>
+    <div class="row">
+    <input class="col-12" placeholder="Mobile">
+    </div>
+    <div class="row">
+        <input class="col-12" placeholder="Email Address">
+    </div>
+    <div class="row">
+        <input class = "col-6" placeholder="password">
+        <input class = "col-6" placeholder="confirm password">
+    </div>
+    <div >
+        <input type="checkbox" id = "agree">
+        <label for="agree">I Agree</label>
+        <span style="font-size: 15px">By clicking register. you agree to the Terms and Comditions set out by this site,
+        including our Cookie Use.</span>
+    </div>
+    <div class="row">
+        <button class="register">Register</button>
+        <button class="sign">Sign In</button>
+    </div>
+
+
+</div>
+</body>
+</html>
