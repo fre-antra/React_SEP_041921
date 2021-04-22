@@ -32,9 +32,11 @@ button {
 }
 input {
   height: 50px;
+  box-shadow: 0 0 5px rgb(31, 31, 165);
+  opacity: 0.5;
 }
-#agree-cbx{
-    height: auto;
+#agree-cbx {
+  height: auto;
 }
 h1 {
   text-align: center;
