@@ -1,0 +1,88 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* center the title */
+div.row.title {
+  justify-content: center;
+  width: auto;
+}
+
+/* container for each row */
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 70%;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+/* make the row take up all the space */
+.row > * {
+  height: 40px;
+  width: 100%;
+  margin-left: 20px;
+}
+
+input {
+  height: 2rem;
+  border-radius: 5px;
+}
+
+/* this takes 1/4 of the width */
+.col-3 {
+  width: calc(3 / 12 * 100%);
+}
+
+/* this takes 3/4 of the width */
+.col-9 {
+  width: calc(9 / 12 * 100%);
+}
+
+/* fix agree checkbox not align with 'I agree' */
+#agree {
+  height: auto;
+}
+
+#register {
+  display: inline-block;
+  border-radius: 5px;
+  color: white;
+}
+
+#register,
+#register-btn {
+  background-color: mediumblue;
+}
+
+#signin {
+  background-color: darkgreen;
+}
+
+input[type="button"] {
+  color: white;
+}
+
+input:hover {
+  box-shadow: 1px 1px 5px rgb(0, 166, 255);
+}
+
+/* for responsiveness */
+@media screen and (max-width: 600px) {
+  .col-sm {
+    flex-direction: column;
+  }
+  .row {
+    margin-bottom: 0;
+  }
+  .row > * {
+    height: 40px;
+    width: 100%;
+    margin: 0;
+    margin-bottom: 20px;
+  }
+}
