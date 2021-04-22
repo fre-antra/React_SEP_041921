@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML Assignment</title>
+    <style>
+      *{
+        padding: 0;
+        margin: 0;
+        font-family: Helvetica, sans-serif;
+
+      }
+
+      body {
+        margin: auto;
+        box-sizing: border-box;
+      }
+
+      #formLayout{
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+    
+      }
+      .form{
+        width: 500px;
+        margin: auto;
+      }
+
+      h1 {
+        margin: 1rem;
+        text-align: center;
+      }
+
+      form input{
+        font-size: 1.2rem;
+        margin: 0.5rem auto;
+        padding: 0.7rem;
+        width: 200px;
+        height: 25px;
+        border-radius: 5px;
+        border-width: 1px;
+      }
+      .buttons {
+        width: 100%;
+        margin: 0.5rem 0.8rem;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      .buttons button {
+        width: calc(50% - 0.8rem);
+        padding: 0.5rem;
+        font-size: 1.2rem;
+      }
+
+      .button-register {
+        background-color: #007acc;
+      }
+
+      button { 
+        color: white;
+        padding: 0.3rem 0.5rem;
+        border-radius: 5px;
+        border-width: 0;
+        cursor: pointer;
+        }
+
+      a {
+        color: rgb(23, 176, 247);
+        cursor: pointer
+      }
+
+      .button-signup {
+        background-color: green;
+      }
+      
+      .fullwidth{
+        width: calc(500px - 10%);
+      }
+
+      #checkbox{
+        position: relative;
+
+        display: block;
+        text-align: center;
+        width: fit-content;
+        margin: 0;
+      }
+      
+      p {font-size: 0.8rem;
+        color: rgb(66, 65, 65);
+        }
+      
+      .test {
+        display: flex;
+        justify-content: flex-start;
+        align-content: center;
+        margin: 0.8rem;
+        position: relative;
+        align-items: center;
+      }
+
+      .test label {
+        width: 30%;
+        padding-left: 0.5rem ;
+      }
+
+      @media (max-width: 700px){
+        .form{
+        width: 90%;
+        margin: auto;
+        }
+        form input{
+          width: 100%;
+        }
+        
+        .buttons, .test {
+          margin: 0.8rem 0;
+        }
+        
+        .fullwidth {
+          width: 100%;
+        }
+
+        p {font-size: 1rem;
+        }
+      
+      
+      }
+    </style>
+  </head>
+  <body>
+
+  <div class="form">
+  <h1>Sign Up</h1>
+  <form id="formLayout">
+    <input type="text" placeholder="First Name">
+    <input type="text" placeholder="Last Name">
+    <input class="fullwidth" type="text" placeholder="Mobile No.">
+    <input class="fullwidth" type="text" placeholder="Email Address">
+    <input type="password" placeholder="Password">
+    <input type="password" placeholder="Confirm Password">
+  
+
+    <div class="test">
+      <input type="checkbox" id="checkbox">
+      <label for="checkbox">I Agree</label>
+      <p>By clicking <button class="button-register">Register</button>, you agree to the <a>Term and Conditions</a> set out by this site, including Cookie Use.</p>
+    </div>
+    <div class="buttons">
+      <button class="button-register"type="submit">Register</button>
+      <button class="button-signup">Sign In</button>
+    </div>
+  </form>
+</div>
+    
+  </body>
