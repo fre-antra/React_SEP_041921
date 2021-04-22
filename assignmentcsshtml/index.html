@@ -1,0 +1,116 @@
+<!DOCTYPE hmtl>
+<html>
+    <head>
+
+        <style>
+            h1 {
+                justify-content: center;
+                text-align: center;
+            }
+            .formSignUp {
+                text-align: justify;
+                width:40%;
+                margin: auto;
+            }
+            input {
+                border-radius: 5px;
+                border-color:lavender;
+                padding: 5px;
+                margin-bottom: 5px;
+            }
+            #firstName {
+                float: left;
+                width:47%;
+            }
+            #lastName {
+                float: right;
+                width:47%;
+            }
+            #password {
+                float: left;
+                width:47%;
+            }
+            #confirmPassword {
+                float: right;
+                width:47%;
+            }
+            #mobileInput {
+                width: 100%;
+            }
+            #termsandconditions {
+                width: 100%;
+                margin-top:30px;
+                height:8%;
+                padding: 10px;
+                margin: auto;
+            }
+            #inputCheckbox {
+                float:left;
+                width:20%;
+                justify-content: center;
+            }
+            
+            p {
+                width: 60%;
+                float: right;
+                justify-content: center;
+                margin-top: 0;
+            }
+            span {
+                background-color:deepskyblue;
+                font-size:12px;
+                padding:3px;
+                color: white;
+                border-radius: 3px;
+            }
+            #registerButton {
+                background-color:deepskyblue;
+                color: white;
+                border-color:deepskyblue;
+                padding: 5px;
+                border-radius: 5px;
+                float: left;
+                width:47%;
+                border-style: hidden;
+            }
+            #signInButton {
+                background-color: green;
+                border-color: green;
+                color: white;
+                padding: 5px;
+                border-radius: 5px;
+                float: right;
+                width:47%;
+                border-style: hidden;
+            }
+            #buttons{
+                width: 100%;
+                margin:auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Sign Up</h1>
+        <div class="formSignUp">
+            <input id="firstName" type="text" placeholder="First Name">
+            <input id = "lastName" type="text" placeholder="Last Name">
+            <br>
+            <input id="mobileInput" type="tel" placeholder="Mobile No.">
+            <input id="mobileInput" type="tel" placeholder="Email Address">
+            <input id="password" type="text" placeholder="Password">
+            <input id="confirmPassword" type="text" placeholder="Confirm Password">
+            <br>
+            <div id="termsandconditions">
+                <label id="inputCheckbox">
+                    <input  type="checkbox"  name="agree"> I Agree
+                </label>
+                <p id="termsandconditions1">By clicking <span>Register</span>, you agree to the <a href="#">Terms and Conditions</a> set out by this site, including our Cookie Use.</p>
+            </div>
+            <div id="buttons">
+                <button id="registerButton" type="submit">Register</button>
+                <button id="signInButton">Sign In</button>
+            </div>
+            
+        </div>
+    </body>
+</html>
