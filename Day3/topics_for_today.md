@@ -11,5 +11,6 @@
 - Difference between var, let, const in scope and hoisting
 - Difference between undefined and not defined
 - Function hoisting
-- Different ways to declare a function in JavaScriptUse class to create a class object
+- Different ways to declare a function in JavaScript
+- Use class to create a class object
 - Constructor function
