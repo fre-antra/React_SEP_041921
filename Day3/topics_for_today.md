@@ -1,15 +1,15 @@
-::before and ::after in CSS
-Pseudo selectors in CSS
-SVG and canvas in CSS
-Primitive type data in JavaScript
-Types of primitive type data
-Passing by reference or by value
-Type coersion in JavaScript
-Difference between == and ===
-Different ways to create an object in JavaScript
-Plain object and class object
-Difference between var, let, const in scope and hoisting
-Difference between undefined and not defined
-Function hoisting
-Different ways to declare a function in JavaScriptUse class to create a class object
-Constructor function
+- ::before and ::after in CSS
+- Pseudo selectors in CSS
+- SVG and canvas in CSS
+- Primitive type data in JavaScript
+- Types of primitive type data
+- Passing by reference or by value
+- Type coersion in JavaScript
+- Difference between == and ===
+- Different ways to create an object in JavaScript
+- Plain object and class object
+- Difference between var, let, const in scope and hoisting
+- Difference between undefined and not defined
+- Function hoisting
+- Different ways to declare a function in JavaScriptUse class to create a class object
+- Constructor function
