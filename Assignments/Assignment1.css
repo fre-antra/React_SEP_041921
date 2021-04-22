@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@200&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    height: 70vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.container {
+    max-width: 600px;
+    width: 100%;
+}
+.title {
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+input[type = "text"] {
+    padding: 20px 0 15px 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 46%;
+    border-width: 1px;
+    border-color: #D3D3D3;}
+
+input[type = "password"] {
+    padding: 20px 0 15px 10px;
+    margin: 10px;
+    border-radius: 10px;
+    width: 46%;
+    border-width: 1px;
+    border-color: #D3D3D3;
+}
+
+input:focus {
+    outline: 0;
+    border-color: #00FFFF;
+    box-shadow: 0 0 0 1px rgba(0, 123, 255, .5);
+    
+}
+
+input::-webkit-input-placeholder {
+    font-size: 20px;
+    line-height: 4;
+}
+
+#Mobile {
+    width: 96%;
+}
+
+#Email {
+    width: 96%;
+}
+
+.consent {
+    padding-top: 15px;
+    display: flex;
+    float: right;
+}
+.checkBox {
+    padding-top: 10px;
+    padding-left: 2%;
+    font-weight: bold;
+    width: 100px;
+}
+
+.cookie {
+    max-width: 500px;
+    font-size: 17px;
+}
+
+#submit{
+    padding: 20px 0 15px 10px;
+    width: 46%;
+    border-radius: 10px;
+    margin: 10px;
+    color: white;
+    font-size: 20px;
+}
+
+input[type = "submit"] {
+    background-color: #6495ED;
+    border-style: none;
+    cursor: pointer;
+    
+}
+
+input[type = "button"] {
+    background-color: #228B22;
+    border-style: none;
+    cursor: pointer;
+}
+
+#Register {
+    max-width: 70px;
+    max-height: 20px;
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    display: inline-flex;
+    color: white;
+    font-size: 13px;
+    font-weight: bold;
+    background-color: #6495ED;
+    border-radius: 3px;
+    padding: 1px 0 1px 9px;
+
+
+}
+#terms {
+    color: #1E90FF;
+}
