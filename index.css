@@ -26,6 +26,11 @@ input[type=text],input[type=password]{
 input[type=email], input[type=tel]{
     width: 85%;
 }
+input:focus{
+    opacity: .9;
+    box-shadow: 0 0 5px rgb(31, 31, 165);
+    transition: all .5s ease;
+}
 
 .check-box-div{
     margin-left: 14.5px;
@@ -35,10 +40,7 @@ label{
     font-size: small;
     float: inline-end;
 }
-input:focus{
-    opacity: .9;
-    box-shadow: 0 0 5px rgb(31, 31, 165);
-}
+
 button{
     padding: 12px;
     font-size: large;
@@ -46,38 +48,43 @@ button{
     border: none;
     border-radius: 5px;
     width: 42%;
-    opacity: .8;
-    
 }
 
-#login-button:focus{
-    box-shadow: 0 0 0 2px #ffffff, 0 0 3px 5px #3a97f9;
-    outline: 2px dotted transparent;
-    outline-offset: 2px;
+#login-button{
+    background-color: #198754;
+    opacity: 0.8;
+    transition: all .8s ease;
+  
 }
-#register-button:focus{
+#register-button{
+    background-color: #0d6efd;
+    opacity: 0.8;
+    transition: all .8s ease;
+}
+#login-button:hover{
+    opacity: 1;
+    transition: all .8s ease;
+}
+#register-button:hover{
+    opacity: 1;
+    transition: all .8s ease;
+}
+
+input[type=checkbox]:hover{
+    transition: all .5s ease;
+    opacity: 1;
+}
+
+button:focus{
     box-shadow: 0 0 0 2px #ffffff, 0 0 3px 5px #3a97f9;
     outline: 2px dotted transparent;
     outline-offset: 2px;   
 }
 
-button, input[type=checkbox]:hover{
-    transition: all .5s ease;
-    opacity: 1;
-}
-
-#login-button{
-    background-color: #198754;
-    transition: all .5s ease;
-}
-#register-button{
-    background-color: #0d6efd;
-    transition: all .5s ease;
-}
-
 #term-conditon-text{
     color:dodgerblue;
 }
+
 i{
     background-color: dodgerblue;
     border-radius: 3px;
