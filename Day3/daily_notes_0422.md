@@ -1,0 +1,2 @@
+- Review the topics for today
+- Check out the documents shared in the Slack channel and Github
