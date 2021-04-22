@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css" />
+</head>
+<body>
+    <div id="title">
+        <h1>Sign Up</h1>
+    </div>
+    <form>
+        <div id="names">
+            <input type="text" id="fname" placeholder="First Name">
+            <input type="text" id="lname" placeholder="Last Name"> 
+        </div><br>
+
+        <input type="number" id="mobile" placeholder="Mobile No." max="9999999999"> <br> <br>
+        <input type="email" id="email" placeholder="Email Address"> <br> <br>
+        <input type="password" id="pass" placeholder="Password">
+        <input type="password" id="confirmPass" placeholder="Confirm Password"> <br> <br>
+
+        <div id="agree">
+            <input type="checkbox" id="agree">
+            <label for="agree">I agree</label>
+            <div id="terms">
+                <p>
+                    By clicking <span id="register">Register</span>, you agree to the <a href=""> Terms and Conditions</a> set out <br> by this site, including our Cookie use. 
+                </p>
+            </div>
+        </div>
+        
+        <div id="buttons">
+            <input type="submit" id="register-button" value="Register">
+            <input type="submit" id="sign-in" value="Sign In">
+        </div>
+    </form>
+</body>
+</html>
