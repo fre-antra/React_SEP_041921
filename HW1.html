@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel = "stylesheet" type = "text/css" media = "all" href = "HW1.css"/>
+    <!--  <title>Sign_up</title>-->  
+    </head>
+    <body>
+        <h1>Sign Up</h1>
+        <div class = "registerform">
+            <FORM id = "inputforms" name = "forms" Action="url" method="get">
+                <input type = "text" class = "colgrid-firstName" placeholder="First Name">
+                <input type = "text" class = "colgrid-lastName" placeholder="Last Name">
+                <input type = "text" class = "colgrid-mobile" placeholder="Mobile No.">
+                <input type = "text" class = "colgrid-email" placeholder="Email Address">
+                <input type = "text" class = "colgrid-password" placeholder="Password">
+                <input type = "text" class = "colgrid-comfirmpassword" placeholder="Comfirm Password">
+            </FORM>
+
+            <div id="agreement">
+                <div> 
+                    <input type = "checkbox" id="agree">
+                    <label for = "agree" id="agreetext">I Agree</label>
+                </div>
+
+                <div id="agreeterms">
+                    <p class="terms">
+                        By clicking. 
+                        <img class="registerPic" src=image.jpg alt="Register">
+                        You agree to the 
+                        <a href="url">Terms and Conditions</a>
+                        set by this site, including our Cookies Use.
+                    </p>
+                </div>
+            </div>
+
+
+            <div id="buttons">
+                <button class="registerBtm" name = "form" type = "sumbit" onclick="alert('Saving......')">Register</button>
+                <button class="signinrBtm" type = "button" onclick="alert('Forwarding to sign in page')">Sign In</button> 
+            </div>
+        </div>
+    </body>
+</html>
