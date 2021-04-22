@@ -1,0 +1,110 @@
+/* CSS Reset */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.container {
+}
+.signup-box {
+    margin: 100px auto;
+    padding:20px;
+    border-radius: 10px;
+    width: 500px;
+    background-color: gainsboro;
+}
+.row {
+    display:flex;
+    margin: 2px;
+    padding: 5px;
+    box-sizing: border-box;
+    height: 60px;
+    position: relative;  
+    vertical-align: middle;
+}
+.row:first-child{
+    justify-content: center;
+}
+.row:last-child{
+    justify-content: center;
+}
+
+[class*="col"] {
+    display:flex;
+    margin: 5px;
+    padding: 5px;
+    width: 100%;
+    border-radius: 10px;    
+    border-style:solid;
+    
+}
+
+.col-50 {
+    width: 50%;
+}
+
+[class*="col"]:focus {
+    border-color: #0275d8;
+    box-shadow: 2px 0px 1px 1px #9cbcd8,-2px 0px 1px 1px #9cbcd8;   
+    border-radius: 10px;
+    outline: none;
+}
+
+
+.checkbox-label {
+    display: inline-block;
+    padding: 5px;
+    width: 150px;
+    flex-basis: 200px;
+}
+
+.termBox {
+    display: inline-block;
+    margin-top: -5px;
+    margin-left: 30px;
+}
+
+button {
+    display: flex;    
+    margin: 5px;
+    padding: 5px;
+    width: 140px !important;
+    background-color: skyblue;
+    justify-content: center;
+    align-items: center;
+    color: white; 
+    border-radius: 10px;
+}
+
+.display-button {
+    display: inline-block;
+    width: 60px !important;
+    font-size: 0.8rem;
+    padding: 2px;
+    border-radius: 5px;
+}
+
+
+
+.register {
+    background-color: #0275d8;
+}
+
+.login {
+    background-color: #5cb85c;
+}
+
+a:link{
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Example of responsive layout */
+@media only screen and (max-width: 600px) {
+    .signup-box {
+        width: 350px;
+    }
+
+    button {
+        width: 100px !important;
+    }
+}
