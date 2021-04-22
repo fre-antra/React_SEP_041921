@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guk's HTML Homework</title>
+    <meta name="description" content="HTML Homework - Guk Kim" />
+    <meta name="author" content="Guk Kim" />
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- BEM Block__Element--Modifier ex) .card__img--blue-->
+  </head>
+  <body>
+    <section id="sign_up_page">
+      <!-- signUp -->
+      <section id="signUp">
+        <div class="signUp__title">
+          <h1 class="signUp__title__font">Sign Up</h1>
+        </div>
+      </section>
+
+      <!-- Forms -->
+      <section id="forms">
+        <form>
+          <div class="forms__name">
+            <input
+              type="text"
+              id="forms__name__fname"
+              name="forms__name__fname"
+              placeholder="First Name"
+            />
+            <input
+              type="text"
+              id="forms__name__lname"
+              name="lname"
+              placeholder="Last Name"
+            />
+          </div>
+          <div class="forms__phone">
+            <input
+              type="text"
+              id="forms__phone__number"
+              name="forms__phone__number"
+              placeholder="Mobile No."
+            />
+          </div>
+          <div class="forms__email">
+            <input
+              type="text"
+              id="forms__email__address"
+              name="forms__email__address"
+              placeholder="Email Address"
+            />
+          </div>
+          <div class="forms__password">
+            <input
+              type="text"
+              id="forms__password__pw"
+              name="forms__password__pw"
+              placeholder="Password"
+            />
+            <input
+              type="text"
+              id="forms__password__pw"
+              name="forms__password__confirm"
+              placeholder="Confirm Password"
+            />
+          </div>
+        </form>
+      </section>
+
+      <!-- Label -->
+      <section id="label">
+        <div class="label__checkbox">
+          <input
+            type="checkbox"
+            id="label__checkbox__agree"
+            name="label__checkbox__agree"
+            value="agree"
+          />
+          <label for="label__checkbox__agree"> I&nbsp;agree</label>
+        </div>
+
+        <div class="label__content">
+          <p class="label__content__font">
+            By clicking <img src="im.png" class="register-img" />, you agree to
+            the <a href="#">Terms and Conditions</a> set out by this site,
+            including our Cookie Use.
+          </p>
+        </div>
+      </section>
+
+      <!-- Buttons -->
+      <section id="btns">
+        <div class="btns__register">
+          <button type="submit" class="btns__register__btn">Register</button>
+        </div>
+        <div class="btns__signIn">
+          <button type="submit" class="btns__signIn__btn">Sing In</button>
+        </div>
+      </section>
+    </section>
+  </body>
+</html>

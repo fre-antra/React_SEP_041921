@@ -1,0 +1,88 @@
+a {
+  text-decoration: none;
+  color: rgb(77, 148, 255);
+}
+#sign_up_page {
+  text-align: center;
+  width: 40%;
+  margin: auto;
+}
+
+input[type="text"] {
+  border: 1px solid grey;
+  border-radius: 6px;
+  outline: none !important;
+  height: 35px;
+  margin: 8px 5px;
+  text-indent: 7px;
+}
+
+input[type="text"]:focus {
+  border: 1.5px solid rgb(77, 148, 255);
+  box-shadow: 0 0 10px #719ece;
+}
+
+.signUp__title__font {
+  font-size: 30px;
+}
+
+.label__content__font {
+  font-size: 10px;
+}
+
+#btns {
+  display: flex;
+  justify-content: center;
+}
+
+.btns__register,
+.btns__signIn {
+  flex-grow: 1;
+}
+
+/* #btns > * {
+    flex-grow: 1;
+} */
+
+button {
+  margin: 0px 8px;
+  width: 168px;
+}
+
+#label {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+input[type="text"] {
+  width: calc(100% - 20px);
+  /*width: 100%;  +padding +border +margin  */
+}
+
+.forms__name input,
+.forms__password input {
+  width: calc(50% - 20px);
+}
+
+.register-img {
+  width: 100px;
+}
+.label__checkbox {
+  width: 150px;
+}
+.btns__register__btn,
+.btns__signIn__btn {
+  border-radius: 5px;
+  color: white;
+  padding: 12px;
+  border: 0;
+  width: calc(100% - 15px);
+}
+
+.btns__register__btn {
+  background: #487ece;
+}
+.btns__signIn__btn {
+  background: rgb(100, 177, 100);
+}
