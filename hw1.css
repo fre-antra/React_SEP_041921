@@ -1,0 +1,66 @@
+.root{
+    text-align: center;
+}
+#Reg{
+    background-color: rgb(108, 173, 233);
+    color: white;
+    font-size: 20px;
+    border-radius: 10px;
+    border-width: 0;
+    width: 410px;
+    height: 55px;
+    margin: 15px;
+}
+#Sign{
+    background-color: greenyellow;
+    color:white;
+    font-size: 20px;
+    border-radius: 10px;
+    border-width: 0;
+    width: 410px;
+    height: 55px;
+    margin: 15px;
+    
+}
+.info{
+    margin: 15px;
+    width: 400px;
+    height: 55px;
+    font-size: 20px;
+    border-radius: 10px;
+    border-width: 1px;
+}
+
+#mob{
+    width: 840px;
+}
+
+#email{
+    width: 840px;
+}
+
+#register{
+    background-color: rgb(108, 173, 233);
+    color:white;
+    border-radius: 3px;
+}
+
+#term{
+    color:rgb(108, 173, 233);
+}
+
+#para{
+    width: 600px;
+    margin: auto;
+    display: inline-block;
+}
+
+#agree{
+    width: 17px;
+    height: 17px;
+}
+
+#ag{
+    font-size:20px;
+    font-weight: bold;
+}
