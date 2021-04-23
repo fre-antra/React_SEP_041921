@@ -1,5 +1,6 @@
 :root {
-  --world-color: green;
+  --world-color: blue;
+  --design-color: green;
   --card-border-color: lightgray;
   --shadow-color: rgb(226, 226, 226);
   --font-grey-color: rgb(136, 136, 136);
@@ -27,6 +28,7 @@ header {
 
 .subscribe {
   text-decoration: underline;
+  margin-left: 20px;
 }
 
 .header-title {
@@ -38,6 +40,10 @@ header {
   border: none;
   font-size: 1.2em;
   color: var(--font-grey-color);
+}
+
+.subscribe, .search-button {
+  width: 100px;
 }
 
 .blog {
@@ -89,6 +95,10 @@ header {
 
 .world {
   color: var(--world-color);
+}
+
+.design {
+  color: var(--design-color);
 }
 
 footer {
