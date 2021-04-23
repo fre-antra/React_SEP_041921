@@ -1,0 +1,32 @@
+.card {
+  background-color: var(--main-white);
+  width: 45%;
+  border: 5px solid var(--light-gray);
+  padding: 20px 10px;
+}
+
+.card__category {
+  margin-top: 0;
+}
+.card__category--blue {
+  color: var(--main-blue);
+}
+
+.card__category--green {
+  color: var(--main-green);
+}
+
+.card__title {
+  margin-bottom: 0;
+}
+
+.card__date {
+  color: var(--light-black);
+  font-size: small;
+  margin-top: 5px;
+}
+
+.card__summary {
+  height: 40px;
+  overflow: auto;
+}

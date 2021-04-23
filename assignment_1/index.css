@@ -51,7 +51,7 @@ input {
 #register {
   display: inline-block;
   border-radius: 5px;
-  color: white;
+  color: var(--main-white);
 }
 
 #register,
@@ -64,7 +64,7 @@ input {
 }
 
 input[type="button"] {
-  color: white;
+  color: var(--main-white);
 }
 
 input:hover {

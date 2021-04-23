@@ -1,0 +1,68 @@
+@import url("./nav.css");
+@import url("./card.css");
+@import url("./footer.css");
+
+/* reset everything */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* variables */
+:root {
+  --main-black: black;
+  --main-white: white;
+  --light-black: rgb(103, 100, 100);
+  --light-gray: rgb(217, 217, 217);
+  --main-blue: rgb(5, 115, 198);
+  --main-green: rgb(2, 197, 2);
+}
+
+body {
+  background-image: url("../img/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* main content */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+/* responsive */
+@media screen and (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .row > .card {
+    margin: 10px 0;
+  }
+}
+
+/* blog post (second page) */
+.col-4 {
+  width: calc(4 / 12 * 100%);
+}
+
+.col-8 {
+  width: calc(9 / 12 * 100%);
+}

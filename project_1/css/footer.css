@@ -1,0 +1,13 @@
+footer {
+  color: var(--light-black);
+  padding: 20px;
+  background-color: var(--light-gray);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+footer ul {
+  list-style-type: none;
+}
