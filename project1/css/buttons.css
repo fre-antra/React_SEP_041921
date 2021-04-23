@@ -1,0 +1,22 @@
+.btn-subscribe {
+  display: inline-block;
+  padding: 0.3em 1.2em;
+  border-radius: 2em;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  background: var(--color-btn);
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.btn-subscribe:hover {
+  background-color: #4095c6;
+}
+/* @media all and (max-width: 30em) {
+  .btn-subscribe {
+    display: block;
+    margin: 0.2em auto;
+  }
+} */

@@ -1,0 +1,23 @@
+header{
+    background-color:var(--color-header) ;
+    position: sticky;
+    top: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 30px;
+    z-index: 1;
+}
+.icon-search{
+    background-color: var(--color-btn);
+    border-radius: 5px;
+    padding-top: 8px;
+}
+
+@media (max-width:400px) {
+    .header{
+            padding: 20px 0;
+
+    }
+}

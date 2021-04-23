@@ -1,0 +1,36 @@
+@import url(./css/blog.css);
+@import url(./css/footer.css);
+@import url(./css/header.css);
+@import url(./css/buttons.css);
+/* fonts */
+@import url('https://fonts.googleapis.com/css?family=Raleway:200');
+
+:root{
+    --color-main:cyan;
+    --color-header:azure;
+    --color-blog-title:dimgray;
+    --color-category:pink;
+    --color-blog-background:lightyellow;
+    --color-btn:#4eb5f1;
+}
+*,*::before,*::after{
+    margin: 0px;
+    padding: 0px;
+}
+html{
+    font-size: 62.25%
+}
+
+body{
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    font-family: 'Raleway';
+    
+}
+.main{
+    display: flex;
+    flex-direction: column;
+
+}
+
+
