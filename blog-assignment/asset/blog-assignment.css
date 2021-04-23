@@ -1,0 +1,140 @@
+/* Master  */
+
+:root{
+    --color-blue:#4285F4;
+    --color-blue-dark:#0d47a1;
+    --color-green:#00C851;
+    --color-green-dark:#007E33;
+    --color-grey-light: #EEEEEE;
+    --color-grey:#e0e0e0;
+    --color-grey-dark:#757575;
+}
+
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: inherit
+}
+
+html{
+    font-size: 62.25%;
+}
+
+body{
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.container{
+    position: fixed;
+    width:100%;
+    max-width: 100rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    padding-top: 6rem;
+}
+
+.blog-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.blog-container__header,
+.blog-row,
+.blog-container__footer {
+    display: flex;
+    flex:1 1 100%;
+    margin:1px;
+}
+
+.blog-container__header {
+    padding:1rem;
+}
+
+.header-item {
+    flex: 1;
+}
+
+.header-subscribe {
+    text-align: left;
+}
+
+.header-subscribe a {
+    color: var(--color-grey-dark);
+}
+
+.header-headding {
+    text-align: center;
+    text-decoration: underline;
+}
+
+.mag-glass {
+    text-align: right;
+}
+
+.mag-glass-img {
+    width: 1.4em;
+    height: 1.4em;
+}
+
+.post-wrapper {
+    margin: 1rem;
+    padding: 1.5rem;
+    border:2px solid var(--color-grey);
+    flex:1 1 100%;
+}
+
+.badge__blue {
+    font-weight: bolder;
+    color: var(--color-blue);
+}
+
+.badge__green {
+    font-weight: bolder;
+    color: var(--color-green);
+}
+
+.post-category {
+    margin-bottom: 1rem;
+}
+
+.post-title {
+    font-weight: bolder;
+    font-size: 2rem;
+}
+
+.post-date {
+    font-weight: bolder;
+    font-size: 1.4rem;
+    color: var(--color-grey-dark);
+    margin-bottom: 1rem;
+}
+
+.post-description {
+    height: 8rem;
+    font-size: 1.4rem;
+}
+
+.post-continue a {
+    color: var(--color-blue);
+}
+
+.blog-container__footer {
+    margin: 2rem 0;
+    flex-direction: column;
+    background-color: var(--color-grey-light);
+    padding: 2rem 0;
+}
+
+.footer-row {
+    flex: 1 1 100%;
+}
+
+.footer-item {
+    text-align: center;
+    margin-top: 2rem;
+}
