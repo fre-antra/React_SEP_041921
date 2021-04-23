@@ -1,0 +1,103 @@
+/* Fonts */ 
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@900&family=PT+Serif&display=swap');
+
+/* Reset */
+@import url("./reset.css");
+
+/* Flexbox System */ 
+@import url("./flexbox_system.css");
+
+/* Root Variables */ 
+@import url("./root.css");
+
+/* Typography */ 
+@import url("./typography.css");
+
+html {
+    font-size: 62.25%; 
+}
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    line-height: 1.5;
+    font-family: "PT Serif", sans-serifs;
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Fira Sans", sans-serif;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 3rem;
+}
+
+h3 { 
+    font-size: 2.5rem;
+}
+
+/* Card Styling */
+.card {
+    border: solid 3px rgba(0,0,0, 0.1);
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0, 0.1);
+    transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover{
+    box-shadow: 4px 4px 6px 0 rgba(0,0,0, 0.1);
+}
+
+.card-content {
+    flex: 1 1 auto;
+    min-height: 40px;
+    padding: 10px 16px;
+}
+
+.card-date {
+    margin-bottom: 5px;
+}
+
+.card-text {
+    min-height: 40px;
+    margin-bottom: auto;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+/* Footer Styling */
+.footer {
+    font-size: 1.2rem;
+    min-height: 100px;
+    justify-content: center;
+    align-items: center;
+    border-top: 3px solid var(--color-super-light);
+    background-color: var(--color-ultra-light);
+}
+
+
+
+
+
+
+

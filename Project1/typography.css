@@ -1,0 +1,21 @@
+@import url(./root.css);
+
+.text-light {
+    color: var(--color-light);
+}
+
+.text-dark {
+    color: var(--color-dark);
+}
+
+.text-primary {
+    color: var(--color-primary);
+}
+
+.text-success {
+    color: var(--color-success);
+}
+
+.underline {
+    text-decoration: underline;
+}
