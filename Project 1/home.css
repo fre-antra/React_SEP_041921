@@ -1,0 +1,85 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+} 
+
+.subscrible {
+    align-self: center;
+}
+
+.title {
+    align-self: center;
+}
+
+.search {
+    align-self: center;
+}
+
+.main {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.flex-inline {
+    display: flex;
+    justify-content: space-between;
+} 
+
+.blogCatagory {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+#world {
+    color: rgb(4, 4, 255);
+}
+
+#design {
+    color:rgb(22, 168, 2);
+}
+.blogTitle {
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.blogDate {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+.card {
+    width: 49%;
+    padding: 6px 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 3px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+
+.footer {
+    display: flex;
+    justify-content: center;
+    align-self: auto;
+    width: 80%;
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: "Lucida Console", "Courier New", monospace;
+    color: rgb(56, 56, 56);
+    font-size: 15px;
+} 
+
+
