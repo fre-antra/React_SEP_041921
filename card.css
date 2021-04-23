@@ -1,0 +1,44 @@
+.container {
+    max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 50px;
+}
+.row{
+    margin-top: 40px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+}
+
+.card{
+    border:1px solid gray;
+    box-sizing: border-box;
+    width: 375px;
+    padding: 5px;
+    height: 200px;
+}
+.category{
+    font-size: 15px;
+}
+
+.blue{
+    color: deepskyblue;
+}
+.green{
+    color: limegreen;
+}
+.card-title{
+    font-size: 30px;
+    font-weight: bold;
+}
+.card-date{
+    font-size: 13px;
+    color: gray;
+}
+.card-content{
+    height:80px ;
+}
+.card-foot{
+}

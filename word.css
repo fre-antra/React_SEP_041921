@@ -1,0 +1,26 @@
+.footer{
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+    background-color: lightgrey;
+    text-align: center;
+    padding: 10px;
+}
+.header{
+    max-width: 800px;
+    display: flex;
+    align-items: start;
+    justify-content: space-between;
+    height: 30px;
+    margin: auto;
+}
+
+#subscribe{
+    display: block;
+}
+.title{
+    font-size: 30px;
+    font-weight: bold;
+    text-decoration: underline;
+}
