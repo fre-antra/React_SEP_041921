@@ -1,0 +1,21 @@
+@import url('./cardlayout.css');
+@import url('./container.css');
+@import url('./flexbox.css');
+
+
+h1,h2,h3,h4,h5,h6{
+  border: none !important;
+}
+
+  .blog-title{
+      margin-top: 10px;
+      text-align: center;
+  }
+
+  h6{
+      color: dodgerblue;
+  }
+  .post-title{
+      font-size: xx-large;
+      
+  }

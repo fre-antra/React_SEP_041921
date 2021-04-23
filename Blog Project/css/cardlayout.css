@@ -1,0 +1,34 @@
+.card{
+    height: 220px;
+    background-color: #ffff;
+    margin: 15px;
+    box-shadow: 0 0 3px gray;
+    border-radius: 3px;
+    transition: 0.3;
+    opacity: 0.8; 
+    transition: all .3s ease; 
+  }
+  .card:hover{
+      box-shadow: 0 0 6px gray;
+      opacity: 1;
+      transition: all .3s ease;
+  }
+  .card-content{
+    padding-top: 10px;     
+    padding-left: 15px; 
+  }
+
+  .card-footer{
+    margin-top: 40px;
+    color: dodgerblue;
+    text-decoration: underline;
+}
+
+.card-content-type{
+    color: dodgerblue;
+    font-weight: bold;
+}
+.card-content-type-desgin{
+    color: green;
+    font-weight: bold;
+}
