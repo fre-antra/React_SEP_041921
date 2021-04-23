@@ -19,3 +19,15 @@ h1,h2,h3,h4,h5,h6{
       font-size: xx-large;
       
   }
+  .subscription-text{
+    text-decoration: underline;
+    color: gray;
+    margin-top: 30px;
+    margin-left: 320px;
+  }
+footer{
+  background-color: rgb(223, 221, 221);
+  width: 100%;
+  height: 200px;
+  opacity: 0.8;
+}
