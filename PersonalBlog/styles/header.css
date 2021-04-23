@@ -1,0 +1,25 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.subscribe {
+  text-decoration: underline;
+  margin-left: 20px;
+}
+
+.header-title {
+  text-decoration: underline;
+}
+
+.search-button {
+  background-color: transparent;
+  border: none;
+  font-size: 1.2em;
+  color: var(--font-grey-color);
+}
+
+.subscribe, .search-button {
+  width: 100px;
+}

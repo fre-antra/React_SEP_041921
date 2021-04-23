@@ -1,0 +1,22 @@
+@import url('./card.css');
+
+.blog {
+  display: flex;
+  width: 100%;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  max-width: 50%;
+}
+
+@media (max-width:800px) {
+  .blog {
+    flex-direction: column;
+  }
+  .column{
+    max-width: 100%;
+  }
+}

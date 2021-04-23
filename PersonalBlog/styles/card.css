@@ -1,0 +1,51 @@
+
+.card {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  border: 1px solid var(--card-border-color);
+  border-radius: 5px;
+  box-shadow: 2px 2px var(--shadow-color);
+  padding: 20px;
+  margin: 20px;
+}
+
+.card-title {
+  margin-top: 5px;
+}
+
+.card-date {
+  color: var(--font-grey-color);
+  font-size: var(--font-size-small);
+}
+
+.card-description {
+  margin: 10px 0;
+  overflow: hidden;
+  white-space: normal;
+  text-overflow: ellipsis;
+  line-height: 1.1em;
+  height: 3.3em;
+  max-height: 3.3em;
+}
+
+.card-category {
+  font-weight: bold;
+  font-size: var(--font-size-small);
+}
+
+.world {
+  color: var(--world-color);
+}
+
+.design {
+  color: var(--design-color);
+}
+
+@media (max-width:800px) {
+  .card {
+    width: 50%;
+    margin: 20px auto;
+    min-width: 300px;
+  }
+}
