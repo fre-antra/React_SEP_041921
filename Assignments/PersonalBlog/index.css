@@ -1,0 +1,106 @@
+body {
+    padding:0px;
+}
+
+.app_nav {
+    position: fixed; top:0; left:0; right:0; z-index: 10;
+    height: 50px;
+    border-bottom: solid; border-width: thin; border-color: rgb(109, 106, 106);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background-color:#283593 ; 
+    color: white;
+    overflow: hidden;
+}
+.app_nav h1 {
+    text-align: left;
+    width: 60% ;
+}
+.app_nav button {
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+.app_nav button:hover {
+    background-color: green; 
+    cursor: pointer;
+}
+main {
+    margin-top: 150px;
+}
+.app_footer{
+    position: relative;
+    margin-top: 50px;
+    bottom: 0; left: 0; right:0;
+    height: 50px; padding: 15px;
+    background-color:#283593; color: white;
+    text-align: center; overflow: hidden;
+    /*
+    height: 75px;
+    margin-top: -75px;
+    overflow: hidden;
+    */
+}
+
+.app_footer div {
+    margin: 10px;
+}
+.app_footer a {
+    color: orange;
+}
+
+/*List style*/
+section h2 {
+    padding: 10px;
+}
+.Travel h2 {
+    background-color: rgba(81, 203, 238, 1);
+}
+.Health h2 {
+    background-color: rgb(238, 165, 81);
+}
+
+.list {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+/*post styles*/
+.blog {
+    padding: 5px;
+    width: 30%;
+    height: 200px;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+.blog-category{
+    font-weight: bold;
+    color: green;
+    margin-bottom: 10px;
+}
+.blog-title {
+    font-weight: bold;
+    font-size: 25px;
+}
+.blog-date {
+    color: gray;
+}
+.blog-summary {
+    height: 40px;
+}
+#healthList .blog-category{
+    color: orange;
+}
+#healthList .blog {
+    box-shadow: 0 0 5px rgb(238, 165, 81);
+    border: 1px solid rgb(238, 165, 81);
+}
