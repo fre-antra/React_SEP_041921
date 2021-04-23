@@ -1,0 +1,78 @@
+body {
+    height: 100%;
+}
+
+.header-container {
+   display: flex;
+   padding: 10px;
+   justify-content: space-between;
+   align-items: center;
+   text-decoration: underline;
+   
+}
+
+.container {
+    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.box {
+    border: 5px #ccc solid;
+    flex-basis: 40%;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+.box > .p-date {
+    color: lightslategrey;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.box > .p-info {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.box > .h4-world {
+    color:lightskyblue;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.box > .h4-design {
+    color:limegreen;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.header-container->p {
+    flex: 0, 1, 50px;
+    align-self: center;
+    color: lightslategrey;
+    
+}
+
+.header-container->h1 {
+    flex: 10, 2, 200px;
+    text-decoration: underline;
+    align-self: center;
+
+}
+
+img {
+    flex: 0, 1, 50px;
+    height: 20px;
+    align-self: center;
+}
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:whitesmoke;
+}
+
+.footer-container > p {
+    font-size:small;
+    color:lightslategray;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
