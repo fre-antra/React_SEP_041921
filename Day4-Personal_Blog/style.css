@@ -1,0 +1,29 @@
+
+/* Header */
+@import url("./css/header.css");
+
+/* Container */
+@import url("./css/container.css");
+
+/* Footer */
+@import url("./css/footer.css");
+
+* {
+    margin: 40px 30px 40px 30px; 
+}
+
+/* @media screen and (max-width: 900px) {
+
+    .container {
+        height: 1500px;
+    }
+    .header {
+        min-width: 550px;
+        w
+    }
+    .container-row {
+        display: block;
+        width: 80%;
+        height: 30%;
+    }
+} */

@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&family=Oswald:wght@200&display=swap');
+
+.footer {
+    padding-top: 10px;
+    width: 90%;
+    height: 200px;
+    text-align: center;
+    font-family: 'Orelega One', cursive;
+    background-color: #f8f8ff;
+    min-width: 900px;
+}
+
+a {
+    text-decoration: none;
+}

@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+.container {
+    min-width: 900px;
+    height: 1000px;
+    font-family: 'Lora', serif;
+}
+.container-row {
+    display: flex;
+    width: 90%;
+    height: 30%;
+
+}
+.container-box {
+    border-width: 5px;
+    border-style: groove;
+    border-radius: 10px;
+    display: block;
+    width: 46%;
+    height: 80%;
+}
+
+.container-box:hover {
+    outline: 0;
+    border-color: #000000;
+    box-shadow: 0 0 0 1px rgba(0, 123, 255, .5);
+}
+
+#typeWorld {
+    margin: 10px 30px 5px 30px;
+    color: blue;
+    font-weight: bold;
+}
+
+#typeDesign {
+    margin: 10px 30px 5px 30px;
+    color: green;
+    font-weight: bold;
+}
+
+#title {
+    margin: 0 30px 5px 28px;
+    font-size: 30px;
+}
+
+#date {
+    margin: 3px 30px 5px 30px;
+    color: grey;
+}
+
+#description {
+    margin: 40px 30px 20px 30px;
+}

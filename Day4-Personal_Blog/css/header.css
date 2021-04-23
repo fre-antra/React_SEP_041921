@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Orelega+One&family=Oswald:wght@200&display=swap');
+
+header {
+    font-family: 'Orelega One', cursive;
+    height: 100px;
+    display: flex;
+    min-width: 900px;
+
+}
+
+#subscribe {
+    width: 10%;
+    font-size: 20px;
+    color: grey;
+}
+
+h1 {
+    width: 70%;
+    text-align: center;
+}
+
+img {
+    width: 15%;
+    height: 30%;
+}
