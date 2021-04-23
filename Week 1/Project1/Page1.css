@@ -1,0 +1,111 @@
+:root {
+  --color-world: #4285f4;
+  --color-sport: #00c851;
+  --color-grey: #e0e0e0;
+  --color-grey-dark: #757575;
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.25%; /*regular font size = 16*/
+}
+
+body {
+  font-size: 1.6rem;
+  box-sizing: border-box;
+  font-family: "Times New Roman", Times, serif;
+}
+
+.magnifying-glass {
+  cursor: pointer;
+}
+
+.blog-container {
+  position: fixed;
+  width: 100%;
+  max-width: 50rem;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.hide {
+  display: none;
+}
+
+.blog-container{
+   display:flex;
+   flex-direction: column;
+}
+
+.blog-header{
+   display:flex;
+   justify-content: space-between;
+   margin-bottom: 5%;
+}
+
+
+.subscribe{
+   color: var(--color-grey-dark)
+}
+
+.blog-row{
+   display:flex;
+
+}
+
+.blog-box{
+   border: 3px solid var(--color-grey);
+   padding: 1.5rem;
+   margin: 0.5rem;
+   width: 100%;
+}
+
+.blog-category-container{
+   margin-bottom: 3%
+}
+
+.blog-world-category{
+   color: var(--color-world);
+   font-size: 1.1rem;
+   font-weight: bold;
+}
+
+.blog-sport-category{
+   color: var(--color-sport);
+   font-size: 1.1rem;
+   font-weight: bold;
+}
+
+.blog-title{
+   font-size: 1.8rem;
+}
+
+.blog-date{
+   font-size: 1rem;
+   color: var(--color-grey-dark);
+}
+
+.blog-content-container{
+   margin-top: 3%;
+   /* margin-bottom: 15% */
+}
+
+.blog-content{
+   font-size: 1rem;
+}
+
+.continue-reading-container{
+   margin-top: 15%
+}
+
+.continue-reading{
+   font-size: 1rem;
+}
