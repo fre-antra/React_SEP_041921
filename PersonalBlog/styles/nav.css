@@ -1,12 +1,19 @@
-header {
+nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 10px 0;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  border-bottom: 1px solid lightgray;
+  background-color: var(--shadow-color);
 }
 
 .subscribe {
   text-decoration: underline;
   margin-left: 20px;
+  border: 1px solid black;
 }
 
 .header-title {
@@ -21,5 +28,5 @@ header {
 }
 
 .subscribe, .search-button {
-  width: 100px;
+  width: 65px;
 }
