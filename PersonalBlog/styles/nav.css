@@ -1,13 +1,15 @@
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 0;
-  background-color: white;
+nav {  
   position: sticky;
   top: 0;
   border-bottom: 1px solid lightgray;
   background-color: var(--shadow-color);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
 }
 
 .subscribe {

@@ -6,11 +6,9 @@
 
 @import url('./nav.css');
 @import url('./footer.css');
-@import url('./blog.css');
+@import url('./blogList.css');
 
 .main-container {
-  display: flex;
-  flex-direction: column;
   width: 60%;
   min-width: 800px;
   margin: auto;
