@@ -1,0 +1,242 @@
+:root{
+    --color-primary:#4285F4;
+    --color-primary-dark:#0d47a1;
+    --color-success:#00C851;
+    --color-success-dark:#007E33;
+    --color-grey:#a3a3a3;
+    --color-grey-dark:#3d3d3d;
+    --color-white: #f8f8f8;
+    --color-background: #f0f0f0;
+    --color-grey-btn: #7a7a7a;
+    --color-subscribe-btn: #f50d0d;
+    --color--hero-section: #FDEED7;
+    --color--header: #090B60;
+    --color-read-article: #f50d0d;
+}
+
+*,*::after,*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html{
+    font-size: 62.25%
+}
+
+body{
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    background-color: var(--color-background);
+    min-height: 100rem;
+}
+
+a {
+    text-decoration: none;
+}
+a:visited {
+    color: var(--color-background);
+}
+
+.navbar {
+    height: 5.5rem;
+    background-color: var(--color-grey-dark);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar__logo {
+    display: inline;
+    float: left;
+    font-size: 2.8rem;
+    color: var(--color-white);
+    margin-left: 2rem;
+}
+
+.navbar__list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+.navbar__item {
+    display: inline;
+    cursor: pointer;
+    background-color: var(--color-grey-btn);
+    color: var(--color-white);
+    padding: 1.6rem 1.4rem;
+    border-radius: 0.5rem;
+}
+
+.navbar__item.navbar__search-item {
+    background-color: var(--color-white);
+    display: inline-block;
+    padding: 1.5rem 1rem;
+    margin: 0;
+    padding: 0;
+    margin-right: 2rem;
+}
+
+.navbar__subscribe {
+    background-color: var(--color-subscribe-btn);
+}
+
+.navbar__item.navbar__search-item > input {
+    font-size: 1.6rem;
+    padding: 1.5rem;
+    border: none;
+}
+
+.hero-section {
+    width: 100%;
+    height: 55rem;
+    position: relative;
+    background-image: url("../resources/images/hero-img2.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-sizing: border-box;
+}
+
+.hero-section__hero-image {
+    height: 580px;
+    width: 100%;
+
+}
+
+.hero-section__hero-caption {
+    background-color: var(--color--hero-section);
+    position: absolute;
+    bottom: 5rem;
+    width: 50%;
+    padding: 0 1rem;
+    font-weight: 700;
+    margin-left: 1rem;
+    border-radius: 0.5rem;
+} 
+
+.hero-caption__title {
+    font-size: 4rem;
+    color: var(--color--header);
+    margin-bottom: 0.7rem;
+}
+
+.hero-caption__content {
+    font-size: 1.3rem;
+    font-weight: 500;
+}
+
+.btn__read-article {
+    margin: 1rem 0;
+    padding: 1rem 1.5rem;
+    font-size: 1.7rem;
+    background-color: var(--color-read-article) ;
+    color: var(--color-white);
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.card__category {
+    display: inline-block;
+    border-radius: 0.5rem;
+    padding: 0.4rem 1rem;
+    margin-top: 1rem;
+    margin-bottom: 0.3rem;
+}
+.card__category.category-space {
+    background-color: #df8319;
+    color: var(--color-white);
+}
+
+.card__category.category-gaming {
+    background-color: #f00909;
+    color: var(--color-white);
+}
+
+.card__category.category-programming {
+    background-color: #19b126;
+    color: var(--color-white);
+}
+
+.card__category.category-emotion {
+    background-color: #d016e0;
+    color: var(--color-white);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+}
+
+.col-3 {
+    width: calc(3/12 * 100%);
+    margin-right: 2rem ;
+}
+
+.section__header {
+    color: var(--color--header);
+    font-size: 3rem;
+    margin: 1rem 0;
+}
+
+.card {
+    width: 100%;
+
+}
+
+.card__image {
+    width: 100%;
+    height: 200px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.card__title {
+    color: var(--color--header);
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 1rem 0;
+}
+
+.card__content {
+    font-size: 1.5rem;
+}
+
+#xbox {
+    background-image: url("../resources/images/xbox.webp");
+}
+
+#time {
+    background-image: url("../resources/images/time.webp");
+}
+
+#vbi {
+    background-image: url("../resources/images/vbi.webp");
+}
+
+#love {
+    background-image: url("../resources/images/love.webp");
+}
+
+.footer {
+    margin-top: 10rem;
+    width: 100%;
+    height: 100px;
+    background-color: var(--color-grey-dark);
+}
+
+.footer__header {
+    color: var(--color--hero-section);
+    padding-top: 1rem;
+    font-size: 1.4rem;
+}
