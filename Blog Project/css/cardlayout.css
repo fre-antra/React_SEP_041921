@@ -19,7 +19,7 @@
   }
 
   .card-footer{
-    margin-top: 40px;
+    margin-top: 80px;
     color: dodgerblue;
     text-decoration: underline;
 }
@@ -31,4 +31,8 @@
 .card-content-type-desgin{
     color: green;
     font-weight: bold;
+}
+
+.card-content-text{
+  margin-top: 5px;
 }
