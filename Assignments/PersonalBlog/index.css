@@ -119,6 +119,11 @@ ul{
     border: 1px solid rgb(238, 165, 81);
 }
 
+.continue {
+    font-weight: bold;
+    color: rgb(141, 27, 27);
+}
+
 /*ITEM PAGE*/
 .item-page {
     display: flex;
@@ -143,11 +148,12 @@ ul{
 .nav-item {
     text-align: right;
     font-size:20px;
-}
-.nav-item a {
-    text-decoration: none;
     font-weight: bold;
-    color: RED;
+    color: red;
+}
+.nav-item span:hover, .continue:hover {
+    cursor: pointer;
+    color: green;
 }
 .item-header h1 {
     font-size: 3em;
@@ -167,6 +173,10 @@ ul{
 }
 .about {
     background-color: rgb(240, 238, 226);
+}
+
+.hidden {
+    display: none;
 }
 
 @media (min-width: 768px) {

@@ -34,7 +34,7 @@ const blogs= [
     },
     {
         id: 2,
-        userId:1,
+        userId:3,
         category:"Travel",
         title:'Seoul',
         date: "Nov 12",
@@ -52,7 +52,7 @@ const blogs= [
     },
     {
         id: 4,
-        userId:1,
+        userId:4,
         category:"Travel",
         title:'Saigon',
         date: "Nov 12",
@@ -61,7 +61,7 @@ const blogs= [
     },
     {
         id: 5,
-        userId:1,
+        userId:2,
         category:"Health",
         title:'Cardiology',
         date: "Nov 11",
@@ -79,7 +79,7 @@ const blogs= [
     },
     {
         id: 7,
-        userId:1,
+        userId:2,
         category:"Health",
         title:'Healthy Lifestyle',
         date: "Nov 11",

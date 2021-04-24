@@ -1,5 +1,17 @@
-const item= blogs[0]
-const user=users[0]
+function renderSummary(obj){
+    return `
+    <div class="blog">
+        <ul class="blog-info">
+            <li class="blog-category">${obj.category}</li>
+            <li class="blog-title">${obj.title}</li>
+            <li class="blog-date">${obj.date}</li>
+        </ul>
+        <p class="blog-summary">
+                ${obj.summary}  
+        </p>
+        <span class="continue" id="continue-${obj.id}" onclick="showItem(event)">Continue Reading</span> 
+    </div>`
+}
 
 function renderDetails(obj){
     const {userId,title,date,content}= obj
@@ -28,10 +40,11 @@ function renderDetails(obj){
                 <p>${bodyIntro}</p>
                 ${html1}
             </div>
-            <div class='nav-item'> <a href="#home">BACK</></div>
+            <div class='nav-item'><span onclick="switchPage()">BACK</span></div>
         </div>
     `
 }
+
 function renderUserInfo(obj){
     const html1= archives.map(obj=>`<li><a href='/${obj.code}'>${obj.display}</a></li>`).join('');
     return `
@@ -54,16 +67,3 @@ function renderUserInfo(obj){
     
     `
 }
-
-(function renderLeftSide(){
-    const element= document.getElementById('left')
-    const html= renderDetails(item)
-    element.innerHTML = html
-
-})();
-
-(function renderRightSide(){
-    const element= document.getElementById('right')
-    const html= renderUserInfo(user)
-    element.innerHTML = html
-})()
