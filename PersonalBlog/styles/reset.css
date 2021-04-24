@@ -4,6 +4,22 @@
   box-sizing: border-box;
 }
 
+h1 {
+  font-size: 2rem;
+}
+
+button:focus {
+  outline: none;
+}
+
+input {
+  outline: none;
+}
+
+input:hover {
+  cursor: pointer;
+}
+
 .main-container {
   width: 60%;
   min-width: 800px;

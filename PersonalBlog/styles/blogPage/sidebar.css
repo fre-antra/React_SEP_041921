@@ -1,0 +1,39 @@
+.blog-sidebar {
+  flex-grow: 1;
+  max-width: 33%;
+}
+
+.blog-sidebar-item {
+  padding: 20px;
+  margin-bottom: 30px;
+}
+
+.blog-sidebar-item-title {
+  font-style: italic;
+  margin-bottom: 10px;
+
+}
+
+.blog-sidebar-about {
+  border-radius: 5px;
+  background-color: var(--background-grey-color);
+}
+
+.blog-sidebar-about-content {
+}
+
+.blog-sidebar-archives {
+  list-style: none;
+}
+
+.blog-sidebar-archives li {
+  padding: 2px 0;
+}
+
+.blog-sidebar-elsewhere {
+  list-style: none;
+}
+
+.blog-sidebar-elsewhere li {
+  padding: 2px 0;
+}

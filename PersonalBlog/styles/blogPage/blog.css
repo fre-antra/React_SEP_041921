@@ -1,13 +1,50 @@
+@import url('./sidebar.css');
+
 .blog-container {
   display: flex;
+  padding-top: 20px;
 }
 
 .blog-content {
   flex-grow: 2;
   max-width: 66%;
+  padding-right: 50px;
 }
 
-.blog-sidebar {
-  flex-grow: 1;
-  max-width: 33%;
+.blog-content header {
+  border-bottom: 1px solid var(--shadow-color);
+}
+
+.blog-header-date {
+  color: var(--font-grey-color);
+  padding: 10px 0;
+}
+
+.blog-header-description {
+  padding: 20px 0;;
+}
+
+.p-border {
+  border: 1px solid var(--shadow-color);
+  padding-bottom: 15px;
+}
+
+.blog-body p {
+  margin-top: 15px;
+  line-height: 1.2em;
+}
+
+.blog-body h1, .blog-body h2 {
+  margin-top: 15px;
+}
+
+code {
+  margin-top: 15px;
+  display: block;
+  border: 1px solid var(--shadow-color);
+}
+
+.blog-body ul, .blog-body ol {
+  margin: 15px 0 15px 40px;
+  line-height: 1.2em;
 }

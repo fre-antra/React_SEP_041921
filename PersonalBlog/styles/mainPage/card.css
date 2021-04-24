@@ -42,6 +42,10 @@
   color: var(--design-color);
 }
 
+.card-link {
+  width: fit-content;
+}
+
 @media (max-width:800px) {
   .card {
     width: 50%;

@@ -1,8 +1,8 @@
-nav {  
+nav {
   position: sticky;
   top: 0;
   border-bottom: 1px solid lightgray;
-  background-color: var(--shadow-color);
+  background-color: white;
 }
 
 .nav-container {
@@ -17,6 +17,10 @@ nav {
   margin-left: 20px;
 }
 
+.subscribe:hover {
+  cursor: pointer;
+}
+
 .header-title {
   text-decoration: underline;
 }
@@ -28,6 +32,11 @@ nav {
   color: var(--font-grey-color);
 }
 
-.subscribe, .search-button {
+.search-button :hover {
+  cursor: pointer;
+}
+
+.subscribe,
+.search-button {
   width: 65px;
 }
