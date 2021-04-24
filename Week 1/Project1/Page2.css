@@ -76,3 +76,44 @@ body {
   font-size: 0.8rem;
   color: var(--color-grey-dark);
 }
+
+.article-body{
+   display: flex;
+}
+
+/* Article Side */
+.article-side-title{
+   font-size: 1.6rem;
+   font-style: italic;
+}
+
+.about{
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 9%;
+   background-color: var(--color-grey-light);
+   padding: 3%;
+}
+
+.archives{
+   display: flex;
+   flex-direction: column;
+   margin-bottom: 9%;
+}
+
+.elsewhere{
+   display: flex;
+   flex-direction: column;
+}
+
+.about-detail{
+   font-size: 1.1rem;
+}
+
+.archives-date{
+   font-size: 1.1rem;
+}
+
+.elsewhere-link{
+   font-size: 1.1rem;
+}
