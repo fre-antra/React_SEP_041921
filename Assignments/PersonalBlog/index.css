@@ -1,5 +1,9 @@
 body {
-    padding:0px;
+    box-sizing: border-box;
+    position: relative;
+    padding-bottom: 50px;
+    min-height: 100vh;
+    margin:0;
 }
 
 .app_nav {
@@ -16,7 +20,15 @@ body {
 }
 .app_nav h1 {
     text-align: left;
+    font-size: 3em;
     width: 60% ;
+}
+.app_nav a {
+    text-decoration: none;
+    color: white;
+}
+.app_nav a:hover {
+    color: yellow; 
 }
 .app_nav button {
     padding: 10px;
@@ -32,18 +44,15 @@ body {
 main {
     margin-top: 150px;
 }
+section {
+    margin-bottom: 40px;
+}
 .app_footer{
-    position: relative;
-    margin-top: 50px;
+    position: absolute;
     bottom: 0; left: 0; right:0;
     height: 50px; padding: 15px;
     background-color:#283593; color: white;
     text-align: center; overflow: hidden;
-    /*
-    height: 75px;
-    margin-top: -75px;
-    overflow: hidden;
-    */
 }
 
 .app_footer div {
@@ -55,41 +64,46 @@ main {
 
 /*List style*/
 section h2 {
+    font-size: 2.5 em;
     padding: 10px;
 }
-.Travel h2 {
+#travel h2 {
     background-color: rgba(81, 203, 238, 1);
 }
-.Health h2 {
+#health h2 {
     background-color: rgb(238, 165, 81);
 }
 
 .list {
     display: flex;
-    justify-content: space-around;
     flex-wrap: wrap;
 }
 
 /*post styles*/
 .blog {
-    padding: 5px;
-    width: 30%;
-    height: 200px;
+    margin: 15px;padding: 5px;
+    width: 150px; height: 250px;
     box-shadow: 0 0 5px rgba(81, 203, 238, 1);
     border: 1px solid rgba(81, 203, 238, 1);
 }
 ul{
     list-style: none;
     padding-left: 0;
+    
+}
+.blog-info {
+    height: 100px;
 }
 .blog-category{
     font-weight: bold;
     color: green;
-    margin-bottom: 10px;
+   
 }
 .blog-title {
     font-weight: bold;
     font-size: 25px;
+    margin: 10px 0;
+    height: 50px;
 }
 .blog-date {
     color: gray;
@@ -103,4 +117,60 @@ ul{
 #healthList .blog {
     box-shadow: 0 0 5px rgb(238, 165, 81);
     border: 1px solid rgb(238, 165, 81);
+}
+
+/*ITEM PAGE*/
+.item-page {
+    display: flex;
+    justify-content: space-around;
+   
+}
+.item-page #left {
+    width: 70%;
+}
+.item-page #right {
+    width: 20%;
+}
+.item-page h2{
+    padding-left: 0;
+}
+
+/*LEFT*/
+.item-header {
+    margin-bottom: 50px;
+}
+
+.nav-item {
+    text-align: right;
+    font-size:20px;
+}
+.nav-item a {
+    text-decoration: none;
+    font-weight: bold;
+    color: RED;
+}
+.item-header h1 {
+    font-size: 3em;
+    color: rgb(143, 132, 69); 
+}
+.item-header p {
+    color: gray;
+
+}
+
+/*RIGHT*/
+#right {
+    display: none;
+}
+#right div {
+    padding: 15px;
+}
+.about {
+    background-color: rgb(240, 238, 226);
+}
+
+@media (min-width: 768px) {
+    #right {
+        display: block;
+    }
 }
