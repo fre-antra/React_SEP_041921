@@ -24,7 +24,7 @@ body {
   font-family: "Times New Roman", Times, serif;
 }
 
-.blog-container {
+.article-container {
   position: fixed;
   width: 100%;
   max-width: 50rem;
@@ -38,7 +38,6 @@ body {
 .hide {
   display: none;
 }
-
 
 .blog-header {
   display: flex;
@@ -73,60 +72,7 @@ body {
   padding: 2rem;
 }
 
-.footer{
-   font-size: 0.8rem;
-   color: var(--color-grey-dark);
-}
-
-.blog-row {
-  display: flex;
-  margin-bottom: 3%;
-}
-
-.blog-box {
-  border: 3px solid var(--color-grey);
-  padding: 1.2rem;
-  margin: 0.5rem;
-  width: 100%;
-}
-
-.blog-category-container {
-  margin-bottom: 3%;
-}
-
-.blog-world-category {
-  color: var(--color-world);
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-.blog-sport-category {
-  color: var(--color-sport);
-  font-size: 1.1rem;
-  font-weight: bold;
-}
-
-.blog-title {
-  font-size: 1.8rem;
-}
-
-.blog-date {
-  font-size: 1rem;
+.footer {
+  font-size: 0.8rem;
   color: var(--color-grey-dark);
-}
-
-.blog-content-container {
-  margin-top: 3%;
-}
-
-.blog-content {
-  font-size: 1rem;
-}
-
-.continue-reading-container {
-  margin-top: 12%;
-}
-
-.continue-reading {
-  font-size: 1rem;
 }
