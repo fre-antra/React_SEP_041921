@@ -1,0 +1,46 @@
+.blog-container > .blog-col-2 > .blog-col-2-2 {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+.blog-container > .blog-col-1 > p, .blog-container > .blog-col-1 > ul > li,
+.blog-container > .blog-col-1 > ol > li,.blog-container > .blog-col-2 > .blog-col-2-1 > p,
+.blog-container > .blog-col-2 > .blog-col-2-2 > a {
+    font-size: 12px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.blog-container > .blog-col-1 > #blog-date {
+    color: lightslategrey;
+}
+.blog-container > .blog-col-1 > #blog-col-1-p1 {
+    border: lightgrey solid 2px;
+}
+
+.blog-container > .blog-col-1 > #blog-col-1-p2 {
+    border: lightgrey solid 2px;
+    font-family: monospace;
+}
+
+.blog-container > .blog-col-2 > .blog-col-2-1 {
+    background-color: whitesmoke;
+    padding: 20px;
+    border-radius:5px;
+}
+.blog-container > .blog-col-2 > .blog-col-2-2 {
+    padding: 20px;
+}
+
+.blog-container > .blog-col-1 > #button-older {
+    border: solid lightskyblue 2px;
+    color: lightskyblue;
+    border-radius: 10px;
+    background: white;
+}
+.blog-container > .blog-col-1 > #button-newer {
+    border: solid lightgray 2px;
+    color: lightgray;
+    border-radius: 10px;
+    background: white;
+}
+

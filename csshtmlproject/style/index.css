@@ -1,3 +1,5 @@
+@import url("blog-container.css");
+
 body {
     height: 100%;
 }
@@ -6,9 +8,15 @@ body {
    display: flex;
    padding: 10px;
    justify-content: space-between;
+   justify-items: center;
    align-items: center;
    text-decoration: underline;
-   
+   position: fixed;
+   top:0;
+   width: 100%;
+   margin:auto;
+   background-color:whitesmoke;
+   border-radius: 10px;
 }
 
 .container {
@@ -16,6 +24,7 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
+    margin-top: 100px;
 }
 
 .box {
@@ -47,6 +56,7 @@ body {
     align-self: center;
     color: lightslategrey;
     
+    
 }
 
 .header-container->h1 {
@@ -60,6 +70,7 @@ img {
     flex: 0, 1, 50px;
     height: 20px;
     align-self: center;
+    margin-right:50px;
 }
 
 .footer-container {

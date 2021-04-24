@@ -1,0 +1,7 @@
+@import url("blog-cols.css");
+
+.blog-container {
+    margin-top: 100px;
+    display: flex;
+}
+

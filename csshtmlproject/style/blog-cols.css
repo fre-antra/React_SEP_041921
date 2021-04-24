@@ -1,0 +1,14 @@
+
+@import url("blog-col-content.css");
+
+.blog-container > .blog-col-1 {
+    flex: 3;
+    padding: 20px;
+}
+
+.blog-container > .blog-col-2 {
+    flex: 1;
+    flex-direction: column;
+    padding: 20px;
+}
+
