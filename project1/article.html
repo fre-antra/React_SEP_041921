@@ -39,16 +39,29 @@
         </p>
         <br />
         <hr />
-        <p>
-          Lorem ipsum is placeholder text commonly used in the graphic, print,
-          and publishing industries for previewing layouts and visual mockups.
-        </p>
+        <pre>
+        <code>
+        public static void main(String[] args)
+        {	final int NUM_FACTS = 100;
+          for(int i = 0; i < NUM_FACTS; i++)
+            System.out.println( i + "! is " + factorial(i));
+        }
+        
+        public static int factorial(int n)
+        {	int result = 1;
+          for(int i = 2; i <= n; i++)
+            result *= i;
+          return result;
+        }
+      
+        </code>
+        </pre>
         <br />
         <p class="border">
           Lorem ipsum is placeholder
           <span class="highlight">text</span> commonly used in the graphic,
-          print, and publishing industries for previewing layouts and visual
-          mockups.
+          print, and publishing industries for <span class="underline">previewing</span> layouts and visual
+          <span class="bold">mockups</span>.
         </p>
         <br>
         <h3>Heading 3</h3>
