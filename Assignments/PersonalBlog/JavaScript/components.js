@@ -30,7 +30,7 @@ function renderDetails(obj){
                 <div>
                     <h1>${title}</h1>
                 </div>
-                <p>${date} by <a href="/user-${userId}">${user.name}</a></p>
+                <p>${date} by <a href="/user-${userId}" target="_blank">${user.name}</a></p>
             </header>
             <div>
                 ${intro}
@@ -40,7 +40,11 @@ function renderDetails(obj){
                 <p>${bodyIntro}</p>
                 ${html1}
             </div>
-            <div class='nav-item'><span onclick="switchPage()">BACK</span></div>
+            <div class='nav-item'>
+                <span onclick="switchPage()">
+                    BACK <i class="fa fa-arrow-circle-left"></i>
+                </span>
+            </div>
         </div>
     `
 }
@@ -58,12 +62,11 @@ function renderUserInfo(obj){
         </div>
         <div>
             <h2>Elsewhere</h2>
-            <ul>
-                <li><a href="http://${obj.github}">GitHub</a></li>
-                <li><a href="http://${obj.twitter}">Twitter</a></li>
-                <li><a href="http://${obj.linkedin}">LinkedIn</a></li>
-            </ul>
+            <div class="social-accounts">
+                <a href="http://${obj.github}" target="_blank"><i class="fa fa-github"></i></a>
+                <a href="http://${obj.twitter}" target="_blank"><i class="fa fa-twitter"></i></a>
+                <a href="http://${obj.linkedin}" target="_blank"><i class="fa fa-linkedin"></i></a>
+            </div>
         </div>
-    
     `
 }
