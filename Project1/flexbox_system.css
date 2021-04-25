@@ -37,7 +37,6 @@ Responsive homemade grid system
 .col-6 {
     flex: 0 0 calc(6/12 * 100%);
     max-width: calc(6/12 * 100%);
-
 }
 
 .col-8 {
@@ -96,6 +95,10 @@ Responsive homemade grid system
     }
     .row{
         flex-direction: column;
+    }
+    .col-6, .col-8, .col-12 {
+        flex: 0 0 calc(12/12 * 100%);
+        max-width: calc(12/12 * 100%);
     }
 }
 
