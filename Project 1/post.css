@@ -1,3 +1,7 @@
+body  {
+    background-color: #628a565b;
+}
+
 .postMain {
     width: 80%;
     margin-left: auto;
@@ -46,7 +50,7 @@
     font-size: 15px;
     margin: 4px 2px;
     cursor: pointer;
-    border: 2px solid #ccc;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: 8px;
   }
 
