@@ -5,7 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="homepage.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="footer.css">
 </head>
 
 <body>
@@ -21,13 +23,22 @@
         </div>
     </header>
 
-    <main class="main">
+    <div class="homeMain">
+        <div class="homeNavbar">
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#blogs">Blogs</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
         <div class="flex-inline">
             <div class="card">
-                <div>
+                <div class="abc">
                     <p class="blogCatagory" id="world">World</p>
                     <p class="blogTitle">Example Blog Post</p>
                     <p class="blogDate">Nov 12</p>
+                    <img class="blogImage" src="https://imgix.bustle.com/uploads/getty/2020/11/2/7742c579-b034-4390-a2b1-db8b23f27d2a-getty-1283240602.jpg?w=1020&h=576&fit=crop&crop=faces&auto=format%2Ccompress" alt="Kitty">
                     <p class="blogAbstract">This card represents an example blog post.</p>
                 </div>
                 <div>
@@ -39,6 +50,7 @@
                     <p class="blogCatagory" id="design">Design</p>
                     <p class="blogTitle">Post Title</p>
                     <p class="blogDate">Nov 11</p>
+                    <img class="blogImage" src="https://imgix.bustle.com/uploads/getty/2020/11/2/7742c579-b034-4390-a2b1-db8b23f27d2a-getty-1283240602.jpg?w=1020&h=576&fit=crop&crop=faces&auto=format%2Ccompress" alt="Kitty">
                     <p class="blogAbstract">This is a wider card with supporting text below as a natural lead-in to addtion content.</p>
                 </div>
                 <div>
@@ -94,7 +106,7 @@
                 </div>
             </div>
         </div>
-    </main>
+    </div>
 
     <footer class="footer">
         <p>Designed by Xing_React_04_19_2021</p>

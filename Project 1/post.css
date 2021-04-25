@@ -1,0 +1,82 @@
+.postMain {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.postBlog {
+    width: 68%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+}
+
+.postAuthor {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.postDate {
+    color: rgb(129, 121, 112);
+}
+
+.postCard {
+    width: 100%;
+    display: inline-block;
+    border: 2px solid #ccc;
+}
+
+.postInput {
+    width: 100%;
+    display: inline-block;
+}
+
+.postContent {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+}
+
+.postButton {
+    color: rgb(107, 105, 105);
+    padding: 6px 6px;
+    text-align: center;
+    display: inline-block;
+    font-size: 15px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+  }
+
+.postSides {
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content:flex-start;
+    font-size: 12px;
+    
+}
+
+.postSidesTitle {
+    font-style: italic;
+    font-size: 15px;
+    margin: 5px 0px;
+}
+
+.postSidesAbout {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 8px;
+}
+
+.postSidesArchives {
+    padding: 8px;
+}
+
+.postSidesElsewhere {
+    padding: 8px;
+}
+
+
