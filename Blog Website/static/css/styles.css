@@ -60,11 +60,15 @@ html {
 }
 
 .footer {
-    height: 30px;
+    height: 40px;
     background-color: gainsboro;
-    justify-content: space-around;
     margin-top: .5rem;
-    padding-top: .6rem;
+    padding: .2rem;
+    flex-direction: column;
+    align-items: center;
+}
+.footer > * {
+    margin-bottom: 0;
 }
 
 .title {
@@ -118,6 +122,9 @@ html {
     background-color: white;
 }
 
+.link-home {
+    text-decoration:none;
+}
 
 /* RESPONSIVE BREAKPOINTS*/
 @media all and (min-width: 0px){ 
