@@ -24,5 +24,5 @@ This repo containes files for project 1 - personal blog.
 ### Homepage - responsive at 1200px and 800px
 ![homepage](https://github.com/fre-antra/React_SEP_041921/blob/by_nao/hw/blog-assignment/asset/home-narrow.png "homepage narrow")
 
-Post page - responsive at 900px
+### Post page - responsive at 900px
 ![post](https://github.com/fre-antra/React_SEP_041921/blob/by_nao/hw/blog-assignment/asset/post-narrow.png "post narrow")
