@@ -34,7 +34,7 @@ p{
     text-decoration: underline;
     color: gray;
     margin-top: 30px;
-    margin-left: 320px;
+    margin-left: 180px;
   }
 footer{
   background-color: rgb(223, 221, 221);
@@ -54,13 +54,11 @@ footer{
   list-style: none;
   float: left;
 }
-
 .nav-bar-list a{
   display: block;
   color: white;
-  text-align: center;
   padding: 14px 16px;
-  text-decoration: none;
+  text-decoration: none; 
 }
 .nav-bar ul{
   list-style-type: none;
@@ -68,7 +66,6 @@ footer{
   padding: 0;
   overflow: hidden;
   background-color: #333;
-  text-align: center;
 }
 .sub-heading-content{
   padding-bottom: 100px;
