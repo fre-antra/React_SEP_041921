@@ -1,0 +1,135 @@
+/* Default style for mobile screen */
+.navbar {
+  background-color: var(--color-grey-dark);
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.navbar__logo {
+  font-size: 2.8rem;
+  margin-left: 2rem;
+  color: var(--color-white);
+  text-align: center;
+}
+
+.navbar__list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+.navbar__item {
+  padding: 1.5rem 0;
+  font-size: 2rem;
+  background-color: var(--color-grey-btn);
+  color: var(--color-white);
+  text-align: center;
+  cursor: pointer;
+}
+
+.navbar__item a {
+  padding: 1.5rem 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.navbar__item:hover {
+  opacity: 0.75;
+  transition: all 0.3s;
+}
+
+.navbar__subscribe {
+  background-color: var(--color-subscribe-btn);
+}
+
+.navbar__search-item {
+  background-color: var(--color-white);
+  align-self: stretch;
+  display: flex;
+}
+
+.navbar__search-item form {
+  padding: 1.5rem 0;
+  display: inline-block;
+  width: 100%;
+}
+
+.navbar__search-item input {
+  font-size: 1.6rem;
+  padding: 1rem 0;
+  display: inline-block;
+  width: 100%;
+
+  text-align: center;
+}
+
+.navbar__search-icon {
+  height: 2rem;
+  background-color: transparent;
+  display: none;
+}
+
+/* For bigger screen */
+@media screen and (min-width: 760px) {
+  .navbar {
+    background-color: var(--color-grey-dark);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar__logo {
+    font-size: 4rem;
+  }
+
+  .navbar__list {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .navbar__item {
+    font-size: 2.5rem;
+    font-weight: 400;
+    margin: 0 0.5rem;
+    padding: 0.7rem 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 0.5rem;
+  }
+
+  .navbar__item a {
+    display: inline-block;
+    padding: 0.7rem 1.5rem;
+  }
+
+  .navbar__search-item {
+    margin-right: 2rem;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-white);
+  }
+
+  .navbar__search-item input {
+    min-width: 20rem;
+    font-size: 2.5rem;
+    text-align: left;
+    border: none;
+  }
+
+  .navbar__search-icon {
+    background-color: transparent;
+    color: white;
+    border: none;
+    display: block;
+  }
+}
