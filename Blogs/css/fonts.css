@@ -1,0 +1,126 @@
+/* Header and footer*/
+
+
+h1{
+    font-size: 25px;
+    text-decoration: underline;
+    color: rgb(39, 114, 158);
+}
+
+a{
+    color: rgb(137, 147, 158);
+}
+
+header{
+    color:rgb(37, 55, 110);
+}
+
+.footer{
+    font-size: 12px;
+    color: rgb(116, 128, 184);
+    font-family: Helvetica;
+}
+
+
+/* Blog homepage */
+
+.section-name{
+    color: rgb(38, 152, 228);
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.section-secname{
+    color: rgb(108, 168, 121);
+    font-family: Arial;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.post-title{
+    font-size: 20px;
+}
+
+.date{
+    font-family:Arial;    
+    font-size: 11px;
+    color: rgb(168, 164, 189);
+
+}
+
+.post{
+    font-family:Arial;    
+    font-size: 10px;
+}
+
+
+/* blogs */
+
+.catalogy{
+    font-size: 14px;
+    font-family: Times;   
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(16, 77, 146);
+}
+
+
+.heading{
+    font-family: Times; 
+    font-size: 18px;   
+    font-weight: bold;
+}
+
+.sub-heading{
+    font-family: Times; 
+    font-size: 15px;   
+    font-weight: bold;
+}
+
+
+.bio{
+    font-size: 11px;
+    font-family: Helvetica;
+    color: rgb(132, 132, 172);
+}
+
+.date-name{
+    font-size: 11px;
+    font-family: Helvetica;
+    color: lightgrey;
+}
+
+.intro{
+    color: rgb(109, 128, 163);
+    font-size: 11px;
+    font-family: sans-serif;
+    font-style: italic;
+}
+
+.contents{
+    font-size: 11px;
+    font-family: Helvetica;
+    color:rgb(71, 97, 122);
+}
+
+.imgcap{
+    font-size: 9.5px;
+    font-style: italic;
+    color: rgb(185, 197, 209);
+}
+
+
+.achieve{
+    font-size: 11px;
+}
+
+.else{
+    font-size: 11px;
+}
+
+.ref{
+    font-style: italic;
+    font-size: 11px;
+    font-family: Times;
+}

@@ -1,0 +1,91 @@
+
+.blog-container{
+    display: flex;
+    flex-direction: row;
+    padding-right: 5%;
+    padding-left: 5%;
+    margin-bottom: 60px;
+}
+
+.blog-content{
+    margin-top: 0px;
+    padding:2%;
+}
+
+.bio{
+    border: 1px solid lightgrey;;
+    border-radius: 3px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding:1%
+}
+
+.airtag{
+    width: 25%;
+}
+
+
+.pics{
+    display: flex;
+    flex-direction: row;   
+    justify-content: space-between;
+}
+.pic{
+    width: 30%;
+    height: 30%;
+}
+.imgcap{
+    padding-bottom: 10px;
+}
+.contents{
+    padding-bottom: 2%;
+}
+
+.ref{
+    padding-top: 6%;
+}
+
+.nearest-access{
+    padding-top: 5%;
+}
+
+.others{
+    margin-top: 0px;
+    width: 80%;
+    padding: 2%;
+}
+
+.about{
+    padding-bottom: 20px;
+    background-color: rgb(233, 244, 250);
+    padding: 15px;
+
+    
+}
+
+.achieve{
+    padding-top: 20px;
+    white-space: pre-line;
+}
+
+.else{
+    padding-top: 20px;
+    white-space: pre-line;
+}
+
+
+
+.older{
+    color: lightskyblue;
+    background-color: white;
+    border: 1px solid lightskyblue;
+    border-radius: 10px;
+}
+
+.newer{
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    background-color: white;
+    color: lightgrey;
+}
+
