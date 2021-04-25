@@ -14,5 +14,6 @@ This repo containes files for project 1 - personal blog.
 ## Responsive design
 
 Homepage - responsive at 1200px and 800px
+
 Post page - responsive at 900px
 
