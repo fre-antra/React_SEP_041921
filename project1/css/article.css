@@ -1,0 +1,52 @@
+.article-main {
+  margin-top: 40px;
+  margin-bottom: 40px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.article-left {
+  width: 800px;
+}
+.article-right {
+  display: flex;
+  flex-direction: column;
+}
+.article-right>*{
+    padding: 20px;
+}
+.article-links-block {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 10px;
+}
+.article-about {
+  background-color: gainsboro;
+  width: 250px;
+  text-align: justify;
+  margin-bottom: 10px;
+}
+.article-about > * {
+  margin: 10px auto;
+}
+.italic h3 {
+  font-style: italic;
+}
+.border {
+  border-style: solid;
+  border-width: 2px;
+}
+.highlight {
+  background: coral;
+  color: white;
+}
+
+.list {
+  padding: revert;
+}
+
+@media (max-width:800px) {
+    .article-left{
+        margin:auto 10vw;
+    }
+}

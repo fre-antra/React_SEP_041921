@@ -2,10 +2,9 @@ footer{
     display: flex;
     height: 80px;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-evenly;
     align-items: center;
     background-color: aquamarine;
-    padding-top: 30px;
 }
 
 .copyright{

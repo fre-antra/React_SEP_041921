@@ -4,7 +4,7 @@
   border-radius: 2em;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
-  font-weight: 300;
+  font-size: 0.6rem;
   color: #ffffff;
   background: var(--color-btn);
   text-align: center;
@@ -16,7 +16,6 @@
 }
 /* @media all and (max-width: 30em) {
   .btn-subscribe {
-    display: block;
     margin: 0.2em auto;
   }
 } */
