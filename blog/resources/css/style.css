@@ -1,0 +1,86 @@
+@import "nav.css";
+@import "footer.css";
+@import "blogpage.css";
+
+:root {
+  --main-grey: #d3d3d3;
+  --main-blue: #0066ff;
+  --main-green: #009900;
+  --secondary-grey: lightgrey;
+}
+
+.blue {
+  color: var(--main-blue);
+}
+
+.green {
+  color: var(--main-green);
+}
+
+main {
+  width: 80%;
+  margin: auto;
+}
+
+/* --------------CONTAINER & CARD------------------------------------- */
+
+.container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 3%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 250px;
+  flex: 0 1 47%;
+  margin-bottom: 5%;
+  position: relative;
+}
+
+.card span {
+  display: block;
+  padding-left: 4%;
+  padding-right: 25%;
+}
+
+.card-category {
+  font-weight: bold;
+  padding: 3% 0;
+}
+
+.card-date {
+  color: grey;
+  padding-bottom: 1.5%;
+}
+
+.card-title h2 {
+  font-size: 1.6em;
+  margin: 0;
+}
+
+span:last-child {
+  position: absolute;
+  bottom: 10%;
+}
+
+/* --------------SMALL SCREEN------------------------------------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 760px) {
+  .card {
+    flex: 0 1 100%;
+  }
+  #left-container {
+    flex: 0 1 55%;
+  }
+
+  #right-container {
+    flex: 0 1 42%;
+  }
+
+  .button {
+    padding: 0.3em 0.4em;
+  }
+}
