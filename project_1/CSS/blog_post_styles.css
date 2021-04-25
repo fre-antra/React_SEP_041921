@@ -1,0 +1,109 @@
+@import url(main_styles.css);
+
+.main-container {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 4rem;
+}
+
+.page-container {
+  max-width: 90rem;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 12px;
+}
+
+h1 {
+  font-size: 35px;
+}
+
+.article-date {
+  color: var(--card-date-color);
+  margin-bottom: 20px;
+}
+
+h2,
+h3 {
+  margin-top: 20px;
+}
+
+h3 {
+  font-size: 20px;
+}
+
+.my-10 {
+  margin: 10px 0;
+}
+
+ul {
+  margin-left: 40px;
+  margin-top: 10px;
+}
+
+ol {
+  margin-left: 40px;
+  margin-bottom: 10px;
+}
+
+hr {
+  border: 1px solid var(--card-border);
+  margin: 20px 0;
+}
+
+.btn-wrapper {
+  margin-top: 40px;
+}
+
+button {
+  padding: 8px;
+  border-radius: 20px;
+  background-color: white;
+  outline: none;
+}
+
+.older {
+  border: 1px solid rgb(0, 68, 255);
+  color: rgb(0, 68, 255);
+}
+
+.newer {
+  border: 1px solid gray;
+  color: gray;
+}
+
+aside h3 {
+  font-style: italic;
+}
+
+aside a {
+  display: block;
+}
+
+.about h3 {
+  margin-top: 0;
+}
+
+.about {
+  background-color: var(--white-grey);
+  padding: 10px;
+}
+
+.archives {
+  margin: 40px 0;
+}
+
+.bordered-box {
+  border: 1px solid var(--card-border);
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 600px) {
+  .main-container {
+    grid-template-columns: 1fr;
+  }
+
+  .mobile-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

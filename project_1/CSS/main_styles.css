@@ -1,3 +1,10 @@
+:root {
+  --blue: rgb(0, 68, 255);
+  --card-date-color: rgb(148, 148, 148);
+  --white-grey: rgb(219, 219, 219);
+  --card-border: rgb(233, 233, 233);
+}
+
 *,
 *::before,
 *::after {
@@ -8,6 +15,15 @@
 
 html {
   font-size: 62.25%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Times New Roman", Times, serif;
 }
 
 body {
@@ -22,7 +38,7 @@ body {
 }
 
 .app-container {
-  max-width: 70rem;
+  max-width: 80rem;
   width: 100%;
   margin: 0 auto;
 }
@@ -35,23 +51,24 @@ body {
   padding: 1rem;
   background-color: transparent;
   z-index: 1;
+  margin: 40px 0 60px;
 }
 
-#navbar > *{
+#navbar > * {
   width: 33.33%;
 }
 
-.navbar__header{
+.navbar__header {
   text-align: center;
 }
 
-.navbar__header .heading{
+.navbar__header .heading {
   text-decoration: underline;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: "Times New Roman", Times, serif;
   font-size: 4rem;
 }
 
-.navbar__icon{
+.navbar__icon {
   text-align: right;
 }
 
@@ -59,23 +76,22 @@ body {
   width: 20px;
 }
 
-.card-date{
-  color: rgb(148, 148, 148);
+.card-date {
+  color: var(--card-date-color);
   font-size: 13px;
   margin-bottom: 4px;
 }
 
-.card-row {
-  display: flex;
-  flex-direction: row;
+.card__container {
+  display: grid;
   flex-wrap: wrap;
-  width: 100%;
+  grid-gap: 12px 1.5%;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 12px;
 }
 
-.card-column {
-  width: 47%;
-  margin: 12px 1.5%;
-  border: 4.5px solid rgb(233, 233, 233);
+.card {
+  border: 4.5px solid var(--card-border);
   padding: 16px 12px;
 }
 
@@ -86,7 +102,7 @@ body {
 }
 
 .card-item.left .card__header {
-  color: rgb(0, 68, 255);
+  color: var(--blue);
 }
 
 .card-item.right .card__header {
@@ -100,19 +116,14 @@ body {
 footer {
   display: flex;
   flex-direction: column;
-  background-color: rgb(206, 206, 206);
+  background-color: var(--white-grey);
   align-items: center;
   padding: 25px 0 15px 0;
+  margin: 40px 0px 50px;
 }
 
 @media (max-width: 600px) {
-  .card__container .card-row {
-    flex-direction: column;
-  }
-
-  .card-column {
-    width: 100%;
-    margin: 12px auto;
-    max-width: 350px;
+  .card__container {
+    grid-template-columns: 1fr;
   }
 }
