@@ -14,7 +14,7 @@ This repo containes files for project 1 - personal blog.
 ## Demo
 
 Home
-[!homepage](blog-assignment/asset/home-wide.png)
+[homepage](!blog-assignment/asset/home-wide.png)
 
 ## Responsive design
 
