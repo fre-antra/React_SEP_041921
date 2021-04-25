@@ -1,0 +1,7 @@
+/* Variables */
+@import url("../common/variables.css");
+
+/* Typography */
+@import url("../common/format.css");
+
+@import url("blog-details.css");
