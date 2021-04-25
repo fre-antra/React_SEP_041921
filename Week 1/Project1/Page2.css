@@ -9,20 +9,23 @@
 *,
 *::before,
 *::after {
-  margin: 0;
+  margin: 2;
   padding: 0;
   box-sizing: inherit;
 }
 
 html {
   font-size: 62.25%; /*regular font size = 16*/
+
 }
 
 body {
   font-size: 1.6rem;
   box-sizing: border-box;
   font-family: "Times New Roman", Times, serif;
+  overflow: scroll
 }
+≥
 
 .article-container {
   position: fixed;
@@ -235,4 +238,18 @@ hr {
    color: var(--color-grey-dark);
    border: 1.5px solid;
    cursor: pointer;
+}
+
+@media(max-width: 600px){
+   .article-container{
+      flex-direction: column;
+   }
+
+   .article-main{
+      flex-direction: column;
+   }
+
+   .article-side{
+      flex-direction: column;
+   }
 }
