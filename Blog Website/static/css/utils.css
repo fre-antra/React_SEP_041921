@@ -1,0 +1,85 @@
+/* POSITIONING  */
+.corner-right {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+.img {
+    width: 100px;    
+}
+
+/* FONT-SIZE */
+
+/* Responsive font size between 12px-20px */
+body {
+    font-size: calc(12px + (22 - 12) * ((100vw - 570px) / (1200 - 570)));
+}
+
+.font-xs {
+    font-size: 0.6rem;
+}
+
+.font-small {
+    font-size: 0.8rem;
+}
+
+.flexbox {
+    display: flex;    
+    vertical-align: middle;
+}
+
+.sticky {
+    position:-webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.border {
+    border: 1px solid var(--grayscale);
+    width: 100%;
+}
+
+.text-left {
+    text-align: left;
+    width: 100%;
+}
+
+.bg-gray {
+    background-color:rgb(240, 236, 236);
+}
+
+/* PADDING & MARGIN */
+.pl-1 {
+    padding-left: 10vh;
+}
+.pl-2 {
+    padding-left: 11vh;
+}.pl-3 {
+    padding-left: 12vh;
+}.pl-4 {
+    padding-left: 13vh;
+}.pl-5 {
+    padding-left: 14vh;
+}
+.ml-1 {
+    margin-left: 10vh;
+}
+.ml-2 {
+    margin-left: 11vh;
+}.ml-3 {
+    margin-left: 12vh;
+}.ml-4 {
+    margin-left: 13vh;
+}.ml-5 {
+    margin-left: 14vh;
+}

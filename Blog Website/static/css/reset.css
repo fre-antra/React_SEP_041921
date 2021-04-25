@@ -22,11 +22,13 @@ hr {
 h1, h2, h3, h4, h5, h6 {
     margin-top: 0;
     margin-bottom: 0.5rem;
+    padding: 0.2rem;
     }
 
-p {
+p, ul, ol, pre {
     margin-top: 0;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
+    padding: 0.2rem;
     }
 html, body, div, form, fieldset, legend, label
     {
@@ -45,9 +47,12 @@ th, td
     text-align: left;
     vertical-align: top;
     }
-    
-h1, h2, h3, h4, h5, h6, th, td, caption { font-weight:normal; }
-    
+   
 img { border: 0; }
     
 input, select {vertical-align: middle;}
+
+a {
+    color: var(--primary);
+    margin: 0.1rem;
+}
