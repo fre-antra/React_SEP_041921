@@ -1,25 +1,35 @@
 @import url('https://fonts.googleapis.com/css2?family=Orelega+One&family=Oswald:wght@200&display=swap');
 
 header {
+    max-width: 900px;
+    display: flex;  
+    align-items: center;
+    padding: 20px;
+    margin: auto;
     font-family: 'Orelega One', cursive;
-    height: 100px;
-    display: flex;
-    min-width: 900px;
+}
 
+header a {
+    padding: 20px;
+    text-decoration: none;
 }
 
 #subscribe {
-    width: 10%;
-    font-size: 20px;
-    color: grey;
+    width: 20%;
+    float: left;
 }
 
-h1 {
-    width: 70%;
+header h1 {
+    width: 50%;
     text-align: center;
 }
 
 img {
-    width: 15%;
-    height: 30%;
+    width: 30px;
+    height: 30px;
+    padding: 20px;
+}
+
+header a:visited {
+    color: black;
 }

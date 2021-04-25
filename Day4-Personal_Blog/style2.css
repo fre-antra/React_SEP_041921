@@ -1,12 +1,9 @@
 
 /* Header */
 @import url('./css/header.css');
-
-/* Footer */
+@import url('./css/main.css');
+@import url('./css/aside.css');
 @import url('./css/footer.css');
-
-/* Container */
-@import url('./css/container.css');
 
 * {
     padding: 0;
@@ -14,20 +11,22 @@
 }
 
 @media (max-width: 700px) {
+
     header {
         display: block;
         width: 100%;
         float: none;
     }
 
-    .container-row {
-        display: block;
-        padding: 0;
 
-    }
-    
-    [class ^= "container-box"] {
-        padding: 0px;
+    main {
+        float: none;
         width: 100%;
-    }   
+    }
+
+    aside {
+        float: none;
+        width: 100%;
+        padding: 20px;
+    }
 };

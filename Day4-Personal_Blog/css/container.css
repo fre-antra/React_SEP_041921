@@ -1,29 +1,46 @@
 @import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
 
-.container {
-    min-width: 900px;
-    height: 1000px;
+body {
+    max-width: 900px;
+    margin: auto;
     font-family: 'Lora', serif;
 }
+
+.container {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
 .container-row {
     display: flex;
     width: 90%;
-    height: 30%;
-
+    padding: 30px;
 }
-.container-box {
+
+.container-box1 {
     border-width: 5px;
     border-style: groove;
     border-radius: 10px;
-    display: block;
-    width: 46%;
-    height: 80%;
+    width: 370px;
+    transition: box-shadow .3s;   
+    margin: 5px;
+    padding-bottom: 10px;
 }
 
-.container-box:hover {
-    outline: 0;
-    border-color: #000000;
-    box-shadow: 0 0 0 1px rgba(0, 123, 255, .5);
+.container-box2 {
+    border-width: 5px;
+    border-style: groove;
+    border-radius: 10px;
+    width: 370px;
+    transition: box-shadow .3s;
+    margin: 5px;
+    padding-bottom: 10px;
+}
+
+[class^="container-box"]:hover {
+    outline: none;
+    border-radius: 10px;
+    box-shadow: 0 0 11px rgba(33,33,33,.2);
 }
 
 #typeWorld {
@@ -49,5 +66,14 @@
 }
 
 #description {
+    margin: 15px 30px 20px 30px;
+}
+
+#reading {
     margin: 40px 30px 20px 30px;
+    text-decoration: none;
+}
+
+.container a:visited {
+    color: black;
 }

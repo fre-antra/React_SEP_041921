@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora&display=swap');
+
+body {
+    max-width: 900px;
+    margin: auto;
+    font-family: 'Lora', serif;
+}
+
+section {
+    padding: 20px;   
+}
+
+main {
+    float: left;
+    width: 70%;
+}
+
+#date {
+    color: grey;
+}
+
+#row {
+    padding-top: 20px;
+}
+
+.postRouter {
+    padding: 20px;
+}
+
+input {
+    box-sizing: border-box;
+    padding: 10px;
+    text-align: center;
+    background-color:#FFFFFF;
+    border-radius: 20px;
+    border-color:#6495ED;
+    color: #6495ED;
+    outline: none;
+    cursor: pointer;
+}
+
+input:focus {
+    background-color: #F0F8FF;
+}
+
+main p {
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+}
