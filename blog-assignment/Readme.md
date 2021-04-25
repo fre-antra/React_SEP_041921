@@ -5,5 +5,5 @@ This repo containes files for project 1 - personal blog
   * [homepage](https://github.com/fre-antra/React_SEP_041921/blob/by_nao/hw/blog-assignment/html/blog-assignment.html)
   * [post](https://github.com/fre-antra/React_SEP_041921/blob/by_nao/hw/blog-assignment/html/blog-post.html)
 * css
- * [homepage](https://github.com/fre-antra/React_SEP_041921/tree/by_nao/hw/blog-assignment/css/homepage)
- * [post](https://github.com/fre-antra/React_SEP_041921/tree/by_nao/hw/blog-assignment/css/post)
+  * [homepage](https://github.com/fre-antra/React_SEP_041921/tree/by_nao/hw/blog-assignment/css/homepage)
+  * [post](https://github.com/fre-antra/React_SEP_041921/tree/by_nao/hw/blog-assignment/css/post)
