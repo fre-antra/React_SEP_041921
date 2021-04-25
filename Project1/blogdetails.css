@@ -1,0 +1,65 @@
+/* 
+Contains styling for blog details page
+
+*/
+
+/* Root Variables */ 
+@import url("./root.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+.about {
+    background-color: var(--color-super-light);
+}
+
+/* Spans for block details*/  
+.snippet {
+    padding: 3px;
+    border: solid 3px rgba(0,0,0, 0.1);
+}
+
+/* In requirement - Codeblock + Snippet. Snippet have margin bottom but same text. Codeblock has different font*/
+.codeblock {
+    padding: 3px;
+    font-family: 'Roboto', sans-serif;
+    border: solid 3px rgba(0,0,0, 0.1);
+    margin-bottom: 15px;
+}
+
+.byline {
+    display: block;
+    color: var(--color-light);
+    margin-bottom: 1.5rem;
+}
+
+/* Buttons for Blogs Navigation */
+
+a.btn {
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    border-radius: 1.5rem;
+    border: 1px solid;
+    box-shadow: 1px 1px 1px 0 rgba(0,0,0, 0.1);
+    background-color: white;
+    padding: 0.5rem 1rem;
+}
+
+a.btn-primary {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+a.btn-primary:hover{
+    background-color: var(--color-primary);
+    color: white;
+}
+
+a.btn-secondary {
+    border-color: var(--color-light);
+    color: var(--color-light);
+}
+
+a.btn-secondary:hover{
+    background-color: var(--color-light);
+    color: white;
+}

@@ -13,6 +13,9 @@
 /* Typography */ 
 @import url("./typography.css");
 
+/* Blog Details Page */
+@import url("./blogdetails.css");
+
 html {
     font-size: 62.25%; 
 }
@@ -25,13 +28,13 @@ html {
 
 body {
     font-size: 1.6rem;
-    line-height: 1.5;
     font-family: "PT Serif", sans-serifs;
     text-align: left;
 }
 
 h1, h2, h3, h4, h5, h6 {
     font-family: "Fira Sans", sans-serif;
+    margin-bottom: 0.5rem;
 }
 
 h1 {
@@ -46,6 +49,14 @@ h3 {
     font-size: 2.5rem;
 }
 
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
 /* Card Styling */
 .card {
     border: solid 3px rgba(0,0,0, 0.1);
@@ -70,6 +81,22 @@ h3 {
 .card-text {
     min-height: 40px;
     margin-bottom: auto;
+}
+
+/* Link Styling - Lighter Blue */
+a {
+    color: var(--color-link);
+} 
+
+/* List Styling */ 
+
+ul, ol {
+    list-style-position: inside;
+    margin-bottom: 15px;
+}
+
+li {
+    padding-left: 1rem;
 }
 
 /* Header Styling */

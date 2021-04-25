@@ -19,3 +19,22 @@
 .underline {
     text-decoration: underline;
 }
+
+.italic {
+    font-style: italic;
+}
+
+/* Background */
+
+.bg-superlight {
+    background-color: var(--color-super-light);
+}
+.bg-ultralight {
+    background-color: var(--color-ultra-light);
+}
+
+/* List */
+
+.list-undecorated {
+    list-style-type: none;
+}

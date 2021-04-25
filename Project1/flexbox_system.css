@@ -21,6 +21,12 @@ Responsive homemade grid system
     margin-bottom: 15px;
 }
 
+/* Column */
+.column {
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
 /* Column - Only 4, 6 and 8 implemented for this blog */
 .col-4 {
     flex: 0 0 calc(4/12 * 100%);
@@ -39,8 +45,13 @@ Responsive homemade grid system
     max-width: calc(8/12 * 100%);
 }
 
+.col-12 {
+    flex: 0 0 calc(12/12 * 100%);
+    max-width: calc(12/12 * 100%);
+}
+
 /* Column Padding */
-.col-4, .col-6, .col-8 {
+.col-4, .col-6, .col-8, .col-12 {
     width: 100%;
     position: relative;
     padding-right: 15px;
@@ -64,6 +75,13 @@ Responsive homemade grid system
 .justify-content-end {
     justify-content: flex-end;
 }
+
+/* Padding */
+
+.padding {
+    padding: 1rem;
+}
+
 
 /* Responsiveness */
 @media (max-width: 576px){
