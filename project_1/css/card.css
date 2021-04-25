@@ -27,6 +27,6 @@
 }
 
 .card__summary {
-  height: 40px;
+  height: 80px;
   overflow: auto;
 }

@@ -5,11 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fanwood+Text&family=Libre+Caslon+Text&display=swap"
+      rel="stylesheet"
+    />
     <title>My blog post</title>
   </head>
   <body>
     <nav class="nav">
-      <div class="nav__item--sub">Subscribe</div>
+      <div class="nav__item--sub"><a href="#">Subscribe</a></div>
       <div class="nav__item--title"><h1>My Food Court</h1></div>
       <div class="nav__item">
         <label for="search">
@@ -23,10 +28,137 @@
         </label>
       </div>
     </nav>
-    <div class="container">
-      <!-- <div class="col-8">Main content</div>
 
-      <aside class="col-4">Side bar</aside> -->
+    <div class="container-row">
+      <div class="blog-container row">
+        <main class="blog-body col-8">
+          <header>
+            <h1 class="card__title">Curd rice</h1>
+            <p class="card__date">
+              May 1 by <a href="#" class="author_name">Mark</a>
+            </p>
+            <p>
+              Curd rice, also called yogurt rice, is a dish originating from
+              India. The word "curd" in Indian English refers to unsweetened
+              probiotic yogurt. It is most popular in the South Indian states of
+              Maharashtra, Tamil Nadu, Kerala , Karnataka, Telangana and Andhra
+              Pradesh.
+            </p>
+          </header>
+          <div class="boxed_text">
+            <img
+              class="photo"
+              src="./img/450px-Plain_Curd_Rice.jpg"
+              alt="Curd rice photo"
+            />
+            <p>
+              In the state of Maharashtra it is known as dahi bhat. In the state
+              of Tamil Nadu it is called thayir saadam, in Kerala it is called
+              "tayire choore" and in Telangana and Andhra Pradesh it is called
+              perugannam/daddojanam. In Karnataka, it is called mosaranna. The
+              dish is a staple of traditional cuisine, with the untempered
+              version present at the end of almost every South Indian meal. The
+              tempered version is often served during formal occasions and also
+              offered as prasadam (blessed food) to devotees in temples.
+            </p>
+          </div>
+
+          <h2>Preparation</h2>
+          <p>
+            While it is most easily prepared by simply mixing steamed white rice
+            and yogurt, more elaborate methods can be used when needed.
+          </p>
+          <ol>
+            <li>
+              Rice is prepared either via steaming or pressure cooking to be
+              soft as in the South Indian style
+            </li>
+            <li>It is then allowed to cool to room temperature</li>
+            <li>
+              After which it is seasoned with finely chopped green chillies,
+              ginger, and curry leaves
+            </li>
+            <li>
+              And sometimes along with the tempering of black gram, mustard
+              seeds, cumin seeds, and asafoetida
+            </li>
+            <li>Finally, curd and salt are added</li>
+          </ol>
+
+          <h2>Serving</h2>
+          <p>
+            Curd rice is often eaten accompanied by South Asian pickles. In
+            South Indian cuisine, curd rice is traditionally eaten at the end of
+            lunch and dinner, as this helps ease the effects of spicy food
+            consumed prior. It is also said to aid digestion, as well as to
+            balance the effects of the warm climate.
+          </p>
+
+          <h2>Source</h2>
+          <code
+            ><a href="https://en.wikipedia.org/wiki/Curd_rice"
+              >https://en.wikipedia.org/wiki/Curd_rice</a
+            ></code
+          >
+          <br />
+          <div class="buttons">
+            <button>Older post</button>
+            <button disabled>Newer post</button>
+          </div>
+        </main>
+        <aside class="sidebar col-4">
+          <div class="about">
+            <h2>About me</h2>
+            <h3>Huy Vuong</h3>
+            <img
+              class="photo"
+              alt="My profile pic"
+              src="./img/profile_photo.png"
+            />
+            <p>
+              I'm an experienced food writer. I have spent the last 20 years
+              writing about food from all over the world. My specialty is on
+              traditional food or street food.
+            </p>
+          </div>
+
+          <div class="archives">
+            <h2>Archives</h2>
+            <ul>
+              <li><a href="#">December 2020</a></li>
+              <li><a href="#">November 2020</a></li>
+              <li><a href="#">October 2020</a></li>
+              <li><a href="#">September 2020</a></li>
+              <li><a href="#">August 2020</a></li>
+              <li><a href="#">July 2020</a></li>
+              <li><a href="#">June 2020</a></li>
+              <li><a href="#">May 2020</a></li>
+            </ul>
+          </div>
+
+          <div class="elsewhere">
+            <h2>Archives</h2>
+            <ul>
+              <li><a href="https://github.com">Github</a></li>
+              <li><a href="https://twitter.com">Twitter</a></li>
+              <li><a href="https://www.facebook.com/">Facebook</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
     </div>
+
+    <footer>
+      <ul>
+        <li>Huy Vuong</li>
+        <li>04/23/2021</li>
+        <li>123 Main Street, Washington, USA</li>
+        <li>Copyright ABC</li>
+        <li>
+          Give me money:
+          <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Paypal</a>
+        </li>
+      </ul>
+    </footer>
   </body>
 </html>

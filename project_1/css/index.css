@@ -1,6 +1,7 @@
 @import url("./nav.css");
 @import url("./card.css");
 @import url("./footer.css");
+@import url("./blog.css");
 
 /* reset everything */
 
@@ -18,20 +19,46 @@
   --main-white: white;
   --light-black: rgb(103, 100, 100);
   --light-gray: rgb(217, 217, 217);
+  --light-gray-footer: rgba(217, 217, 217, 0.71);
+  --light-gray-about: rgb(241, 241, 241);
   --main-blue: rgb(5, 115, 198);
   --main-green: rgb(2, 197, 2);
+  --link-blue: #2c87f0;
 }
 
 body {
   background-image: url("../img/background.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+  background-repeat: repeat;
+  background-size: contain;
+  font-family: "Fanwood Text", serif;
+  font-size: 1.1rem;
+}
+
+p,
+ol,
+ul {
+  margin: 15px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 15px 0;
 }
 
 /* main content */
 .container {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
 }
@@ -46,7 +73,7 @@ body {
 }
 
 /* responsive */
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 800px) {
   .row {
     flex-direction: column;
     margin-bottom: 0;
@@ -56,13 +83,4 @@ body {
   .row > .card {
     margin: 10px 0;
   }
-}
-
-/* blog post (second page) */
-.col-4 {
-  width: calc(4 / 12 * 100%);
-}
-
-.col-8 {
-  width: calc(9 / 12 * 100%);
 }
