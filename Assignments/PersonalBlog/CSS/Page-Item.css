@@ -1,0 +1,84 @@
+/*ITEM PAGE*/
+
+.item-page h2{
+    padding-left: 0;
+}
+
+/*LEFT*/
+.item-header {
+    margin-bottom: 50px;
+}
+
+.nav-item {
+    display: flex;
+    justify-content: space-between;
+    font-size:20px;
+    font-weight: bold;
+    color: red;
+}
+.nav-item div {
+    display: flex;
+}
+.nav-item button {
+    border: 1px solid rgba(81, 203, 238, 1);
+    border-radius: 10px;
+    padding: 10px;
+    margin-right: 10px;
+    font-weight: bold ;
+    color: rgba(81, 203, 238, 1) ;
+    background-color: white;
+}
+.nav-item button:hover{
+    border-color: rgb(6, 83, 6);
+    color: rgb(6, 83, 6);
+}
+.nav-item button:disabled {
+    box-shadow: none;
+    border-color: rgb(167, 165, 165);
+    color: rgb(167, 165, 165);
+    cursor: not-allowed;
+}
+.nav-item span:hover, .continue:hover {
+    cursor: pointer;
+    color: green;
+}
+.item-header h1 {
+    font-size: 3em;
+    color: rgb(143, 132, 69); 
+}
+.item-header p {
+    color: gray;
+
+}
+
+/*RIGHT*/
+#right div {
+    padding: 15px;
+}
+.about {
+    background-color: rgb(240, 238, 226);
+}
+.social-accounts {
+    display: flex;
+    justify-content: space-around;
+}
+
+.social-accounts i {
+    font-size: 25px;
+}
+.social-accounts i:hover{
+    font-size: 30px;
+}
+
+@media (min-width: 768px) {
+    .item-page {
+        display: flex;
+        justify-content: space-around;
+    }
+    .item-page #left {
+        width: 70%;
+    }
+    .item-page #right {
+        width: 20%;
+    }
+}

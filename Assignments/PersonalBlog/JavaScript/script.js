@@ -1,8 +1,16 @@
 const HomePage= document.getElementById('blog-home-page')
 const ItemPage= document.getElementById('blog-item-page')
 
+let postIndex;
+
+function checkPost(array,index){
+    const preBtn= document.getElementById('pre-btn')
+    const nextBtn= document.getElementById('next-btn')
+    preBtn.disabled= (index===0)? true: false;
+    nextBtn.disabled= (index===array.length-1)? true:false;
+}
+
 function switchPage () {
-    ItemPage.innerHTML='';
     ItemPage.classList.toggle('hidden');
     HomePage.classList.toggle('hidden');
 }
@@ -29,14 +37,26 @@ function renderContent(container,id,renderTemplate,param){
     container.appendChild(ele)
 }
 
-function showItem(event){
-    switchPage();
-    let itemId= event.target.id.slice(-1)*1
-    const item= blogs.find(b=>b.id===itemId)
+function showItem(index){
+    ItemPage.innerHTML='';
+    const item= blogs[index]
     const user= users.find(u=>u.id===item.userId)
     renderContent(ItemPage,'left',renderDetails,item)
     renderContent(ItemPage,'right',renderUserInfo,user)
-    
+    checkPost(blogs,index)
+}
+
+function switchItemPage(event){
+    const {id}= event.target
+    postIndex= (id==='next-btn')? postIndex+1: postIndex-1
+    showItem(postIndex)
+}
+
+function showItemPage(event){
+    switchPage();
+    let itemId= event.target.id.slice(-1)*1
+    postIndex= blogs.findIndex(b=>b.id===itemId)
+    showItem(postIndex)
 }
 
 

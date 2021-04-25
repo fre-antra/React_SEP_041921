@@ -1,0 +1,40 @@
+.app_nav {
+    position: fixed; top:0; left:0; right:0; z-index: 10;
+    height: 50px;
+    border-bottom: solid; border-width: thin; border-color: rgb(109, 106, 106);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px;
+    background-color:rgb(0,95,131) ; 
+    color: white;
+    overflow: hidden;
+}
+.app_nav h1 {
+    text-align: left;
+    font-size: 2em;
+    width: 60% ;
+}
+.app_nav a {
+    color: white;
+}
+.app_nav a:hover {
+    color: yellow; 
+}
+.app_nav button {
+    padding: 10px;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+    border: none;
+}
+.app_nav button:hover {
+    background-color: green; 
+    cursor: pointer;
+}
+
+@media (min-width: 400px){
+    .app_nav h1 {
+        font-size: 3em;
+    }
+}

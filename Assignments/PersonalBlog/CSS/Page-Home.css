@@ -1,0 +1,57 @@
+/*LIST style*/
+.section-home-list h2 {
+    font-size: 2.5 em;
+    padding: 10px;
+    background-color: rgba(81, 203, 238, 1);
+}
+
+#HealthList h2 {
+    background-color: rgb(238, 165, 81);
+}
+
+.list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/*SUMMARY BOX styles*/
+.blog {
+    margin: 15px;padding: 5px;
+    width: 150px; height: 250px;
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    border: 1px solid rgba(81, 203, 238, 1);
+}
+#HealthList .blog {
+    box-shadow: 0 0 5px rgb(238, 165, 81);
+    border: 1px solid rgb(238, 165, 81);
+}
+
+.blog-info {
+    height: 100px;
+}
+.blog-category{
+    font-weight: bold;
+    color: green;
+}
+#HealthList .blog-category{
+    color: orange;
+}
+
+.blog-title {
+    font-weight: bold;
+    font-size: 25px;
+    color: rgb(82, 56, 56);
+    margin: 10px 0;
+    height: 50px;
+}
+.blog-date {
+    color: gray;
+}
+.blog-summary {
+    height: 40px;
+}
+
+.continue {
+    font-weight: bold;
+    color: rgb(141, 27, 27);
+}

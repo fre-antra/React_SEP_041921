@@ -9,7 +9,7 @@ function renderSummary(obj){
         <p class="blog-summary">
                 ${obj.summary}  
         </p>
-        <span class="continue" id="continue-${obj.id}" onclick="showItem(event)">Continue Reading</span> 
+        <span class="continue" id="continue-${obj.id}" onclick="showItemPage(event)">Continue Reading</span> 
     </div>`
 }
 
@@ -41,8 +41,12 @@ function renderDetails(obj){
                 ${html1}
             </div>
             <div class='nav-item'>
+                <div>
+                    <button id='pre-btn' onclick='switchItemPage(event)'>OLDER POST</button>
+                    <button id='next-btn'onclick='switchItemPage(event)'>NEWER POST</button>
+                </div>
                 <span onclick="switchPage()">
-                    BACK <i class="fa fa-arrow-circle-left"></i>
+                    HOME PAGE <i class="fa fa-home"></i>
                 </span>
             </div>
         </div>

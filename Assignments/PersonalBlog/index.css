@@ -1,3 +1,9 @@
+@import url('./CSS/nav.css');
+@import url('./CSS/footer.css');
+@import url('./CSS/form-searchBar.css');
+@import url('./CSS/Page-Home.css');
+@import url('./CSS//Page-Item.css');
+
 body {
     box-sizing: border-box;
     position: relative;
@@ -20,219 +26,17 @@ ul{
     padding-left: 0;
 }
 
-.app_nav {
-    position: fixed; top:0; left:0; right:0; z-index: 10;
-    height: 50px;
-    border-bottom: solid; border-width: thin; border-color: rgb(109, 106, 106);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px;
-    background-color:rgb(0,95,131) ; 
-    color: white;
-    overflow: hidden;
-}
-.app_nav h1 {
-    text-align: left;
-    font-size: 2em;
-    width: 60% ;
-}
-.app_nav a {
-    color: white;
-}
-.app_nav a:hover {
-    color: yellow; 
-}
-.app_nav button {
-    padding: 10px;
-    background-color: red;
-    color: white;
-    font-weight: bold;
-    border: none;
-}
-.app_nav button:hover {
-    background-color: green; 
-    cursor: pointer;
-}
 main {
     margin-top: 125px;
 }
 section {
     margin-bottom: 40px;
 }
-.app_footer{
-    position: absolute;
-    bottom: 0; left: 0; right:0;
-    height: 50px; padding: 15px;
-    background-color: rgb(0,95,131); color: white;
-    text-align: center; overflow: hidden;
-}
-
-.app_footer div {
-    margin: 10px;
-}
-.app_footer a {
-    color: orange;
-}
-
-/*FORM*/
-
-#search_form {
-    padding:10px;
-    display: flex;
-    justify-content: space-between;
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-    border: 1px solid rgba(81, 203, 238, 1);
-    border-radius: 10px;
-    width: 80%;
-    max-width: 300px;
-    margin: 10px auto;
-}
-#search_form input, #search_form button {
-    border: none;
-    background-color: white;
-}
-#search_form input {
-    width: 90%;
-}
-#search_form input:focus {
-    outline: none;
-}
 
 button:hover {
     cursor: pointer;
 }
 
-/*LIST style*/
-.section-home-list h2 {
-    font-size: 2.5 em;
-    padding: 10px;
-    background-color: rgba(81, 203, 238, 1);
-}
-
-#HealthList h2 {
-    background-color: rgb(238, 165, 81);
-}
-
-.list {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-/*SUMMARY BOX styles*/
-.blog {
-    margin: 15px;padding: 5px;
-    width: 150px; height: 250px;
-    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
-    border: 1px solid rgba(81, 203, 238, 1);
-}
-#HealthList .blog {
-    box-shadow: 0 0 5px rgb(238, 165, 81);
-    border: 1px solid rgb(238, 165, 81);
-}
-
-.blog-info {
-    height: 100px;
-}
-.blog-category{
-    font-weight: bold;
-    color: green;
-}
-#HealthList .blog-category{
-    color: orange;
-}
-.blog-title {
-    font-weight: bold;
-    font-size: 25px;
-    color: rgb(82, 56, 56);
-    margin: 10px 0;
-    height: 50px;
-}
-.blog-date {
-    color: gray;
-}
-.blog-summary {
-    height: 40px;
-}
-
-.continue {
-    font-weight: bold;
-    color: rgb(141, 27, 27);
-}
-
-/*ITEM PAGE*/
-.item-page {
-    display: flex;
-    justify-content: space-around;
-   
-}
-.item-page #left {
-    width: 70%;
-}
-.item-page #right {
-    width: 20%;
-}
-.item-page h2{
-    padding-left: 0;
-}
-
-/*LEFT*/
-.item-header {
-    margin-bottom: 50px;
-}
-
-.nav-item {
-    text-align: right;
-    font-size:20px;
-    font-weight: bold;
-    color: red;
-}
-.nav-item span:hover, .continue:hover {
-    cursor: pointer;
-    color: green;
-}
-.item-header h1 {
-    font-size: 3em;
-    color: rgb(143, 132, 69); 
-}
-.item-header p {
-    color: gray;
-
-}
-
-/*RIGHT*/
-#right {
-    display: none;
-}
-#right div {
-    padding: 15px;
-}
-.about {
-    background-color: rgb(240, 238, 226);
-}
-.social-accounts {
-    display: flex;
-    justify-content: space-around;
-}
-
-.social-accounts i {
-    font-size: 25px;
-}
-.social-accounts i:hover{
-    font-size: 30px;
-}
-
 .hidden {
     display: none;
-}
-
-@media (min-width: 400px){
-    .app_nav h1 {
-        font-size: 3em;
-    }
-}
-@media (min-width: 768px) {
-    #right {
-        display: block;
-    }
 }
