@@ -7,7 +7,7 @@ Object.prototype.myForEach = function (cb) {
     // for (let key in this) {
     //   cb(this[key], key, this);
     // }
-    Object.keys(this).forEach(k => {
+    Object.keys(this).myForEach(k => {
       cb(this[k], k, this);
     })
   }
