@@ -1,0 +1,87 @@
+@import url(header.css);
+@import url(footer.css);
+@import url(grid-system.css);
+@import url(font.css);
+
+.container{
+    position: relative;
+    width: 100%;
+    max-width: 70rem;
+    /* margin-top: 200px; */
+    margin-left: auto;
+    margin-right: auto;
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+}
+.row{
+    width: 100%;
+    /* margin-top: 130px; */
+}
+.container header-container{
+    width: 100%;
+}
+.row h1{
+    text-align: center;
+    text-decoration: underline;
+}
+.sub-column{
+    float: left;
+    text-decoration: underline;
+}
+.img-column{
+    float: right;
+    /* width: 20%; */
+}
+img{
+    width: 40px;
+    height: 40px;
+}
+
+.bullet-list{
+    list-style-type: none;
+    /* display: block; */
+}
+.bullet-list li{
+    display: list-item;
+}
+.bullet-list li::before{
+   color: rgb(181, 164, 187);
+   content: "\2022";
+   font-weight: bold;
+   display: inline-block; 
+   width: 1em;
+   margin-left: -1em;
+}
+.order-list li{
+    display: list-item;
+}
+
+.button {
+    padding: 18px 40px;
+    border-radius: 40px;
+    background-color: transparent;
+    border-style: solid;
+    font-size: 16px;
+}
+
+.button.older{
+    color:rgb(181, 164, 187);
+    border-color: rgb(181, 164, 187);
+}
+.button.newer{
+    color: rgb(3, 20, 27);
+    border-color:rgb(3, 20, 27);
+}
+.about-container{
+    float: left;
+    background-color: ghostwhite;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+.list-container{
+    margin-left: -2rem;
+}
+.link-list{
+    list-style-type: none;
+    display: list-item;
+} 

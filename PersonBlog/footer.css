@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=New+Tegomin);
+
+.footer{
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 150px;
+    background-color: rgb(227, 209, 233);
+    /* color: white; */
+    text-align: center;
+    color: white;
+    font-family: 'New Tegomin', serif;
+}

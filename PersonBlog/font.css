@@ -1,0 +1,19 @@
+.header li a {
+    font-size: 20px;
+}
+.footer p{
+    font-size: 20px;
+    padding: 20px;
+}
+p.bold span{
+    font-weight: bold;
+}
+p.bold{
+    border-style: groove;
+}
+p.border{
+    border-style: groove;
+}
+.sub-column{
+    color:grey;
+}
