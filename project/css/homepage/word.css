@@ -1,26 +1,34 @@
 .footer{
     position: absolute;
-    right: 0px;
-    left: 0px;
+    width: 100%;
     bottom: 0px;
     background-color: lightgrey;
     text-align: center;
     padding: 10px;
+    height: 4em;
 }
 .header{
-    max-width: 800px;
+    max-width: 40em;
     display: flex;
     align-items: start;
     justify-content: space-between;
-    height: 30px;
+    height: 1em;
     margin: auto;
 }
-
-#subscribe{
-    display: block;
-}
 .title{
-    font-size: 30px;
+    font-size: 1em;
     font-weight: bold;
     text-decoration: underline;
+}
+
+#subscribe {
+    display: block;
+}
+
+#search{
+    width: 20px;
+    height: 20px;
+    background: url("search.svg") no-repeat;
+    background-size: 16px 16px;
+    border: none;
 }

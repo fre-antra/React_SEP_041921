@@ -1,9 +1,14 @@
 .container {
-    max-width: 800px;
+    max-width: 40em;
     display: flex;
     flex-direction: column;
-    margin: auto;
     margin-top: 50px;
+    margin: auto;
+}
+#card-container{
+    position: relative;
+    padding-bottom: 6em;
+
 }
 .row{
     margin-top: 40px;
@@ -12,15 +17,17 @@
     justify-content: space-between;
 }
 
+
 .card{
-    border:1px solid gray;
+    border:2px solid gray;
+    box-shadow: 10px 5px 5px #dddddd;
     box-sizing: border-box;
-    width: 375px;
+    width: 18em;
     padding: 5px;
-    height: 200px;
+    height: 12em;
 }
 .category{
-    font-size: 15px;
+    font-size: 0.5em;
 }
 
 .blue{
@@ -30,15 +37,15 @@
     color: limegreen;
 }
 .card-title{
-    font-size: 30px;
+    font-size: 1em;
     font-weight: bold;
 }
 .card-date{
-    font-size: 13px;
+    font-size: 0.5em;
     color: gray;
 }
 .card-content{
-    height:80px ;
+    height:5em ;
 }
 .card-foot{
 }
