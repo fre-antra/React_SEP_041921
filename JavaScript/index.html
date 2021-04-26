@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./index.css" />
+
+    </head>
+
+        <div onclick="clickp()" class="g-target">
+            <div class="p-target">
+                <div
+                    class="target"
+                    style="height: 200px; width: 200px; background-color: red;"
+                ></div>
+            </div>
+        </div>
+
+        <script>
+            function clickp() {
+                console.log(event.target.className);
+            }
+        </script>
+    </body>
+</html>
