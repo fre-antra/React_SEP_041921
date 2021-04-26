@@ -12,6 +12,7 @@
     padding:2%;
 }
 
+
 .bio{
     border: 1px solid lightgrey;;
     border-radius: 3px;
@@ -23,7 +24,6 @@
 .airtag{
     width: 25%;
 }
-
 
 .pics{
     display: flex;
@@ -57,7 +57,7 @@
 
 .about{
     padding-bottom: 20px;
-    background-color: rgb(233, 244, 250);
+    background-color: rgb(237, 245, 245);
     padding: 15px;
 
     
