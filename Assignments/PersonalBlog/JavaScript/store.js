@@ -88,7 +88,6 @@ const blogs= [
     },
 ];
 
-
 const users= [
     {
         id:1,
@@ -169,5 +168,10 @@ const archives= [
         code: 0620,
         display:'Jun 2020'
     },
+]
+
+const categories=[
+    {category:'Travel', id:'showTravel'},
+    {category:'Health', id:'showHealth'}
 ]
 

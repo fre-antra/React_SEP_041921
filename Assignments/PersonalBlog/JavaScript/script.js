@@ -3,6 +3,15 @@ const ItemPage= document.getElementById('blog-item-page')
 
 let postIndex;
 
+/*HELPERS*/
+function renderContent(container,id,renderTemplate,param){
+    const html= renderTemplate(param)
+    const ele= document.createElement('section')
+    ele.id= id;
+    ele.innerHTML +=html
+    container.appendChild(ele)
+}
+
 function checkPost(array,index){
     const preBtn= document.getElementById('pre-btn')
     const nextBtn= document.getElementById('next-btn')
@@ -15,28 +24,6 @@ function switchPage () {
     HomePage.classList.toggle('hidden');
 }
 
-function renderList(category,number){
-    const filteredBlog= blogs.filter(obj=>obj.category===category)
-    const list= (number>=filteredBlog.length)? filteredBlog: filteredBlog.slice(0,number)
-    const html1 = list.map(obj=>renderSummary(obj)).join('')
-    const html2= `
-        <section class="section-home-list" id='${category}List'>
-            <h2>${category}</h2>
-            <div class="list">
-                ${html1}
-            </div>
-        </section>
-    `
-    HomePage.innerHTML += html2
-}
-function renderContent(container,id,renderTemplate,param){
-    const html= renderTemplate(param)
-    const ele= document.createElement('section')
-    ele.id= id;
-    ele.innerHTML +=html
-    container.appendChild(ele)
-}
-
 function showItem(index){
     ItemPage.innerHTML='';
     const item= blogs[index]
@@ -46,6 +33,13 @@ function showItem(index){
     checkPost(blogs,index)
 }
 
+function showPaginatedList(id,value){
+    const category= categories.find(obj=>obj.id===id)
+    category.number= value
+    renderHomePage(categories)
+}
+
+/*EVENT LISTENERS */
 function switchItemPage(event){
     const {id}= event.target
     postIndex= (id==='next-btn')? postIndex+1: postIndex-1
@@ -59,8 +53,14 @@ function showItemPage(event){
     showItem(postIndex)
 }
 
+function pagination(event){
+    event.preventDefault();
+    const {id,value}= event.target
+    //const e= document.querySelector(`option[value="${value}"]`)
+    showPaginatedList(id,value)
+}
 
 (function runHomePage(){
-    renderList('Travel')
-    renderList('Health')
+    renderHomePage(categories)
+    
 })();

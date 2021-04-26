@@ -3,6 +3,7 @@
 @import url('./CSS/form-searchBar.css');
 @import url('./CSS/Page-Home.css');
 @import url('./CSS//Page-Item.css');
+@import url('./CSS/form-listControl.css');
 
 body {
     box-sizing: border-box;

@@ -1,11 +1,12 @@
 /*LIST style*/
+
 .section-home-list h2 {
+    background-color: rgba(81, 203, 238, 1);
     font-size: 2.5 em;
     padding: 10px;
-    background-color: rgba(81, 203, 238, 1);
 }
 
-#HealthList h2 {
+#HealthList h2{
     background-color: rgb(238, 165, 81);
 }
 

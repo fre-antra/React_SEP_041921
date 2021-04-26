@@ -1,0 +1,43 @@
+.list-control>div{
+    display: flex;
+    padding: 5px;
+    width: 250px;
+    margin: 0 auto;
+}
+.list-control label{
+    width: 120px;
+    margin-right: 5px;
+}
+.list-control select {
+    min-width: 100px;
+}
+
+@media (min-width:750px) {
+    .section-home-list header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        background-color: rgba(81, 203, 238, 1);
+        height: 70px;
+    }
+    #HealthList header {
+        background-color: rgb(238, 165, 81);
+    }
+    .section-home-list h2 {
+        width: 40%;
+        height: 40px;
+    }
+    .list-control{
+        display: flex;
+        width: 50%;
+        flex-direction: row-reverse;
+    }
+    .list-control>div {
+        width: auto;
+        margin: 0;
+        
+    }
+    .list-control label{
+        width: auto;
+    }
+}

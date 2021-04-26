@@ -1,3 +1,4 @@
+/*HOME COMPONENT*/ 
 function renderSummary(obj){
     return `
     <div class="blog">
@@ -13,6 +14,49 @@ function renderSummary(obj){
     </div>`
 }
 
+function renderList(category,number){
+    const filteredBlog= blogs.filter(obj=>obj.category===category)
+    const num= +number
+    const list= (num===0)? filteredBlog.slice(): filteredBlog.slice(0,number)
+    const html1 = list.map(obj=>renderSummary(obj)).join('')
+    const e=document.getElementById(`show${category}`)
+    return `
+        <section class="section-home-list" id='${category}List'>
+            <header>
+                <h2>${category}</h2>
+                <div class="list-control">
+                    <div class="show-per-page">
+                        <label for='show${category}'>Show per page:</label>
+                        <select name="show${category}" id="show${category}" onchange="pagination(event)" >
+                            <option disabled selected></option>
+                            <option value='0'>All</option>
+                            <option value='1'>1</option>
+                            <option value='2'>2</option>
+                        </select>
+                    </div>
+                    <div class="sort-list">
+                        <label for='sort'>Sort:</label>
+                        <select id='sort'>
+                            <option value='Most Recent'>Recent</option>
+                            <option value='Oldest'>Oldest</option>
+                        </select>
+                    </div>
+                </div>
+            </header>
+            <div class="list">
+                ${html1}
+            </div>
+        </section>
+    `
+}
+
+function renderHomePage(array){
+    HomePage.innerHTML = '';
+    const html= array.map(obj=>renderList(obj.category,obj.number)).join('')
+    HomePage.innerHTML += html
+}
+
+/*ITEM COMPONENT */
 function renderDetails(obj){
     const {userId,title,date,content}= obj
     const {intro,body}= content
@@ -42,8 +86,8 @@ function renderDetails(obj){
             </div>
             <div class='nav-item'>
                 <div>
-                    <button id='pre-btn' onclick='switchItemPage(event)'>OLDER POST</button>
-                    <button id='next-btn'onclick='switchItemPage(event)'>NEWER POST</button>
+                    <button id='pre-btn' onclick='switchItemPage(event)'>NEWER POST</button>
+                    <button id='next-btn'onclick='switchItemPage(event)'>OLDER POST</button>
                 </div>
                 <span onclick="switchPage()">
                     HOME PAGE <i class="fa fa-home"></i>
