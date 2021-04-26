@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+html, body {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2em;
+  height: 5em;
+  /* margin-bottom: 1em; */
+}
+
+header span {
+  text-decoration: underline;
+}
+
+header .search {
+  position: absolute;
+  right: 5%;
+}
+
+header .subscribe {
+  position: absolute;
+  left: 5%;
+  font-weight: bold;
+}
+
+header .title {
+  font-size: 1.5em;
+  font-weight: bolder;
+  color: rgb(70, 70, 70);
+}
+
+main {
+  flex: auto;
+}
+
+footer {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: space-evenly;
+  background-color: #eee;
+  margin-top: 20px;
+  height: 60px;
+  min-height: 5em;
+}
+
+footer p {
+  text-align: center;
+  width: 100%;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+hr {
+  margin: 1em 0;
+}
+
+.link, .link:visited {
+  color: gray;
+}

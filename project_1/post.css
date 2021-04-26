@@ -1,0 +1,102 @@
+main {
+  display: grid;
+  /* grid-template-rows: 100%; */
+  grid-template-columns: 3fr 1fr;
+}
+
+.body-left {
+  margin: 1em;
+  padding: 0em 2em;
+}
+
+.post-info {
+  margin-top: 0.5em;
+  color: gray;
+}
+
+.post-content {
+  margin-top: 1em;
+}
+
+.btn-group {
+  margin-top: 3em;
+}
+
+.btn-group button{
+  background-color: #fff;
+  border-radius: 1.8em;
+  padding: 0.5em 1em;
+  font-size: 1em;
+}
+
+.btn-group button:active {
+  outline: none;
+  border: none;
+}
+
+.btn-group button:focus {
+  outline: 0;
+}
+
+.primary {
+  color: rgb(44, 118, 215);;
+  border: 1px solid rgb(44, 118, 215);
+}
+
+.default {
+  color: rgb(126, 126, 126);
+  border: 1px solid rgb(126, 126, 126);
+}
+
+.body-right {
+  margin: 1em;
+  padding: 0em 2em;
+}
+
+.body-right section {
+  padding: 1em;
+  margin: 1em 0em;
+}
+
+.about {
+  background-color: rgb(240, 240, 240);
+}
+
+blockquote {
+  border: 1px solid gray;
+  margin: 1em 0em;
+}
+
+ul.side-list {
+  list-style: none;
+}
+
+ul.post-list, ol.post-list{
+  margin: 1em 2em;
+}
+
+.post-title {
+  font-size: 2.3em;
+}
+
+h2 {
+  font-size: 2em;
+}
+
+h3 {
+  font-size: 1.5em;
+}
+
+section h3 {
+  font-style: italic;
+}
+
+.body-left h2,h3 {
+  margin-top: 1rem;
+}
+
+
+
+.post-link, .post-link:visited {
+  color: rgb(44, 118, 215);
+}
