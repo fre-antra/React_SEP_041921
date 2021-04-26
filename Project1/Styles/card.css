@@ -7,21 +7,13 @@
 
 .row {
     display: flex;
-    flex-direction: row;
+    /* flex-direction: row; */
     align-items: center;
     justify-content: center;
 }
 
 .row:after {
     display: flex;
-}
-
-@media screen and (max-width: 600px) {
-    .column {
-        width: 100%;
-        display: flex;
-        margin-bottom: 20px;
-}
 }
 
 .card {
@@ -48,4 +40,12 @@
 
 #date{
     color: gray;
+}
+
+@media screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+        display: flex;
+        margin-bottom: 20px;
+}
 }

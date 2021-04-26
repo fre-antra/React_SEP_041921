@@ -1,0 +1,63 @@
+.main-blog{
+    padding: 20px;
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.column-info{
+    float: left;
+    width: 75%;
+}
+
+.column-about{
+
+    float: left;
+    width: 25%;
+    padding-left: 30px;
+}
+
+.box-para{
+    border: lightgray;
+    border-style: solid;
+}
+
+.about-box{
+    padding: 10px;
+    background-color: rgb(219, 211, 211);
+}
+
+.code-block{
+    border: lightgray;
+    border-style: solid;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.archive-else{
+    padding-left: 10px;
+}
+
+.older{
+    background-color: white;
+    color: rgba(6, 128, 243, 0.808);
+    border-radius: 10px;
+    padding: 5px;
+    border-color: rgba(6, 128, 243, 0.808);
+}
+
+.newer{
+    background-color: white;
+    color: rgb(211, 201, 201);
+    border-radius: 10px;
+    padding: 5px;
+    border-color: rgb(211, 201, 201);
+}
+
+.ul-list{
+    padding: 0;
+    list-style-type: none;
+}
+
+.icons{
+    max-width: 10%;
+    height: auto;
+}
