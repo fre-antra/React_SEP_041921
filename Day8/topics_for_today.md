@@ -1,0 +1,9 @@
+- Class method and instance method
+- Use class keyword (ES6) and constructor function (ES5) to create class methods
+- Encapsulation
+- Inheritance
+- Polymorphism
+- Abstraction
+- Function overloading and overwriting in JavaScript
+- Loop through an array using forEach() and map()
+- Dot notation and bracket notation
