@@ -1,73 +1,71 @@
-.root{
-    text-align: center;
+.root {
+  text-align: center;
 }
-#Reg{
-    background-color: rgb(108, 173, 233);
-    color: white;
-    font-size: 20px;
-    border-radius: 10px;
-    border-width: 0;
-    width: 410px;
-    height: 55px;
-    margin: 15px;
+#Reg {
+  background-color: rgb(108, 173, 233);
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  border-width: 0;
+  width: 410px;
+  height: 55px;
+  margin: 15px;
 }
-#Sign{
-    background-color: greenyellow;
-    color:white;
-    font-size: 20px;
-    border-radius: 10px;
-    border-width: 0;
-    width: 410px;
-    height: 55px;
-    margin: 15px;
-    
+#Sign {
+  background-color: greenyellow;
+  color: white;
+  font-size: 20px;
+  border-radius: 10px;
+  border-width: 0;
+  width: 410px;
+  height: 55px;
+  margin: 15px;
 }
-.info{
-    margin: 15px;
-    width: 20%;
-    max-width: 400px;
-    min-width: 200px;
-    height: 55px;
-    font-size: 20px;
-    border-radius: 10px;
-    border-width: 1px;
-    
+.info {
+  margin: 15px;
+  width: 20%;
+  max-width: 400px;
+  min-width: 200px;
+  height: 55px;
+  font-size: 20px;
+  border-radius: 10px;
+  border-width: 1px;
 }
 
-#mob{
-    width: 42%;
-    max-width: 840px;
-    min-width: 440px;
+#mob {
+  width: 42%;
+  max-width: 840px;
+  min-width: 440px;
 }
 
-#email{
-    width: 42%;
-    max-width: 840px;
-    min-width: 440px;
+#email {
+  width: 42%;
+  max-width: 840px;
+  min-width: 440px;
 }
 
-#register{
-    background-color: rgb(108, 173, 233);
-    color:white;
-    border-radius: 3px;
+#register {
+  background-color: rgb(108, 173, 233);
+  color: white;
+  border-radius: 3px;
 }
 
-#term{
-    color:rgb(108, 173, 233);
+#term {
+  color: rgb(108, 173, 233);
 }
 
-#para{
-    width: 600px;
-    margin: auto;
-    display: inline-block;
+#para {
+  width: 600px;
+  margin: auto;
+  display: inline-block;
 }
 
-#agree{
-    width: 17px;
-    height: 17px;
+#agree {
+  width: 17px;
+  height: 17px;
 }
 
-#ag{
-    font-size:20px;
-    font-weight: bold;
+#ag {
+  font-size: 20px;
+  font-weight: bold;
 }
