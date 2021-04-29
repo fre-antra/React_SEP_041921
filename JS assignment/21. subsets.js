@@ -1,4 +1,3 @@
-// recursion
 const subsets = (nums, k) => {
   let res = [],
     result;

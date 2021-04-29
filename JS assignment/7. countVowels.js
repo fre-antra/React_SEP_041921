@@ -1,5 +1,5 @@
 const countVowels = (str) => {
-  vowels = "aeiouAEIOU";
+  vowels = 'aeiouAEIOU';
   let cnt = 0;
   for (let i = 0; i < str.length; i++) {
     let char = str[i];
@@ -11,4 +11,4 @@ const countVowels = (str) => {
   return cnt;
 };
 
-console.log(countVowels("The quick brown fox"));
+console.log(countVowels('The quick brown fox'));

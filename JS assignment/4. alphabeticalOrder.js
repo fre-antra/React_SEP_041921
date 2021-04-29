@@ -1,3 +1,3 @@
-const alphabeticalOrder = (str) => str.split('').sort().join('')
+const alphabeticalOrder = (str) => str.split('').sort().join('');
 
-console.log(alphabeticalOrder('flgkhasdf'))
+console.log(alphabeticalOrder('flgkhasdf'));

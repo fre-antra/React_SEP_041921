@@ -1,5 +1,5 @@
 const longestWord = (str) => {
-  arr = str.split(" ");
+  arr = str.split(' ');
   arr.sort((a, b) => b.length - a.length);
   return arr[0];
 };

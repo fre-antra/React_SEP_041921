@@ -3,7 +3,7 @@ const findLongestSubstrWithoutRepeatCharacters = (str) => {
   let start = 0,
     maxLen = 0;
   let map = new Map();
-  let res = "";
+  let res = '';
 
   for (let i = 0; i < str.length; i++) {
     let ch = str[i];
@@ -19,5 +19,5 @@ const findLongestSubstrWithoutRepeatCharacters = (str) => {
 
   return res;
 };
-console.log(findLongestSubstrWithoutRepeatCharacters("abcabcbb"));
-console.log(findLongestSubstrWithoutRepeatCharacters("bbbbbb"));
+console.log(findLongestSubstrWithoutRepeatCharacters('abcabcbb'));
+console.log(findLongestSubstrWithoutRepeatCharacters('bbbbbb'));

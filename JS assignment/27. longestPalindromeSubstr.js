@@ -15,4 +15,4 @@ const longestPalindromeSubstr = (s) => {
   }
   return result;
 };
-console.log(longestPalindromeSubstr("babad"));
+console.log(longestPalindromeSubstr('babad'));

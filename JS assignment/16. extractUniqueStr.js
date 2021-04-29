@@ -1,5 +1,5 @@
 const extractUniqueStr = (str) => {
-  res = "";
+  res = '';
   for (let i = 0; i < str.length; i++) {
     char = str[i];
     if (res.indexOf(char) === -1) {
@@ -9,4 +9,4 @@ const extractUniqueStr = (str) => {
   return res;
 };
 
-console.log(extractUniqueStr("thequickbrownfoxjumpsoverthelazydog"));
+console.log(extractUniqueStr('thequickbrownfoxjumpsoverthelazydog'));
