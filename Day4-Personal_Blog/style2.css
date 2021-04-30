@@ -1,8 +1,14 @@
 
 /* Header */
 @import url('./css/header.css');
+
+/* Main */
 @import url('./css/main.css');
+
+/* Aside */
 @import url('./css/aside.css');
+
+/* Footer */
 @import url('./css/footer.css');
 
 * {
