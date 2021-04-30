@@ -38,9 +38,7 @@ a:visited{
     list-style-type: none;
     /* color: inherit; */
 }
-/* h1,h2,h3 {
-    margin: 1rem 0;
-} */
+
 
 .flex {
     display: flex;
