@@ -139,11 +139,22 @@
 //     }
 //     return res;
 // }
+// const arr = [1, 2, 3];
+
+// arr.__proto__.myMap = function (callback) {
+//     // console.log(this);
+//     const res = [];
+//     for (let i = 0; i < this.length; i++) {
+//         res.push(callback(this[i], i, this));
+//     }
+//     return res;
+// }
 
 // const arr1 = arr.myMap((val, index, array) => {
 //     return val * 2;
 // });
 
+// console.log(arr1);
 // Array.prototype.myReduce = function (callback, initacc) {
 //     let acc = initacc;
 //     for (let i = 0; i < this.length; i++) {
@@ -157,18 +168,46 @@
 // // filter, reduce, some, any
 // console.log(arr1);
 
-// // rest parameters vs. spread operator
+// rest parameters vs. spread operator
 
-// function foo(num1, num2, ...arg) {
+// function foo(num1, num2, ...arg, num3) {
 //     const arr = [{name: 'Jojo'}, ...arg ];
 //     console.log(arr);
 // }
 
 // foo(1, 2, 3, 4, 5, 6, 7);
 
+// const arr = [1, 2, 3];
+// const arr1 = [2, ...arr, 4]; 
+
 
 // // object copy
 // // shadow, deep copy
+
+// const obj = {
+//     name: 'Dio',
+//     age: 200,
+//     case: [
+//         {name: 1}
+//     ],
+//     date: new Date,
+//     foo: function() {
+//         console.log(111);
+//     }
+// };
+
+// // 1. spread operator
+// const obj2 = {...obj};
+// console.log(obj2);
+// obj2.case.push({name: 2});
+// console.log(obj);
+
+// // 2. json.pase
+// const obj3 = JSON.parse(JSON.stringify(obj));
+// console.log(obj, obj3)
+
+// 3. lodash: _.clonedeep()
+
 
 // const obj = {
 //     name: 'Dio', 
@@ -198,34 +237,33 @@
 
 // library: lodash
 // const _ = require('lodash');
-// const obj1 = _.clone(obj);
+// const obj1 = _.clonedeep(obj);
 
-// destruction
-const data = { age: 200 };
-const { age } = data;
-console.log(age);
+// // destruction
+// const data = { age: 200 };
+// const { age } = data;
+// console.log(age);
 
-const foo = (data) => {
-    return { ...this[0], ...data }
-}
-const obj = { name: 'Dio', age: 10 };
-const arr = [obj, foo];
+// const foo = (data) => {
+//     return { ...this[0], ...data }
+// }
+// const obj = { name: 'Dio', age: 10 };
+// const arr = [obj, foo];
 
-let [state, setState] = [obj, foo];
-let [a, b, c] = [1, 2, 3]
-console.log(a, b, c)
-state = setState({ age: 200 });
-console.log(state);
+// let [state, setState] = [obj, foo];
+// let [a, b, c] = [1, 2, 3]
+// console.log(a, b, c)
+// state = setState({ age: 200 });
+// console.log(state);
 
-
-// this
-// global
+// // this
+// // global
 // function foo() {
 //     console.log(this);
 // }
 // foo();
 
-// objct own the method
+// // objct own the method
 // const obj = {
 //     foo() {
 //         console.log(this);
@@ -250,18 +288,19 @@ console.log(state);
 // }
 // const arr = new Array();
 
-// call, apply, bind
+// // call, apply, bind
 // const obj = {
 //     pi: 3.1415926,
 //     getPi() {
 //         return this.pi;
 //     }
 // }
+
 // function foo(circle, radius) {
 //     console.log(`${circle} is a circle, the area is ${this.getPi() * (radius ** 2)}`);
 // }
-// // const bar = foo.bind(obj);
-// // bar('Jojo', 20);
+// const bar = foo.bind(obj);
+// bar('Jojo', 20);
 
 // foo.call(obj, 'Jojo', 20);
 // foo.apply(obj, ['Jojo', 20]);
@@ -277,11 +316,11 @@ console.log(state);
 // ES6 arrow function
 // const myObj = {
 //     myMethod() {
-//         console.log(this);
+//         console.log(this); // <-------
 
 //         const foo = function() {
 //             console.log(this);
-//         }.bind(this);
+//         }.bind(this); // <---------
 
 //         const bar = () => {
 //             console.log(this);
@@ -346,23 +385,28 @@ console.log(state);
 
 // async
 
-// for (let index = 0; index < 5; index++) {
-//     setTimeout(() => console.log(index), index * 1000);
-//     // (function(i) {
-//     //     var v = i;
-//     //     setTimeout(() => console.log(v), v * 1000);
-//     // })(index)
+// var i;
+// for (i = 0; i < 5; i++) {
+//     setTimeout(() => console.log(i), i * 1000);
 // }
 
-// call stack: 
-// async api || web api: 
+// for (var index = 0; index < 5; index++) {
+//     // setTimeout(() => console.log(index), index * 1000);
+//     (function(i) {
+//         var v = i;
+//         setTimeout(() => console.log(v), (5 - v) * 1000);
+//     })(index);
+// }
+
+// call stack: for set
+// async api || web api: 5, 4, 3, 2, 1
 // 1. , 5s 
 // 2. console.log(i), 4s
 // 3. console.log(i), 3s
 // 4.
 // 5.        1s
 
-// message queue: [,,console.log(i),console.log(i)]
+// message queue: [1,2,345console.log(i),console.log(i)]
 
 // 5 5 5 5 5
 
@@ -415,10 +459,7 @@ console.log(state);
 // getUser(print, 5);
 // getUser(print, 34);
 
-
-
 // Promise
-
 
 // function print(data) {
 //     console.log(data);
@@ -479,138 +520,138 @@ console.log(state);
 
 // MyPromise
 
-// class MyPromise {
-//     thenCallBackQueue = []; // queue
-//     catchCallBackQueue = []; // queue
-//     promiseState = 'pending';
-//     currentDate;
+class MyPromise {
+    thenCallBackQueue = []; // queue
+    catchCallBackQueue = []; // queue
+    promiseState = 'pending';
+    currentDate;
 
-//     constructor(executor) {
-//         try {
-//             executor(this.resolve, this.reject.bind(this));
-//         } catch (error) {
-//             this.reject(error);
-//         }
-//     }
+    constructor(executor) {
+        try {
+            executor(this.resolve, this.reject.bind(this));
+        } catch (error) {
+            this.reject(error);
+        }
+    }
 
-//     resolve = (data) => {
-//         setTimeout(() => {
-//             try {
-//                 this.promiseState = 'fulfilled';
+    resolve = (data) => {
+        setTimeout(() => {
+            try {
+                this.promiseState = 'fulfilled';
 
-//                 // <-----------
-//                 if (!this.thenCallBackQueue.length) return;
+                // <-----------
+                if (!this.thenCallBackQueue.length) return;
 
-//                 this.currentDate = data;
-//                 while (this.thenCallBackQueue.length) {
-//                     const cb = this.thenCallBackQueue.shift();
+                this.currentDate = data;
+                while (this.thenCallBackQueue.length) {
+                    const cb = this.thenCallBackQueue.shift();
 
-//                     if (this.currentDate instanceof MyPromise) {
-//                         this.currentDate.then(dataFromNew => {
-//                             this.currentDate = cb(dataFromNew);
-//                         })
-//                     } else {
-//                         this.currentDate = cb !== undefined
-//                             ? cb(this.currentDate)
-//                             : this.currentDate;
-//                     }
-//                 }
+                    if (this.currentDate instanceof MyPromise) {
+                        this.currentDate.then(dataFromNew => {
+                            this.currentDate = cb(dataFromNew);
+                        })
+                    } else {
+                        this.currentDate = cb !== undefined
+                            ? cb(this.currentDate)
+                            : this.currentDate;
+                    }
+                }
 
-//             } catch (error) {
-//                 this.reject(error);
-//             }
-//         }, 0);
-//     }
+            } catch (error) {
+                this.reject(error);
+            }
+        }, 0);
+    }
 
-//     reject(error) {
-//         this.promiseState = 'rejected';
-//         setTimeout(() => {
-//             if (!this.catchCallBackQueue.length) return;
+    reject(error) {
+        this.promiseState = 'rejected';
+        setTimeout(() => {
+            if (!this.catchCallBackQueue.length) return;
 
-//             this.currentDate = error;
-//             const cb = this.catchCallBackQueue.shift();
+            this.currentDate = error;
+            const cb = this.catchCallBackQueue.shift();
 
-//             if (this.currentDate instanceof MyPromise) {
-//                 this.currentDate.then(dataFromNew => {
-//                     this.currentDate = cb(dataFromNew);
-//                 })
-//             } else {
-//                 this.currentDate = cb(this.currentDate);
-//             }
-//         }, 0);
-//     }
+            if (this.currentDate instanceof MyPromise) {
+                this.currentDate.then(dataFromNew => {
+                    this.currentDate = cb(dataFromNew);
+                })
+            } else {
+                this.currentDate = cb(this.currentDate);
+            }
+        }, 0);
+    }
 
-//     then(resolvefn) {
-//         if (this.promiseState === 'pending') {
-//             this.thenCallBackQueue.push(resolvefn);
-//         }
-//         return this;
-//     }
+    then(resolvefn) {
+        if (this.promiseState === 'pending') {
+            this.thenCallBackQueue.push(resolvefn);
+        }
+        return this;
+    }
 
-//     catch(rejectfn) {
-//         this.catchCallBackQueue.push(rejectfn);
-//         return this;
-//     }
+    catch(rejectfn) {
+        this.catchCallBackQueue.push(rejectfn);
+        return this;
+    }
 
-//     static all = (array) => {
-//         let count = 0;
-//         const resolveData = new Array(array.length);
+    static all = (array) => {
+        let count = 0;
+        const resolveData = new Array(array.length);
 
-//         return new MyPromise((resolve, reject) => {
-//             array.forEach((ele, i) => {
-//                 if (ele instanceof MyPromise) {
-//                     ele.then(data => {
-//                         count++;
-//                         resolveData[i] = data;
-//                         if (count === array.length)
-//                             resolve(resolveData);
-//                     }).catch(err => reject(err));
-//                 } else {
-//                     count++;
-//                     resolveData[i] = ele;
-//                     if (count === array.length)
-//                         resolve(resolveData);
-//                 }
-//             })
-//         });
-//     }
+        return new MyPromise((resolve, reject) => {
+            array.forEach((ele, i) => {
+                if (ele instanceof MyPromise) {
+                    ele.then(data => {
+                        count++;
+                        resolveData[i] = data;
+                        if (count === array.length)
+                            resolve(resolveData);
+                    }).catch(err => reject(err));
+                } else {
+                    count++;
+                    resolveData[i] = ele;
+                    if (count === array.length)
+                        resolve(resolveData);
+                }
+            })
+        });
+    }
 
-//     static resolve(resdata) {
-//         return new MyPromise((res, _) => {
-//             res(resdata);
-//         });
-//     }
-//     static reject(rejdata) {
-//         return new MyPromise((_, reject) => {
-//             reject(rejdata);
-//         });
-//     }
-// }
+    static resolve(resdata) {
+        return new MyPromise((res, _) => {
+            res(resdata);
+        });
+    }
+    static reject(rejdata) {
+        return new MyPromise((_, reject) => {
+            reject(rejdata);
+        });
+    }
+}
 
-// const getRandomTime = () => {
-//     return Math.floor(Math.random() * 5);
-// }
+const getRandomTime = () => {
+    return Math.floor(Math.random() * 5);
+}
 
-// const p = new MyPromise((resolve, reject) => {
-//     const timer = getRandomTime();
-//     console.log(`Wait ${timer}s`);
-//     if (timer > 1) {
-//         setTimeout(() => {
-//             console.log('promise');
-//             resolve('Hello'); // <-----------
-//         }, timer * 1000);
-//     } else {
-//         reject('timer smaller then 2');
-//     }
+const p = new Promise((resolve, reject) => {
+    const timer = getRandomTime();
+    console.log(`Wait ${timer}s`);
+    if (timer > 1) {
+        setTimeout(() => {
+            console.log('promise');
+            resolve('Hello'); // <----------- typeof
+        }, timer * 1000);
+    } else {
+        reject('timer smaller then 2');
+    }
 
-// })
-//     .then()
-//     .then(data => console.log(data))
-//     .catch(err => console.log(err));
+}) // res -> then; rej -> catch
+    .then()
+    .then(data => console.log(data))
+    .catch(err => console.log(err));
 
 
-// console.log(p);
-// message queue: [resolve('Hello')]
+// // console.log(p);
+// // message queue: [resolve('Hello')]
 // const promise1 = MyPromise.resolve(3);
 // const promise2 = 42;
 // const promise3 = new MyPromise((resolve, reject) => {
@@ -620,7 +661,7 @@ console.log(state);
 // MyPromise.all([promise1, promise2, promise3]).then((values) => {
 //     console.log(values);
 // });
-// expected output: Array [3, 42, "foo"]
+// // expected output: Array [3, 42, "foo"]
 
 
 // function myFetch(url) {
