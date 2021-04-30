@@ -166,7 +166,6 @@ Note : There are six possible values that typeof returns: object, boolean, funct
 
 // console.log(matrix(4));
 
-
 /* 11. Write a JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers, respectively.
 Sample array : [1,2,3,4,5]
 Expected Output : 2,4 */
@@ -176,13 +175,11 @@ Expected Output : 2,4 */
 //   sortedArr = arr.sort((a, b) => a - b);
 //   let secondLastIdx = sortedArr.length - 2
 
-
 //   result.push(sortedArr[1], sortedArr[secondLastIdx])
 //   return result;
 // }
 
 // console.log(findSecondLowestHighest([1, 6, 3, 5, 4]))
-
 
 /* 12. Write a JavaScript function which says whether a number is perfect.
 According to Wikipedia : In number theory, a perfect number is a positive integer that is equal to the sum of its proper positive divisors, that is, the sum of its positive divisors excluding the number itself (also known as its aliquot sum). Equivalently, a perfect number is a number that is half the sum of all of its positive divisors (including itself).
@@ -246,7 +243,6 @@ Output : 25, 10, 10, 1 */
 
 // console.log(amountToCoins(46, [25, 10, 5, 2, 1]))
 
-
 /* 15. Write a JavaScript function to compute the value of bn where n is the exponent and b is the bases. Accept b and n from the user and display the result. */
 
 // function exponent(b, n) {
@@ -280,33 +276,112 @@ Expected Output : "thequickbrownfxjmpsvlazydg" */
 
 /* 17. Write a JavaScript function to  get the number of occurrences of each letter in specified string. */
 
-function characterCount(str) {
-  let characters = {};
-  str.replace(/\S/g, function(l){characters[l] = (isNaN(characters[l]) ? 1 : characters[l] + 1)})
-  return characters
+// function characterCount(str) {
+//   let characters = {};
+//   str.replace(/\S/g, function(l){characters[l] = (isNaN(characters[l]) ? 1 : characters[l] + 1)})
+//   return characters
+// }
+
+// console.log(characterCount("The quick brown fox jumps over the lazy dog"));
+
+/* 18. Write a function for searching JavaScript arrays with a binary search.
+Note : A binary search searches by splitting an array into smaller and smaller chunks until it finds the desired value. */
+
+// function binarySearch(array, target) {
+//   let position = Math.floor(array.length / 2);
+
+//   if(array[position] === target) {
+//     return position;
+//   } else if(array.length === 1) {
+//     return null;
+//   } else if(array[position] < target) {
+//     let arrRight = array.slice(position + 1);
+//     let res = binarySearch(arrRight, target);
+//     if(res === null) {
+//       return null
+//     } else {
+//       return position + 1 + res;
+//     }
+//   } else {
+//     let arrLeft = array.slice(0, position);
+//     return binarySearch(arrLeft, target)
+//   }
+// }
+
+// var myArray = [1, 2, 3, 5, 6, 7, 10, 11, 14, 15, 17, 19, 20, 22, 23];
+//  console.log(binarySearch(myArray, 6));
+
+/* 19. Write a JavaScript function that returns array elements larger than a number. */
+
+// function BiggerElements(val) {
+//   return function(evalue) {
+//     return (evalue >= val)
+//   }
+// }
+
+// var result = [11, 45, 4, 31, 64, 10]. filter(BiggerElements(12));
+// console.log(result);
+
+/* 20. Write a JavaScript function that generates a string id (specified length) of random characters.
+Sample character list : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789" */
+
+// function makeId(num) {
+//   let text = '';
+//   let char_list ="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+
+//   for(let i = 0; i < num; i++) {
+//     text += char_list.charAt(Math.floor(Math.random() * char_list.length))
+//   }
+//   return text;
+// }
+
+// console.log(makeId(8))
+
+/* 21. Write a JavaScript function to get all possible subset with a fixed length (for example 2) combinations in an array.
+Sample array : [1, 2, 3] and subset length is 2
+Expected output : [[2, 1], [3, 1], [3, 2], [3, 2, 1]] */
+
+/* 22. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string.
+Sample arguments : 'microsoft.com', 'o'
+Expected output : 3 */
+
+// function letterCount(str, letter) {
+//   let count = 0;
+//   strArray = str.replace(/[^A-Za-z0-9]/g, "").toLowerCase().split("")
+
+//   for(let i = 0; i < strArray.length; i++) {
+//     if(strArray[i] === letter) {
+//       count++;
+//     }
+//   }
+//   return count;
+// }
+
+// console.log(letterCount("micrOsoft.com", 'o'))
+
+/* 23. Write a JavaScript function to find the first not repeated character.
+Sample arguments : 'abacddbec'
+Expected output : 'e' */
+
+function notRepeatedChar(str) {
+  const strArray = str.split("");
+  let result = "";
+  let ctr = 0;
+
+  for (let i = 0; i < strArray.length; i++) {
+    ctr = 0;
+    for (let j = 0; j < strArray.length; j++) {
+      if (strArray[i] === strArray[j]) ctr += 1;
+    }
+    if (ctr < 2) {
+      result = strArray[i];
+      break;
+    }
+  }
+  return result;
 }
 
-console.log(characterCount("The quick brown fox jumps over the lazy dog"));
-
-// 18. Write a function for searching JavaScript arrays with a binary search.
-// Note : A binary search searches by splitting an array into smaller and smaller chunks until it finds the desired value.
-
-// 19. Write a JavaScript function that returns array elements larger than a number.
-
-// 20. Write a JavaScript function that generates a string id (specified length) of random characters.
-// Sample character list : "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-
-// 21. Write a JavaScript function to get all possible subset with a fixed length (for example 2) combinations in an array.
-// Sample array : [1, 2, 3] and subset length is 2
-// Expected output : [[2, 1], [3, 1], [3, 2], [3, 2, 1]]
-
-// 22. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string.
-// Sample arguments : 'microsoft.com', 'o'
-// Expected output : 3
-
-// 23. Write a JavaScript function to find the first not repeated character.
-// Sample arguments : 'abacddbec'
-// Expected output : 'e'
+console.log(notRepeatedChar('abacddbecf'))
 
 // 24. Write a JavaScript function to apply Bubble Sort algorithm.
 // Note : According to wikipedia "Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that works by repeatedly stepping through the list to be sorted, comparing each pair of adjacent items and swapping them if they are in the wrong order".
