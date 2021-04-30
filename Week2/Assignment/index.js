@@ -1,6 +1,5 @@
 /* JAVASCRIPT ASSIGNMENT */
 
-
 /* 1. Write a JavaScript function that reverse a number.
 Example x = 32243;
 Expected Output : 34223 */
@@ -76,7 +75,6 @@ Expected Output : 'The Quick Brown Fox ' */
 
 // console.log(upperCase("the quick brown fox"))
 
-
 /* 6. Write a JavaScript function that accepts a string as a parameter and find the longest word within the string.
 Example string : 'Web Development Tutorial'
 Expected Output : 'Development' */
@@ -100,37 +98,195 @@ Note : As the letter 'y' can be regarded as both a vowel and a consonant, we do 
 Example string : 'The quick brown fox'
 Expected Output : 5 */
 
+// function countVowel(str) {
+//    let vowelList = 'aeiouAEIOU';
+//    let count = 0;
 
-// 8. Write a JavaScript function that accepts a number as a parameter and check the number is prime or not.
-// Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself.
+//    for(let i = 0; i < str.length; i++) {
+//       if(vowelList.indexOf(str[i]) !== -1) {
+//          count++;
+//       }
+//    }
+//    return count;
+// }
 
-// 9. Write a JavaScript function which accepts an argument and returns the type.
-// Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined.
+// console.log(countVowel("The Equick brooown fox"))
 
-// 10. Write a JavaScript function which returns the n rows by n columns identity matrix.
+/* 8. Write a JavaScript function that accepts a number as a parameter and check the number is prime or not.
+Note : A prime number (or a prime) is a natural number greater than 1 that has no positive divisors other than 1 and itself. */
 
-// 11. Write a JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers, respectively.
-// Sample array : [1,2,3,4,5]
-// Expected Output : 2,4
+// function primeNumber(num) {
+//    if(num === 1) {
+//       return false;
+//    } else if(num === 2) {
+//       return true;
+//    } else {
+//       for(let i = 2; i < num; i++) {
+//          if(num % i === 0) {
+//             return false;
+//          }
+//       }
+//       return true;
+//    }
+// }
 
-// 12. Write a JavaScript function which says whether a number is perfect.
-// According to Wikipedia : In number theory, a perfect number is a positive integer that is equal to the sum of its proper positive divisors, that is, the sum of its positive divisors excluding the number itself (also known as its aliquot sum). Equivalently, a perfect number is a number that is half the sum of all of its positive divisors (including itself).
-// Example : The first perfect number is 6, because 1, 2, and 3 are its proper positive divisors, and 1 + 2 + 3 = 6. Equivalently, the number 6 is equal to half the sum of all its positive divisors: ( 1 + 2 + 3 + 6 ) / 2 = 6. The next perfect number is 28 = 1 + 2 + 4 + 7 + 14. This is followed by the perfect numbers 496 and 8128.
+// console.log(primeNumber(37))
 
-// 13. Write a JavaScript function to compute the factors of a positive integer.
+/* 9. Write a JavaScript function which accepts an argument and returns the type.
+Note : There are six possible values that typeof returns: object, boolean, function, number, string, and undefined. */
+// function findType(input) {
+//    var dataType = [Function, RegExp, Number, String, Boolean, Object]
 
-// 14. Write a JavaScript function to convert an amount to coins.
-// Sample function : amountTocoins(46, [25, 10, 5, 2, 1])
-// Here 46 is the amount. and 25, 10, 5, 2, 1 are coins.
-// Output : 25, 10, 10, 1
+//    if(typeof input === "object" || typeof input === "function") {
+//       for(let i = 0, len = dataType.length; i < len; i++) {
+//          if(value instanceof dataType[i]) {
+//             return dataType[i]
+//          }
+//       }
+//    }
+//    return typeof input
+// }
 
-// 15. Write a JavaScript function to compute the value of bn where n is the exponent and b is the bases. Accept b and n from the user and display the result.
+// console.log(findType("hello"))
 
-// 16. Write a JavaScript function to extract unique characters from a string.
-// Example string : "thequickbrownfoxjumpsoverthelazydog"
-// Expected Output : "thequickbrownfxjmpsvlazydg"
+/* 10. Write a JavaScript function which returns the n rows by n columns identity matrix. */
 
-// 17. Write a JavaScript function to  get the number of occurrences of each letter in specified string.
+// function matrix(n) {
+//   for (let i = 0; i < n; i++) {
+//     for (let j = 0; j < n; j++) {
+//       if (i === j) {
+//         console.log(" 1 ");
+//       } else {
+//         console.log(" 0 ");
+//       }
+//    }
+//    console.log("----------");
+//   }
+// }
+
+// console.log(matrix(4));
+
+
+/* 11. Write a JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers, respectively.
+Sample array : [1,2,3,4,5]
+Expected Output : 2,4 */
+
+// function findSecondLowestHighest(arr) {
+//   let result = []
+//   sortedArr = arr.sort((a, b) => a - b);
+//   let secondLastIdx = sortedArr.length - 2
+
+
+//   result.push(sortedArr[1], sortedArr[secondLastIdx])
+//   return result;
+// }
+
+// console.log(findSecondLowestHighest([1, 6, 3, 5, 4]))
+
+
+/* 12. Write a JavaScript function which says whether a number is perfect.
+According to Wikipedia : In number theory, a perfect number is a positive integer that is equal to the sum of its proper positive divisors, that is, the sum of its positive divisors excluding the number itself (also known as its aliquot sum). Equivalently, a perfect number is a number that is half the sum of all of its positive divisors (including itself).
+Example : The first perfect number is 6, because 1, 2, and 3 are its proper positive divisors, and 1 + 2 + 3 = 6. Equivalently, the number 6 is equal to half the sum of all its positive divisors: ( 1 + 2 + 3 + 6 ) / 2 = 6. The next perfect number is 28 = 1 + 2 + 4 + 7 + 14. This is followed by the perfect numbers 496 and 8128. */
+
+// function isPerfect(number) {
+//   let temp = 0;
+//   for(let i = 1; i <= number/2; i++) {
+//     if(number%i === 0) {
+//       temp += i;
+//     }
+//   }
+
+//   if(temp === number && temp !== 0) {
+//     console.log('It is a perfect number.');
+//   } else {
+//     console.log('It is not a perfect number.')
+//   }
+// }
+
+// console.log(isPerfect(28))
+
+/* 13. Write a JavaScript function to compute the factors of a positive integer. */
+// function factors(num) {
+//   let num_factors = [];
+
+//   for(let i = 1; i <= Math.floor(Math.sqrt(num)); i++) {
+//     if(num % i === 0 ) {
+//       num_factors.push(i)
+//     }
+//     if(num / i !== i) {
+//     num_factors.push(num / i)
+//     }
+//     num_factors.sort(function(x,y) {
+//       return x - y
+//     })
+//   }
+//   return num_factors
+// }
+
+// console.log(factors(15))
+
+/* 14. Write a JavaScript function to convert an amount to coins.
+Sample function : amountTocoins(46, [25, 10, 5, 2, 1])
+Here 46 is the amount. and 25, 10, 5, 2, 1 are coins.
+Output : 25, 10, 10, 1 */
+
+// function amountToCoins(amount, coins) {
+//   if(amount === 0) {
+//     return [];
+//   } else {
+//     if(amount >= coins[0]) {
+//       left = (amount - coins[0]);
+//       return [coins[0]].concat(amountToCoins(left, coins))
+//     } else {
+//       coins.shift()
+//       return amountToCoins(amount, coins)
+//     }
+//   }
+// }
+
+// console.log(amountToCoins(46, [25, 10, 5, 2, 1]))
+
+
+/* 15. Write a JavaScript function to compute the value of bn where n is the exponent and b is the bases. Accept b and n from the user and display the result. */
+
+// function exponent(b, n) {
+//   let ans = 1;
+//   for(let i = 1; i <= n; i++) {
+//     ans = b * ans
+//   }
+//   return ans
+//   // return b ** n
+// }
+
+// console.log(exponent(2,3))
+
+/* 16. Write a JavaScript function to extract unique characters from a string.
+Example string : "thequickbrownfoxjumpsoverthelazydog"
+Expected Output : "thequickbrownfxjmpsvlazydg" */
+
+// function unique_char(str1) {
+//   let str = str1;
+//   let uniql = "";
+
+//   for(let i = 0; i < str.length; i++) {
+//     if(uniql.indexOf(str.charAt(i)) == -1) {
+//       uniql += str[i];
+//     }
+//   }
+//   return uniql;
+// }
+
+// console.log(unique_char("thequickbrownfoxjumpsoverthelazydog"))
+
+/* 17. Write a JavaScript function to  get the number of occurrences of each letter in specified string. */
+
+function characterCount(str) {
+  let characters = {};
+  str.replace(/\S/g, function(l){characters[l] = (isNaN(characters[l]) ? 1 : characters[l] + 1)})
+  return characters
+}
+
+console.log(characterCount("The quick brown fox jumps over the lazy dog"));
 
 // 18. Write a function for searching JavaScript arrays with a binary search.
 // Note : A binary search searches by splitting an array into smaller and smaller chunks until it finds the desired value.
