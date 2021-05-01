@@ -363,41 +363,165 @@ Expected output : 3 */
 Sample arguments : 'abacddbec'
 Expected output : 'e' */
 
-function notRepeatedChar(str) {
-  const strArray = str.split("");
-  let result = "";
-  let ctr = 0;
+// function notRepeatedChar(str) {
+//   const strArray = str.split("");
+//   let result = "";
+//   let ctr = 0;
 
-  for (let i = 0; i < strArray.length; i++) {
-    ctr = 0;
-    for (let j = 0; j < strArray.length; j++) {
-      if (strArray[i] === strArray[j]) ctr += 1;
-    }
-    if (ctr < 2) {
-      result = strArray[i];
-      break;
-    }
-  }
-  return result;
+//   for (let i = 0; i < strArray.length; i++) {
+//     ctr = 0;
+//     for (let j = 0; j < strArray.length; j++) {
+//       if (strArray[i] === strArray[j]) ctr += 1;
+//     }
+//     if (ctr < 2) {
+//       result = strArray[i];
+//       break;
+//     }
+//   }
+//   return result;
+// }
+
+// console.log(notRepeatedChar('abacddbecf'))
+
+/* 24. Write a JavaScript function to apply Bubble Sort algorithm.
+Note : According to wikipedia "Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that works by repeatedly stepping through the list to be sorted, comparing each pair of adjacent items and swapping them if they are in the wrong order".
+Sample array : [12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]
+Expected output : [3223, 546, 455, 345, 234, 213, 122, 98, 84, 64, 23, 12, 9, 4, 1] */
+
+// function bubbleSort(array) {
+//   let len = array.length;
+//   for (let i = 0; i < len; i++) {
+//     for (let j = 0; j < len; j++) {
+//       if (array[j] > array[j + 1]) {
+//         let temp = array[j];
+//         array[j] = array[j + 1];
+//         array[j + 1] = temp;
+//       }
+//     }
+//   }
+//   return array;
+// }
+
+// let bubbleSort2 = (inputArr) => {
+//   let len = inputArr.length;
+//   let swapped;
+//   do {
+//     swapped = false;
+//     for (let i = 0; i < len; i++) {
+//       if (inputArr[i] > inputArr[i + 1]) {
+//         let tmp = inputArr[i];
+//         inputArr[i] = inputArr[i + 1];
+//         inputArr[i + 1] = tmp;
+//         swapped = true;
+//       }
+//     }
+//   } while (swapped);
+//   return inputArr;
+// };
+
+// console.log(
+//   bubbleSort([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213])
+// );
+
+// console.log(
+//   bubbleSort2([12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213])
+// );
+
+/* 25. Write a JavaScript function that accept a list of country names as input and returns the longest country name as output.
+Sample function : Longest_Country_Name(["Australia", "Germany", "United States of America"])
+Expected output : "United States of America" */
+
+// function longestCountryName(countries) {
+//   return countries.reduce(function(lname, country) {
+//     return lname.length > country.length ? lname : country;
+//   }, "")
+// }
+
+// console.log(longestCountryName(['Australia', 'Germany', 'United States of America']))
+
+/* 26. Write a JavaScript function to find longest substring in a given a string without repeating characters. */
+
+// function longestSubstringWithoutRepeating(input) {
+//   let chars = input.split("");
+//   let curr_char;
+//   let str = "";
+//   let longestString = "";
+//   let hash = {};
+
+//   for (let i = 0; i < chars.length; i++) {
+//     curr_char = chars[i];
+//     if (!hash[chars[i]]) {
+//       str += curr_char;
+//       hash[chars[i]] = { index: i };
+//     } else {
+//       if (longestString.length <= str.length) {
+//         longestString = str;
+//       }
+//       let prev_duplicateIdx = hash[curr_char].index;
+//       let str_FromPrevDupe = input.substring(prev_duplicateIdx + 1, i);
+//       str = str_FromPrevDupe + curr_char;
+//       hash = {};
+//       for (let j = prev_duplicateIdx + 1; j <= i; j++) {
+//         hash[input.charAt(j)] = { index: j };
+//       }
+//     }
+//   }
+//   return longestString.length > str.length ? longestString : str;
+// }
+
+// console.log(longestSubstringWithoutRepeating("google.com"));
+
+/* 27. Write a JavaScript function that returns the longest palindrome in a given string.
+Note: According to Wikipedia "In computer science, the longest palindromic substring or longest symmetric factor problem is the problem of finding a maximum-length contiguous substring of a given string that is also a palindrome. For example, the longest palindromic substring of "bananas" is "anana". The longest palindromic substring is not guaranteed to be unique; for example, in the string "abracadabra", there is no palindromic substring with length greater than three, but there are two palindromic substrings with length three, namely, "aca" and "ada".
+In some applications it may be necessary to return all maximal palindromic substrings (that is, all substrings that are themselves palindromes and cannot be extended to larger palindromic substrings) rather than returning only one substring or returning the maximum length of a palindromic substring. */
+
+// function is_Palindrome(str1) {
+//   var rev = str1.split("").reverse().join("");
+//   return str1 == rev;
+// }
+
+// function longest_palindrome(str1) {
+//   var max_length = 0,
+//     maxp = "";
+
+//   for (var i = 0; i < str1.length; i++) {
+//     var subs = str1.substr(i, str1.length);
+
+//     for (var j = subs.length; j >= 0; j--) {
+//       var sub_subs_str = subs.substr(0, j);
+//       if (sub_subs_str.length <= 1) continue;
+
+//       if (is_Palindrome(sub_subs_str)) {
+//         if (sub_subs_str.length > max_length) {
+//           max_length = sub_subs_str.length;
+//           maxp = sub_subs_str;
+//         }
+//       }
+//     }
+//   }
+
+//   return maxp;
+// }
+// console.log(longest_palindrome("abracadabra"));
+
+// console.log(
+//   longest_palindrome("HYTBCABADEFGHABCDEDCBAGHTFYW12345678987654321ZWETYGDE")
+// );
+
+/* 28. Write a JavaScript program to pass a 'JavaScript function' as parameter. */
+function addStudent(id, refreshCallback) {
+  refreshCallback()
 }
 
-console.log(notRepeatedChar('abacddbecf'))
+function refreshStudentList() {
+  console.log("hello")
+}
 
-// 24. Write a JavaScript function to apply Bubble Sort algorithm.
-// Note : According to wikipedia "Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that works by repeatedly stepping through the list to be sorted, comparing each pair of adjacent items and swapping them if they are in the wrong order".
-// Sample array : [12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]
-// Expected output : [3223, 546, 455, 345, 234, 213, 122, 98, 84, 64, 23, 12, 9, 4, 1]
+console.log(addStudent(1, refreshStudentList))
 
-// 25. Write a JavaScript function that accept a list of country names as input and returns the longest country name as output.
-// Sample function : Longest_Country_Name(["Australia", "Germany", "United States of America"])
-// Expected output : "United States of America"
+/* 29. Write a JavaScript function to get the function name. */
+function abc() {
+  console.log(arguments.callee.name)
+}
 
-// 26. Write a JavaScript function to find longest substring in a given a string without repeating characters.
-
-// 27. Write a JavaScript function that returns the longest palindrome in a given string.
-// Note: According to Wikipedia "In computer science, the longest palindromic substring or longest symmetric factor problem is the problem of finding a maximum-length contiguous substring of a given string that is also a palindrome. For example, the longest palindromic substring of "bananas" is "anana". The longest palindromic substring is not guaranteed to be unique; for example, in the string "abracadabra", there is no palindromic substring with length greater than three, but there are two palindromic substrings with length three, namely, "aca" and "ada".
-// In some applications it may be necessary to return all maximal palindromic substrings (that is, all substrings that are themselves palindromes and cannot be extended to larger palindromic substrings) rather than returning only one substring or returning the maximum length of a palindromic substring.
-
-// 28. Write a JavaScript program to pass a 'JavaScript function' as parameter.
-
-// 29. Write a JavaScript function to get the function name.
+abc()
