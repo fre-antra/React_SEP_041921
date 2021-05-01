@@ -1,0 +1,10 @@
+- How to loop through an object
+- Object.keys()
+- reduce() and its usage
+- Destructure
+- Deep copy and shallow copy and implementation in JavaScript
+- Destructure
+- Arrow function and this keyword
+- Closure
+- IIFE
+- Currying function

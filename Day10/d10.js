@@ -72,7 +72,7 @@ function getUser(id, cb) {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       data = JSON.parse(xhttp.responseText);         // json light weight  parse json -> string   stringfie do other way
-      cb(data);
+      cb(data,2);
     }
   };
   xhttp.open("GET", "https://jsonplaceholder.typicode.com/todos/" + id, true);
@@ -80,8 +80,9 @@ function getUser(id, cb) {
 }
 
                                                         //if print without callback, undefiend 
-getUser(1, data1 => {                   // 这一堆是个cb  里面cb(data) 的data == data1
+getUser(1, (data1,data2) => {                   // 这一堆是个cb  里面cb(data) 的data == data1
   logMsg(data1);
+  logMsg(data2);
   getUser(2, data2 => {
     logMsg(data2);
     getUser(3, data3 => {
