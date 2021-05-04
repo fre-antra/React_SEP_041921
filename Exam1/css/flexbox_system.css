@@ -1,0 +1,127 @@
+/*
+Responsive homemade grid system 
+*/
+
+/* Primary Container for Grid */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Flex Row, responsive (ish)*/
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+    margin-bottom: 15px;
+}
+
+/* Column */
+.column {
+    flex-direction: column;
+    margin-bottom: 30px;
+}
+
+/* Grid */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Column - Only 4, 6 and 8 implemented for this blog */
+.col-4 {
+    flex: 0 0 calc(4/12 * 100%);
+    max-width: calc(4/12 * 100%);
+
+}
+
+.col-6 {
+    flex: 0 0 calc(6/12 * 100%);
+    max-width: calc(6/12 * 100%);
+}
+
+.col-8 {
+    flex: 0 0 calc(8/12 * 100%);
+    max-width: calc(8/12 * 100%);
+}
+
+.col-12 {
+    flex: 0 0 calc(12/12 * 100%);
+    max-width: calc(12/12 * 100%);
+}
+
+/* Column Padding */
+.col-4, .col-6, .col-8, .col-12 {
+    width: 100%;
+    position: relative;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-bottom: 1rem;
+}
+
+/* Flex Justify */
+.d-flex {
+    display: flex;
+}
+
+.d-none {
+    display: none;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-end {
+    justify-content: flex-end;
+}
+
+/* Padding */
+
+.padding {
+    padding: 1rem;
+}
+
+
+/* Responsiveness */
+@media (max-width: 576px){
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (max-width: 768px){
+    .container {
+        max-width: 720px;
+    }
+    .row{
+        flex-direction: column;
+    }
+    .col-6, .col-8, .col-12 {
+        flex: 0 0 calc(12/12 * 100%);
+        max-width: calc(12/12 * 100%);
+    }
+}
+
+@media (max-width: 992px){
+    .container {
+        max-width: 960px;
+    }
+
+}
+
+@media (max-width: 1200px){
+    .container {
+        max-width: 1140px;
+    }
+}

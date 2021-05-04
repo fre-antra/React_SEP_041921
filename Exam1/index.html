@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Album Searcher</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div class= "container">
+    <header class="header">
+        <form class="searchbar" id="searchbar">
+            <input type="text" name="search" id="search" placeholder="Search..."
+                   class="search">
+            <button class="search__button" onclick="searchAlbums()">
+                <a class="text-light">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                         class="bi bi-search" viewBox="0 0 16 16">
+                        <path
+                                d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z" />
+                    </svg>
+                </a>
+            </button>
+        </form>
+    </header>
+    <main class="main">
+        <div class="container">
+            <section class="content-header">
+                <h2 id="search-header">Search Albums by Artist Name: </h2>
+                <hr />
+            </section>
+            <section class="search-result" id="search-result">
+                <div class="grid" id="search-result-grid">
+                </div>
+            </section>
+        </div>
+    </main>
+</div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

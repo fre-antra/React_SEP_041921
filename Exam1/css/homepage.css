@@ -1,0 +1,99 @@
+/* CSS for Home Page elements styling
+ */
+
+/* Card Styling */
+.card {
+    border: solid 1px var(--color-main);
+    border-radius: 3px;
+    flex: 0 0 10rem;
+    transition: all 0.2s ease-in-out;
+    margin: 1rem;
+    background-color: #f0eeee;
+    min-height: 60px;
+    padding: 10px 10px;
+}
+
+.card:hover{
+    box-shadow: 4px 4px 6px 0 rgba(0,0,0, 0.1);
+}
+
+.card-content {
+
+}
+
+.card-date {
+    margin-bottom: 5px;
+}
+
+.card__image {
+    padding: .5rem;
+}
+
+.card-text {
+    padding: 0.5rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    min-height: 40px;
+    margin-bottom: auto;
+}
+
+/* Margin to avoid Header Overlap */
+.main {
+    margin-top: 3rem;
+    margin-left: 6rem;
+    margin-right: 6rem;
+}
+
+/* Header Styling */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 0 0 6rem;
+    width: 100%;
+    background-color: var(--color-main);
+}
+
+.header-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.searchbar {
+    flex: 0 0 40%;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.search {
+    box-sizing: content-box;
+    border-radius: 100px;
+    background-color: white;
+    padding: 0.5rem 2rem;
+    margin-right: -3.25rem;
+    width: 60%;
+    border: none;
+    transition: all 0.2s;
+}
+
+.search:hover{
+    width: 100%;
+}
+
+
+.search__button {
+    height: 2rem;
+    width: 2rem;
+    background-color: white;
+    border: none;
+}
+
+/* Content Header Styling */
+
+.content-header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--color-main);
+}

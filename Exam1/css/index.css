@@ -1,0 +1,86 @@
+/* Reset */
+@import url("./reset.css");
+
+/* Flexbox System */ 
+@import url("./flexbox_system.css");
+
+/* Root Variables */ 
+@import url("./root.css");
+
+/* Typography */ 
+@import url("./typography.css");
+
+/* Home Page Element Styling */
+@import url("./homepage.css");
+
+html {
+    font-size: 62.25%; 
+}
+
+*, ::after, ::before{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 1.6rem;
+    font-family: "Arial", sans-serif;
+    text-align: left;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: "Arial", sans-serif;
+    font-weight: normal;
+    margin-bottom: 0.5rem;
+}
+
+h1 {
+    font-size: 2rem;
+}
+
+h2 {
+    font-size: 2rem;
+}
+
+h3 { 
+    font-size: 1.5rem;
+}
+
+h4 {
+    font-size: 1.25rem;
+}
+
+hr {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+p {
+    margin-bottom: 1rem;
+}
+
+
+/* Link Styling - Lighter Blue */
+a {
+    color: var(--color-link);
+} 
+
+/* List Styling */ 
+
+ul, ol {
+    list-style-position: inside;
+    margin-bottom: 15px;
+}
+
+li {
+    padding-left: 1rem;
+}
+
+
+
+
+
+
+
+
