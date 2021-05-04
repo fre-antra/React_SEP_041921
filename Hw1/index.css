@@ -18,28 +18,6 @@ input {
     border: none;
     font-size: medium;
 }
-input[type="text"],
-input[type="password"] {
-    width: 40.5%;
-}
-input[type="email"],
-input[type="tel"] {
-    width: 85%;
-}
-input:focus {
-    opacity: 0.9;
-    box-shadow: 0 0 5px rgb(31, 31, 165);
-    transition: all 0.5s ease;
-}
-
-.check-box-div {
-    margin-left: 14.5px;
-}
-
-label {
-    font-size: small;
-    float: inline-end;
-}
 
 button {
     padding: 12px;
@@ -49,45 +27,27 @@ button {
     border-radius: 5px;
     width: 42%;
 }
-
-#login-button {
-    background-color: #198754;
-    opacity: 0.8;
-    transition: all 0.8s ease;
-}
-#register-button {
-    background-color: #0d6efd;
-    opacity: 0.8;
-    transition: all 0.8s ease;
-}
-#login-button:hover {
-    opacity: 1;
-    transition: all 0.8s ease;
-}
-#register-button:hover {
-    opacity: 1;
-    transition: all 0.8s ease;
-}
-
-input[type="checkbox"]:hover {
-    transition: all 0.5s ease;
-    opacity: 1;
-}
-
 button:focus {
     box-shadow: 0 0 0 2px #ffffff, 0 0 3px 5px #3a97f9;
     outline: 2px dotted transparent;
     outline-offset: 2px;
 }
-
-#term-conditon-text {
-    color: dodgerblue;
-}
-
 i {
     background-color: dodgerblue;
     border-radius: 3px;
     padding: 3px;
     opacity: 0.9;
     color: #ffffff;
+}
+.header-text {
+    color: red;
+}
+#app {
+    margin: 0 -5px;
+}
+
+#app:after {
+    content: "";
+    display: table;
+    clear: both;
 }
