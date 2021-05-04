@@ -16,20 +16,20 @@ function fetchData() {
     )
         .then((res) => res.json())
         .then((data) => {
+            app.innerHTML = `<div style = "text-align: center;"> <p> Results found: ${data.resultCount} </p>
+            </div>`;
             data.results.forEach((element) => {
                 app.innerHTML += `<div class = "col" style =
                 "color: red;
                 float: left;
-                width: 25%;
-                margi
-                margin-bottom: 10px;
+                width: 20%;
+                margin-top: 50px;
                 padding: 0 10px;">
 
                 <div class = "card" style = 
                 "box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-                padding: 16px;
+                padding: 10px;
                 height: 330px;
-                margin-bottom; 20px;
                 text-align: center;
                 background-color: #f1f1f1;">
                 <img src = "${element.artworkUrl60}" style = "height: 230px"></src>
