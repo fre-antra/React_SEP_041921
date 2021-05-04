@@ -1,0 +1,136 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: teal;
+    flex: 0 0 4rem;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 40%;
+}
+
+.search_input {
+    border: none;
+    border-radius: 2rem;
+    padding: .5rem 2rem;
+    width: 80%;
+    transition: all .2s ease 0s;
+    margin-right: -2.5rem;
+}
+
+.search_input:focus {
+    outline: none;
+    width: 100%;
+    transition: all .2s ease 0s;
+}
+
+.search_button {
+    border: none;
+    background-color: white;
+}
+
+.container_content {
+    position: relative;
+    flex: 1 1 auto;
+    overflow-y: auto;
+    width: 100%;
+}
+
+.result {
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
+}
+
+.info {
+    padding: 1rem;
+    color: #333;
+    font-size: 1.5rem;
+    text-align: center;
+    border-bottom: 1px solid teal;
+    margin: auto auto 1rem;
+}
+
+.flexGrid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.flexGrid>.card {
+    margin: 1rem;
+}
+
+.card {
+    background-color: #f0eeee;
+    border: 1px solid teal;
+    border-radius: 3px;
+    flex: 0 0 6rem;
+}
+
+.card_content {
+    color: #333;
+    text-align: center;
+    padding: 0 .5rem .5rem;
+    font-size: .8rem;
+    font-weight: bold;
+}
+
+.lds {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+}
+
+.lds div {
+    display: inline-block;
+    position: absolute;
+    left: 8px;
+    width: 16px;
+    background: teal;
+    animation: lds 1.2s cubic-bezier(0, 0.5, 0.5, 1) infinite;
+}
+
+.lds div:nth-child(1) {
+    left: 8px;
+    animation-delay: -0.24s;
+}
+
+.lds div:nth-child(2) {
+    left: 32px;
+    animation-delay: -0.12s;
+}
+
+.lds div:nth-child(3) {
+    left: 56px;
+    animation-delay: 0;
+}
+
+@keyframes lds {
+    0% {
+        top: 8px;
+        height: 64px;
+    }
+    50%, 100% {
+        top: 24px;
+        height: 32px;
+    }
+}
