@@ -1,3 +1,4 @@
+
 const searchAPI = (() => {
   const baseUrl = "https://itunes.apple.com/search";
   // 'https://itunes.apple.com/search?term=${ARTIST_NAME}&media=music&entity=album&attribute=artistTerm&limit=500'
@@ -8,7 +9,7 @@ const searchAPI = (() => {
     const option = {
       method: "GET",
     };
-    return fetch(url, option).then((res) => res.json());
+    return fetchJsonp(url, option).then((res) => res.json());
   };
   return {
     getSearchResult,
