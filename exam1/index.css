@@ -1,0 +1,76 @@
+:root {
+  --height-header: 60px;
+  --height-card: 300px;
+
+  --width-card: 110px;
+
+  /* --color-green: rgb(30, 255, 0);
+  --color-red-button: rgb(148, 21, 21);
+  --color-red-li-hover: rgb(27, 172, 8); */
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Itim", cursive;
+}
+.header {
+  position: fixed;
+  height: var(--height-header);
+  background: #008080;
+  color: white;
+  width: 100vw;
+  font-size: 2rem;
+  text-transform: capitalize;
+  line-height: var(--height-header);
+  letter-spacing: 2px;
+  user-select: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header input {
+  outline: none;
+  border: none;
+  list-style: none;
+  letter-spacing: 1px;
+  padding: 5px 10px;
+  border-radius: 5px;
+  margin: 0 10px;
+  width: 50%;
+}
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 100%;
+  width: 100%;
+}
+.searchRes {
+  width: 80%;
+  margin-top: calc(var(--height-header)*2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.count {
+    width: 100%;
+    border-bottom: 1px solid #008080;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.resCard {
+  width: var(--width-card);
+  overflow: auto;
+  padding: 5px;
+  margin: 5px;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #008080;
+}
+.cardImg {
+  width: calc(var(--width-card)-10);
+}
