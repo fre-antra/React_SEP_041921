@@ -1,13 +1,14 @@
 const albumAPI = (() => {
 
-    const artistName =  "swift"
-    console.log(artistName)
-    console.log(234)
-    const baseurl = 'https://itunes.apple.com/search?term=${'+ artistName +'}&media=music&entity=album&attribute=artistTerm&limit=500';
 
-    const getCards = () =>
-        fetchJsonp(baseurl)
+    const getCards = (name) => {
+        const artistName =  name;
+        const baseurl = 'https://itunes.apple.com/search?term=${'+ artistName +'}&media=music&entity=album&attribute=artistTerm&limit=500';
+
+
+        return fetchJsonp(baseurl)
             .then((response) => response.json());
+    }
 
     return {
         getCards,
@@ -17,8 +18,9 @@ const albumAPI = (() => {
 const View = (() => {
     const domString = {
         cardList: 'album-card',
-        removeBtn: 'btn-remove',
-        searchResult: 'search-result'
+        nameSearch: 'name-search',
+        searchResult: 'search-result',
+        searchBtn: 'search-btn'
     }
     const render = (element, htmlString) => {
         element.innerHTML = htmlString;
@@ -59,26 +61,32 @@ const Model = ((api, view) => {
     }
 
     class State {
-        #cardList = [];
+        #cardVal = [];
         #inputVal = '';
+
 
         get inputVal() {
             return this.#inputVal;
         }
         set inputVal(value) {
             this.#inputVal = value;
+            const cardElement = document.querySelector('#' + view.domString.searchResult);
+            const htmlString = "songs by: " + this.#inputVal
+            // view.createCard(this.#cardVal);
+            view.render(cardElement, htmlString);
+
         }
         
-        get cardList() {
-            return this.cardList;
+        get cardVal() {
+            return this.cardVal;
         }
-        set cardList(newlist) {
-            this.#cardList = newlist;
-
+        set cardVal(newlist) {
+            this.#cardVal = newlist;
             const cardElement = document.querySelector('#' + view.domString.cardList);
-            console.log(this.#cardList)
-            const htmlString = view.createCard(this.#cardList);
+            const htmlString =  view.createCard(this.#cardVal);
             view.render(cardElement, htmlString);
+
+            
         }
     }
 
@@ -95,12 +103,42 @@ const AppController = ((view, model) => {
 
     const state = new model.State();
 
+    const search = () => {
+        const searchBtn = document.querySelector('#' + view.domString.searchBtn);
+        const nameSearch = document.querySelector('#' + view.domString.nameSearch);
+
+        nameSearch.addEventListener('keyup', event => {
+            if (event.key === 'Enter') {
+                event.preventDefault()
+                state.inputval = nameSearch.value
+            }
+        })
+        console.log(45654654)
+        searchBtn.addEventListener('click', event => {
+            const cardElement = document.querySelector('#' + view.domString.searchResult);
+            const nameSearch = document.querySelector('#' + view.domString.nameSearch);
+            console.log(nameSearch.value)
+            state.inputVal = nameSearch.value
+            model.getCards(nameSearch.value).then(data => {
+                console.log(56)
+                state.cardVal = data;
+                search();
+            })
+            if (event.key === 'Enter') {
+                state.inputval = nameSearch.value
+                event.preventDefault()
+            }
+            
+        });
+    }
+
     const init = () => {
         model.getCards().then(data => {
-            state.cardList = data;
-            // removeTodoFromList();
-            // addTodoToList();
-        });
+            console.log(56)
+            state.cardVal = data;
+            search();
+        })
+        
     }
     
     return {
