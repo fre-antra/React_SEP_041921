@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
+        <title>Itunes API</title>
+        <link rel="stylesheet" href="./itunesAPI.css" />
+        <script async src="./itunesAPI.js"></script>
+    </head>
+
+    <body>
+        <header class="searchBar">
+            <form class = "bar">
+                <input class = "search" 
+                type = "text" 
+                placeholder="Search..."/>
+                <button class = "btn-search">
+                    <img class = "img-search" src="./search.jpg"></img>
+                </button>
+                <i class="fa fa-search"></i>
+            </form>
+        </header>
+        
+        <section class = "content">
+            
+            <p class = "default">Search Albums by ArtistName:</p>
+            <hr>
+
+            <div id = "results" class = "searchResult">
+                <div class ="cards">
+                    <div class = "album">
+                        <img class = "albumImg" src="url" alt>
+                        <div class = "albumInfo">1989</div>
+                    </div>
+                    <!--
+                    <div class = "album">
+                        <img class = "albumImg" src="url" alt>
+                        <div class = "albumname">abcd</div>
+                    </div>
+                    <div class = "album">
+                        <img class = "albumImg" src="url" alt>
+                        <div class = "albumname">ABCD</div>
+                    </div>
+                    -->
+                </div>
+                <!--<li>
+                    <span>result</span>
+                </li>-->
+            </div>
+
+        </section>
+
+    </body>
+</html>

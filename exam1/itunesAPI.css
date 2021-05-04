@@ -1,0 +1,45 @@
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.searchBar{
+    /*text-align: center;*/
+    position: fixed;
+    padding: 15px;
+    background-color: rgb(97, 159, 167);
+    width: 100%;
+    
+}
+
+.bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    /*
+    margin:0px;
+    padding:0px;
+    */
+    border-color: white;
+    border-radius: 10px;
+
+}
+
+.img-search{
+    width: 18px;
+    height: 17px;
+}
+
+.content{
+    text-align: center;
+    padding-top: 80px;
+    padding-left: 15%;
+    padding-right: 15%;
+}
+
+.cards{
+    display: flex;
+    flex-wrap: row wrap;
+    justify-content: space-between;
+}
