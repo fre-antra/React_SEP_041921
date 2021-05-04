@@ -3,7 +3,6 @@ const API = (() => {
     const getAll = (artist) => {
         fetchJsonp(`https://itunes.apple.com/search?term=${artist}&media=music&entity=album&attribute=artistTerm&limit=500`)
         .then(res => res.json())
-        .then(json => console.log(json.results));
     }
 
 
@@ -15,10 +14,10 @@ const API = (() => {
 
 const View = (() => {
     const domElement = {
-        album : '.album',
+        album : '.album-cover',
         searchInput: '.search-input',
         searchBtn: '.btn-search',
-        form: '.search'
+        form: '.search-form'
     }
 
     const render = (ele, htmlString) => {
@@ -71,39 +70,36 @@ const Model = ((api,view) => {
 const Controller = ((view,model) => {
     const state = new model.State()
 
+        
+
     const searchAlbum = () => {
-        const searchBtn = document.querySelector(view.domElement.searchBtn)
-        searchBtn.addEventListener('click', e => {
-            e.preventDefault();
-            console.log('Form Submit')
+        const searchEle = document.querySelector(view.domElement.form)
+        const searchInput = document.querySelector(view.domElement.searchInput)
+        const newAlbum = document.querySelector(view.domElement.album)
+        let newSearch = ''
+        let albums = []
+    
+        searchInput.addEventListener('change', e => {
+            newSearch = e.target.value
+            console.log(newSearch)
+        })
+    
+        searchEle.addEventListener('submit', e => {
+            e.preventDefault()
+            model.getAll(newSearch)
+            .then(res => console.log(res))
+            .then(res => state.album = res.results)            
+
         })
     }
-
-    const searchResult = () => {
-        const searchInput = document.querySelector(view.domString.searchInput);
-        searchInput.addEventListener('keyup', event => {
-            if (event.key === 'Enter') {
-               
-                model.getAll(event.target.value)
-                .then(data => {
-                    console.log(data);
-                    state.album = [data, ...state.album];
-                });
-                event.target.value = '';
-            }
-        });
-    }
-
     const init = () => {
-        model.getAll()
-        .then(data => {
-            state.album = data
-            createAlbum()
-            searchAlbum()
-        })
+        searchAlbum()
+        view.render(newAlbum,state.album)
     }
 
     return {
         init
     }
 })(View, Model)
+
+Controller.init()
