@@ -44,7 +44,6 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  
   height: 100%;
   width: 100%;
 }
@@ -72,5 +71,5 @@
   border: 1px solid #008080;
 }
 .cardImg {
-  width: calc(var(--width-card)-10);
+  width: calc(var(--width-card)  - 10);
 }
