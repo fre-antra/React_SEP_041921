@@ -2,7 +2,7 @@ function init() {
   let albumCount = 0;
   //api search
   function searchArtist(artistName) {
-    fetch(`https://itunes.apple.com/search?term=${artistName}&media=music&entity=album&attribute=artistTerm&limit=500`)
+    fetchJsonp(`https://itunes.apple.com/search?term=${artistName}&media=music&entity=album&attribute=artistTerm&limit=500`)
       .then((response) => response.json())
       .then((albumList) => {
         albumCount = albumList.resultCount;
