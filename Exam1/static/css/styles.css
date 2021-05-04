@@ -1,0 +1,102 @@
+/* CSS RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, 
+body {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* VARIABLES */
+:root {
+    --primary-color: teal;
+    --header-height: 60px;
+}
+
+/* STYLES */
+.container {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    display: flex;
+    width: 100%;
+    height: var(--header-height);
+    background-color: var(--primary-color);
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 6rem;
+    
+}
+
+.search {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+}
+
+.search-input {
+    border-radius: 100px;
+    outline: none;
+    padding: 0.5rem;
+    border: none;
+}
+
+.search-input:focus {
+    transform:scaleX(1.2)
+}
+
+.btn-search {
+    background-color: transparent;
+    color: white;
+    border: none;
+    margin-left: 1rem;
+}
+
+.btn-search:focus {
+    transform: scale(1.5);
+}
+
+
+.main {
+    width: 100%;
+    position: relative;
+    margin-top: calc(var(--header-height) + 0.6rem);
+}
+
+.content-header {
+    font-size: 2rem;  
+    justify-self: center;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.album-cover {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.album {
+    border: 1px solid var(--primary-color);
+    padding: 0.2rem 0.2rem 0.1rem 0.2rem;
+    margin-right: 1rem;
+}
+
+.album-cover > img {
+    height: 50px;
+}
