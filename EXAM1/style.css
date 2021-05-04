@@ -1,0 +1,40 @@
+main {
+  width: 80%;
+  margin: auto;
+}
+
+.topnav {
+  background-color: lightgrey;
+  height: 5%;
+  display: grid;
+  place-items: center;
+}
+
+#container-card {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-top: 3%;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  height: 300px;
+  flex: 0 1 22%;
+  margin-bottom: 5%;
+  position: relative;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+.container {
+  padding: 2px 16px;
+}
+
+.card-avatar {
+  width: 100%;
+}
