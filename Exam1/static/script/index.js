@@ -1,11 +1,9 @@
 const API = (() => {
     
-    const getAll = (artist) => {
+    const getAll = (artist) => 
         fetchJsonp(`https://itunes.apple.com/search?term=${artist}&media=music&entity=album&attribute=artistTerm&limit=500`)
         .then(res => res.json())
-    }
-
-
+    
 
     return {
         getAll,
@@ -21,18 +19,19 @@ const View = (() => {
     }
 
     const render = (ele, htmlString) => {
-        element.innerHTML = htmlString;
+        ele.innerHTML = htmlString;
     }
 
     const createAlbum = arr => {
-        const htmlString = ''
-        arr.results.forEach(item => {
+        let htmlString = ''
+        arr.forEach(item => {
             htmlString += `
                 <div class="album">
                     <img src=${item.artworkUrl100} alt="Album Picture">
                 </div>
             `
         });
+        return htmlString
     }
 
     return {
@@ -44,17 +43,25 @@ const View = (() => {
 
 const Model = ((api,view) => {
     class State {
-        #album = [];
+        #album = []
+        #val = ''
         
         get album() {
             return this.#album;
         }
         set album(newalbum) {
             this.#album = newalbum;
-
+            
             const albumEle = document.querySelector(view.domElement.album);
             const htmlString = view.createAlbum(this.#album);
             view.render(albumEle, htmlString);
+        }
+        get val() {
+            return this.#val;
+        }
+        set val(value) {
+            this.#val = value;        
+         
         }
     }
 
@@ -68,38 +75,34 @@ const Model = ((api,view) => {
 })(API,View)
 
 const Controller = ((view,model) => {
-    const state = new model.State()
-
-        
-
+    const state = new model.State()        
+    const albumContent = document.querySelector(view.domElement.album)
     const searchAlbum = () => {
-        const searchEle = document.querySelector(view.domElement.form)
-        const searchInput = document.querySelector(view.domElement.searchInput)
-        const newAlbum = document.querySelector(view.domElement.album)
-        let newSearch = ''
-        let albums = []
-    
+        let artistName = ''
+        searchInput = document.querySelector(view.domElement.searchInput)
         searchInput.addEventListener('change', e => {
-            newSearch = e.target.value
-            console.log(newSearch)
+            artistName = e.target.value
+            console.log(artistName)
         })
-    
-        searchEle.addEventListener('submit', e => {
-            e.preventDefault()
-            model.getAll(newSearch)
-            .then(res => console.log(res))
-            .then(res => state.album = res.results)            
 
+        searchForm = document.querySelector(view.domElement.form)
+        searchBtn = document.querySelector(view.domElement.searchBtn)
+        searchForm.addEventListener('submit', e => {
+            e.preventDefault()
+            console.log("Form submit!")
+            model.getAll(artistName).then(data => {
+                console.log(data.results)                
+                const htmlString = view.createAlbum(data.results)
+                view.render(albumContent,htmlString)
+            })
         })
-    }
-    const init = () => {
-        searchAlbum()
-        view.render(newAlbum,state.album)
+
     }
 
     return {
-        init
+        searchAlbum
     }
-})(View, Model)
+})(View,Model)
 
-Controller.init()
+Controller.searchAlbum()
+// Model.getAll('swift')
