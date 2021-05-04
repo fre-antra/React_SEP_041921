@@ -38,8 +38,17 @@
     padding-right: 15%;
 }
 
-.cards{
+.searchResult{
     display: flex;
-    flex-wrap: row wrap;
-    justify-content: space-between;
+    flex-wrap: wrap;
+    
+}
+
+.album{
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+    margin: 10px;
 }

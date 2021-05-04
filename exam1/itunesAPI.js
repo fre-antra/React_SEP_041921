@@ -1,36 +1,45 @@
 
-const baseurl = (artiestName) =>{
-    `https://itunes.apple.com/search?term=${artiestName}&media=music&entity=album&attribute=artistTerm&limit=500`
+const baseurl = (init) =>{
+    const artistName = `https://itunes.apple.com/search?term=${init}&media=music&entity=album&attribute=artistTerm&limit=500`;
+    return artistName;
 }
 
-const searchAct = () => {
+
+const searchAct = () =>{
     let n = document.querySelector('.search');
-    n.addEventListener('keyup',function(evt){
+    n.addEventListener('keyup',function(event){
         searchResult.getAll(n.value);
     })
 
-    form.addEventListener('submit',evt=>{
-        evt.preventDefault()
+    document.querySelector('.bar').addEventListener('submit',event =>{
+        event.preventDefault();
         searchResult.getAll(n.value);
     })
 }
 
 
-const searchResult = () => {
-    getAll = (artiestName) => {
-        const linkInfo= baseurl(artiestName);
-        fetch(linkInfo).then(res => res.json()).then(json=>{
-                let {results} = json;
-                document.querySelector('.default').innerHTML = `${results.length} Results for "${artiestName}"`;
-                
-        let cnt= results.map(content=>
+const searchResult = {
+    getAll(artistName){
+        const linkInfo= baseurl(artistName);
+        fetch(linkInfo)
+        .then(res => res.json())
+        .then(json =>{
+            let {results} = json;
+            document.querySelector('.default').innerHTML =`${results.length} Result for "${artistName}"`;
+
+            let info= results.map(content =>
             `
+            
             <div class='album'>
                 <img class = "albumImg" src=${content.artworkUrl100} alt>
                 <div class='albumInfo'>${content.collectionName}</div>
-            </div>`).join('')
-            ;
-        document.querySelector('.searchResult').innerHTML= cnt;
+            </div>`).join('');
+
+            document.querySelector('.searchResult').innerHTML= info;
+            })
         }
-    }
-}
+};
+
+
+
+searchAct();
