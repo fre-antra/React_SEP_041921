@@ -31,7 +31,7 @@ const todoAPI = (() => {
 
 const View = (() => {
     const domString = {
-        todolist: 'todlist-content',
+        todolist: 'todolist-content',
         removeBtn: 'btn-remove',
         todoinput: 'todolist__input'
     }
@@ -120,6 +120,7 @@ const AppController = ((view, model) => {
                 state.inputval = event.target.value;
 
                 const newtodo = new model.Todo(state.inputval);
+
                 model.addTodo(newtodo).then(data => {
                     console.log(data);
                     state.todolist = [data, ...state.todolist];
@@ -151,4 +152,3 @@ const AppController = ((view, model) => {
 })(View, Model);
 
 AppController.init();
-

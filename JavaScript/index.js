@@ -143,30 +143,30 @@
 //     })
 //     .catch(err => console.log(err));
 
-// myFetch
-function myFetch(url, options) {
-    return new Promise((resolve, reject) => {
-        let method = options && options.method ? options.method : 'GET';
+// // myFetch
+// function myFetch(url, options) {
+//     return new Promise((resolve, reject) => {
+//         let method = options && options.method ? options.method : 'GET';
 
-        const xhttp = new XMLHttpRequest();
-        xhttp.open(method, url, true);
+//         const xhttp = new XMLHttpRequest();
+//         xhttp.open(method, url, true);
 
-        if (options && options.headers)
-            Object.keys(options.headers).forEach(key => {
-                xhttp.setRequestHeader(key, options.headers[key]);
-            });
+//         if (options && options.headers)
+//             Object.keys(options.headers).forEach(key => {
+//                 xhttp.setRequestHeader(key, options.headers[key]);
+//             });
 
-        xhttp.onreadystatechange = function () {
-            if (this.readyState == 4 && this.status >= 200 && this.status < 300)
-                resolve({ json: () => JSON.parse(xhttp.response) });
-            else if (this.status < 200 || this.status >= 300) {
-                reject({ errorStat: this.readyState });
-            }
-        }
+//         xhttp.onreadystatechange = function () {
+//             if (this.readyState == 4 && this.status >= 200 && this.status < 300)
+//                 resolve({ json: () => JSON.parse(xhttp.response) });
+//             else if (this.status < 200 || this.status >= 300) {
+//                 reject({ errorStat: this.readyState });
+//             }
+//         }
 
-        options && options.body ? xhttp.send(options.body) : xhttp.send();
-    });
-}
+//         options && options.body ? xhttp.send(options.body) : xhttp.send();
+//     });
+// }
 
 // // // get/:id
 // myFetch('https://jsonplaceholder.typicode.com/todos/1')
@@ -175,20 +175,20 @@ function myFetch(url, options) {
 //     .catch(err => console.log(err));
 
 // // post
-myFetch('https://jsonplaceholder.typicode.com/posts', {
-    method: 'POST',
-    body: JSON.stringify({
-        title: 'foo',
-        body: 'bar',
-        userId: 1,
-    }),
-    headers: {
-        'Content-type': 'application/json; charset=UTF-8',
-    },
-})
-    .then((response) => response.json())
-    .then((json) => console.log(json))
-    .catch(err => console.log(err));
+// myFetch('https://jsonplaceholder.typicode.com/posts', {
+//     method: 'POST',
+//     body: JSON.stringify({
+//         title: 'foo',
+//         body: 'bar',
+//         userId: 1,
+//     }),
+//     headers: {
+//         'Content-type': 'application/json; charset=UTF-8',
+//     },
+// })
+//     .then((response) => response.json())
+//     .then((json) => console.log(json))
+//     .catch(err => console.log(err));
 
 // // put
 // myFetch('https://jsonplaceholder.typicode.com/posts/1', {
@@ -223,10 +223,6 @@ myFetch('https://jsonplaceholder.typicode.com/posts', {
 // fetch('https://jsonplaceholder.typicode.com/posts/1', {
 //   method: 'DELETE',
 // });
-
-
-
-
 
 // // this
 // global
