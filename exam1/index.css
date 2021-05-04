@@ -49,6 +49,8 @@
 .results-container {
     display: flex;
     flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
     justify-content: space-between;
 }
 
@@ -74,4 +76,6 @@
 .top-result-div {
     text-align: center;
     font-family: sans-serif;
+    margin-left: 100px;
+    margin-right: 100px;
 }
