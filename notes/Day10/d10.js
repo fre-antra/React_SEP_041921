@@ -102,7 +102,7 @@ function logMsg(msg) {
 //     }, timer);
 // })
 //     .then((data1) => {
-//         console.log("data1: ", data1);
+//         console.log("data1: ", data1);         // data1 : hello   data2: undefined, bc first then didnt return
 //     })
 //     .then((data2) => {
 //         console.log("data2: ", data2);
@@ -137,7 +137,7 @@ function logMsg(msg) {
   //   })
   //   .then((data2) => {
   //     console.log("Data2: ");
-  //     logMsg(data2);
+  //     logMsg(data2);         // if not return a promise, the promise function will auto transfer it to promise
   //     return getUserPromise(3);
   //   })
   //   .then((data3) => {

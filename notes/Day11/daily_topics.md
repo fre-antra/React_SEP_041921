@@ -1,0 +1,3 @@
+- Implement MyPromise()
+- bind(), call(), apply()
+- Implement MyFetch()
