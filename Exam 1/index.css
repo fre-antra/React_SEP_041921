@@ -1,6 +1,7 @@
 :root {
     --height-header: 60px;
     --color-green: rgb(13, 73, 5);
+    --background-color:rgba(230, 219, 172, 0.973);
 }
 
 * {
@@ -13,40 +14,80 @@
 html, 
 body {
     height: 100%;
-    width: 80%;
+    width: 100%;
     overflow: hidden;
 }
 
 .header {
-    position: absolute;
+    position: fixed;
     height: var(--height-header);
     background: var(--color-green);
     color: white;
     width: 100vw;
+    /* display: flex;
+    justify-content: center; */
 }
 
 .header_search {
-    width: 60
+    margin: auto;
+    border-radius: 10px;
+    font-size: 1rem;
+    width: 30%;
+    height: calc(var(--height-header) * 0.5);
+    background-color: var(--background-color);
+}
+
+.header_search:hover {
+    width: 40%;
+}
+
+.count_box{
+    position: fixed;
+    top: var(--height-header);
+    height: var(--height-header);
+    width: 100%;
+    /* display: flex;
+    justify-content: center; */
+}
+.count_head{
+    height: var(--height-header);
+    width: 70%;
+    border-bottom: 1px solid black;
+}
+
+.count_head p{
+    text-align: center;
 }
 
 .content {
+    position: fixed;
+    top: calc(var(--height-header) * 2);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color:white;
+    justify-content: space-between;
+    flex-wrap: wrap;
     height: 100%;
-    width: 100%;
-}
-
-.content__header {
-    height: var(--height-header);
+    width: 80%;
+    margin-left: auto;
+    overflow: scroll;
 }
 
 .card {
     padding: 6px 12px;
     margin: 8px 0;
-    display: inline-block;
-    border: 3px solid #ccc;
+    width: 150px;
+    max-height: 250px;
+    border: 1px solid black;
     border-radius: 4px;
-    box-sizing: border-box;
+    background-color: var(--background-color);
+}
+
+.card_image {
+    width:100%;
+    height: 100% ;
+    padding: 10px;
+}
+
+.card_title {
+    text-align: center;
+    padding: 10px;
 }

@@ -6,14 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>iTune Search</title>
     <link rel="stylesheet" href="./index.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
     <script async src="./index.js"></script>
 </head>
 <body>
     <header class="header">
-        <input id="header__search" type="text" name="search" placeholder="Search..">
-        <button class="button__search" onclick="getSearchResult()">Search</button>
+        <input class="header_search" type="text" name="search" placeholder="Search..">
     </header>
-        <p id="search__result"></p>
-        <div id="container-card"></div>            
+
+    <div class="count-box">
+        <div class="count_header">
+            <p>Search Albums by ArtistName</p>
+        </div>
+    </div>
+
+    <div class="content">
+
+    </div>            
 </body>
 </html>

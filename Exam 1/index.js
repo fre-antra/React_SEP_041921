@@ -1,5 +1,4 @@
 const searchAPI = (() => {
-
     const searchArtist = (artist_name) => 
         fetch(`https://itunes.apple.com/search?term=${artist_name}&media=music&entity=album&attribute=artistTerm&limit=500`)
             .then((response) => response.json());    
@@ -11,27 +10,31 @@ const searchAPI = (() => {
 
 const View = (() => {
     const domString = {
-        count: 'content__header',
-        collections: 'content__main',
-        search: 'header__serach'
+        countResult: 'count_header',
+        collectionList: 'content',
+        searchInput: 'header_search'
     }
     const render = (element, htmlString) => {
         element.innerHTML = htmlString;
     }
 
-    // const createSearchResult = (artist_name, result) => {
-    //     let htmlString = `<p class="search__result">${result} results for "${artist_name}"</p>`;
-    //     return htmlString
-    // }
+    const createCountResult = (count) => {
+        let htmlString = `<p class="search__result">There are ${count} results</p>`;
+        return htmlString
+    }
 
-    const createCollections = (collectionList) => {
+    const createCollectionList = (collectionArray) => {
         let htmlString = '';
-        collectionList.forEach(ele => {
+        collectionArray.forEach(ele => {
             htmlString += `
-                <card class="card">
-                    <img class="cardImage' src="${ele.collectionViewUrl}">
-                    <span class="cardTitle>${ele.collectionName}</span>
-                </card>
+                <div class="card">
+                    <div class="card-image">
+                        <img src="${ele.artworkUrl100}"/>
+                    </div>
+                    <div class="card-title">
+                        <p>${ele.collectionCensoredName}</p>
+                    </div>
+                </div>
             `;
         });
         return htmlString;
@@ -40,32 +43,31 @@ const View = (() => {
     return {
         domString,
         render,
-        // createSearchResult,
-        createCollections
+        createCountResult,
+        createCollectionList
     }
 })();
 
 const Model = ((api, view) => {
     class State {
-        #search_result = {};
-        #inputval = '';
-        get inputval() {
-            return this.#inputval;
+        #collectionList = [];
+        #count = '';
+        get count() {
+            return this.#count;
         }
-        set inputval(value) {
-            this.#inputval = value;
+        set count(newCount) {
+            const countElement = document.querySelector('.' + view.domString.countResult);
+            const countHtmlString = view.createCountResult(newCount);
+            view.render(countElement, countHtmlString);
         }
 
-        get search_result() {
-            return this.#search_result;
+        get collectionList() {
+            return this.#collectionList;
         }
-        set search_result(result) {
-            this.#search_result = result;
-            // const countElement = document.querySelector('.' + view.domString.count);
-            // const countHtmlString = view.createSearchResult(this.#inputval, this.#search_result.resultCount);
-            const collectionElement = document.querySelector('.' + view.domString.collections);
-            const collectionHtmlString = view.createCollections(this.#search_result.results);
-            // view.render(countElement, countHtmlString);
+        set collectionList(newList) {
+            this.#collectionList = newList;
+            const collectionElement = document.querySelector('.' + view.domString.collectionList);
+            const collectionHtmlString = view.createCollectionList(this.#collectionList);
             view.render(collectionElement, collectionHtmlString);
         }
         
@@ -79,28 +81,29 @@ const Model = ((api, view) => {
     }
 })(searchAPI, View);
 
-const AppController = ((model) => {
+const AppController = ((view, model) => {
     const state = new model.State();
     
     const searchInput = () => {
-        let artist_name =  document.getElementById("header__search").value;
+        const searchEle = document.querySelector('.' + view.domString.searchInput)
+        searchEle.addEventListener('keyup', event=>{
+            if(event.key === 'Enter'){
+                const artist = event.target.value;
+                model.searchArtist(artist).then(data =>{
+                    console.log(data)
+                    state.count = data.resultCount;
+                    state.collectionList = data.results;
+                });
 
-        model.searchArtist(artist_name).then(data => {
-            console.log(data);
-            state.search_result = data;
-        });
-
-    }
-
-    const init = () => {
-        searchInput();
+            }
+        })
     }
     
     return {
-        init
+        searchInput
     }
-})(Model);
+})(View, Model);
 
-AppController.init();
+AppController.searchInput();
  
 
