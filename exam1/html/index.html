@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header class='header'>
+            <form class="search-container">
+                <div class="search">
+                    <input type="text" placeholder="Search..." class="search-input" id="name-search">
+                </div>
+                <button class="search-img">
+                    <img src="../asset/mag-glass.png" alt="mag-glass" class="mag-glass-img">
+                </button>
+            </form>
+        </header>
+        <div class="search-result-container">
+            <div class="search-result-container">
+                <h2 class="result-artist-name" id="search-result">Search Albums by ArtistName:</h2>
+            </div>
+            <hr class="search-result-hr">
+        </div>
+    </div>
+    <main class="card-container">
+        <div class="card-wrapper" id='album-card'>
+            
+        </div>
+    </main>
+    <script src="../javascript/index.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+*,
+*::before,
+*::after{
+    margin:0;
+    padding:0;
+    box-sizing: inherit
+}
+
+html{
+    font-size: 62.25%;
+}
+
+body{
+    font-size: 1.6rem;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+:root{
+    --height-header: 60px;
+    --height-todolist: 300px;
+    --height-todolist-header: 30px;
+    --width-todolist: 400px;
+
+    --color-blue-light:#BBffff;
+    --color-blue:#4285F4;
+    --color-blue-dark:#0d47a1;
+    --color-green:#00C851;
+    --color-green-dark:#007E33;
+    --color-white-dark: #EEEEEE;
+    --color-grey:#e0e0e0;
+    --color-grey-dark:#757575;
+    --color-grey-light: #CCCCCC;
+    --color-green: rgb(30, 255, 0);
+    --color-red: rgb(148, 21, 21);
+    --color-red-light: rgb(27, 172, 8);
+    --color-bg-blue: #006666;
+}
