@@ -14,8 +14,8 @@ const View = (() => {
     const domElement = {
         album : '.album-cover',
         searchInput: '.search-input',
-        searchBtn: '.btn-search',
-        form: '.search-form'
+        form: '.search-form',
+        title: '.content-header'
     }
 
     const render = (ele, htmlString) => {
@@ -84,16 +84,17 @@ const Controller = ((view,model) => {
             artistName = e.target.value
             console.log(artistName)
         })
-
+        title = document.querySelector(view.domElement.title)
         searchForm = document.querySelector(view.domElement.form)
-        searchBtn = document.querySelector(view.domElement.searchBtn)
         searchForm.addEventListener('submit', e => {
             e.preventDefault()
             console.log("Form submit!")
             model.getAll(artistName).then(data => {
                 console.log(data.results)                
+                let titleContent = `Search for artist ${artistName[0].toUpperCase()+artistName.slice(1)} return ${data.results.length} results`
                 const htmlString = view.createAlbum(data.results)
                 view.render(albumContent,htmlString)
+                view.render(title,titleContent)
             })
         })
 
