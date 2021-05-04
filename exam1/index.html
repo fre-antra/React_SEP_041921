@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/index.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fanwood+Text&family=Libre+Caslon+Text&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./js/index.js" defer></script>
+    <title>Album Search</title>
+  </head>
+  <body>
+    <nav class="nav">
+      <div class="nav__item">
+        <div class="nav__item--label">
+          <input
+            id="searchBar"
+            class="nav__item--search"
+            type="text"
+            placeholder="Search..."
+          />
+          <button id="magnifying_class_btn" class="magnifying_class_btn">
+            <img alt="Search" src="./img/loupe.png" />
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <main class="container">
+      <div class="row info">
+        <p id="album-count">Search Albums by ArtistName:</p>
+        <hr />
+      </div>
+
+      <div id="searchResult" class="row"></div>
+    </main>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+.card {
+  flex: 0 0 9rem;
+  background-color: var(--light-gray);
+  border: 2px solid var(--main-black);
+  padding: 5px 5px;
+  margin: 10px 10px;
+  /* make all items stretch to same height */
+  align-self: stretch;
+}
+
+.card__img {
+  display: block;
+  margin: auto;
+}
+
+.card__albumtitle {
+  font-size: large;
+  font-weight: bold;
+  text-align: center;
+  padding: 5px 0;
+}
