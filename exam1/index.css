@@ -1,0 +1,77 @@
+.header-container {
+    background-color: teal;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:100%;
+    position:sticky;
+
+}
+
+.form-container {
+    margin-top: 10px;
+    margin-bottom:10px;
+    width:50%;
+    box-sizing: border-box;
+    background-color:teal;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    display: flex;
+}
+
+.form-input {
+    border: none;
+    flex-basis: 50%;
+    font-size: medium;
+    background-color: whitesmoke;
+    padding:5px;
+    padding-left: 10px;
+    border-radius: 25px 0px 0px 25px;
+}
+.form-input:focus {
+    border: none;
+    outline:none;
+    flex-basis: 100%;
+    
+}
+
+.form-btn-search {
+    flex-basis: 10px;
+    border:none;
+    font-size: medium;
+    background-color: whitesmoke;
+    border-radius: 0px 25px 25px 0px;
+    padding:5px;
+    padding-right: 10px;
+}
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card-album {
+    width:100px;
+    height:150;
+    background-color: lightgrey;
+    justify-content: center;
+    border: 2px solid;
+    border-color: teal;
+    border-radius: 5px;
+    padding:5px;
+    overflow-y: hidden;
+    text-overflow: ellipsis;
+    margin-top: 10px;
+}
+.card-album div {
+    font-size: small;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-align: center;
+}
+
+.top-result-div {
+    text-align: center;
+    font-family: sans-serif;
+}
