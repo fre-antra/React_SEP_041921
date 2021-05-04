@@ -1,0 +1,51 @@
+.main-container {
+  position: relative;
+  flex: 1 1 auto;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.searchList {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.searchList-info {
+  width: 90%;
+  padding: 1rem;
+  color: #333;
+  font-size: 2rem;
+  text-align: center;
+  border-bottom: 1px solid teal;
+  margin: auto auto 1rem;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid>.card {
+  margin: 1rem;
+}
+
+.card {
+  background-color: #f0eeee;
+  border: 1px solid teal;
+  border-radius: 3px;
+  flex: 0 0 10rem;
+}
+
+.card-img {
+  padding: .5rem;
+}
+
+.card-content {
+  color: #333;
+  text-align: center;
+  padding: 0 .5rem .5rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+}

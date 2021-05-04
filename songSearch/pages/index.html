@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Song Search</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  <link rel="stylesheet" href="../styles/index.css" />
+</head>
+<body>
+  <nav>
+    <form class="nav-form">
+      <input type="text" class="nav-search-input" placeholder="Search...">
+      <button class="nav-search-button">
+        <i class="fa fa-search"></i>
+      </button>
+    </form>
+  </nav>
+  <main class="main-container">
+    <section class="searchList">
+      <div class="searchList-info">Search Albums by ArtistName:</div>
+      <div class="grid"></div>
+    </section>
+  </main>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+  <script src="../util/index.js"></script>
+</body>
+</html>

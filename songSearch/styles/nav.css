@@ -1,0 +1,39 @@
+nav {
+  background-color: var(--navbar-color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: var(--navbar-height);
+  flex: 0 0 6rem;
+}
+
+.nav-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 0 0 40%;
+}
+
+
+.nav-search-input {
+  border: none;
+  width: var(--navbar-searchbar-width);
+  background-color: #f0eeee;
+  border-radius: 100px;
+  transition: all .2s;
+  margin-right: -3.25rem;
+  padding: .7rem 2rem;
+}
+.nav-search-input:focus {
+  width: 100%;
+}
+
+.nav-search-button {
+  background: none;
+  border: none;
+}
+
+.nav-search-button i {
+  font-size: 1.2rem;
+}
+
