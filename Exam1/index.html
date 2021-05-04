@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <header class="header">
+        <div class="searchbar" tabindex="1">
+            <input type="text" class="searchbar__input" id="searchInput">
+            <img class="searchbar__search-icon" src="./magnifying-glass.svg" alt="">
+        </div>
+    </header>
+
+    <p class="report" id="report">Result for</p>
+    <main>
+        <div class="container" id="cardsList">
+
+            <div class="card">
+                <div class="card__thumbnail">
+                    <img class="card__image" src="./xbox.webp" alt="" srcset="">
+                </div>
+                <div class="card__caption">
+                    <p class="card__text">Name</p>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+<script src="./index.js"></script>
+</html>
