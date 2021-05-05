@@ -29,14 +29,37 @@ function Search() {
 // }
 
 function fill_in_data(data) {
-    let img_array = document.getElementsByClassName("content_img");
-    let content_array = document.getElementsByClassName("content");
-    let box_array = document.getElementsByClassName("content_box");
-    for (let i = 0; i < img_array.length; i++) {
-        //fill_img(data.results[i].artistViewUrl, img_array[i])
-        img_array[i].src = data.results[i].artworkUrl100;
-        content_array[i].innerHTML = data.results[i].collectionName;
-        box_array[i].style.display = 'block';
+    let len = Math.min(data.results.length, 50);
+    for (let i = 0; i < len; i++) {
+        let content_array = document.getElementsByClassName("content_list");
+        let content_box = document.createElement('div');
+        content_box.className = "content_box";
+        content_array[0].appendChild(content_box);
+
+        let content_img = document.createElement('img');
+        content_img.className = "content_img";
+        content_img.src = data.results[i].artworkUrl100;
+        content_box.appendChild(content_img);
+
+        let content_info = document.createElement('p');
+        content_info.className = "content";
+        content_info.innerHTML = data.results[i].collectionName.substring(0,25);
+        content_box.appendChild(content_info);
+        console.log(data.results[i],content_box);
     }
+    let remaind = document.getElementsByClassName("remaind_words");
+    remaind[0].innerHTML = data.results.length + " results for " + document.getElementsByClassName("header_input_box")[0].value;
+    // let img_array = document.getElementsByClassName("content_img");
+    // let content_array = document.getElementsByClassName("content");
+    // let box_array = document.getElementsByClassName("content_box");
+
+
+
+    // for (let i = 0; i < img_array.length; i++) {
+    //     //fill_img(data.results[i].artistViewUrl, img_array[i])
+    //     img_array[i].src = data.results[i].artworkUrl100;
+    //     content_array[i].innerHTML = data.results[i].collectionName;
+    //     box_array[i].style.display = 'block';
+    // }
 }
 //
