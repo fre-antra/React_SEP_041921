@@ -109,18 +109,15 @@ const AppController = ((view, model) => {
         const nameSearch = document.querySelector('#' + view.domString.nameSearch);
         const searchForm = document.querySelector('#' + view.domString.searchForm);
 
-        const click = () => {
-            searchBtn.addEventListener('click', event => {
-                // const nameSearch = document.querySelector('#' + view.domString.nameSearch);   
-                model.getCards(nameSearch.value).then(data => {
-                    state.inputVal = [nameSearch.value, data.results.length]
-                    state.cardVal = data;
-                    search();
-                })
-                
-            });
-        }
-        click();
+        searchBtn.addEventListener('click', event => {
+            // const nameSearch = document.querySelector('#' + view.domString.nameSearch);   
+            model.getCards(nameSearch.value).then(data => {
+                state.inputVal = [nameSearch.value, data.results.length]
+                state.cardVal = data;
+                search();
+            })
+            
+        });
 
         nameSearch.addEventListener('keypress', event => {
             if (event.keyCode == 13) {
@@ -137,10 +134,11 @@ const AppController = ((view, model) => {
     }
 
     const init = () => {
-        model.getCards().then(data => {
-            // state.cardVal = data;
-            search();
-        })
+        // model.getCards().then(data => {
+        //     // state.cardVal = data;
+            
+        // })
+        search();
         
     }
     
