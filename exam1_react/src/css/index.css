@@ -1,0 +1,91 @@
+@import url("./NavBar.css");
+@import url("./SearchResult.css");
+
+/* reset everything */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* variables */
+:root {
+  --main-black: black;
+  --main-white: white;
+  --light-black: rgb(103, 100, 100);
+  --light-gray: rgb(217, 217, 217);
+  --light-gray-footer: rgba(217, 217, 217, 0.71);
+  --light-gray-about: rgb(241, 241, 241);
+  --main-blue: rgb(5, 115, 198);
+  --main-teal: teal;
+  --link-blue: #2c87f0;
+}
+
+body {
+  font-family: "Fanwood Text", serif;
+  font-size: 1.1rem;
+}
+
+p,
+ol,
+ul {
+  margin: 15px;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 15px 0;
+}
+
+hr {
+  width: 100%;
+}
+
+/* main content */
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.container-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 90%;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0;
+}
+
+.info p {
+  font-size: 1.4rem;
+}
+
+/* responsive */
+/* @media screen and (max-width: 800px) {
+  .row {
+    flex-direction: column;
+    margin-bottom: 0;
+    margin-top: 0;
+  }
+
+  .row > .card {
+    margin: 10px 0;
+  }
+} */
