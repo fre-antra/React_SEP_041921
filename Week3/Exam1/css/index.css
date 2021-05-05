@@ -1,36 +1,11 @@
-
 /* Layout */
 @import url("./layout.css");
-
-/* Content */
-@import url("./content.css");
 
 /* Variables */
 @import url("./variables.css");
 
 /* Reset */
 @import url("./reset.css");
-
-
-/* Search Bar */
-.search-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex: 1 1 100%;
-}
-
-.searchbar {
-  width: 30%;
-}
-
-input {
-  padding: 0.5rem;
-  padding-left: 2rem;
-  border-radius: 20px;
-  border: 1px;
-  font-size: 1.2rem;
-}
 
 
 

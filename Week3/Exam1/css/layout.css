@@ -48,6 +48,31 @@
   margin: auto auto 1rem;
 }
 
+/* Search Bar */
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1 1 100%;
+}
+
+.searchbar {
+  width: 30%;
+}
+
+input {
+  padding: 0.5rem;
+  padding-left: 2rem;
+  border-radius: 20px;
+  border: 1px;
+  font-size: 1.2rem;
+}
+
+.magnifying-glass {
+  width: 1.3rem;
+}
+
+
 .text-container {
   margin-top: 1.5%;
 }

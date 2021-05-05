@@ -31,12 +31,12 @@ const searchEventListeners = (() => {
     text: "",
   };
 
-  searchbar.addEventListener("keyup", (e) => {
-    state.text = e.target.value;
+  searchbar.addEventListener("keyup", (event) => {
+    state.text = event.target.value;
   });
 
-  container.addEventListener("submit", (e) => {
-    e.preventDefault();
+  container.addEventListener("submit", (event) => {
+    event.preventDefault();
 
     itunesAPI(state.text).then((data) => {
       addList(data.results, state.text);
