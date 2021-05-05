@@ -1,0 +1,81 @@
+.app-container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+  min-height: var(--main-min-height);
+  max-width: 100%;
+  min-width: 320px;
+  margin: auto;
+}
+
+.app-container .app-header {
+  background-color: var(--theme-color-primary);
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  height: var(--main-header-height);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5px 20px;
+  color: var(--header-color);
+}
+
+.app-header {
+  background-color: var(--theme-color-primary);
+  height: var(--main-header-height);
+  display: flex;
+}
+
+.content-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+}
+
+.content-info {
+  width: 80%;
+  padding: 1rem;
+  color: #333;
+  font-size: 2rem;
+  text-align: center;
+  border-bottom: 1px solid var(--theme-color-primary);
+  margin: auto auto 1rem;
+}
+
+.text-container {
+  margin-top: 1.5%;
+}
+
+.grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.grid .card {
+  margin: 0.8rem;
+}
+
+.card {
+  border: 1px solid var(--theme-color-primary);
+  border-radius: 2.5px;
+  flex: 0 0 10rem;
+  background-color: rgb(232, 232, 232);
+}
+
+.card-image {
+  padding: 1rem;
+}
+
+.card-name {
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.2rem;
+}

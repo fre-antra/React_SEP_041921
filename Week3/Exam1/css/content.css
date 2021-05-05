@@ -1,0 +1,14 @@
+.content-container {
+   display: flex;
+   flex-direction: column;
+   /* justify-content: center; */
+   align-items: center;
+}
+
+.text-container{
+   margin-top: 1.5%;
+}
+
+.magnifying-glass {
+   width: 1.3rem;
+ }

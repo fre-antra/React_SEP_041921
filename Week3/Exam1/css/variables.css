@@ -1,0 +1,6 @@
+:root {
+  --theme-color-primary: #008080;
+  --main-min-height: 40rem;
+  --main-header-height: 5rem;
+  --main-header-height-sm: 15rem;
+}

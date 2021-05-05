@@ -1,0 +1,109 @@
+:root {
+  --height-header: 60px;
+  --height-todolist: 300px;
+  --height-todolist-header: 30px;
+
+  --width-todolist: 400px;
+
+  --color-green: rgb(30, 255, 0);
+  --color-red-button: rgb(148, 21, 21);
+  --color-red-li-hover: rgb(27, 172, 8);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Dancing Script", cursive;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.header {
+  position: fixed;
+  height: var(--height-header);
+  background: linear-gradient(to right, black, var(--color-green));
+  color: white;
+  width: 100vw;
+  font-size: 2rem;
+  text-transform: capitalize;
+  line-height: var(--height-header);
+  letter-spacing: 2px;
+  user-select: none;
+}
+
+.content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blanchedalmond;
+  height: 100%;
+  width: 100%;
+}
+
+.todolist {
+  height: var(--height-todolist);
+  width: var(--width-todolist);
+  background-color: var(--color-green);
+  box-shadow: 2px 3px 5px black;
+  border-radius: 10px;
+}
+
+.todolist__header,
+.todolist__input,
+ul li {
+  height: var(--height-todolist-header);
+  width: 100%;
+  padding: 0 15px;
+  line-height: var(--height-todolist-header);
+  font-size: 1rem;
+  text-transform: capitalize;
+  outline: none;
+  border: none;
+  list-style: none;
+  letter-spacing: 1px;
+  user-select: none;
+}
+.todolist__header {
+  font-size: 1.5rem;
+}
+
+ul {
+  height: calc(var(--height-todolist) - var(--height-todolist-header) * 2);
+  overflow: auto;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+}
+
+ul li:hover {
+  background-color: var(--color-red-li-hover);
+}
+
+ul li button {
+  background-color: transparent;
+  color: var(--color-red-button);
+  width: 20px;
+  height: var(--height-todolist-header);
+  outline: none;
+  border: none;
+}
+ul li button:hover {
+  color: red;
+  font-size: 1.4rem;
+}
+ul li button:active {
+  color: red;
+  font-size: 1.2rem;
+}
+ul li span {
+  width: 90%;
+  overflow: hidden;
+}

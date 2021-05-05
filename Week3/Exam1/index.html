@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Album Search</title>
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="./css/index.css" />
+    </head>
+    <body>
+        <main class="app-container">
+            <header class="app-header">
+                <form class="search-container">
+                  <input class="searchbar" type="text" placeholder="Search...">
+                  <button class="nav-search-button">
+                     <img class="magnifying-glass" src="magnifying-glass.png">
+                  </button>
+                </form>
+            </header>
+            <div class='content-container'>
+                <section class="text-container">
+                    <div class="content-info">Search Albums by Artist Name:</div>
+                    <div class="grid"></div>
+                </section>
+            </div>
+        </main>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+        <script src="./index.js"></script>
+
+    </body>
+</html>
