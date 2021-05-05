@@ -51,7 +51,7 @@ html {
   padding: 2rem;
 }
 .content_list {
-  width: 50%;
+  width: 45%;
   display: flex;
   flex-wrap: wrap;
   margin: auto;
@@ -59,7 +59,6 @@ html {
   justify-content: center;
 }
 .content_box {
-  display: none;
   height: 180px;
   width: 110px;
   background-color: rgb(243, 241, 240);
