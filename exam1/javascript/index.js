@@ -20,7 +20,8 @@ const View = (() => {
         cardList: 'album-card',
         nameSearch: 'name-search',
         searchResult: 'search-result',
-        searchBtn: 'search-btn'
+        searchBtn: 'search-btn',
+        searchForm: 'search-form'
     }
     const render = (element, htmlString) => {
         element.innerHTML = htmlString;
@@ -69,9 +70,9 @@ const Model = ((api, view) => {
             return this.#inputVal;
         }
         set inputVal(value) {
-            this.#inputVal = value;
+            this.#inputVal = value[0];
             const cardElement = document.querySelector('#' + view.domString.searchResult);
-            const htmlString = "songs by: " + this.#inputVal
+            const htmlString = value[1] + " results for: " + this.#inputVal
             // view.createCard(this.#cardVal);
             view.render(cardElement, htmlString);
 
@@ -106,36 +107,38 @@ const AppController = ((view, model) => {
     const search = () => {
         const searchBtn = document.querySelector('#' + view.domString.searchBtn);
         const nameSearch = document.querySelector('#' + view.domString.nameSearch);
+        const searchForm = document.querySelector('#' + view.domString.searchForm);
 
-        nameSearch.addEventListener('keyup', event => {
-            if (event.key === 'Enter') {
+        const click = () => {
+            searchBtn.addEventListener('click', event => {
+                // const nameSearch = document.querySelector('#' + view.domString.nameSearch);   
+                model.getCards(nameSearch.value).then(data => {
+                    state.inputVal = [nameSearch.value, data.results.length]
+                    state.cardVal = data;
+                    search();
+                })
+                
+            });
+        }
+        click();
+
+        nameSearch.addEventListener('keypress', event => {
+            if (event.keyCode == 13) {
                 event.preventDefault()
-                state.inputval = nameSearch.value
-            }
-        })
-        console.log(45654654)
-        searchBtn.addEventListener('click', event => {
-            const cardElement = document.querySelector('#' + view.domString.searchResult);
-            const nameSearch = document.querySelector('#' + view.domString.nameSearch);
-            console.log(nameSearch.value)
-            state.inputVal = nameSearch.value
-            model.getCards(nameSearch.value).then(data => {
-                console.log(56)
-                state.cardVal = data;
-                search();
-            })
-            if (event.key === 'Enter') {
-                state.inputval = nameSearch.value
-                event.preventDefault()
+                model.getCards(nameSearch.value).then(data => {
+                    state.inputVal = [nameSearch.value, data.results.length]
+                    state.cardVal = data;
+                    search();
+                })
+                
             }
             
-        });
+        })
     }
 
     const init = () => {
         model.getCards().then(data => {
-            console.log(56)
-            state.cardVal = data;
+            // state.cardVal = data;
             search();
         })
         
