@@ -18,8 +18,8 @@ const View = (() => {
         element.innerHTML = htmlString;
     }
 
-    const createCountResult = (count) => {
-        let htmlString = `<p class="search__result">There are ${count} results</p>`;
+    const createCountResult = (artist, count) => {
+        let htmlString = `<p>${count} results for "${artist}"</p>`;
         return htmlString
     }
 
@@ -28,12 +28,10 @@ const View = (() => {
         collectionArray.forEach(ele => {
             htmlString += `
                 <div class="card">
-                    <div class="card-image">
+                    <div class="card_image">
                         <img src="${ele.artworkUrl100}"/>
                     </div>
-                    <div class="card-title">
-                        <p>${ele.collectionCensoredName}</p>
-                    </div>
+                    <span class="card_title">${ele.collectionName}</span>
                 </div>
             `;
         });
@@ -49,15 +47,17 @@ const View = (() => {
 })();
 
 const Model = ((api, view) => {
+
     class State {
         #collectionList = [];
-        #count = '';
+        #count = [];
+
         get count() {
             return this.#count;
         }
         set count(newCount) {
             const countElement = document.querySelector('.' + view.domString.countResult);
-            const countHtmlString = view.createCountResult(newCount);
+            const countHtmlString = view.createCountResult(...newCount);
             view.render(countElement, countHtmlString);
         }
 
@@ -69,8 +69,7 @@ const Model = ((api, view) => {
             const collectionElement = document.querySelector('.' + view.domString.collectionList);
             const collectionHtmlString = view.createCollectionList(this.#collectionList);
             view.render(collectionElement, collectionHtmlString);
-        }
-        
+        }   
     }
 
     const searchArtist = api.searchArtist;
@@ -91,7 +90,7 @@ const AppController = ((view, model) => {
                 const artist = event.target.value;
                 model.searchArtist(artist).then(data =>{
                     console.log(data)
-                    state.count = data.resultCount;
+                    state.count = [artist, data.resultCount];
                     state.collectionList = data.results;
                 });
 
