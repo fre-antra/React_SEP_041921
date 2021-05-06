@@ -1,8 +1,5 @@
-import React, { useState } from 'react';
 
-
-export default function Counter(props){
-    const {count, artist} = props;
+export default function Counter({count,artist}){
     return(
         
             <div id="text-count">

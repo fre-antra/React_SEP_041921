@@ -1,13 +1,11 @@
-import React, { useState } from 'react';
-
 
 export default function Card(props){
     const {img, title} = props
-    console.log(typeof img)
+    
     return(
         
             <div className="card">
-                <img className="card-avatar" src={img}/>
+                <img className="card-avatar" src={img} alt="pic"/>
                 <p>{title}</p>
             </div>
         
