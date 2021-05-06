@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button class="continue">BUTTON</button>
+    <button class="continue">BUTTON</button>
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Jquery: facade pattern
+      // $('button.continue').html('Next Step...');
+      // console.log($('button.continue').html);
+      class PQuery {
+        constructor(selector) {
+          this.element = document.querySelector(selector);
+        }
+        html(tmp) {
+          this.element.innerHTML = tmp;
+        }
+      }
+
+      function $$(selector) {
+        return new PQuery(selector);
+      }
+
+      $$('button.continue').html('Next Step...');
+      //   let a = $$('button.continue');
+      //   let aFn = a.html;
+      //   let b = $$('button.continue');
+      //   let bFn = b.html;
+      //   console.log(a === b);
+      //   console.log(aFn === bFn);
+    </script>
+  </body>
+</html>
