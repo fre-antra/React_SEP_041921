@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="button-container">
+      <button class="continue">Button 1</button>
+      <button class="continue">Button 2</button>
+    </div>
+    <div id="banner-message" style="display: none">this banner is hidden</div>
+    <button class="continue">Button 3</button>
+    <button class="continue">Button 4</button>
+
+    <div id="weather-temp"></div>
+    <div id="weather-temp2"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      class jQClass {
+        constructor(selector) {
+          this.elements = document.querySelectorAll(selector);
+        }
+
+        html(tmp) {
+          this.elements.forEach((ele) => {
+            ele.innerHTML = tmp;
+          });
+        }
+
+        on(event, cb) {
+          this.elements.forEach((ele) => {
+            ele.addEventListener(event, cb);
+          });
+        }
+
+        show() {
+          this.elements.forEach((ele) => {
+            ele.style.display = "block";
+          });
+        }
+      }
+
+      const $$ = function (selector) {
+        return new jQClass(selector);
+      };
+
+      class ajaxClass {
+        constructor(xhttp) {
+          this.responseText = xhttp.responseText;
+        }
+      }
+
+      $$.ajax = function ({url, success}) {
+        fetchJsonp(url)
+          .then((res) => res.json())
+          .then((json) => success(JSON.stringify(json)));
+      };
+
+      // $("button.continue").html("Next Step...");
+      $$("button.continue").html("Next Step...");
+
+      // var hiddenBox = $("#banner-message");
+      // $("#button-container button").on("click", function (event) {
+      //   hiddenBox.show();
+      // });
+
+      var hiddenBox = $$("#banner-message");
+      $$("#button-container button").on("click", function (event) {
+        hiddenBox.show();
+      });
+
+      // $.ajax({
+      //   url: "https://jsonplaceholder.typicode.com/todos/1",
+      //   success: function (result) {
+      //     $("#weather-temp").html("<strong>" + result + "</strong> degrees");
+      //   },
+      // });
+
+      $$.ajax({
+        url: "https://jsonplaceholder.typicode.com/todos/1",
+        success: function (result) {
+          $$("#weather-temp2").html("<strong>" + result + "</strong> degrees");
+        },
+      });
+
+    </script>
+  </body>
+</html>
