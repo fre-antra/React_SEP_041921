@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+      <div id="button-container">      
+          
+          <button class="continue">BUTTON</button>
+          <button class="continue">BUTTON</button>
+          <button id="banner-message" style="display: none;">banner message</button>
+        </div>
+<!-- 
+    <button class="continue">BUTTON</button>
+    <button class="continue">BUTTON</button> -->
+
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Jquery: facade pattern
+      // $('button.continue').html('Next Step...');
+      // console.log($('button.continue').html);
+      class PQuery {
+        constructor(selector) {
+          this.element = document.querySelector(selector);
+        }
+        html(tmp) {
+          this.element.innerHTML = tmp;
+        }
+        on(type, listener){
+            this.element.addEventListener(type, listener);
+
+        }
+        show(){
+            this.element.style.display = "block";
+        }
+        ajax(settingObj){ //cant be called because $$.ajax() is not a function,$$ needs to select something, change where to put ajax(), should be a class property?
+           let {url,data,success} = settingObj;
+           let method = settingObj && settingObj.method ? settingObj.method : 'GET';
+           let queryParams = "";
+           
+           Object.keys(data).forEach(key  => { //concat all the query parameters
+               queryParams += `&${key}=${data[key]}`
+           })
+
+           queryParams = queryParams.slice(1);
+
+           let fullURL = `${url}?${queryParams}`;
+
+           var xhttp = new XMLHttpRequest(); // from w3
+            xhttp.onreadystatechange = function() {
+                // if (this.readyState == 4 && this.status == 200) {
+                    if (true) {//for testing with dummy url
+                    let result = xhttp.responseText; //should be good
+                    success(result);
+                }
+            };
+            xhttp.open(method, fullURL, true);
+            xhttp.send();
+
+        }
+      }
+
+    //   $$.ajax({
+    //         url: "/api/getWeather",
+    //         data: {
+    //             zipcode: 97201
+    //         },
+    //         success: function( result ) {
+    //             $( "#weather-temp" ).html( "<strong>" + result + "</strong> degrees" );
+    //         }
+    // });
+      //testing adding parts of url
+        // let data = { name: "John", location: "Boston" }
+        // let queryParams = "";
+        // let url = "/api/getWeather"
+           
+        // Object.keys(data).forEach(key  => {
+        //     queryParams += `&${key}=${data[key]}`
+        // })
+        // queryParams = queryParams.slice(1);
+        // console.log(queryParams);
+        // let fullURL = `${url}?${queryParams}`
+
+        // console.log(fullURL);
+
+
+
+        //testing success function   
+        // let data2 = {zipcode: 97201, success: function(result) {
+        // $$("button.continue").html(
+        //     "<strong>" + result + "</strong> degrees" );
+        // }};
+        // data2.success("response from server")
+
+
+      function $$(selector) {
+        return new PQuery(selector);
+      }
+
+    //   $$('button.continue').html('Next Step...');
+      
+        let a = $$('button.continue');
+        // let b =  document.querySelector("button.continue");
+        var hiddenBox = $( "#banner-message" );
+        $$( "#button-container button" ).on( "click", function( event ) {
+            hiddenBox.show();
+            console.log("from pquery onclick");
+            });
+
+        console.log(a);
+        // console.log(b);
+      //   let aFn = a.html;
+      //   let b = $$('button.continue');
+      //   let bFn = b.html;
+      //   console.log(a === b);
+      //   console.log(aFn === bFn);
+    </script>
+  </body>
+</html>
