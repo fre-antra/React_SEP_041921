@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch-jsonp/1.0.6/fetch-jsonp.min.js"></script>
+
+</head>
+
+<body>
+    <div id="button-container">
+        <button class="continue">BUTTON</button>
+        <button class="continue">BUTTON</button>
+        <button id="click">Click here !</button>
+        <div style="display: none; color: red" id="banner-message">Text is hidden</div>
+    </div>
+    <div id='weather-temp'>Weather Temp</div>
+    <script
+        src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" 
+        crossorigin="anonymous"></script>
+    <script>
+        class PQuery {
+            constructor(selector) {
+                this.element = document.querySelectorAll(selector);
+            }
+            html(template) {
+                console.log('\'BUTTON\' to \'Next Step...\'');
+                this.element.forEach((e) => {
+                    e.innerHTML = template;
+                });
+            }
+            on(ev, callback) {
+                this.element.forEach((e) => {
+                    e.addEventListener(ev, callback);
+                });
+            }
+            hide() {
+                console.log("Text hide")
+                this.element.forEach((e) => {
+                    e.style.display = 'none';
+                })
+            }
+            show() {
+                console.log("Text show")
+                this.element.forEach((e) => {
+                    e.style.display = 'block';
+                });
+            }
+        }
+
+        function $$(selector) {
+            return new PQuery(selector);
+        }
+
+        //DOM Traversal and Manipulation
+        $$('button.continue').html('Next Step...');
+
+        //Event Handling
+        var hiddenBox = $$('#banner-message');
+        $$('#button-container button').on('click', function () {
+            if (document.querySelector('#banner-message').style.display === 'none') {
+                hiddenBox.show();
+            }
+            else
+                hiddenBox.hide();
+        });
+
+        //Ajax
+        function $$ajax({url, success}) {
+            fetchJsonp(url)
+            .then((res )=> res.json())
+            .then((json) => success(JSON.stringify(json)));
+        };
+   
+            $$ajax({
+            url: "http://api.openweathermap.org/data/2.5/weather?zip=11358&APPID=5c9fad7522b3cde7d2fc6d92074b8a61",
+            dataType: "jsonp",
+            success: function (result) {
+                // console.log(result);
+                $("#weather-temp").html("Weather: <br> <strong>" + result + "</strong>");
+            }
+        });
+        
+    </script>
+</body>
+
+</html>
