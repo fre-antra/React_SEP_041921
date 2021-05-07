@@ -5,26 +5,54 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-  </head>
-  <body>
-    <button class="continue">BUTTON</button>
-    <button class="continue">BUTTON</button>
-
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
     <script
       src="https://code.jquery.com/jquery-3.6.0.min.js"
       integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
       crossorigin="anonymous"
     ></script>
+  </head>
+  <body>
+    <button class="continue">BUTTON</button>
+    <button class="continue">BUTTON</button>
+    <div id="banner-message" class="hidden">Hidden BOX</div>
+    <div id="button-container">
+      <div>
+        <button>SHOW</button>
+      </div>
+    </div>
+
     <script>
       // Jquery: facade pattern
       // $('button.continue').html('Next Step...');
       // console.log($('button.continue').html);
+
       class PQuery {
         constructor(selector) {
-          this.element = document.querySelector(selector);
+          if (selector === document || selector === window) {
+            this.elements = [selector];
+          } else {
+            this.elements = document.querySelectorAll(selector);
+          }
         }
         html(tmp) {
-          this.element.innerHTML = tmp;
+          this.elements.forEach((ele) => {
+            ele.innerHTML = tmp;
+          });
+        }
+        on(eventName, cbFn) {
+          this.elements.forEach((ele) => {
+            ele.addEventListener(eventName, cbFn);
+          });
+        }
+        show() {
+          this.elements.forEach((ele) => {
+            ele.classList.remove('hidden');
+          });
         }
       }
 
@@ -39,6 +67,37 @@
       //   let bFn = b.html;
       //   console.log(a === b);
       //   console.log(aFn === bFn);
+
+      var hiddenBox = $$('#banner-message');
+      $$('#button-container button').on('click', function (event) {
+        hiddenBox.show();
+      });
+
+      $$(window).on('click', () => {
+        alert('click');
+      });
+
+      $$.ajax = function (optionObj) {
+        fetch(optionObj.url)
+          .then((res) => {
+            return res.json();
+          })
+          .then((data) => {
+            optionObj.success(data);
+          });
+      };
+
+      $$.ajax({
+        url: 'https://jsonplaceholder.typicode.com/todos/1',
+        success: function (result) {
+          console.log('success', result);
+        },
+      });
+      console.log($);
+
+      // function foo() {}
+      // foo.test = 5;
+      // console.dir(foo);
     </script>
   </body>
 </html>
