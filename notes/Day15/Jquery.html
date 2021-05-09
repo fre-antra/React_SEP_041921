@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hidden {
+        display: none;
+      }
+    </style>
+    <script
+      src="https://code.jquery.com/jquery-3.6.0.min.js"
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <button class="continue">BUTTON</button>
+    <button class="continue">BUTTON</button>
+    <div id="banner-message" class="hidden">Hidden BOX</div>
+    <div id="button-container">
+      <div>
+        <button>SHOW</button>
+      </div>
+    </div>
+
+    <script>
+      // Jquery: facade pattern
+      // $('button.continue').html('Next Step...');                     // JQuery selector will select all, can not use map (we can use forEach), because it return array like obj, not ori array
+      // console.log($('button.continue').html);
+
+      class PQuery {            // class is function not original class object like java
+        constructor(selector) {         // parameter is when you declear function
+          if (selector === document || selector === window) {       // instance is one class object
+            this.elements = [selector];         // this point to instance the real object created by this class
+          } else {      // var is function scope let is block scope
+            this.elements = document.querySelectorAll(selector);
+          }
+        }
+        html(tmp) {
+          this.elements.forEach((ele) => {              // this point to global  if do foo() {console.log(this))  foo();  or window in web browser
+            ele.innerHTML = tmp;
+          });
+        }
+        on(eventName, cbFn) {
+          this.elements.forEach((ele) => {
+            ele.addEventListener(eventName, cbFn);
+          });
+        }
+        show() {
+          this.elements.forEach((ele) => {
+            ele.classList.remove('hidden');
+          });
+        }
+      }
+
+      function $$(selector) {       // argument is what you pass to the function
+        return new PQuery(selector);        // new  + function or fake class
+      }
+
+      $$('button.continue').html('Next Step...');       // $$ is function html is not $$ or PQuery method, is in proto chain
+      //   let a = $$('button.continue');               // if we add html method inside PQuery, it will override proto html, jiujinyuanze
+      //   let aFn = a.html;
+      //   let b = $$('button.continue');
+      //   let bFn = b.html;
+      //   console.log(a === b);            false   each of them are new instance   each instance is different
+      //   console.log(aFn === bFn);        true   all class instance can access the class method from prototype
+
+      var hiddenBox = $$('#banner-message');
+      $$('#button-container button').on('click', function (event) {         //decendt selector  is not child > selector
+        hiddenBox.show();
+      });
+
+      $$(window).on('click', () => {
+        alert('click');
+      });
+
+      $$.ajax = function (optionObj) {          // optionObj is object
+        fetch(optionObj.url)
+          .then((res) => {
+            return res.json();                  // return a promise, then we can use next then
+          })
+          .then((data) => {
+            optionObj.success(data);
+          });
+      };
+
+      $$.ajax({                     // $() function  $. object         
+        url: 'https://jsonplaceholder.typicode.com/todos/1',
+        success: function (result) {
+          console.log('success', result);
+        },
+      });
+      console.log($);
+
+      // function foo() {}    function chain 上面是object
+      // foo.test = 5;
+      // console.dir(foo);
+    </script>
+  </body>
+</html>
