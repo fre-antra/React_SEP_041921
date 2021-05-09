@@ -31,16 +31,21 @@
       // $('button.continue').html('Next Step...');                     // JQuery selector will select all, can not use map (we can use forEach), because it return array like obj, not ori array
       // console.log($('button.continue').html);
 
-      class PQuery {            // class is function not original class object like java
-        constructor(selector) {         // parameter is when you declear function
-          if (selector === document || selector === window) {       // instance is one class object
-            this.elements = [selector];         // this point to instance the real object created by this class
-          } else {      // var is function scope let is block scope
+      class PQuery {
+        // class is function not original class object like java
+        constructor(selector) {
+          // parameter is when you declear function
+          if (selector === document || selector === window) {
+            // instance is one class object
+            this.elements = [selector]; // this point to instance the real object created by this class
+          } else {
+            // var is function scope let is block scope
             this.elements = document.querySelectorAll(selector);
           }
         }
         html(tmp) {
-          this.elements.forEach((ele) => {              // this point to global  if do foo() {console.log(this))  foo();  or window in web browser
+          this.elements.forEach((ele) => {
+            // this point to global  if do foo() {console.log(this))  foo();  or window in web browser
             ele.innerHTML = tmp;
           });
         }
@@ -51,16 +56,17 @@
         }
         show() {
           this.elements.forEach((ele) => {
-            ele.classList.remove('hidden');
+            ele.classList.remove("hidden");
           });
         }
       }
 
-      function $$(selector) {       // argument is what you pass to the function
-        return new PQuery(selector);        // new  + function or fake class
+      function $$(selector) {
+        // argument is what you pass to the function
+        return new PQuery(selector); // new  + function or fake class
       }
 
-      $$('button.continue').html('Next Step...');       // $$ is function html is not $$ or PQuery method, is in proto chain
+      $$("button.continue").html("Next Step..."); // $$ is function html is not $$ or PQuery method, is in proto chain
       //   let a = $$('button.continue');               // if we add html method inside PQuery, it will override proto html, jiujinyuanze
       //   let aFn = a.html;
       //   let b = $$('button.continue');
@@ -68,29 +74,32 @@
       //   console.log(a === b);            false   each of them are new instance   each instance is different
       //   console.log(aFn === bFn);        true   all class instance can access the class method from prototype
 
-      var hiddenBox = $$('#banner-message');
-      $$('#button-container button').on('click', function (event) {         //decendt selector  is not child > selector
+      var hiddenBox = $$("#banner-message");
+      $$("#button-container button").on("click", function (event) {
+        //decendt selector  is not child > selector
         hiddenBox.show();
       });
 
-      $$(window).on('click', () => {
-        alert('click');
+      $$(window).on("click", () => {
+        alert("click");
       });
 
-      $$.ajax = function (optionObj) {          // optionObj is object
+      $$.ajax = function (optionObj) {
+        // optionObj is object
         fetch(optionObj.url)
           .then((res) => {
-            return res.json();                  // return a promise, then we can use next then
+            return res.json(); // return a promise, then we can use next then
           })
           .then((data) => {
             optionObj.success(data);
           });
       };
 
-      $$.ajax({                     // $() function  $. object         
-        url: 'https://jsonplaceholder.typicode.com/todos/1',
+      $$.ajax({
+        // $() function  $. object
+        url: "https://jsonplaceholder.typicode.com/todos/1",
         success: function (result) {
-          console.log('success', result);
+          console.log("success", result);
         },
       });
       console.log($);

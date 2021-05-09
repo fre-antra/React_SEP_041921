@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="hello-example"></div>
+    <script
+      crossorigin
+      src="https://unpkg.com/react@17/umd/react.development.js"
+    ></script>
+    <script
+      crossorigin
+      src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"
+    ></script>
+    <script>
+      class HelloMessage extends React.Component {
+        // react is object      React. format
+        render() {
+          return React.createElement("div", null, "Hello ", this.props.name); // jsx syntax used by react     react use babel transpile jsx to js
+        }
+      }
+
+      ReactDOM.render(
+        //reactdom is an object also
+        React.createElement(HelloMessage, {
+          name: "Taylor",
+        }),
+        document.getElementById("hello-example")
+      );
+    </script>
+  </body>
+</html>
