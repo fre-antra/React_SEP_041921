@@ -1,0 +1,28 @@
+{
+  "name": "reactboilerplate",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-babel": "babel src -d lib",
+    "build-webpack": "webpack --config webpack.config.js",
+    "build": "npm run build-babel && npm run build-webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.13.16",
+    "@babel/core": "^7.14.0",
+    "@babel/preset-env": "^7.14.1",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.37.0",
+    "webpack-cli": "^4.7.0"
+  }
+}
