@@ -1,25 +1,54 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+let data = { name: 'patrick' };
+class App extends React.Component {
+  // state = {
+  //   data: { name: 'patrick' },
+  // };
+
+  constructor(props) {
+    super(props);
+    console.log(this);
+    this.state = {
+      data: { name: 'patrick', counter: 0 },
+    };
+    // this.handleClick = this.handleClick.bind(this);
+  }
+
+  handleClick() {
+    this.setState({
+      data: { name: 'Sam', counter: this.state.data.counter + 1 },
+    });
+    this.setState({
+      data: { name: 'Sam', counter: this.state.data.counter + 1 },
+    });
+  }
+
+  // handleClick = () => {
+  //   this.setState({
+  //     data: { name: 'Sam' },
+  //   });
+  // };
+
+  render() {
+    return (
+      <>
+        <h1>
+          Hello {this.state.data.name} {this.state.data.counter}
+        </h1>
+        <button onClick={() => this.handleClick()}>Change State</button>
+        <button
+          onClick={() => {
+            console.log(data);
+            data = { name: 'Sam2' };
+            console.log(data);
+          }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+          Change State
+        </button>
+      </>
+    );
+  }
 }
 
 export default App;
