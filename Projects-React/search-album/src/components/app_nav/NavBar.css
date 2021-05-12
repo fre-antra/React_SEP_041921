@@ -1,0 +1,15 @@
+.app_nav {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    height: var(--height-nav); width: 100%;
+    background-color: var(--color-blue);
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-bottom: 20px;*/
+} 
+
+.app_nav h1 {
+    color: white;
+}

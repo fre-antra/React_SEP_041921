@@ -1,0 +1,23 @@
+#search_form{
+    padding:  5px 15px;
+    width: 300px;
+    margin: 20px auto;
+    border-radius: 15px;
+    border-style: solid;
+    background-color: white;
+    transition: all 0.2s;
+    display: flex;
+    justify-content: space-between;
+}
+#search_form:hover{
+    transform: scale(1.25);
+}
+#search_form button{
+    border-style: none;
+    background-color: white;
+    font-size: 18px;
+}
+#search_input, #search_input:focus{
+    border:none; outline: none;
+    width: 90%;
+}

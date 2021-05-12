@@ -1,0 +1,19 @@
+.card{
+    width: 200px;
+    text-align: center;
+    border-style: solid;
+    border-color: var(--color-blue);
+    border-width: thin;
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    padding: 5px;
+}
+.card img{
+    padding: .5rem;
+    height: 180px;
+}
+.card_content{
+    font-size: 1.2rem;
+    font-weight: 700;
+}
