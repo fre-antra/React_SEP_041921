@@ -54,18 +54,17 @@ const Model = ((api, view) => {
     #artistName = "";
     #numberOfResults = 0;
     rerender = () => {
-      console.log("in changing state");
-      const list = document.querySelector("#" + view.domString.cardsList);
-      let htmlString = view.showLists(this.#resultsList);
-      view.render(list, htmlString);
+      //  render 'number result for artistname'
       const report = document.querySelector("#" + view.domString.report);
-
       let htmlStringReport = view.showReport(
         this.#artistName,
         this.#numberOfResults
       );
-
       view.render(report, htmlStringReport);
+      // render the cards
+      const list = document.querySelector("#" + view.domString.cardsList);
+      let htmlString = view.showLists(this.#resultsList);
+      view.render(list, htmlString);
     };
 
     get resultsList() {
@@ -84,16 +83,6 @@ const Model = ((api, view) => {
 
     set inputValue(newValue) {
       this.#inputValue = newValue;
-
-      console.log("chnage report 2", newValue);
-      const report = document.querySelector("#" + view.domString.report);
-
-      let htmlStringReport = view.showReport(
-        this.#artistName,
-        this.#numberOfResults
-      );
-
-      view.render(report, htmlStringReport);
     }
 
     get artistName() {
@@ -126,19 +115,21 @@ const AppController = ((view, model) => {
     const inputElement = document.querySelector(
       "#" + view.domString.searchInput
     );
-    console.log(inputElement);
+
     inputElement.addEventListener("keyup", (event) => {
       if (event.key === "Enter") {
         state.inputValue = event.target.value;
         model.getResultsFromArtistName(state.inputValue).then((data) => {
           if (data.resultCount === 0) {
-            console.log("in controller", data);
+            state.numberOfResults = 0;
+            state.artistName = state.inputValue;
+            state.resultsList = [];
           } else {
-            // rerender after new state
-            state.resultsList = data.results;
-            console.log(state.numberOfResults, state.artistName);
             state.numberOfResults = data.resultCount;
             state.artistName = data.results[0].artistName;
+            // we set value of numberOfResults and artistName before results list because set new value to resultsList will trigger rerender
+            // while set value of numberOfResults and artistName are not.
+            state.resultsList = data.results;
           }
         });
       }
@@ -148,10 +139,9 @@ const AppController = ((view, model) => {
   addsearchForArtistFunctionToInput();
 
   const init = () => {
-    //model.getResultsFromArtistName("swift").then((data) => {
-    //  console.log("in init", data.results);
-    //  state.resultsList = data.results;
-    //});
+    state.numberOfResults = 0;
+    state.artistName = "Kaisa";
+    state.resultsList = [];
   };
 
   return { init };
