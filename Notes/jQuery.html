@@ -29,43 +29,46 @@
       // console.log($('button.continue').html);
       class PQuery {
         constructor(selector) {
-          this.element = document.querySelector(selector);
+          this.elements = document.querySelectorAll(selector);
         }
         html(tmp) {
-          this.element.innerHTML = tmp;
+            this.elements.forEach(elem => {
+            elem.innerHTML = tmp;
+            })
         }
         on(type, listener){
-            this.element.addEventListener(type, listener);
-
+            this.elements.forEach(elem =>{
+                elem.addEventListener(type, listener);
+            })
         }
         show(){
             this.element.style.display = "block";
         }
-        ajax(settingObj){ //cant be called because $$.ajax() is not a function,$$ needs to select something, change where to put ajax(), should be a class property?
-           let {url,data,success} = settingObj;
-           let method = settingObj && settingObj.method ? settingObj.method : 'GET';
-           let queryParams = "";
+        // ajax(settingObj){ //cant be called because $$.ajax() is not a function,$$ needs to select something, change where to put ajax(), should be a class property?
+        //    let {url,data,success} = settingObj;
+        //    let method = settingObj && settingObj.method ? settingObj.method : 'GET';
+        //    let queryParams = "";
            
-           Object.keys(data).forEach(key  => { //concat all the query parameters
-               queryParams += `&${key}=${data[key]}`
-           })
+        //    Object.keys(data).forEach(key  => { //concat all the query parameters
+        //        queryParams += `&${key}=${data[key]}`
+        //    })
 
-           queryParams = queryParams.slice(1);
+        //    queryParams = queryParams.slice(1);
 
-           let fullURL = `${url}?${queryParams}`;
+        //    let fullURL = `${url}?${queryParams}`;
 
-           var xhttp = new XMLHttpRequest(); // from w3
-            xhttp.onreadystatechange = function() {
-                // if (this.readyState == 4 && this.status == 200) {
-                    if (true) {//for testing with dummy url
-                    let result = xhttp.responseText; //should be good
-                    success(result);
-                }
-            };
-            xhttp.open(method, fullURL, true);
-            xhttp.send();
+        //    var xhttp = new XMLHttpRequest(); // from w3
+        //     xhttp.onreadystatechange = function() {
+        //         // if (this.readyState == 4 && this.status == 200) {
+        //             if (true) {//for testing with dummy url
+        //             let result = xhttp.responseText; //should be good
+        //             success(result);
+        //         }
+        //     };
+        //     xhttp.open(method, fullURL, true);
+        //     xhttp.send();
 
-        }
+        // }
       }
 
     //   $$.ajax({
@@ -103,7 +106,32 @@
 
       function $$(selector) {
         return new PQuery(selector);
-      }
+      };
+      $$.ajax = function(settingObj){ //cant be called because $$.ajax() is not a function,$$ needs to select something, change where to put ajax(), should be a class property?
+           let {url,data,success} = settingObj;
+           let method = settingObj && settingObj.method ? settingObj.method : 'GET';
+           let queryParams = "";
+           
+           Object.keys(data).forEach(key  => { //concat all the query parameters
+               queryParams += `&${key}=${data[key]}`
+           })
+
+           queryParams = queryParams.slice(1);
+
+           let fullURL = `${url}?${queryParams}`;
+
+           var xhttp = new XMLHttpRequest(); // from w3
+            xhttp.onreadystatechange = function() {
+                // if (this.readyState == 4 && this.status == 200) {
+                    if (true) {//for testing with dummy url
+                    let result = xhttp.responseText; //should be good
+                    success(result);
+                }
+            };
+            xhttp.open(method, fullURL, true);
+            xhttp.send();
+
+        }
 
     //   $$('button.continue').html('Next Step...');
       
