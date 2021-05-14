@@ -16,11 +16,15 @@ class App extends React.Component {
   }
 
   handleClick() {
-    this.setState({
-      data: { name: 'Sam', counter: this.state.data.counter + 1 },
+    this.setState((prevState) => {
+      return {
+        data: { name: 'Sam', counter: prevState.data.counter + 1 },
+      };
     });
-    this.setState({
-      data: { name: 'Sam', counter: this.state.data.counter + 1 },
+    this.setState((prevState) => {
+      return {
+        data: { name: 'Sam', counter: prevState.data.counter + 1 },
+      };
     });
   }
 
