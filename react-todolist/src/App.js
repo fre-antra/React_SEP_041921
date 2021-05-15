@@ -1,11 +1,12 @@
-import logo from './logo.svg';
 import './App.css';
+import Layout from "./components/Layout";
+import TodoList from "./components/TodoList";
 
 function App() {
   return (
-    <div className="App">
-      App
-    </div>
+    <Layout>
+      <TodoList></TodoList>
+    </Layout>
   );
 }
 
