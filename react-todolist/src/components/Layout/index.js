@@ -7,7 +7,7 @@ export default class Layout extends Component {
     const { children } = this.props;
     return (
       <>
-        <header>
+        <header className="header">
           <Header></Header>
         </header>
         <main className="content">
