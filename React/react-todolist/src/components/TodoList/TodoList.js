@@ -84,4 +84,6 @@ class TodoList extends React.Component {
   }
 }
 
-export default withTodos(TodoList);
+export default TodoList;
+
+// export default withTodos(TodoList);
