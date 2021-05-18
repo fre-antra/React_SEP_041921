@@ -1,35 +1,23 @@
 import React, { Component } from 'react';
 import { getAllTodos } from "../../API/todoAPI";
+import { withTodos } from '../../HOC/withTodos';
 
-export default class Dashboard extends Component {
-  state = {
-    totalTodoCount: 0,
-    totalCompleted: 0
-  };
+function Dashboard(props) {
 
-  componentDidMount() {
-    getAllTodos().then(todos => {
-      const totalTodoCount = todos.length;
-      const totalCompleted = todos.filter((todo) => todo.completed === true).length;
-      this.setState({
-        totalTodoCount: totalTodoCount,
-        totalCompleted: totalCompleted
-      });
-    });
-  }
+  const { todoList } = props;
+  const totalTodoCount = todoList.length;
+  const totalCompleted = todoList.filter((todo) => todo.completed === true).length;
+  return (
+    <section>
+      <h1>
+        Total todo counts: {totalTodoCount}
+      </h1>
+      <h1>
+        Total Completed: {totalCompleted}
+      </h1>
+    </section>
 
-  render() {
-    const { totalTodoCount, totalCompleted } = this.state;
-    return (
-      <section>
-        <h1>
-          Total todo counts: {totalTodoCount}
-        </h1>
-        <h1>
-          Total Completed: {totalCompleted}
-        </h1>
-      </section>
-
-    );
-  }
+  );
 }
+
+export default withTodos(Dashboard);

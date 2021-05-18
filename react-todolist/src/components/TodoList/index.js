@@ -3,20 +3,13 @@ import TodoItem from "./TodoItem";
 import "./TodoList.css";
 import { getAllTodos, deleteTodo, addTodo } from '../../API/todoAPI';
 import { Todo } from '../../model/Todo';
-export default class TodoList extends Component {
+import { withTodos } from '../../HOC/withTodos';
+class TodoList extends Component {
   state = {
-    todoList: [],
     inputText: ""
   };
 
-  componentDidMount() {
-    getAllTodos().then(data => {
-      console.log(data);
-      this.setState({ todoList: data });
-    });
-  }
-
-  //assign event handler to the child
+  //assign this event handler to the child
   // handleRemoveTodo = (id) => {
   // deleteTodo(id)
   //   .then(data => {
@@ -30,22 +23,13 @@ export default class TodoList extends Component {
   // };
 
   //use event delegation instead, this avoids creating a lot of event handlers in TodoItem
-  handleRemove = (event) => {
-    if (event.target.className == "btn-remove") {
-      console.log(event.target.id);
-      const id = (event.target.id);
-      deleteTodo(+id)
-        .then(data => {
-          this.setState({
-            todoList: this.state.todoList.filter((todo) => +todo.id !== +id)
-          });
-        })
-        .catch(err => {
-          console.warn(err);
-        });
-    }
+  // handleRemove = (event) => {
+  //   if (event.target.className == "btn-remove") {
+  //     // console.log(event.target.id);
+  //     const id = (event.target.id);
 
-  };
+  //   }
+  // };
 
   handleInputChange = (event) => {
     this.setState({
@@ -57,15 +41,13 @@ export default class TodoList extends Component {
     if (event.key === "Enter") {
       const userId = 1, title = this.state.inputText, completed = false;
       const newTodo = new Todo(userId, title, completed);
-      addTodo(newTodo).then(data => {
-        this.setState({
-          todoList: [data, ...this.state.todoList]
-        });
-      });
+      this.props.handleAddTodo(newTodo);
+      this.setState({ inputText: "" });
     }
   };
 
   render() {
+    const { todoList, handleDeleteTodo } = this.props;
     return (
       <section className="todolist">
         <header className="todolist__header">
@@ -79,9 +61,11 @@ export default class TodoList extends Component {
           onChange={this.handleInputChange}
           onKeyUp={this.handleInputKeyUp}
         />
-        <ul className="todolist__content" onClick={this.handleRemove}>
-          {this.state.todoList.map((todo) =>
+        <ul className="todolist__content"
+        >
+          {todoList.map((todo) =>
             <TodoItem key={todo.id} todo={todo}
+              removeTodo={() => handleDeleteTodo(todo.id)}
             // removeTodo={this.handleRemoveTodo}
             ></TodoItem>
           )}
@@ -90,3 +74,5 @@ export default class TodoList extends Component {
     );
   }
 }
+
+export default withTodos(TodoList);

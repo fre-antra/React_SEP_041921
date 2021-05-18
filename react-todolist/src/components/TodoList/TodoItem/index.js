@@ -7,7 +7,7 @@ export default function TodoItem(props) {
     <li className="todolist__content-item">
       <span>{todo.title}</span>
       <button id={todo.id} className="btn-remove"
-      // onClick={() => removeTodo(todo.id)}
+        onClick={() => removeTodo(todo.id)}
       >X</button>
     </li>
   );
