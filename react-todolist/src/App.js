@@ -6,7 +6,7 @@ import TodoList from "./components/TodoList";
 
 class App extends React.Component {
   state = {
-    activePage: "Dashboard"
+    activePage: "TodoList"
   };
 
   handleChangeActivePage = (activePage) => {

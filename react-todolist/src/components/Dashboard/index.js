@@ -1,10 +1,18 @@
-import React, { Component } from 'react';
+import React, { Component, useEffect } from 'react';
 import { getAllTodos } from "../../API/todoAPI";
 import { withTodos } from '../../HOC/withTodos';
+import { useSelector, useDispatch } from 'react-redux';
+import { selectTodoList, fetchTodos } from '../../slices/todoSlice';
 
 function Dashboard(props) {
+  const dispatch = useDispatch();
+  const todoList = useSelector(selectTodoList);
 
-  const { todoList } = props;
+  //hook to dispatch fetching data action
+  useEffect(() => {
+    dispatch(fetchTodos());
+  }, [dispatch]);
+
   const totalTodoCount = todoList.length;
   const totalCompleted = todoList.filter((todo) => todo.completed === true).length;
   return (
@@ -20,4 +28,4 @@ function Dashboard(props) {
   );
 }
 
-export default withTodos(Dashboard);
+export default Dashboard;
