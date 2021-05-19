@@ -2,6 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
+import ReduxTest, { ReduxTester2 } from './MyRedux/ReduxTester';
 
 import WithTodosData from './components/WithTodosData/WithTodosData';
 
@@ -22,4 +23,10 @@ function Title2(props) {
 //   }
 // }
 
-ReactDOM.render(<App />, document.getElementById('root'));
+ReactDOM.render(
+  <>
+    <ReduxTest />
+    <ReduxTester2></ReduxTester2>
+  </>,
+  document.getElementById('root')
+);
