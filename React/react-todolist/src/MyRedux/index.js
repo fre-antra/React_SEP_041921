@@ -13,7 +13,7 @@ const { createStore } = require('redux');
  * You can use any conditional logic you want in a reducer. In this example,
  * we use a switch statement, but it's not required.
  */
-function counterReducer(state = { value: 0 }, action) {
+function counterReducer(state = { value: 10 }, action) {
   switch (action.type) {
     case 'counter/incremented':
       return { value: state.value + 1 };
@@ -26,7 +26,7 @@ function counterReducer(state = { value: 0 }, action) {
 
 // Create a Redux store holding the state of your app.
 // Its API is { subscribe, dispatch, getState }.
-let store = createStore(counterReducer);
+export let store = createStore(counterReducer);
 export const pStore = pCreateStore(counterReducer);
 
 function pCreateStore(reducerFn) {
@@ -35,6 +35,9 @@ function pCreateStore(reducerFn) {
   let listners = [];
   function subscribe(callbackFn) {
     listners.push(callbackFn);
+    return () => {
+      listners = listners.filter((listner) => listner !== callbackFn);
+    };
   }
 
   function dispatch(action) {
@@ -58,12 +61,13 @@ function pCreateStore(reducerFn) {
 // Normally you'd use a view binding library (e.g. React Redux) rather than subscribe() directly.
 // There may be additional use cases where it's helpful to subscribe as well.
 
-// store.subscribe(() => console.log(store.getState()));
+//const unsub = store.subscribe(() => console.log(store.getState()));
 
 // The only way to mutate the internal state is to dispatch an action.
 // The actions can be serialized, logged or stored and later replayed.
 // store.dispatch({ type: 'counter/incremented' });
-// // {value: 1}
+//unsub();
+// {value: 1}
 // store.dispatch({ type: 'counter/incremented' });
 // // {value: 2}
 // store.dispatch({ type: 'counter/decremented' });
@@ -71,9 +75,9 @@ function pCreateStore(reducerFn) {
 
 //console.log(pStore.getState()); // 0
 
-// pStore.subscribe(() => console.log(pStore.getState()));
+// const unsub = pStore.subscribe(() => console.log(pStore.getState()));
 // pStore.dispatch({ type: 'counter/incremented' });
-// //console.log(pStore.getState()); // 1
-
+// // //console.log(pStore.getState()); // 1
+// unsub();
 // pStore.dispatch({ type: 'counter/incremented' });
 // pStore.dispatch({ type: 'counter/decremented' });
