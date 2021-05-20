@@ -6,6 +6,8 @@ import ReduxTest, { ReduxTester2, ReactReduxTest } from './MyRedux/ReduxTester';
 
 import WithTodosData from './components/WithTodosData/WithTodosData';
 import { Provider } from 'react-redux';
+import { MyProvider } from './MyReactRedux/index';
+
 import { store } from './MyRedux/index';
 
 function Title(props) {
@@ -26,10 +28,10 @@ function Title2(props) {
 // }
 
 ReactDOM.render(
-  <Provider store={store}>
+  <MyProvider store={store}>
     {/* <ReduxTest />
     <ReduxTester2 /> */}
-    <ReactReduxTest></ReactReduxTest>
-  </Provider>,
+    <ReactReduxTest title="test"></ReactReduxTest>
+  </MyProvider>,
   document.getElementById('root')
 );

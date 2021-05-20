@@ -1,6 +1,7 @@
 import React from 'react';
 import { pStore } from '../MyRedux/index';
 import { connect } from 'react-redux';
+import { myconnect } from '../MyReactRedux/index';
 
 export default class ReduxTester extends React.Component {
   componentDidMount() {
@@ -58,7 +59,8 @@ export class ReduxTester2 extends React.Component {
 
 class ReactReduxTester extends React.Component {
   render() {
-    const { counter, increment, decrement } = this.props;
+    const { counter, increment, decrement, title } = this.props;
+    console.log(title);
     return (
       <>
         <h1>React Redux Tester</h1>
@@ -80,7 +82,12 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export const ReactReduxTest = connect(
+// export const ReactReduxTest = connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(ReactReduxTester);
+
+export const ReactReduxTest = myconnect(
   mapStateToProps,
   mapDispatchToProps
 )(ReactReduxTester);
