@@ -1,6 +1,4 @@
 import React from 'react';
-import { getAllTodos } from '../../apis/TodoAPI';
-import { withTodos } from '../../hoc/withTodos';
 
 class Dashboard extends React.Component {
   render() {

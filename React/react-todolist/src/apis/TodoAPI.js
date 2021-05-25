@@ -1,5 +1,25 @@
-const baseUrl = 'https://jsonplaceholder.typicode.com';
-const todoPath = 'todos';
+import { env } from '../env/env';
+
+let baseUrl;
+let todoPath;
+switch (process.env.REACT_APP_ENV) {
+  case 'dev':
+    baseUrl = env.dev.baseUrl;
+    todoPath = env.dev.todosPath;
+    break;
+  case 'test':
+    baseUrl = env.test.baseUrl;
+    todoPath = env.test.todosPath;
+    break;
+  case 'prod':
+    baseUrl = env.prod.baseUrl;
+    todoPath = env.prod.todosPath;
+    break;
+  default:
+    baseUrl = env.dev.baseUrl;
+    todoPath = env.dev.todosPath;
+    break;
+}
 
 export const getAllTodos = () =>
   fetch([baseUrl, todoPath].join('/')).then((res) => res.json());

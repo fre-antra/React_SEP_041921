@@ -2,13 +2,17 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
 import './index.css';
-import ReduxTest, { ReduxTester2, ReactReduxTest } from './MyRedux/ReduxTester';
+import ReduxCounterApp, {
+  TestCounterApp,
+  MyContext,
+} from './myRedux/ReduxCounterApp';
+// import { Provider } from 'react-redux';
+import { Provider } from './MyReactRedux/MyReactRedux';
+
+import { store } from './myRedux/myRedux';
+import { HooksApp, ClassApp, NewCounterApp } from './hooks/HooksApp';
 
 import WithTodosData from './components/WithTodosData/WithTodosData';
-import { Provider } from 'react-redux';
-import { MyProvider } from './MyReactRedux/index';
-
-import { store } from './MyRedux/index';
 
 function Title(props) {
   return <h1>{props.title}</h1>;
@@ -27,11 +31,38 @@ function Title2(props) {
 //   }
 // }
 
-ReactDOM.render(
-  <MyProvider store={store}>
-    {/* <ReduxTest />
-    <ReduxTester2 /> */}
-    <ReactReduxTest title="test"></ReactReduxTest>
-  </MyProvider>,
-  document.getElementById('root')
+// class Myapp extends React.Component {
+//   state = {
+//     remove: false,
+//   };
+
+//   render() {
+//     return (
+//       <Provider store={store}>
+//         <ReduxCounterApp name="patrick" />
+//         {this.state.remove ? null : <ReduxCounterApp />}
+//         <button
+//           onClick={() => {
+//             this.setState({
+//               remove: true,
+//             });
+//           }}
+//         >
+//           Remove Second Counter
+//         </button>
+//       </Provider>
+//     );
+//   }
+// }
+
+const HooksTest = (
+  <div>
+    <HooksApp></HooksApp>
+    <hr></hr>
+    <ClassApp></ClassApp>
+    <hr></hr>
+    <NewCounterApp></NewCounterApp>
+  </div>
 );
+
+ReactDOM.render(<App></App>, document.getElementById('root'));
