@@ -1,5 +1,10 @@
-import { configureStore } from '@reduxjs/toolkit';
-import todoReducer from '../slices/todoSlice';
+import { configureStore } from "@reduxjs/toolkit";
+import todoReducer from "../slices/todoSlice";
+import { TodoSlice } from "../slices/todoSlice";
+
+export interface State {
+  todo: TodoSlice;
+}
 
 export default configureStore({
   //get todos
@@ -7,6 +12,6 @@ export default configureStore({
   //remove todos
   reducer: {
     // This tells Redux that we want our top- level state object to have a field named todo inside, and all the data for state.todo will be updated by the todoReducer function when actions are dispatched.
-    todo: todoReducer
+    todo: todoReducer,
   },
 });

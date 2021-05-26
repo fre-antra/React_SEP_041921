@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import TodoItem from "./TodoItem";
 import "./TodoList.css";
-import { Todo } from '../../model/Todo';
+import { Todo } from "../../model/Todo";
 
-import { useTodos } from '../hooks/useTodos';
-
+import { useTodos } from "../hooks/useTodos";
 
 function TodoList() {
   const [inputText, setInputText] = useState("");
@@ -14,7 +13,6 @@ function TodoList() {
   // useEffect(() => {
   //   dispatch(fetchTodos());
   // }, [dispatch]);
-
 
   //assign this event handler to the child
   // handleRemoveTodo = (id) => {
@@ -38,19 +36,20 @@ function TodoList() {
   //   }
   // };
 
-  function handleInputChange(event) {
+  function handleInputChange(event: React.ChangeEvent<HTMLInputElement>) {
     setInputText(event.target.value);
-  };
+  }
 
-  function handleInputKeyUp(event) {
+  function handleInputKeyUp(event: React.KeyboardEvent<HTMLInputElement>) {
     if (event.key === "Enter") {
-      const userId = 1, title = inputText, completed = false;
-      const newTodo = new Todo(userId, title, completed);
+      const userId = 1,
+        title = inputText,
+        completed = false;
+      const newTodo = new Todo(userId, title, completed, 0);
       handleAddTodo(newTodo);
       setInputText("");
     }
-  };
-
+  }
 
   return (
     <section className="todolist">
@@ -62,20 +61,20 @@ function TodoList() {
         className="todolist__input"
         placeholder="What are you going to do????"
         value={inputText}
-        onChange={handleInputChange}
-        onKeyUp={handleInputKeyUp}
+        onChange={(e) => handleInputChange(e)}
+        onKeyUp={(e) => handleInputKeyUp(e)}
       />
-      <ul className="todolist__content"
-      >
-        {todoList.map((todo) =>
-          <TodoItem key={todo.id} todo={todo}
-            removeTodo={(id) => handleDeleteTodo(id)}
+      <ul className="todolist__content">
+        {todoList.map((todo: Todo) => (
+          <TodoItem
+            key={todo.id}
+            todo={todo}
+            removeTodo={handleDeleteTodo}
           ></TodoItem>
-        )}
+        ))}
       </ul>
     </section>
   );
-
 }
 
-export default (TodoList);
+export default TodoList;

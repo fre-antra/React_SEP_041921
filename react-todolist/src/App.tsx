@@ -1,23 +1,19 @@
 import React from "react";
-import './App.css';
+import "./App.css";
 import Dashboard from "./components/Dashboard";
 import Layout from "./components/Layout";
 import TodoList from "./components/TodoList";
-import {
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import { Switch, Route, Link } from "react-router-dom";
 class App extends React.Component {
   state = {
-    activePage: "TodoList"
+    activePage: "TodoList",
   };
 
-  handleChangeActivePage = (activePage) => {
-    this.setState({
-      activePage: activePage
-    });
-  };
+  // handleChangeActivePage = (activePage) => {
+  //   this.setState({
+  //     activePage: activePage
+  //   });
+  // };
 
   render() {
     // let content;
@@ -34,7 +30,7 @@ class App extends React.Component {
     // }
 
     return (
-      <Layout handleChangeActivePage={this.handleChangeActivePage}>
+      <Layout>
         <Switch>
           <Route path="/dashboard">
             <Dashboard></Dashboard>
@@ -43,11 +39,9 @@ class App extends React.Component {
             <TodoList></TodoList>
           </Route>
         </Switch>
-
       </Layout>
     );
   }
-
 }
 
 export default App;
