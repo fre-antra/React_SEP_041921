@@ -1,22 +1,19 @@
-import React, { Component, useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import TodoItem from "./TodoItem";
 import "./TodoList.css";
-// import { getAllTodos, deleteTodo, addTodo } from '../../API/todoAPI';
 import { Todo } from '../../model/Todo';
-// import { withTodos } from '../../HOC/withTodos';
 
-import { useSelector, useDispatch } from 'react-redux';
-import { selectTodoList, fetchTodos, addNewTodo, removeTodo } from '../../slices/todoSlice';
+import { useTodos } from '../hooks/useTodos';
 
 
-function TodoList(props) {
-  const dispatch = useDispatch();
+function TodoList() {
   const [inputText, setInputText] = useState("");
+  const { todoList, handleAddTodo, handleDeleteTodo } = useTodos();
 
   //hook to dispatch fetching data action
-  useEffect(() => {
-    dispatch(fetchTodos());
-  }, [dispatch]);
+  // useEffect(() => {
+  //   dispatch(fetchTodos());
+  // }, [dispatch]);
 
 
   //assign this event handler to the child
@@ -49,15 +46,11 @@ function TodoList(props) {
     if (event.key === "Enter") {
       const userId = 1, title = inputText, completed = false;
       const newTodo = new Todo(userId, title, completed);
-      dispatch(addNewTodo(newTodo));
-      // this.setState({ inputText: "" });
+      handleAddTodo(newTodo);
       setInputText("");
     }
   };
 
-
-  const { handleDeleteTodo } = props;
-  const todoList = useSelector(selectTodoList);
 
   return (
     <section className="todolist">
@@ -76,8 +69,7 @@ function TodoList(props) {
       >
         {todoList.map((todo) =>
           <TodoItem key={todo.id} todo={todo}
-            removeTodo={() => dispatch(removeTodo(todo.id))}
-          // removeTodo={this.handleRemoveTodo}
+            removeTodo={(id) => handleDeleteTodo(id)}
           ></TodoItem>
         )}
       </ul>

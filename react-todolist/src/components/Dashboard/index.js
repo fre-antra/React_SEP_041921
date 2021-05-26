@@ -1,18 +1,8 @@
-import React, { Component, useEffect } from 'react';
-import { getAllTodos } from "../../API/todoAPI";
-import { withTodos } from '../../HOC/withTodos';
-import { useSelector, useDispatch } from 'react-redux';
-import { selectTodoList, fetchTodos } from '../../slices/todoSlice';
+import React, { Component } from 'react';
+import { useTodos } from '../hooks/useTodos';
 
-function Dashboard(props) {
-  const dispatch = useDispatch();
-  const todoList = useSelector(selectTodoList);
-
-  //hook to dispatch fetching data action
-  useEffect(() => {
-    dispatch(fetchTodos());
-  }, [dispatch]);
-
+function Dashboard() {
+  const { todoList } = useTodos();
   const totalTodoCount = todoList.length;
   const totalCompleted = todoList.filter((todo) => todo.completed === true).length;
   return (
