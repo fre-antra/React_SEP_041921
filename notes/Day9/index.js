@@ -129,7 +129,7 @@
 //   foo4: () => {
 //     return this;
 //   },
-// };
+// };                               // bind apply call   (this指向，后面是参数) bind不会立刻执行，apply后面要跟数组
 /******************Closure */
 // function foo() {
 //   console.log("Hello");

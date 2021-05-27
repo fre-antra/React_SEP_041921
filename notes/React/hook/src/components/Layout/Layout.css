@@ -1,0 +1,18 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: var(--color-primary);
+  height: var(--height-header);
+}
+
+.content {
+  padding-top: var(--height-header);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: var(--height-todolist);
+}
