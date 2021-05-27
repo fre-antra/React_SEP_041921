@@ -1,15 +1,16 @@
 import { createSlice, nanoid, createAsyncThunk } from "@reduxjs/toolkit";
 import { addTodo, deleteTodo, getAllTodos } from "../API/todoAPI";
 import { Todo } from "../model/Todo";
-import { State } from "../store/store";
+import { RootState } from "../store/store";
+import { useAppSelector } from "../components/hooks/useTodos";
 
-export interface TodoSlice {
+export interface TodoState {
   todoList: any[];
   totalTodoCount: number;
   totalCompleted: number;
 }
 
-const initialState: TodoSlice = {
+const initialState: TodoState = {
   todoList: [],
   totalTodoCount: 0,
   totalCompleted: 0,
@@ -67,9 +68,15 @@ const todoSlice = createSlice({
     //     (todo) => +todo.id !== +action.payload
     //   );
     // },
+
+    //example
+    // Use the PayloadAction type to declare the contents of `action.payload`
+    // incrementByAmount: (state, action: PayloadAction<number>) => {
+    //   state.value += action.payload;
+    // };
   },
 });
 
 //selectors
-export const selectTodoList = (state: State) => state.todo.todoList;
+export const selectTodoList = (state: RootState) => state.todo.todoList;
 export default todoSlice.reducer;
