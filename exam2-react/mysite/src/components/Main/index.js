@@ -4,7 +4,7 @@ import responsiveDesign from "../../images/responsivedesign.svg";
 import passion from "../../images/passion.svg";
 import innovativesolutions from "../../images/innovativesolutions.svg";
 
-const Home = props => {
+const Main = props => {
   const handleScroll = id => {
     const anchorAbout = document.querySelector(id);
     anchorAbout.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -216,4 +216,4 @@ const Home = props => {
   );
 };
 
-export default Home;
+export default Main;
