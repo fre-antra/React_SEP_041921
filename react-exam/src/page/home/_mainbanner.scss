@@ -1,0 +1,47 @@
+.main {
+    background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)),
+      url(../../assets/images/apple-1838564_1920-main.jpg); /* Browser prefixes*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    padding: 14.7% 0; /* Center contents within the container, make background image cover*/
+    color: white;
+  }
+  
+  .entry-banner h1 {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+  }
+  #hello {
+    font-size: 28pt;
+  }
+  #name {
+    font-size: 100pt;
+  }
+  #person-description {
+    font-size: 33pt;
+  }
+  .banner-buttons .btn-border,
+  .submit-contact .btn-border,
+  .projects .btn-border {
+    background-color: transparent;
+    width: 100%;
+    margin: 0 5%;
+    margin-top: 40px;
+    color: white;
+    font-family: "Roboto", Helvetica, serif;
+    font-size: 16pt;
+    border-radius: 0;
+    border: 2px solid white;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+  }
+  
+  .banner-buttons .btn-border:hover,
+  .submit-contact .btn-border:hover,
+  .projects .btn-border:hover {
+    border: 2px solid white;
+    background-color: white;
+  }

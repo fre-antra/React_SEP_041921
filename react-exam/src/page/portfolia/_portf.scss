@@ -1,0 +1,27 @@
+@import './Card/Card';
+.projects .btn-border:hover {
+  border: 2px solid white;
+  background-color: white;
+}
+.projects {
+  background-color: #59585d;
+  padding: 70px 50px;
+  color: white;
+  text-align: center;
+}
+
+.projects-header-quote {
+  margin-bottom: 20px;
+}
+.projects h1,
+.projects h3 {
+  font-family: 'Source Sans Pro', Arial, sans-serif;
+}
+.projects p {
+  font-family: 'Roboto', Helvetica, serif;
+  padding: 0 10px;
+}
+
+.projects-header-quote {
+  font-style: italic;
+}

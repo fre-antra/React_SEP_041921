@@ -1,0 +1,49 @@
+.footer {
+  background-color: black;
+  color: white;
+  padding: 50px 0;
+  font-family: "Roboto", Helvetica, serif;
+}
+
+.footer h3,
+.footer h4 {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+.facebook,
+.linkedin,
+.pinterest,
+.email-icon {
+  padding: 3%;
+}
+.footer img {
+  background-color: #8a8a8a;
+  -webkit-transition: all 200ms ease-out;
+  -moz-transition: all 200ms ease-out;
+  -o-transition: all 200ms ease-out;
+  -ms-transition: all 200ms ease-out;
+  transition: all 200ms ease-out;
+}
+.img-responsive {
+  width: 3vw;
+}
+.footer img:hover {
+  background-color: white;
+}
+.company-information,
+.home-footer,
+.portfolio-footer,
+.resume-footer,
+.contact-footer {
+  margin-top: 50px;
+}
+.footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.home-footer a,
+.portfolio-footer a,
+.resume-footer a,
+.contact-footer a {
+  color: white;
+}

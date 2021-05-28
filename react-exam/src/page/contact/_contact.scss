@@ -1,0 +1,86 @@
+.contact {
+    background-color: #3a3a3a;
+    padding: 70px 150px;
+    color: white;
+  }
+  .contact input,
+  textarea {
+    color: black;
+  }
+  
+  .contact h1,
+  .contact h2,
+  .contact h4 {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+  }
+  .contact p {
+    font-family: "Roboto", Helvetica, serif;
+  }
+  .contact-header-quote {
+    font-style: italic;
+  }
+  .contact-header-quote h4 {
+    margin: 5px 0;
+  }
+  .contact-instructions,
+  .contact-form-body {
+    margin-top: 50px;
+    padding: 0px 6%;
+  }
+  
+  .email,
+  .message {
+    margin: 15px 0px;
+  }
+  .contact input,
+  .contact textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 3px 0px;
+  }
+  
+  .submit-contact .btn-border {
+    margin-top: 10px;
+  }
+  .footer {
+    background-color: black;
+    color: white;
+    padding: 50px 0;
+    font-family: "Roboto", Helvetica, serif;
+  }
+  
+  .footer h3,
+  .footer h4 {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+  }
+
+  .footer img {
+    background-color: #8a8a8a;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+  }
+  
+  .footer img:hover {
+    background-color: white;
+  }
+  .company-information,
+  .home-footer,
+  .portfolio-footer,
+  .resume-footer,
+  .contact-footer {
+    margin-top: 50px;
+  }
+  .footer ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  
+  .home-footer a,
+  .portfolio-footer a,
+  .resume-footer a,
+  .contact-footer a {
+    color: white;
+  }

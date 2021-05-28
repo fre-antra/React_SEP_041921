@@ -1,0 +1,27 @@
+// Header
+@import '../page/component/Header/Header';
+
+//Footer
+@import '../page/component/Footer/Footer';
+
+// Home
+@import '../page/home/aboutme';
+@import '../page/home/mainbanner';
+@import '../page/home/summary';
+
+//Contact
+@import '../page/contact/contact';
+
+//Portf
+@import '../page/portfolia/portf';
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+.page-content {
+  min-height: 100vh;
+}

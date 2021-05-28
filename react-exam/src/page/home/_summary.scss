@@ -1,0 +1,30 @@
+.resume .btn-black-border:hover {
+    border: 2px solid #464646;
+    background-color: #464646;
+    color: white;
+  }
+.summary {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+      url(../../assets/images/architecture-2178604_1920-main1.jpg);
+    background-attachment: fixed;
+    background-attachment: center center;
+    color: white;
+    padding: 60px 30px;
+  }
+  
+  .summary .row {
+    padding: 50px 6%;
+    width: 100%;
+  }
+  
+  .summary h3 {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+  }
+  .summary p {
+    font-family: "Roboto", Helvetica, serif;
+  }
+  .img-summary{
+    width: 5vw;
+    margin-right: 10px;
+
+  }
