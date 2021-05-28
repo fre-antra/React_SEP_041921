@@ -10,7 +10,7 @@ import Contact from '../Contact/Contact';
 
 const Home = () => {
   return (
-    <div>
+    <div id="home">
       <section className="hero-section">
         <div className="hero-section__background">
           <MyParallax bgImage={heroImage}>
@@ -81,10 +81,10 @@ const Home = () => {
           </div>
         </MyParallax>
       </section>
-      <section>
+      <section id="portfolio">
           <Portfolio />
       </section>
-      <section>
+      <section id="contact">
           <Contact />
       </section>
       {/*<h1>Footer</h1>*/}
