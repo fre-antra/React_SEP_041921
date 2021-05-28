@@ -1,3 +1,6 @@
+@import '../../../styles/base';
+@import '../../../styles/button';
+
 .hero-section {
   color: white;
   z-index: 101;
@@ -19,20 +22,38 @@
     margin: 0;
   }
 
-  .hero-section__title {
+  .hero-section__jobtitle {
     font-size: 3rem;
   }
 }
 
-.btn__ghost-btn {
-    display: inline-block;
-    background-color: transparent;
-    color: #fff;
-    border: 1px solid #fff;
-    text-align: center;
-    outline: none;
-    text-decoration: none;
-    font-size: 1.4rem;
-    padding: 10px;
-    margin: 0 10px;
+.aboutme-section {
+
+    .white-layer {
+        background-color: rgb(212, 200, 200);
+        opacity: 0.9;
+        z-index: 2;
+      }
+      
+    .aboutme-section__intro {
+        font-size: 3rem;
+        margin-top: 50px;
+    }
+
+    .aboutme-section__subintro {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .aboutme-section__header {
+        font-size: 2rem;
+        margin-top: 70px;
+    }
+
+    .aboutme-section__text {
+        font-size: 1.1rem;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
 }
+

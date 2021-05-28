@@ -3,8 +3,8 @@ import "./Navbar.scss";
 import logo from "../../images/logo.svg";
 
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import { Container } from "semantic-ui-react";
-import Portfolio from "../Pages/Portfolio";
+
+import Portfolio from "../Pages/Portfolio/Portfolio";
 import Contact from "../Pages/Contact";
 import Home from "../Pages/Home/Home";
 

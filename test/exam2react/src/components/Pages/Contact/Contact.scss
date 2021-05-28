@@ -1,0 +1,31 @@
+@import '../../../styles/base';
+@import '../../../styles/button';
+
+
+.contact {
+    background-color: rgb(56, 56, 56);
+    padding: 50px 0;
+    color: white;
+
+    .contact-section__intro {
+        font-size: 3rem;
+        margin-top: 40px;
+        margin-bottom: 0;
+    }
+
+    .contact-section__subintro {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-section__header {
+        font-size: 2rem;
+        margin-top: 70px;
+    }
+
+    .contact-section__text {
+        font-size: 1.1rem;
+        margin-top: 20px;
+        margin-bottom: 50px;
+    }
+}
