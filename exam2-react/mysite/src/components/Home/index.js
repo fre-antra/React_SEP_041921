@@ -4,7 +4,13 @@ import responsiveDesign from "../../images/responsivedesign.svg";
 import passion from "../../images/passion.svg";
 import innovativesolutions from "../../images/innovativesolutions.svg";
 
-const Home = () => {
+const Home = props => {
+  const handleScroll = id => {
+    const anchorAbout = document.querySelector(id);
+    anchorAbout.scrollIntoView({ behavior: "smooth", block: "center" });
+  };
+  // const { handleScroll } = props;
+
   return (
     <>
       <div className="main">
@@ -21,14 +27,25 @@ const Home = () => {
 
           <div className="row text-center">
             <div className="banner-buttons">
-              <div className="col-sm-1 col-md-1 col-sm-offset-5 col-md-offset-5">
-                <Link className="btn btn-default btn-border" to="#about">
+              <div
+                // id="scrollAbout"
+                className="col-sm-1 col-md-1 col-sm-offset-5 col-md-offset-5"
+              >
+                <Link
+                  to="#"
+                  className="btn btn-default btn-border"
+                  onClick={() => handleScroll("#about")}
+                >
                   Info
                 </Link>
               </div>
 
               <div className="col-sm-1 col-md-1">
-                <Link className="btn btn-default btn-border" to="#projects">
+                <Link
+                  to="#"
+                  className="btn btn-default btn-border"
+                  onClick={() => handleScroll("#project")}
+                >
                   Portfolio
                 </Link>
               </div>

@@ -1,27 +1,27 @@
 const Contact = () => {
   return (
-    <div class="contact">
-      <div class="container-fluid">
-        <div class="row">
-          <div class="col-sm-12 col-md-12 text-center">
-            <div class="contact-header">
+    <div className="contact">
+      <div className="container-fluid">
+        <div className="row">
+          <div className="col-sm-12 col-md-12 text-center">
+            <div className="contact-header">
               <h1>Contact</h1>
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-sm-12 col-md-12 text-center">
-            <div class="contact-header-quote">
+        <div className="row">
+          <div className="col-sm-12 col-md-12 text-center">
+            <div className="contact-header-quote">
               <h4>"XXXXXX"</h4>
               <h4>-XXX</h4>
             </div>
           </div>
         </div>
 
-        <div class="row">
-          <div class="col-sm-6 col-md-6">
-            <div class="contact-instructions">
+        <div className="row">
+          <div className="col-sm-6 col-md-6">
+            <div className="contact-instructions">
               <h2>Reaching out to me</h2>
               <p>
                 Don't be afraid to contact me! I'm happy to answer any
@@ -42,47 +42,47 @@ const Contact = () => {
             </div>
           </div>
 
-          <div class="col-sm-6 col-md-6">
-            <div class="contact-form-body">
+          <div className="col-sm-6 col-md-6">
+            <div className="contact-form-body">
               <form>
-                <div class="row">
-                  <div class="col-sm-6 col-md-6">
-                    <div class="firstname">
+                <div className="row">
+                  <div className="col-sm-6 col-md-6">
+                    <div className="firstname">
                       <h4>Full Name *</h4>
                       <input type="text" placeholder="First Name" />
                     </div>
                   </div>
 
-                  <div class="col-sm-6 col-md-6">
-                    <div class="lastname">
+                  <div className="col-sm-6 col-md-6">
+                    <div className="lastname">
                       <h4>Full Name *</h4>
                       <input type="text" placeholder="Last Name" />
                     </div>
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-sm-12 col-md-12">
-                    <div class="email">
+                <div className="row">
+                  <div className="col-sm-12 col-md-12">
+                    <div className="email">
                       <h4>Email *</h4>
                       <input type="text" placeholder="Email" />
                     </div>
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-sm-12 col-md-12">
-                    <div class="message">
+                <div className="row">
+                  <div className="col-sm-12 col-md-12">
+                    <div className="message">
                       <h4>Message *</h4>
                       <textarea placeholder="Message"></textarea>
                     </div>
                   </div>
                 </div>
 
-                <div class="row">
-                  <div class="col-sm-4 col-md-4 col-sm-offset-4 col-md-offset-4">
-                    <div class="submit-contact">
-                      <a class="btn btn-default btn-border" href="#">
+                <div className="row">
+                  <div className="col-sm-4 col-md-4 col-sm-offset-4 col-md-offset-4">
+                    <div className="submit-contact">
+                      <a className="btn btn-default btn-border" href="#">
                         Submit
                       </a>
                     </div>

@@ -2,6 +2,7 @@ import "./App.css";
 import "./bootstrap/css/bootstrap.min.css";
 import "./style.css";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { useEffect } from "react";
 
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";

@@ -3,6 +3,7 @@ import fb from "../../images/facebook.svg";
 import linkedin from "../../images/linkedin.svg";
 import pinterest from "../../images/pinterest.svg";
 import email from "../../images/email.svg";
+import "./index.css";
 // import fbimg2 from  ""
 const Footer = () => {
   return (
@@ -10,7 +11,7 @@ const Footer = () => {
       <div className="container-fluid">
         <div className="row">
           <div className="media-links">
-            <div className="col-sm-1 col-md-1 col-sm-offset-4 col-md-offset-4">
+            <div className="col-sm-2 col-md-1 col-sm-offset-4 col-md-offset-4">
               <div className="facebook">
                 <Link to="#">
                   <img className="img-responsive" src={fb} />
