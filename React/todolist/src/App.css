@@ -1,0 +1,37 @@
+ul{
+    height: 400px;
+    overflow: auto;
+    border: 1px solid red;
+    border-radius: 10px;
+    padding: 4px 10px;
+}
+
+ul li {
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li:hover {
+    background-color: rgb(216, 216, 216);
+}
+
+ul li button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    width: 20px;
+    height: auto;
+}
+
+ul li button:hover {
+    background-color: red;
+    cursor: pointer;
+}
+
+ul li button:active {
+    background-color: red;
+}
+
+ul li span {
+    overflow: hidden;
+}
