@@ -1,3 +1,6 @@
 [submodule "react-song-search"]
 	path = react-song-search
 	url = https://github.com/FaBioLeeNA/react-song-search.git
+[submodule "WebsiteTemplate"]
+	path = WebsiteTemplate
+	url = https://github.com/FaBioLeeNA/WebsiteTemplate.git
