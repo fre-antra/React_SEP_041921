@@ -5,3 +5,15 @@ header {
   width: 100%;
   background: rgb(14, 157, 161);
 }
+
+.links {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  display: flex;
+  font-size: 1.5rem;
+}
+.links a {
+  padding: 0 1rem;
+  text-align: center;
+  text-decoration: none;
+  color: white;
+}
