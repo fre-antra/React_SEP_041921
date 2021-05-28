@@ -1,0 +1,32 @@
+@import '../../../styles/base';
+@import '../../../styles/button';
+
+.portfolio {
+    background-color: #666666;
+    color: white;
+    height: 100vh;
+    width: 100%;
+
+    .dark-layer {
+        background-color: #0a0a0a;
+        opacity: 0.87;
+        z-index: 2;
+      }
+
+    .portfolio-section__intro {
+        font-size: 2.6rem;
+        margin-top: 50px;
+    }
+
+    .portfolio-section__subintro {
+        font-size: 1.6rem;
+        margin-bottom: 20px;
+    }
+
+    .portfolio-section__header {
+        font-size:1.8rem;
+        margin-bottom: 20px;
+        margin-top: 20%
+    }
+}
+
