@@ -1,7 +1,7 @@
-@import url('./boostrap/css/bootstrap-theme.css');
-@import url('./boostrap/css/bootstrap-theme.min.css');
-@import url('./boostrap/css/bootstrap.css');
-@import url('./boostrap/css/bootstrap.min.css');
+@import url("./boostrap/css/bootstrap-theme.css");
+@import url("./boostrap/css/bootstrap-theme.min.css");
+@import url("./boostrap/css/bootstrap.css");
+@import url("./boostrap/css/bootstrap.min.css");
 
 html {
   scroll-behavior: smooth;
@@ -342,8 +342,8 @@ textarea {
 
 @media screen and (max-width: 600px) {
   .column {
-      width: 100%;
-      display: flex;
-      margin-bottom: 20px;
-}
+    width: 100%;
+    display: flex;
+    margin-bottom: 20px;
+  }
 }
