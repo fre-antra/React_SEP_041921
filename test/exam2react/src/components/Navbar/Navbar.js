@@ -5,7 +5,7 @@ import logo from "../../images/logo.svg";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 import Portfolio from "../Pages/Portfolio/Portfolio";
-import Contact from "../Pages/Contact";
+import Contact from "../Pages/Contact/Contact";
 import Home from "../Pages/Home/Home";
 
 const Navbar = () => {
