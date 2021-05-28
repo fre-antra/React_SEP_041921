@@ -121,7 +121,6 @@ export const Home = (props) => {
         <div id='contact'>
           <Contact />
         </div>
-        
       </Layout>
     </>
   );

@@ -12,6 +12,7 @@ import { Home } from './page/home/home';
 import { Contact } from './page/contact/contact';
 import { Portf } from './page/portfolia/portfolia';
 import { Layout } from './page/component/Layout/Layout';
+
 import './styles/index.scss';
 
 const App = () => {
@@ -19,12 +20,12 @@ const App = () => {
     <Router>
       <Switch>
         <Route
-          path="/home"
+          path='/home'
           exact
           component={(routeProps) => <Home {...routeProps} />}
         />
         <Route
-          path="/contact"
+          path='/contact'
           component={(routeProps) => (
             <Layout>
               <Contact {...routeProps} />
@@ -32,7 +33,7 @@ const App = () => {
           )}
         />
         <Route
-          path="/portf"
+          path='/portf'
           component={(routeProps) => (
             <Layout>
               <Portf {...routeProps} />
@@ -40,7 +41,7 @@ const App = () => {
           )}
         />
 
-        <Redirect to="/home" />
+        <Redirect to='/home' />
       </Switch>
     </Router>
   );
