@@ -6,7 +6,7 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import { Container } from "semantic-ui-react";
 import Portfolio from "../Pages/Portfolio";
 import Contact from "../Pages/Contact";
-import Home from "../Pages/Home";
+import Home from "../Pages/Home/Home";
 
 const Navbar = () => {
   return (
@@ -16,31 +16,35 @@ const Navbar = () => {
           <nav className="navbar">
             <img className="navbar__logo" alt="logo" src={logo} />
             <ul className="navbar__list">
-              <li >
-                <Link className="navbar__list-item" to="/">Home</Link>
+              <li>
+                <Link className="navbar__list-item" to="/">
+                  Home
+                </Link>
               </li>
               <li>
-                <Link className="navbar__list-item" to="/portfolio">Portfolio</Link>
+                <Link className="navbar__list-item" to="/portfolio">
+                  Portfolio
+                </Link>
               </li>
               <li>
-                <Link className="navbar__list-item" to="/contact">Contact</Link>
+                <Link className="navbar__list-item" to="/contact">
+                  Contact
+                </Link>
               </li>
             </ul>
           </nav>
 
-          <Container>
-            <Switch>
-              <Route path="/portfolio" exact>
-                <Portfolio />
-              </Route>
-              <Route path="/contact" exact>
-                <Contact />
-              </Route>
-              <Route path="/">
-                <Home />
-              </Route>
-            </Switch>
-          </Container>
+          <Switch>
+            <Route path="/portfolio" exact>
+              <Portfolio />
+            </Route>
+            <Route path="/contact" exact>
+              <Contact />
+            </Route>
+            <Route path="/">
+              <Home />
+            </Route>
+          </Switch>
         </div>
       </Router>
     </div>
