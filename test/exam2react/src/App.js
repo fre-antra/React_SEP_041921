@@ -3,11 +3,10 @@ import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
-    <Container className="App">
+    <div className="App">
         {/* use react router */}
         <Navbar></Navbar>
-
-    </Container>
+    </div>
   );
 }
 
