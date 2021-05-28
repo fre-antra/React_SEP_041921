@@ -1,0 +1,45 @@
+.btn__ghost-btn {
+    display: inline-block;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 10px;
+    margin: 0 10px;
+}
+.btn__ghost-btn a {
+    color: #fff;
+}
+
+.btn__ghost-btn--black {
+    display: inline-block;
+    background-color: transparent;
+    color: rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    text-align: center;
+    outline: none;
+    text-decoration: none;
+    font-size: 1.4rem;
+    padding: 10px 30px;
+    margin: 0 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+    
+}
+
+.btn__ghost-btn--black a {
+    color: rgb(0, 0, 0);
+}
+
+.btn__ghost-btn--black:hover {
+    border: 1px solid white;
+    background-color: $light-grey;
+
+}
+
+.btn__ghost-btn--black:hover a {
+    color: white;
+}
