@@ -5,11 +5,13 @@ import passion from "../../images/passion.svg";
 import innovativesolutions from "../../images/innovativesolutions.svg";
 
 const Main = props => {
+  const { targetref } = props;
   const handleScroll = id => {
     const anchorAbout = document.querySelector(id);
     anchorAbout.scrollIntoView({ behavior: "smooth", block: "center" });
   };
   // const { handleScroll } = props;
+  console.log(targetref);
 
   return (
     <>
@@ -44,7 +46,7 @@ const Main = props => {
                 <Link
                   to="#"
                   className="btn btn-default btn-border"
-                  onClick={() => handleScroll("#project")}
+                  onClick={() => handleScroll(targetref)}
                 >
                   Portfolio
                 </Link>

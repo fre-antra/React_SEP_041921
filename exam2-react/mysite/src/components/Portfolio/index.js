@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import $ from "jquery";
-const Portfolio = () => {
+const Portfolio = props => {
+  const { refprop } = props;
   useEffect(() => {
     projects();
   }, []);
@@ -42,7 +43,7 @@ const Portfolio = () => {
   }
 
   return (
-    <div className="projects" id="#projects">
+    <div className="projects" id="#projects" ref={refprop}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 col-md-12 text-center">
