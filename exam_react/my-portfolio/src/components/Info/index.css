@@ -1,0 +1,93 @@
+.about {
+    padding: 3% 0;
+    background: linear-gradient(
+        rgba(225, 225, 225, 0.94),
+        rgba(225, 225, 225, 0.94)
+      ),
+      url(./images/aboutbackground.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center center;
+  }
+  
+  .about-header h1 {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 34pt;
+  }
+  
+  .about-header-quote {
+    font-family: "Slabo", Helvetica, serif;
+    font-style: italic;
+    margin-bottom: 50px;
+  }
+  
+  .about-general-description,
+  .about-statistic-description {
+    display: flex;
+    justify-content: center;
+  }
+  .about-general-description h2,
+  .about-statistic-description h2 {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+    font-size: 24pt;
+    margin-bottom: 20px;
+  }
+  
+  .about-general-description p,
+  .about-statistic-description p {
+    font-family: "Roboto", Helvetica, serif;
+    font-size: 12pt;
+    margin-bottom: 20px;
+  }
+  
+  .about-statistic-description p {
+    margin: 5px 0px;
+  }
+  .about-option-buttons {
+    display: flex;
+    justify-content: center;
+  }
+  .about-option-buttons .btn-black-border,
+  .resume .btn-black-border {
+    background-color: transparent;
+    width: 100%;
+    margin-top: 40px;
+    color: black;
+    font-family: "Roboto", Helvetica, serif;
+    font-size: 16pt;
+    border-radius: 0;
+    border: 2px solid black;
+    -webkit-transition: all 200ms ease-out;
+    -moz-transition: all 200ms ease-out;
+    -o-transition: all 200ms ease-out;
+    -ms-transition: all 200ms ease-out;
+    transition: all 200ms ease-out;
+  }
+  
+  .about-option-buttons .btn-black-border:hover,
+  .resume .btn-black-border:hover {
+    border: 2px solid #464646;
+    background-color: #464646;
+    color: white;
+  }
+  
+  .summary {
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+      url(./images/architecture-2178604_1920-main1.jpg);
+    background-attachment: fixed;
+    background-attachment: center center;
+    color: white;
+    padding: 60px 30px;
+  }
+  
+  .summary .row {
+    padding: 50px 6%;
+    width: 100%;
+  }
+  
+  .summary h3 {
+    font-family: "Source Sans Pro", Arial, sans-serif;
+  }
+  .summary p {
+    font-family: "Roboto", Helvetica, serif;
+  }
