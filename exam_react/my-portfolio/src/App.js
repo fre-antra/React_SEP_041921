@@ -7,6 +7,9 @@ import Portfolio from './components/Portfolio/index';
 import Contact from './components/Contact/index';
 import './App.css'
 
+import "./boostrap/css/bootstrap.min.css";
+
+
 class App extends Component {
   render() {
     return (

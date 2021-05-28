@@ -41,7 +41,7 @@ html {
   /* Main banner */
   .main {
     background: linear-gradient(rgba(20, 20, 20, 0.7), rgba(20, 20, 20, 0.7)),
-      url('/images/apple-1838564_1920-main.jpg'); /* Browser prefixes*/
+      url('./images/apple-1838564_1920-main.jpg'); /* Browser prefixes*/
     background-repeat: no-repeat;
     background-position: center center;
     background-attachment: fixed;
@@ -93,7 +93,7 @@ html {
         rgba(225, 225, 225, 0.94),
         rgba(225, 225, 225, 0.94)
       ),
-      url('/images/aboutbackground.jpg');
+      url('./images/aboutbackground.jpg');
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-position: center center;
@@ -162,7 +162,7 @@ html {
   
   .summary {
     background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
-      url('/images/architecture-2178604_1920-main1.jpg');
+      url('./images/architecture-2178604_1920-main1.jpg');
     background-attachment: fixed;
     background-attachment: center center;
     color: white;
@@ -205,19 +205,19 @@ html {
   /*.luvtalk-project, .personal-website-project, .strike-zone-project, .resume {border: 3px solid white;}*/
   .luvtalk-project {
     background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url('/images/luvtalklogo.png');
+      url('./images/luvtalklogo.png');
     background-position: center center;
   }
   
   .personal-website-project {
     background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url('/images/logo.svg');
+      url('./images/logo.svg');
     background-position: center center;
   }
   
   .strike-zone-project {
     background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
-      url('/images/mlbproject.png');
+      url('./images/mlbproject.png');
     background-position: center center;
   }
   
