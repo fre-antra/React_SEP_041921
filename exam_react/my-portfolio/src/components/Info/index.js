@@ -1,5 +1,9 @@
 import React, { Component, Fragment } from 'react';
 // import '../../App.css'
+import devLogo from '../../images/developerdesign.svg'
+import resLogo from '../../images/responsivedesign.svg'
+import innovationLogo from '../../images/innovativesolutions.svg'
+import passionLogo from '../../images/passion.svg'
 
 export default class Info extends Component {
     render() {
@@ -87,7 +91,7 @@ export default class Info extends Component {
                             <div className="development-summary">
                                 <div className="col-sm-1 col-md-1">
                                     <div className="development-img">
-                                        <img className="img-responsive" alt="" src="../../images/developerdesign.svg"></img>
+                                        <img className="img-responsive" alt="" src={devLogo}></img>
                                     </div>
                                 </div>
 
@@ -102,7 +106,7 @@ export default class Info extends Component {
                             <div className="responsive-summary">
                                 <div className="col-sm-1 col-md-1 col-sm-offset-2 col-md-offset-2">
                                     <div className="responsive-img">
-                                        <img className="img-responsive" alt="" src="../../images/responsivedesign.svg"></img>
+                                        <img className="img-responsive" alt="" src={resLogo}></img>
                                     </div>
                                 </div>
 
@@ -119,7 +123,7 @@ export default class Info extends Component {
                             <div className="ideas-summary">
                                 <div className="col-sm-1 col-md-1">
                                     <div className="idea-img">
-                                        <img className="img-responsive" alt="" src="../../images/innovativesolutions.svg"></img>
+                                        <img className="img-responsive" alt="" src={innovationLogo}></img>
                                     </div>
                                 </div>
 
@@ -133,7 +137,7 @@ export default class Info extends Component {
 
                             <div className="passion-summary">
                                 <div className="col-sm-1 col-md-1 col-sm-offset-2 col-md-offset-2">
-                                    <img className="img-responsive" alt="" src="../../images/passion.svg"></img>
+                                    <img className="img-responsive" alt="" src={passionLogo}></img>
                                 </div>
 
                                 <div className="col-sm-4 col-md-4">

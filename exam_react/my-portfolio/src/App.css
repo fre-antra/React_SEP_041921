@@ -19,6 +19,7 @@ html {
   .primary-nav li {
     display: inline-block;
     margin: 0px 20px;
+    margin-top: 1em;
     color: white;
     font-size: 13pt;
   }

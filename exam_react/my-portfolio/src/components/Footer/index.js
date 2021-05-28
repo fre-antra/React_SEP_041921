@@ -1,5 +1,9 @@
 import React, { Component } from 'react';
 import './index.css';
+import linkedinLogo from '../../images/linkedin.svg'
+import facebookLogo from '../../images/facebook.svg'
+import pinterestLogo from '../../images/pinterest.svg'
+import emailLogo from '../../images/email.svg'
 
 export default class Footer extends Component {
     render() {
@@ -10,25 +14,25 @@ export default class Footer extends Component {
                         <div className="media-links">
                             <div className="col-sm-1 col-md-1 col-sm-offset-4 col-md-offset-4">
                                 <div className="facebook">
-                                    <a href="#"><img className="img-responsive" src="./images/facebook.svg" /></a>
+                                    <a href="#"><img className="img-responsive" alt="" src={facebookLogo} /></a>
                                 </div>
                             </div>
 
                             <div className="col-sm-1 col-md-1">
                                 <div className="linkedin">
-                                    <a href="#"><img className="img-responsive" src="./images/linkedin.svg" /></a>
+                                    <a href="#"><img className="img-responsive" alt="" src={linkedinLogo} /></a>
                                 </div>
                             </div>
 
                             <div className="col-sm-1 col-md-1">
                                 <div className="pinterest">
-                                    <a href="#"><img className="img-responsive" src="./images/pinterest.svg" /></a>
+                                    <a href="#"><img className="img-responsive" alt="" src={pinterestLogo} /></a>
                                 </div>
                             </div>
 
                             <div className="col-sm-1 col-md-1">
                                 <div className="email-icon">
-                                    <a href="#"><img className="img-responsive" src="./images/email.svg" /></a>
+                                    <a href="#"><img className="img-responsive" alt="" src={emailLogo} /></a>
                                 </div>
                             </div>
                         </div>
