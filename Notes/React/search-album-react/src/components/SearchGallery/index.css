@@ -1,0 +1,44 @@
+#album__wrapper {
+  width: 80%;
+  margin: auto;
+  justify-content: space-around;
+  display: flex;
+  flex-wrap: wrap;
+  text-align: center;
+}
+.album__card {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+.album__card img {
+  width: 80%;
+  object-fit: contain;
+  padding-bottom: 1rem;
+}
+#album__wrapper > li {
+  list-style: none;
+}
+
+#album__wrapper li > p {
+  text-transform: capitalize;
+}
+
+.album__card {
+  width: 200px;
+  height: 270px;
+  border: 2px solid black;
+  margin: 1rem;
+}
+.results__count {
+  font-size: 2rem;
+  text-align: center;
+  margin: 1rem;
+}
+.separator {
+  width: 100%;
+  border-bottom: 2px solid black;
+}
