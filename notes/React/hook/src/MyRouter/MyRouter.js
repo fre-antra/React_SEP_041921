@@ -5,10 +5,10 @@ const MyRouteInstances = [];
 function routerRegister(routeInstance) {
   MyRouteInstances.push(routeInstance);
 
-  const hanldePopstate = () => {
+  const hanldePopstate = () => {    //用来取消popstate event
     routeInstance.forceUpdate();
   };
-  window.addEventListener('popstate', hanldePopstate);    // 后退键
+  window.addEventListener('popstate', hanldePopstate);    // 后退键 
   return function unRegister() {
     MyRouteInstances = MyRouteInstances.filter(
       (instance) => instance !== routeInstance

@@ -1,0 +1,101 @@
+.projects {
+  background-color: #59585d;
+  padding: 50px;
+  color: white;
+}
+
+.projects-header-quote {
+  margin-bottom: 20px;
+}
+.projects h1,
+.projects h3 {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+.projects p {
+  font-family: "Roboto", Helvetica, serif;
+  padding: 0 10px;
+}
+
+.projects-header-quote {
+  font-style: italic;
+}
+/*.luvtalk-project, .personal-website-project, .strike-zone-project, .resume {border: 3px solid white;}*/
+.luvtalk-project {
+  /* background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+      url(./images/luvtalklogo.png); */
+  background-position: center center;
+}
+
+.personal-website-project {
+  /* background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+      url(./images/logo.svg); */
+  background-position: center center;
+}
+
+.strike-zone-project {
+  /* background: linear-gradient(rgba(0, 0, 0, 0.85), rgba(0, 0, 0, 0.85)),
+      url(./images/mlbproject.png); */
+  background-position: center center;
+}
+
+.resume {
+  padding: 50px 0px;
+  font-family: "Calisto MT", Helvetica, serif;
+}
+
+.resume-header {
+  margin-bottom: 20px;
+}
+.objective h4,
+.education h4,
+.work-experience h4,
+.resume-projects h4,
+.activities h4,
+.skills h4,
+.endorsements h4 {
+  border-bottom: 1px solid black;
+}
+.contact {
+  background-color: #3a3a3a;
+  padding: 50px 150px;
+  color: white;
+}
+.contact input,
+textarea {
+  color: black;
+}
+
+.contact h1,
+.contact h2,
+.contact h4 {
+  font-family: "Source Sans Pro", Arial, sans-serif;
+}
+.contact p {
+  font-family: "Roboto", Helvetica, serif;
+}
+.contact-header-quote {
+  font-style: italic;
+}
+.contact-header-quote h4 {
+  margin: 5px 0;
+}
+.contact-instructions,
+.contact-form-body {
+  margin-top: 50px;
+  padding: 0px 6%;
+}
+
+.email,
+.message {
+  margin: 15px 0px;
+}
+.contact input,
+.contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 3px 0px;
+}
+
+.submit-contact .btn-border {
+  margin-top: 10px;
+}

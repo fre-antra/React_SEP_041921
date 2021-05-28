@@ -8,6 +8,17 @@ function fetchCounterData() {
   });
 }
 
+// function foo() {
+//   let aa = 5;
+// }
+
+// foo();     each has their own aa variable
+// foo();
+// foo();
+// foo();
+
+
+
 function NewCounter() {
   const [counter] = useCounter();
 
@@ -17,11 +28,12 @@ export const NewCounterApp = NewCounter;
 
 function useCounter(initialCounterState = 0, initialLoading = false) {
   const [counter, setCounter] = useState(initialCounterState);
-  const [isLoading, setIsLoading] = useState(initialLoading);
+  const [isLoading, setIsLoading] = useState(initialLoading);         // class的如果只更新一个参数，另一个会自动parse copy paste 但是function的不会
   const counterRef = useRef(counter);
   counterRef.current = counter;
-  useEffect(() => {
-    // console.log('useEffect for mount');
+  useEffect(() => {                                         // similiar like didmount , but it will trigger every time with change
+    // didmount   | didupdate 
+    // console.log('useEffect for mount');                  // hook会用原始数据  alert 0 不是加过的
     setIsLoading(true);
     fetchCounterData()
       .then((data) => {
@@ -31,11 +43,14 @@ function useCounter(initialCounterState = 0, initialLoading = false) {
       .catch((err) => {
         setIsLoading(false);
       });
-  }, []);
+  }, []);     // [] is dependence array , anyinside change useEffect will be called
+  // 如果[]里面放counter 会执行一次默认的，然后counter变成100   测到变化 再跑一次
+  // 如果是Reference check reference, 如果是primitive data, check value only
+
   return [counter, setCounter, isLoading, counterRef];
 }
 
-function HooksAppp() {
+function HooksAppp() {                // this is same as render()  will call every second
   //   const result = useState(0);
   //   const counter = result[0];
   //   const setCounter = result[1];
@@ -75,7 +90,7 @@ function HooksAppp() {
   //     }
   //   });
 
-  const [counter, setCounter, isLoading, counterRef] = useCounter(0, false);
+  const [counter, setCounter, isLoading, counterRef] = useCounter(0, false);       // customise hook   // Ref is reference
   return (
     <section className="hooksApp">
       <h1>HooksApp</h1>
@@ -102,7 +117,7 @@ function HooksAppp() {
 }
 
 function HooksAppTest(props) {
-  const { isLoading, counter, handleAdd, counterRef } = props;
+  const { isLoading, counter, handleAdd, counterRef } = props;      // this is not order sequency, is not array is object
   return (
     <section className="classApp">
       <h1>ClassApp</h1>
@@ -124,7 +139,7 @@ function HooksAppTest(props) {
 }
 
 const withCounter = (WrappedComponenet) =>
-  class NewComponent extends React.Component {
+  class NewComponent extends React.Component {      //warppedcomponenet could be function component
     constructor(...args) {
       super(...args);
       this.state = {
@@ -191,9 +206,9 @@ class ClassAppp extends React.Component {
         <button onClick={handleAdd}>Add One</button>
         <button
           onClick={() => {
-            //const clickState = counter;
+            //const clickState = counter;           this pass by value primitive data , will keep old state value
             setTimeout(() => {
-              alert(counterRef.current);
+              alert(counterRef.current);        // this will be current value not old one, because it pass by reference
             }, 3000);
           }}
         >
