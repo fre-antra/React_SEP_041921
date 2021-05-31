@@ -1,0 +1,1486 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="App"
+      >
+        <div>
+          <div>
+            <nav
+              class="navbar"
+            >
+              <img
+                alt="logo"
+                class="navbar__logo"
+                src="logo.svg"
+              />
+              <ul
+                class="navbar__list"
+              >
+                <li>
+                  <a
+                    class="navbar__list-item"
+                    href="/"
+                  >
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="navbar__list-item"
+                    href="/portfolio"
+                  >
+                    Portfolio
+                  </a>
+                </li>
+                <li>
+                  <a
+                    class="navbar__list-item"
+                    href="/contact"
+                  >
+                    Contact
+                  </a>
+                </li>
+              </ul>
+            </nav>
+            <div
+              id="home"
+            >
+              <section
+                class="hero-section"
+              >
+                <div
+                  class="hero-section__background"
+                >
+                  <div
+                    class="react-parallax "
+                    style="position: relative; overflow: hidden;"
+                  >
+                    <img
+                      alt="the cat"
+                      class="react-parallax-bgimage"
+                      src="heroimage.jpg"
+                      style="position: absolute; left: 50%; transform: translate3d(-50%, 0, 0); opacity: 0.9;"
+                    />
+                    <div
+                      class="react-parallax-content"
+                      style="position: relative;"
+                    >
+                      <div
+                        class="dark-layer"
+                      >
+                        <div
+                          class="center-div undefined"
+                          style="height: 100vh; width: 100%;"
+                        >
+                          <p
+                            class="hero-section__intro"
+                          >
+                            Hello I'm
+                          </p>
+                          <p
+                            class="hero-section__name"
+                          >
+                            XXXX
+                          </p>
+                          <p
+                            class="hero-section__jobtitle"
+                          >
+                            UI Developer. UX Desinger. Problem Solver.
+                          </p>
+                          <div>
+                            <button
+                              class="btn__ghost-btn"
+                            >
+                              Info
+                            </button>
+                            <button
+                              class="btn__ghost-btn"
+                            >
+                              Portfolio
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section
+                class="aboutme-section"
+              >
+                <div
+                  class="react-parallax "
+                  style="position: relative; overflow: hidden;"
+                >
+                  <img
+                    alt="the cat"
+                    class="react-parallax-bgimage"
+                    src="aboutme.jpg"
+                    style="position: absolute; left: 50%; transform: translate3d(-50%, 0, 0); opacity: 0.9;"
+                  />
+                  <div
+                    class="react-parallax-content"
+                    style="position: relative;"
+                  >
+                    <div
+                      class="white-layer"
+                    >
+                      <div
+                        class="center-div undefined"
+                      >
+                        <p
+                          class="aboutme-section__intro"
+                        >
+                          About me
+                        </p>
+                        <i
+                          class="aboutme-section__subintro"
+                        >
+                          Sharing a little bit of my story...
+                        </i>
+                      </div>
+                      <div
+                        class="ui container"
+                        style="width: 50%;"
+                      >
+                        <p
+                          class="aboutme-section__header"
+                        >
+                          General Overview
+                        </p>
+                        <p
+                          class="aboutme-section__text"
+                        >
+                          Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                        </p>
+                        <p
+                          class="aboutme-section__header"
+                        >
+                          Statistics
+                        </p>
+                        <i
+                          class="aboutme-section__text"
+                        >
+                          And for those that don't fancy reading:
+                        </i>
+                        <p
+                          class="aboutme-section__text"
+                        >
+                          Male, 200 years old. 
+                          <br />
+                          Five feet 110 inches 
+                          <br />
+                          Favorite fonts:Roboto 
+                          <br />
+                          Loves to learn new things
+                        </p>
+                        <div
+                          class="center-div undefined"
+                        >
+                          <button
+                            class="btn__ghost-btn--black mb-50"
+                          >
+                            <a
+                              href="#contact"
+                            >
+                              Contact
+                            </a>
+                          </button>
+                          <div
+                            class="mb-50"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+              <section
+                id="portfolio"
+              >
+                <div
+                  class="portfolio "
+                >
+                  <div
+                    class="pt-60"
+                  />
+                  <div
+                    class="center-div undefined"
+                  >
+                    <p
+                      class="portfolio-section__intro"
+                    >
+                      Projects and Portfolio
+                    </p>
+                    <i
+                      class="portfolio-section__subintro mb-50"
+                    >
+                      Sharing my endeavors and passions...
+                    </i>
+                    <div
+                      class="mb-50"
+                    />
+                    <div
+                      class="ui container three column grid"
+                    >
+                      <div
+                        class="column"
+                      >
+                        <div>
+                          <div
+                            style="background-image: url(luvtalklogo.png); height: 350px; width: 100%; background-position: center; background-size: cover;"
+                          >
+                            <div
+                              class="dark-layer"
+                              style="height: 350px; width: 100%;"
+                            >
+                              <div
+                                class="center-div undefined"
+                              >
+                                <p
+                                  class="portfolio-section__header"
+                                >
+                                  LUV TALK Website
+                                </p>
+                                <div
+                                  class="mb-50"
+                                  style="width: 90%; text-align: center;"
+                                >
+                                  <p>
+                                    Website, created during my first internship, which utilized HTML, CSS, PHP, Ajax, Javascript/jQuery, and Wordpress.
+                                  </p>
+                                </div>
+                                <button
+                                  class="btn__ghost-btn mb-50"
+                                >
+                                  <a
+                                    href="#"
+                                  >
+                                    More
+                                  </a>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="column"
+                      >
+                        <div>
+                          <div
+                            style="background-image: url(mlbproject.png); height: 350px; width: 100%; background-position: center; background-size: cover;"
+                          >
+                            <div
+                              class="dark-layer"
+                              style="height: 350px; width: 100%;"
+                            >
+                              <div
+                                class="center-div undefined"
+                              >
+                                <p
+                                  class="portfolio-section__header"
+                                >
+                                  Personal Website
+                                </p>
+                                <div
+                                  class="mb-50"
+                                  style="width: 90%; text-align: center;"
+                                >
+                                  <p>
+                                    Enjoyable side project that was created to experiment with more HTML and CSS, but also provided an outlet to showcase my abilities and interests.
+                                  </p>
+                                </div>
+                                <button
+                                  class="btn__ghost-btn mb-50"
+                                >
+                                  <a
+                                    href="#"
+                                  >
+                                    More
+                                  </a>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div
+                        class="column"
+                      >
+                        <div>
+                          <div
+                            style="background-image: url(mlbproject.png); height: 350px; width: 100%; background-position: center; background-size: cover;"
+                          >
+                            <div
+                              class="dark-layer"
+                              style="height: 350px; width: 100%;"
+                            >
+                              <div
+                                class="center-div undefined"
+                              >
+                                <p
+                                  class="portfolio-section__header"
+                                >
+                                  Strike Zone Analysis
+                                </p>
+                                <div
+                                  class="mb-50"
+                                  style="width: 90%; text-align: center;"
+                                >
+                                  <p>
+                                    Data analytics project completed during my time at the Illinois Math and Science Academy which studied the baseball strike zone based on the state of the game.
+                                  </p>
+                                </div>
+                                <button
+                                  class="btn__ghost-btn mb-50"
+                                >
+                                  <a
+                                    href="#"
+                                  >
+                                    More
+                                  </a>
+                                </button>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="mt-60"
+                    />
+                    <button
+                      class="btn__ghost-btn mb-50 "
+                    >
+                      <a
+                        href="#"
+                      >
+                        More Projects
+                      </a>
+                    </button>
+                  </div>
+                </div>
+              </section>
+              <section
+                id="contact"
+              >
+                <div
+                  class="contact"
+                >
+                  <div
+                    class="center-div undefined"
+                  >
+                    <p
+                      class="contact-section__intro"
+                    >
+                      Contact
+                    </p>
+                    <i
+                      class="contact-section__subintro"
+                    >
+                      "XXXXXXXXXXX"
+                      <br />
+                      -XXXXXXXXXXXX
+                    </i>
+                    <div
+                      class="ui container"
+                      style="width: 80%;"
+                    >
+                      <div
+                        class="ui centered middle aligned two column grid"
+                      >
+                        <div
+                          class="row"
+                        >
+                          <div
+                            class="six wide column"
+                          >
+                            <p
+                              class="contact-section__header"
+                            >
+                              Reaching out to me
+                            </p>
+                            <p>
+                              Don't be afraid to contact me! I'm happy to answer any questions, provide more information, or just have a nice conversation! Fill out the form below to being reaching out to me. If you prefer another email client other than your default, which will appear after clicking the button and have all of the information you just entered, you can email me at XXXXX.
+                            </p>
+                            <p
+                              class="contact-section__header"
+                            >
+                              Contact Information
+                            </p>
+                            <p>
+                              XXXX 
+                              <br />
+                               XXXX 
+                              <br />
+                               (XXXX)-445-7747 
+                              <br />
+                               
+                              XXXXXX@gmail.com
+                            </p>
+                          </div>
+                          <div
+                            class="six wide column"
+                          >
+                            <div
+                              class="mt-50"
+                            />
+                            <form
+                              class="ui form"
+                            >
+                              <div
+                                class="equal width fields"
+                              >
+                                <div
+                                  class="field"
+                                >
+                                  <label
+                                    for="form-input-control-first-name"
+                                  >
+                                    First name *
+                                  </label>
+                                  <div
+                                    class="ui input"
+                                  >
+                                    <input
+                                      id="form-input-control-first-name"
+                                      placeholder="First name"
+                                      type="text"
+                                    />
+                                  </div>
+                                </div>
+                                <div
+                                  class="field"
+                                >
+                                  <label
+                                    for="form-input-control-last-name"
+                                  >
+                                    Last name *
+                                  </label>
+                                  <div
+                                    class="ui input"
+                                  >
+                                    <input
+                                      id="form-input-control-last-name"
+                                      placeholder="Last name"
+                                      type="text"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                              <div
+                                class="field"
+                              >
+                                <label>
+                                  Email
+                                </label>
+                                <div
+                                  class="ui input"
+                                >
+                                  <input
+                                    placeholder="joe@schmoe.com"
+                                    type="text"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                class="field"
+                              >
+                                <label
+                                  for="form-textarea-control-opinion"
+                                >
+                                  Message *
+                                </label>
+                                <textarea
+                                  id="form-textarea-control-opinion"
+                                  placeholder="Message"
+                                  rows="3"
+                                />
+                              </div>
+                            </form>
+                            <div
+                              class="center-div undefined"
+                            >
+                              <div
+                                class="mt-60"
+                              />
+                              <button
+                                class="btn__ghost-btn mb-50 "
+                              >
+                                <a
+                                  href="#"
+                                >
+                                  More Projects
+                                </a>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+        <div>
+          <div
+            class="footer-section"
+          >
+            <div
+              class="center-div undefined"
+            >
+              <div
+                class="mt-50"
+              />
+              <div
+                class="ui centered eight column grid"
+              >
+                <div
+                  class="row"
+                >
+                  <div
+                    class="column"
+                  >
+                    <img
+                      alt="logo"
+                      class="icon"
+                      src="facebook.svg"
+                    />
+                  </div>
+                  <div
+                    class="column"
+                  >
+                    <img
+                      alt="logo"
+                      class="icon"
+                      src="linkedin.svg"
+                    />
+                  </div>
+                  <div
+                    class="column"
+                  >
+                    <img
+                      alt="logo"
+                      class="icon"
+                      src="pinterest.svg"
+                    />
+                  </div>
+                  <div
+                    class="column"
+                  >
+                    <img
+                      alt="logo"
+                      class="icon"
+                      src="email.svg"
+                    />
+                  </div>
+                </div>
+                <div
+                  class="centered two column row"
+                >
+                  <div
+                    class="column"
+                  >
+                    <p
+                      style="text-align: right;"
+                    >
+                      Phone: XXXXXX
+                    </p>
+                  </div>
+                  <div
+                    class="column"
+                  >
+                    <p>
+                      Email: XXXXX@gmail.com
+                    </p>
+                  </div>
+                </div>
+                <div
+                  class="centered five column row"
+                >
+                  <div
+                    class="column"
+                  >
+                    <div
+                      class="footer-section__list"
+                    >
+                      <a
+                        class="footer-section__list-header"
+                      >
+                        XXXXXX
+                      </a>
+                      <a
+                        href="#"
+                      >
+                        Copyright © 2021
+                      </a>
+                      <a
+                        href="#"
+                      >
+                        NY
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    class="column"
+                  >
+                    <div
+                      class="footer-section__list"
+                    >
+                      <a
+                        class="footer-section__list-header"
+                        href="#home"
+                      >
+                        Home
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    class="column"
+                  >
+                    <div
+                      class="footer-section__list"
+                    >
+                      <a
+                        class="footer-section__list-header"
+                        href="#portfolio"
+                      >
+                        Portfolio
+                      </a>
+                      <a
+                        href="#"
+                      >
+                        Project 1
+                      </a>
+                      <a
+                        href="#"
+                      >
+                        Project 2
+                      </a>
+                      <a
+                        href="#"
+                      >
+                        Project 3
+                      </a>
+                      <a
+                        href="#"
+                      >
+                        See All
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    class="column"
+                  >
+                    <div
+                      class="footer-section__list"
+                    >
+                      <a
+                        class="footer-section__list-header"
+                        href="#portfolio"
+                      >
+                        Resume
+                      </a>
+                      <a
+                        href="#home"
+                      >
+                        Download
+                      </a>
+                    </div>
+                  </div>
+                  <div
+                    class="column"
+                  >
+                    <div
+                      class="footer-section__list"
+                    >
+                      <a
+                        class="footer-section__list-header"
+                        href="#contact"
+                      >
+                        Contact
+                      </a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="App"
+    >
+      <div>
+        <div>
+          <nav
+            class="navbar"
+          >
+            <img
+              alt="logo"
+              class="navbar__logo"
+              src="logo.svg"
+            />
+            <ul
+              class="navbar__list"
+            >
+              <li>
+                <a
+                  class="navbar__list-item"
+                  href="/"
+                >
+                  Home
+                </a>
+              </li>
+              <li>
+                <a
+                  class="navbar__list-item"
+                  href="/portfolio"
+                >
+                  Portfolio
+                </a>
+              </li>
+              <li>
+                <a
+                  class="navbar__list-item"
+                  href="/contact"
+                >
+                  Contact
+                </a>
+              </li>
+            </ul>
+          </nav>
+          <div
+            id="home"
+          >
+            <section
+              class="hero-section"
+            >
+              <div
+                class="hero-section__background"
+              >
+                <div
+                  class="react-parallax "
+                  style="position: relative; overflow: hidden;"
+                >
+                  <img
+                    alt="the cat"
+                    class="react-parallax-bgimage"
+                    src="heroimage.jpg"
+                    style="position: absolute; left: 50%; transform: translate3d(-50%, 0, 0); opacity: 0.9;"
+                  />
+                  <div
+                    class="react-parallax-content"
+                    style="position: relative;"
+                  >
+                    <div
+                      class="dark-layer"
+                    >
+                      <div
+                        class="center-div undefined"
+                        style="height: 100vh; width: 100%;"
+                      >
+                        <p
+                          class="hero-section__intro"
+                        >
+                          Hello I'm
+                        </p>
+                        <p
+                          class="hero-section__name"
+                        >
+                          XXXX
+                        </p>
+                        <p
+                          class="hero-section__jobtitle"
+                        >
+                          UI Developer. UX Desinger. Problem Solver.
+                        </p>
+                        <div>
+                          <button
+                            class="btn__ghost-btn"
+                          >
+                            Info
+                          </button>
+                          <button
+                            class="btn__ghost-btn"
+                          >
+                            Portfolio
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section
+              class="aboutme-section"
+            >
+              <div
+                class="react-parallax "
+                style="position: relative; overflow: hidden;"
+              >
+                <img
+                  alt="the cat"
+                  class="react-parallax-bgimage"
+                  src="aboutme.jpg"
+                  style="position: absolute; left: 50%; transform: translate3d(-50%, 0, 0); opacity: 0.9;"
+                />
+                <div
+                  class="react-parallax-content"
+                  style="position: relative;"
+                >
+                  <div
+                    class="white-layer"
+                  >
+                    <div
+                      class="center-div undefined"
+                    >
+                      <p
+                        class="aboutme-section__intro"
+                      >
+                        About me
+                      </p>
+                      <i
+                        class="aboutme-section__subintro"
+                      >
+                        Sharing a little bit of my story...
+                      </i>
+                    </div>
+                    <div
+                      class="ui container"
+                      style="width: 50%;"
+                    >
+                      <p
+                        class="aboutme-section__header"
+                      >
+                        General Overview
+                      </p>
+                      <p
+                        class="aboutme-section__text"
+                      >
+                        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum
+                      </p>
+                      <p
+                        class="aboutme-section__header"
+                      >
+                        Statistics
+                      </p>
+                      <i
+                        class="aboutme-section__text"
+                      >
+                        And for those that don't fancy reading:
+                      </i>
+                      <p
+                        class="aboutme-section__text"
+                      >
+                        Male, 200 years old. 
+                        <br />
+                        Five feet 110 inches 
+                        <br />
+                        Favorite fonts:Roboto 
+                        <br />
+                        Loves to learn new things
+                      </p>
+                      <div
+                        class="center-div undefined"
+                      >
+                        <button
+                          class="btn__ghost-btn--black mb-50"
+                        >
+                          <a
+                            href="#contact"
+                          >
+                            Contact
+                          </a>
+                        </button>
+                        <div
+                          class="mb-50"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+            <section
+              id="portfolio"
+            >
+              <div
+                class="portfolio "
+              >
+                <div
+                  class="pt-60"
+                />
+                <div
+                  class="center-div undefined"
+                >
+                  <p
+                    class="portfolio-section__intro"
+                  >
+                    Projects and Portfolio
+                  </p>
+                  <i
+                    class="portfolio-section__subintro mb-50"
+                  >
+                    Sharing my endeavors and passions...
+                  </i>
+                  <div
+                    class="mb-50"
+                  />
+                  <div
+                    class="ui container three column grid"
+                  >
+                    <div
+                      class="column"
+                    >
+                      <div>
+                        <div
+                          style="background-image: url(luvtalklogo.png); height: 350px; width: 100%; background-position: center; background-size: cover;"
+                        >
+                          <div
+                            class="dark-layer"
+                            style="height: 350px; width: 100%;"
+                          >
+                            <div
+                              class="center-div undefined"
+                            >
+                              <p
+                                class="portfolio-section__header"
+                              >
+                                LUV TALK Website
+                              </p>
+                              <div
+                                class="mb-50"
+                                style="width: 90%; text-align: center;"
+                              >
+                                <p>
+                                  Website, created during my first internship, which utilized HTML, CSS, PHP, Ajax, Javascript/jQuery, and Wordpress.
+                                </p>
+                              </div>
+                              <button
+                                class="btn__ghost-btn mb-50"
+                              >
+                                <a
+                                  href="#"
+                                >
+                                  More
+                                </a>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="column"
+                    >
+                      <div>
+                        <div
+                          style="background-image: url(mlbproject.png); height: 350px; width: 100%; background-position: center; background-size: cover;"
+                        >
+                          <div
+                            class="dark-layer"
+                            style="height: 350px; width: 100%;"
+                          >
+                            <div
+                              class="center-div undefined"
+                            >
+                              <p
+                                class="portfolio-section__header"
+                              >
+                                Personal Website
+                              </p>
+                              <div
+                                class="mb-50"
+                                style="width: 90%; text-align: center;"
+                              >
+                                <p>
+                                  Enjoyable side project that was created to experiment with more HTML and CSS, but also provided an outlet to showcase my abilities and interests.
+                                </p>
+                              </div>
+                              <button
+                                class="btn__ghost-btn mb-50"
+                              >
+                                <a
+                                  href="#"
+                                >
+                                  More
+                                </a>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div
+                      class="column"
+                    >
+                      <div>
+                        <div
+                          style="background-image: url(mlbproject.png); height: 350px; width: 100%; background-position: center; background-size: cover;"
+                        >
+                          <div
+                            class="dark-layer"
+                            style="height: 350px; width: 100%;"
+                          >
+                            <div
+                              class="center-div undefined"
+                            >
+                              <p
+                                class="portfolio-section__header"
+                              >
+                                Strike Zone Analysis
+                              </p>
+                              <div
+                                class="mb-50"
+                                style="width: 90%; text-align: center;"
+                              >
+                                <p>
+                                  Data analytics project completed during my time at the Illinois Math and Science Academy which studied the baseball strike zone based on the state of the game.
+                                </p>
+                              </div>
+                              <button
+                                class="btn__ghost-btn mb-50"
+                              >
+                                <a
+                                  href="#"
+                                >
+                                  More
+                                </a>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="mt-60"
+                  />
+                  <button
+                    class="btn__ghost-btn mb-50 "
+                  >
+                    <a
+                      href="#"
+                    >
+                      More Projects
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </section>
+            <section
+              id="contact"
+            >
+              <div
+                class="contact"
+              >
+                <div
+                  class="center-div undefined"
+                >
+                  <p
+                    class="contact-section__intro"
+                  >
+                    Contact
+                  </p>
+                  <i
+                    class="contact-section__subintro"
+                  >
+                    "XXXXXXXXXXX"
+                    <br />
+                    -XXXXXXXXXXXX
+                  </i>
+                  <div
+                    class="ui container"
+                    style="width: 80%;"
+                  >
+                    <div
+                      class="ui centered middle aligned two column grid"
+                    >
+                      <div
+                        class="row"
+                      >
+                        <div
+                          class="six wide column"
+                        >
+                          <p
+                            class="contact-section__header"
+                          >
+                            Reaching out to me
+                          </p>
+                          <p>
+                            Don't be afraid to contact me! I'm happy to answer any questions, provide more information, or just have a nice conversation! Fill out the form below to being reaching out to me. If you prefer another email client other than your default, which will appear after clicking the button and have all of the information you just entered, you can email me at XXXXX.
+                          </p>
+                          <p
+                            class="contact-section__header"
+                          >
+                            Contact Information
+                          </p>
+                          <p>
+                            XXXX 
+                            <br />
+                             XXXX 
+                            <br />
+                             (XXXX)-445-7747 
+                            <br />
+                             
+                            XXXXXX@gmail.com
+                          </p>
+                        </div>
+                        <div
+                          class="six wide column"
+                        >
+                          <div
+                            class="mt-50"
+                          />
+                          <form
+                            class="ui form"
+                          >
+                            <div
+                              class="equal width fields"
+                            >
+                              <div
+                                class="field"
+                              >
+                                <label
+                                  for="form-input-control-first-name"
+                                >
+                                  First name *
+                                </label>
+                                <div
+                                  class="ui input"
+                                >
+                                  <input
+                                    id="form-input-control-first-name"
+                                    placeholder="First name"
+                                    type="text"
+                                  />
+                                </div>
+                              </div>
+                              <div
+                                class="field"
+                              >
+                                <label
+                                  for="form-input-control-last-name"
+                                >
+                                  Last name *
+                                </label>
+                                <div
+                                  class="ui input"
+                                >
+                                  <input
+                                    id="form-input-control-last-name"
+                                    placeholder="Last name"
+                                    type="text"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div
+                              class="field"
+                            >
+                              <label>
+                                Email
+                              </label>
+                              <div
+                                class="ui input"
+                              >
+                                <input
+                                  placeholder="joe@schmoe.com"
+                                  type="text"
+                                />
+                              </div>
+                            </div>
+                            <div
+                              class="field"
+                            >
+                              <label
+                                for="form-textarea-control-opinion"
+                              >
+                                Message *
+                              </label>
+                              <textarea
+                                id="form-textarea-control-opinion"
+                                placeholder="Message"
+                                rows="3"
+                              />
+                            </div>
+                          </form>
+                          <div
+                            class="center-div undefined"
+                          >
+                            <div
+                              class="mt-60"
+                            />
+                            <button
+                              class="btn__ghost-btn mb-50 "
+                            >
+                              <a
+                                href="#"
+                              >
+                                More Projects
+                              </a>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          class="footer-section"
+        >
+          <div
+            class="center-div undefined"
+          >
+            <div
+              class="mt-50"
+            />
+            <div
+              class="ui centered eight column grid"
+            >
+              <div
+                class="row"
+              >
+                <div
+                  class="column"
+                >
+                  <img
+                    alt="logo"
+                    class="icon"
+                    src="facebook.svg"
+                  />
+                </div>
+                <div
+                  class="column"
+                >
+                  <img
+                    alt="logo"
+                    class="icon"
+                    src="linkedin.svg"
+                  />
+                </div>
+                <div
+                  class="column"
+                >
+                  <img
+                    alt="logo"
+                    class="icon"
+                    src="pinterest.svg"
+                  />
+                </div>
+                <div
+                  class="column"
+                >
+                  <img
+                    alt="logo"
+                    class="icon"
+                    src="email.svg"
+                  />
+                </div>
+              </div>
+              <div
+                class="centered two column row"
+              >
+                <div
+                  class="column"
+                >
+                  <p
+                    style="text-align: right;"
+                  >
+                    Phone: XXXXXX
+                  </p>
+                </div>
+                <div
+                  class="column"
+                >
+                  <p>
+                    Email: XXXXX@gmail.com
+                  </p>
+                </div>
+              </div>
+              <div
+                class="centered five column row"
+              >
+                <div
+                  class="column"
+                >
+                  <div
+                    class="footer-section__list"
+                  >
+                    <a
+                      class="footer-section__list-header"
+                    >
+                      XXXXXX
+                    </a>
+                    <a
+                      href="#"
+                    >
+                      Copyright © 2021
+                    </a>
+                    <a
+                      href="#"
+                    >
+                      NY
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="column"
+                >
+                  <div
+                    class="footer-section__list"
+                  >
+                    <a
+                      class="footer-section__list-header"
+                      href="#home"
+                    >
+                      Home
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="column"
+                >
+                  <div
+                    class="footer-section__list"
+                  >
+                    <a
+                      class="footer-section__list-header"
+                      href="#portfolio"
+                    >
+                      Portfolio
+                    </a>
+                    <a
+                      href="#"
+                    >
+                      Project 1
+                    </a>
+                    <a
+                      href="#"
+                    >
+                      Project 2
+                    </a>
+                    <a
+                      href="#"
+                    >
+                      Project 3
+                    </a>
+                    <a
+                      href="#"
+                    >
+                      See All
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="column"
+                >
+                  <div
+                    class="footer-section__list"
+                  >
+                    <a
+                      class="footer-section__list-header"
+                      href="#portfolio"
+                    >
+                      Resume
+                    </a>
+                    <a
+                      href="#home"
+                    >
+                      Download
+                    </a>
+                  </div>
+                </div>
+                <div
+                  class="column"
+                >
+                  <div
+                    class="footer-section__list"
+                  >
+                    <a
+                      class="footer-section__list-header"
+                      href="#contact"
+                    >
+                      Contact
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;
