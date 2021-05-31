@@ -32,6 +32,7 @@ const Home = () => {
       </section>
 
       <section className="aboutme-section">
+
         <MyParallax bgImage={aboutMeImage}>
           <div className="white-layer">
             <CenterDiv>
@@ -81,13 +82,14 @@ const Home = () => {
           </div>
         </MyParallax>
       </section>
+
       <section id="portfolio">
           <Portfolio />
       </section>
+
       <section id="contact">
           <Contact />
       </section>
-      {/*<h1>Footer</h1>*/}
     </div>
   );
 };
