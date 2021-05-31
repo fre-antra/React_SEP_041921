@@ -1,26 +1,40 @@
-$font-stack:    Helvetica, sans-serif;
+$font-stack: Helvetica, sans-serif;
 
 //grey paletter
 $primary-color: #333;
-$light-grey: #4E4F50;
+$light-grey: #4e4f50;
 $white: rgb(255, 255, 255);
+$black: rgb(0, 0, 0);
 
-// height
+// height and width
 $height-ul: 50px;
+
+// for navbar
+$navbar-height: 60px;
+
+// for icon
+$icon-height: 50px;
+$icon-width: 50px;
 
 //padding margin
 .mb-50 {
-    margin-bottom: 50px;
+  margin-bottom: 50px;
 }
 
 .mt-50 {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .mt-60 {
-    margin-top: 60px;
+  margin-top: 60px;
 }
 
 .pt-60 {
-    padding-top: 60px;
+  padding-top: 60px;
+}
+
+// mixin
+@mixin centerEl {
+  display: flex;
+  align-items: center;
 }

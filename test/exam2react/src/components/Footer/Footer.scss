@@ -2,13 +2,13 @@
 @import "../../styles/button";
 
 .footer-section {
-  color: white;
-  background-color: rgb(0, 0, 0);
+  color: $white;
+  background-color: $black;
 
 
   .icon {
-    width: 50px;
-    height: 50px;
+    width: $icon-width;
+    height: $icon-height;
     background-color: $light-grey;
     cursor: pointer;
     transition: all 0.4s;
@@ -31,6 +31,6 @@
   }
 
   .footer-section__list a {
-    color: white;
+    color: $white;
   }
 }

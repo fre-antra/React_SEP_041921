@@ -1,5 +1,6 @@
 @import '../../styles/base';
 
+// position -> display -> height/ width -> margin/ padding -> font -> background
 .navbar {
     position: absolute;
     top: 0;
@@ -9,7 +10,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 60px;
+    height: $navbar-height;
     width: 100vw;
     padding-right: 40px;
     padding-left: 20px;
@@ -21,17 +22,13 @@
 
     .navbar__list {
         list-style-type: none;
-        //  this center el can be re-usable
-        display: flex;
-        align-items: center;
+        @include centerEl;
         height: 100%;
         margin: 0;
     }
 
     .navbar__list-item {
-        display: block;
-        display: flex;
-        align-items: center;
+        @include centerEl;
         height: 35px;
         margin: 0 30px;
         font-size: 1.1rem;
