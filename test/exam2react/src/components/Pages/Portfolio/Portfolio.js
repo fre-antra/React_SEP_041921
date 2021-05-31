@@ -1,7 +1,8 @@
 import React from "react";
 import "./Portfolio.scss";
 import { Grid } from "semantic-ui-react";
-import CenterDiv, { CenterDivXY } from "../../utils/CenterDiv";
+import CenterDiv from "../../utils/CenterDiv";
+import MarginDiv from "../../utils/MarginDiv";
 import Item from "./Item";
 
 // images
@@ -44,7 +45,7 @@ const Portfolio = () => {
         <i className="portfolio-section__subintro mb-50">
           Sharing my endeavors and passions...
         </i>
-        <div className="mb-50"></div>
+        <MarginDiv className="mb-50" />
 
         <Grid container columns={items.length}>
           {items.map((item) => {
@@ -59,7 +60,8 @@ const Portfolio = () => {
             );
           })}
         </Grid>
-        <div className="mt-60"></div>
+        <MarginDiv className="mt-60" />
+        
         <button className="btn__ghost-btn mb-50 ">
           <a href="#">More Projects</a>
         </button>

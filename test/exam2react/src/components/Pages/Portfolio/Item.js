@@ -3,7 +3,6 @@ import "./Portfolio.scss";
 import CenterDiv from '../../utils/CenterDiv';
 
 const Item = (props) => {
-    console.log('in item 2');
     const {background, header, body } = props;
   return (
     <div>
