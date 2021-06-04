@@ -3,7 +3,6 @@ import developerDesign from "../../images/developerdesign.svg";
 import responsiveDesign from "../../images/responsivedesign.svg";
 import passion from "../../images/passion.svg";
 import innovativesolutions from "../../images/innovativesolutions.svg";
-import { useEffect } from "react";
 
 const Main = props => {
   const { targetRef } = props;
@@ -33,10 +32,7 @@ const Main = props => {
 
           <div className="row text-center">
             <div className="banner-buttons">
-              <div
-                // id="scrollAbout"
-                className="col-sm-1 col-md-1 col-sm-offset-5 col-md-offset-5"
-              >
+              <div className="col-sm-1 col-md-1 col-sm-offset-5 col-md-offset-5">
                 <Link
                   to="#"
                   className="btn btn-default btn-border"
