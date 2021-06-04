@@ -1,8 +1,11 @@
 import { useEffect } from "react";
 import $ from "jquery";
 const Portfolio = props => {
-  const { refprop } = props;
+  let { refProp, setTargetRef } = props;
+
   useEffect(() => {
+    const targetRef = refProp.current;
+    setTargetRef(targetRef); //store target dom element reference in a state
     projects();
   }, []);
 
@@ -43,7 +46,7 @@ const Portfolio = props => {
   }
 
   return (
-    <div className="projects" id="#projects" ref={refprop}>
+    <div className="projects" id="#projects" ref={refProp}>
       <div className="container-fluid">
         <div className="row">
           <div className="col-sm-12 col-md-12 text-center">

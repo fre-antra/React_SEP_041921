@@ -3,15 +3,19 @@ import developerDesign from "../../images/developerdesign.svg";
 import responsiveDesign from "../../images/responsivedesign.svg";
 import passion from "../../images/passion.svg";
 import innovativesolutions from "../../images/innovativesolutions.svg";
+import { useEffect } from "react";
 
 const Main = props => {
-  const { targetref } = props;
+  const { targetRef } = props;
+
   const handleScroll = id => {
-    const anchorAbout = document.querySelector(id);
-    anchorAbout.scrollIntoView({ behavior: "smooth", block: "center" });
+    if (typeof id == "object") {
+      id.scrollIntoView({ behavior: "smooth", block: "center" }); //scroll to ref dom element from other component
+    } else {
+      const anchorAbout = document.querySelector(id);
+      anchorAbout.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
   };
-  // const { handleScroll } = props;
-  console.log(targetref);
 
   return (
     <>
@@ -46,7 +50,7 @@ const Main = props => {
                 <Link
                   to="#"
                   className="btn btn-default btn-border"
-                  onClick={() => handleScroll(targetref)}
+                  onClick={() => handleScroll(targetRef)}
                 >
                   Portfolio
                 </Link>
