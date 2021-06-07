@@ -7,8 +7,10 @@ import { useRef, useState } from "react";
 import Footer from "./components/Footer";
 import Contact from "./components/Contact";
 import Portfolio from "./components/Portfolio";
-import Navbar from "./components/Navbar";
+import Header from "./components/Header";
 import Main from "./components/Main";
+import About from "./components/About";
+import Summary from "./components/Summary";
 
 function App() {
   const ref = useRef();
@@ -21,15 +23,17 @@ function App() {
   return (
     <Router>
       <div className="App">
-        <Navbar />
+        <Header />
         <Switch>
           <Route path="/" exact>
             <Main targetRef={domState} />
+            <About />
+            <Summary />
             <Portfolio refProp={ref} setTargetRef={setTargetRef} />
             <Contact />
           </Route>
           <Route path="/portfolio" exact>
-            <Portfolio />
+            <Portfolio refProp={ref} setTargetRef={setTargetRef} />
           </Route>
           <Route path="/contact" exact>
             <Contact />

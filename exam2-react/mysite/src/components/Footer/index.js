@@ -3,8 +3,7 @@ import fb from "../../images/facebook.svg";
 import linkedin from "../../images/linkedin.svg";
 import pinterest from "../../images/pinterest.svg";
 import email from "../../images/email.svg";
-import "./index.css";
-// import fbimg2 from  ""
+
 const Footer = () => {
   return (
     <div className="footer">
