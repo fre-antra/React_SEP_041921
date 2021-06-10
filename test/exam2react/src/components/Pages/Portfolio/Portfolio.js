@@ -7,6 +7,7 @@ import Item from "./Item";
 
 // images
 import background from "../../../images/luvtalklogo.png";
+import peronalWeb from "../../../images/logo.svg";
 import mlbproject from "../../../images/mlbproject.png";
 
 const items = [
@@ -19,7 +20,7 @@ const items = [
   },
 
   {
-    backgroundImg: mlbproject,
+    backgroundImg: peronalWeb,
     centerDiv: {
       header: "Personal Website",
       body: "Enjoyable side project that was created to experiment with more HTML and CSS, but also provided an outlet to showcase my abilities and interests.",
@@ -37,7 +38,7 @@ const items = [
 
 const Portfolio = () => {
   return (
-    <div className="portfolio ">
+    <div className="portfolio mb-60">
       <div className="pt-60"></div>
       <CenterDiv>
         <p className="portfolio-section__intro">Projects and Portfolio</p>
@@ -50,7 +51,7 @@ const Portfolio = () => {
         <Grid container columns={items.length}>
           {items.map((item) => {
             return (
-              <Grid.Column>
+              <Grid.Column computer={5} tablet={8} mobile={16}>
                 <Item
                   background={item.backgroundImg}
                   header={item.centerDiv.header}
