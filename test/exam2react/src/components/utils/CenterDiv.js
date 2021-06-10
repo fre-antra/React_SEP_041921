@@ -17,4 +17,12 @@ export const CenterDivRow = (props) => {
     )
 }
 
+export const CenterDivColumnRow = (props) => {
+    return (
+        <div className={`center-div__column-row ${props.className}`} style={props.style}>
+            {props.children}
+        </div>
+    )
+}
+
 export default CenterDiv;

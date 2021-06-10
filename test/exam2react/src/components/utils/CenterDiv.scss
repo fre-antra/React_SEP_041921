@@ -5,7 +5,14 @@
 }
 
 .center-div__row {
-    display: row;
-    flex-direction: column;
+    display: flex;
+    flex-direction: row;
     align-items: center;
+}
+
+.center-div__column-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }

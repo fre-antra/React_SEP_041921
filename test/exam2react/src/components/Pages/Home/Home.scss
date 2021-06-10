@@ -1,5 +1,5 @@
-@import '../../../styles/base';
-@import '../../../styles/button';
+@import "../../../styles/base";
+@import "../../../styles/button";
 
 .hero-section {
   color: white;
@@ -28,32 +28,77 @@
 }
 
 .aboutme-section {
+  .white-layer {
+    background-color: rgb(212, 200, 200);
+    opacity: 0.9;
+    z-index: 2;
+  }
 
-    .white-layer {
-        background-color: rgb(212, 200, 200);
-        opacity: 0.9;
-        z-index: 2;
-      }
-      
-    .aboutme-section__intro {
-        font-size: 3rem;
-        margin-top: 50px;
-    }
+  .aboutme-section__intro {
+    font-size: 3rem;
+    margin-top: 50px;
+  }
 
-    .aboutme-section__subintro {
-        font-size: 1.6rem;
-        margin-bottom: 20px;
-    }
+  .aboutme-section__subintro {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
 
-    .aboutme-section__header {
-        font-size: 2rem;
-        margin-top: 70px;
-    }
+  .aboutme-section__header {
+    font-size: 2rem;
+    margin-top: 70px;
+  }
 
-    .aboutme-section__text {
-        font-size: 1.1rem;
-        margin-top: 20px;
-        margin-bottom: 50px;
-    }
+  .aboutme-section__text {
+    font-size: 1.1rem;
+    margin-top: 20px;
+    margin-bottom: 50px;
+  }
 }
 
+.responsive-section {
+  color: $white;
+  .responsive-section__image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .responsive-section__header-text {
+      margin-bottom: 0.1rem;
+  }
+
+  .responsive-section__body-text {
+    font-size: 1rem;
+  }
+
+  @media only screen and (min-width: 724px) {
+      
+    .responsive-section__header-text {
+      font-size: 1.8rem;
+    }
+  }
+
+
+  @media only screen and (min-width: 601px) and  (max-width: 723px) {
+    .responsive-section__image {
+        width: 300px;
+        height: 300px;
+      }
+
+      .responsive-section__header-text {
+        font-size: 1.8rem;
+      }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .responsive-section__image {
+      width: 300px;
+      height: 300px;
+    }
+
+    .responsive-section__header-text {
+      font-size: 1.8rem;
+      color:blue;
+    }
+  }
+}

@@ -33,6 +33,54 @@ $icon-width: 50px;
   padding-top: 60px;
 }
 
+.pb-60 {
+    padding-bottom: 60px;
+  }
+// padding right
+.pr-60 {
+    padding-right: 60px;
+}
+
+.pr-50 {
+    padding-right: 50px;
+}
+
+.pr-40 {
+    padding-right: 40px;
+}
+
+// padding left
+.pl-60 {
+    padding-left: 60px;
+}
+
+.pl-50 {
+    padding-left: 50px;
+}
+
+.pl-40 {
+    padding-left: 40px;
+}
+//size 
+.w-40 {
+    width: 40px;
+}
+
+.h-40 {
+    height: 40px;
+}
+
+.w-60 {
+    width: 60px;
+}
+
+.h-60 {
+    height: 60px;
+}
+// center
+.text-center {
+    text-align: center;
+}
 // mixin
 @mixin centerEl {
   display: flex;

@@ -7,7 +7,7 @@ const MyParallax = (props) => {
             blur={0}
             bgImage={props.bgImage}
             bgImageStyle={{ opacity: "0.9" }}
-            bgImageAlt="the cat"
+            bgImageAlt={props.alt}
             strength={200}
           >
             {props.children}
