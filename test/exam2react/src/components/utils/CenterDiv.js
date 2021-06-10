@@ -9,9 +9,9 @@ const CenterDiv = (props) => {
     )
 }
 
-export const CenterDivXY = (props) => {
+export const CenterDivRow = (props) => {
     return (
-        <div className={`center-divXY ${props.className}`} style={props.style}>
+        <div className={`center-div__row ${props.className}`} style={props.style}>
             {props.children}
         </div>
     )
