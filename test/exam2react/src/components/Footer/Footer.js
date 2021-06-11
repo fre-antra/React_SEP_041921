@@ -9,7 +9,7 @@ import emailLogo from "../../images/email.svg";
 
 const Contact = () => {
   return (
-      <div className="footer-section">
+      <div className="footer-section" data-testid="footer">
         <CenterDiv>
           <div className="mt-50"></div>
           <Grid centered>

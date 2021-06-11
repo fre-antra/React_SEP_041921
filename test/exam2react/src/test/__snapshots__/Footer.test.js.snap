@@ -4,6 +4,7 @@ exports[`Footer Component render without error 1`] = `
 <div>
   <div
     class="footer-section"
+    data-testid="footer"
   >
     <div
       class="center-div undefined"

@@ -10,9 +10,9 @@ import Home from "../Pages/Home/Home";
 
 const Navbar = () => {
   return (
-    <div>
+    <div data-testid="navbar">
       <Router>
-        <div>
+        <div >
           <nav className="navbar">
             <img className="navbar__logo" alt="logo" src={logo} />
             <ul className="navbar__list">
