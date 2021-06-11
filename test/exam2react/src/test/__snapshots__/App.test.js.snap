@@ -389,6 +389,7 @@ exports[`App component render without error 1`] = `
           >
             <div
               class="portfolio mb-60"
+              data-testid="portfolio"
             >
               <div
                 class="pt-60"
@@ -412,6 +413,7 @@ exports[`App component render without error 1`] = `
                 />
                 <div
                   class="ui container three column grid"
+                  data-testid="projects"
                 >
                   <div
                     class="five wide computer sixteen wide mobile eight wide tablet column"

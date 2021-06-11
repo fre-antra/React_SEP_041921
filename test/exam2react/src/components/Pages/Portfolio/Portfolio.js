@@ -38,7 +38,7 @@ const items = [
 
 const Portfolio = () => {
   return (
-    <div className="portfolio mb-60">
+    <div className="portfolio mb-60" data-testid="portfolio">
       <div className="pt-60"></div>
       <CenterDiv>
         <p className="portfolio-section__intro" data-testid="portfolio-header">Projects and Portfolio</p>
@@ -48,7 +48,7 @@ const Portfolio = () => {
         </i>
         <MarginDiv className="mb-50" />
 
-        <Grid container columns={items.length}>
+        <Grid container columns={items.length} data-testid="projects">
           {items.map((item, index) => {
             return (
               <Grid.Column key={index} computer={5} tablet={8} mobile={16}>
@@ -57,6 +57,7 @@ const Portfolio = () => {
                   header={item.centerDiv.header}
                   body={item.centerDiv.body}
                   key={index}
+                  alt="project"
                 ></Item>
               </Grid.Column>
             );

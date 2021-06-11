@@ -1,0 +1,178 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Portfolio render without any errors 1`] = `
+<div>
+  <div
+    class="portfolio mb-60"
+    data-testid="portfolio"
+  >
+    <div
+      class="pt-60"
+    />
+    <div
+      class="center-div undefined"
+    >
+      <p
+        class="portfolio-section__intro"
+        data-testid="portfolio-header"
+      >
+        Projects and Portfolio
+      </p>
+      <i
+        class="portfolio-section__subintro mb-50"
+      >
+        Sharing my endeavors and passions...
+      </i>
+      <div
+        class="mb-50"
+      />
+      <div
+        class="ui container three column grid"
+        data-testid="projects"
+      >
+        <div
+          class="five wide computer sixteen wide mobile eight wide tablet column"
+        >
+          <div>
+            <div
+              class="item"
+              style="background-image: url(luvtalklogo.png); width: 100%; background-position: center; background-size: cover;"
+            >
+              <div
+                class="dark-layer item-layer"
+                style="width: 100%;"
+              >
+                <div
+                  class="center-div undefined"
+                >
+                  <p
+                    class="portfolio-section__header"
+                  >
+                    LUV TALK Website
+                  </p>
+                  <div
+                    class="mb-50"
+                    style="width: 90%; text-align: center;"
+                  >
+                    <p>
+                      Website, created during my first internship, which utilized HTML, CSS, PHP, Ajax, Javascript/jQuery, and Wordpress.
+                    </p>
+                  </div>
+                  <button
+                    class="btn__ghost-btn mb-50"
+                  >
+                    <a
+                      href="#"
+                    >
+                      More
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="five wide computer sixteen wide mobile eight wide tablet column"
+        >
+          <div>
+            <div
+              class="item"
+              style="background-image: url(logo.svg); width: 100%; background-position: center; background-size: cover;"
+            >
+              <div
+                class="dark-layer item-layer"
+                style="width: 100%;"
+              >
+                <div
+                  class="center-div undefined"
+                >
+                  <p
+                    class="portfolio-section__header"
+                  >
+                    Personal Website
+                  </p>
+                  <div
+                    class="mb-50"
+                    style="width: 90%; text-align: center;"
+                  >
+                    <p>
+                      Enjoyable side project that was created to experiment with more HTML and CSS, but also provided an outlet to showcase my abilities and interests.
+                    </p>
+                  </div>
+                  <button
+                    class="btn__ghost-btn mb-50"
+                  >
+                    <a
+                      href="#"
+                    >
+                      More
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          class="five wide computer sixteen wide mobile eight wide tablet column"
+        >
+          <div>
+            <div
+              class="item"
+              style="background-image: url(mlbproject.png); width: 100%; background-position: center; background-size: cover;"
+            >
+              <div
+                class="dark-layer item-layer"
+                style="width: 100%;"
+              >
+                <div
+                  class="center-div undefined"
+                >
+                  <p
+                    class="portfolio-section__header"
+                  >
+                    Strike Zone Analysis
+                  </p>
+                  <div
+                    class="mb-50"
+                    style="width: 90%; text-align: center;"
+                  >
+                    <p>
+                      Data analytics project completed during my time at the Illinois Math and Science Academy which studied the baseball strike zone based on the state of the game.
+                    </p>
+                  </div>
+                  <button
+                    class="btn__ghost-btn mb-50"
+                  >
+                    <a
+                      href="#"
+                    >
+                      More
+                    </a>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="mt-60"
+      />
+      <button
+        class="btn__ghost-btn "
+      >
+        <a
+          href="#"
+        >
+          More Projects
+        </a>
+      </button>
+      <div
+        class="mb-50"
+      />
+    </div>
+  </div>
+</div>
+`;
