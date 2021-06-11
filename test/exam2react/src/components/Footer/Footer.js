@@ -15,20 +15,25 @@ const Contact = () => {
           <div className="mt-50"></div>
           <Grid centered>
             <CenterDiv>
-              <Grid.Row>
-                <Grid.Column computer={4} mobile={16}>
-                  <img className="icon" src={fbLogo} alt="logo" />
-                </Grid.Column>
-                <Grid.Column computer={4} mobile={16}>
-                  <img className="icon" src={liLogo} alt="logo" />
-                </Grid.Column>
-                <Grid.Column computer={4} mobile={16}>
-                  <img className="icon" src={pinLogo} alt="logo" />
-                </Grid.Column>
-                <Grid.Column computer={4} mobile={16}>
-                  <img className="icon" src={emailLogo} alt="logo" />
-                </Grid.Column>
-              </Grid.Row>
+              <Grid>
+                <Grid.Row>
+                  <Grid.Column computer={4} mobile={16}>
+                    <img className="icon" src={fbLogo} alt="logo" />
+                  </Grid.Column>
+
+                  <Grid.Column computer={4} mobile={16}>
+                    <img className="icon" src={liLogo} alt="logo" />
+                  </Grid.Column>
+
+                  <Grid.Column computer={4} mobile={16}>
+                    <img className="icon" src={pinLogo} alt="logo" />
+                  </Grid.Column>
+
+                  <Grid.Column computer={4} mobile={16}>
+                    <img className="icon" src={emailLogo} alt="logo" />
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
             </CenterDiv>
 
             <Grid.Row>
@@ -42,54 +47,59 @@ const Contact = () => {
               </Grid>
             </Grid.Row>
 
-            <Grid.Row centered columns={5}>
+            <Grid.Row centered>
               <CenterDiv>
-                <Grid.Column>
-                  <div className="footer-section__list">
-                    <a className="footer-section__list-header">XXXXXX</a>
-                    <a href="#">Copyright © 2021</a>
-                    <a href="#">NY</a>
-                  </div>
-                </Grid.Column>
-                <Grid.Column>
-                  <div className="footer-section__list">
-                    <a href="#home" className="footer-section__list-header">
-                      Home
-                    </a>
-                  </div>
-                </Grid.Column>
-                <Grid.Column>
-                  <div className="footer-section__list">
-                    <a
-                      href="#portfolio"
-                      className="footer-section__list-header"
-                    >
-                      Portfolio
-                    </a>
-                    <a href="#">Project 1</a>
-                    <a href="#">Project 2</a>
-                    <a href="#">Project 3</a>
-                    <a href="#">See All</a>
-                  </div>
-                </Grid.Column>
-                <Grid.Column>
-                  <div className="footer-section__list">
-                    <a
-                      href="#portfolio"
-                      className="footer-section__list-header"
-                    >
-                      Resume
-                    </a>
-                    <a href="#home">Download</a>
-                  </div>
-                </Grid.Column>
-                <Grid.Column>
-                  <div className="footer-section__list">
-                    <a href="#contact" className="footer-section__list-header">
-                      Contact
-                    </a>
-                  </div>
-                </Grid.Column>
+                <Grid>
+                  <Grid.Column computer={3} mobile={16}>
+                    <div className="footer-section__list">
+                      <a className="footer-section__list-header">XXXXXX</a>
+                      <a href="#">Copyright © 2021</a>
+                      <a href="#">NY</a>
+                    </div>
+                  </Grid.Column>
+                  <Grid.Column computer={3} mobile={16}>
+                    <div className="footer-section__list">
+                      <a href="#home" className="footer-section__list-header">
+                        Home
+                      </a>
+                    </div>
+                  </Grid.Column>
+                  <Grid.Column computer={3} mobile={16}>
+                    <div className="footer-section__list">
+                      <a
+                        href="#portfolio"
+                        className="footer-section__list-header"
+                      >
+                        Portfolio
+                      </a>
+                      <a href="#">Project 1</a>
+                      <a href="#">Project 2</a>
+                      <a href="#">Project 3</a>
+                      <a href="#">See All</a>
+                    </div>
+                  </Grid.Column>
+                  <Grid.Column computer={3} mobile={16}>
+                    <div className="footer-section__list">
+                      <a
+                        href="#portfolio"
+                        className="footer-section__list-header"
+                      >
+                        Resume
+                      </a>
+                      <a href="#home">Download</a>
+                    </div>
+                  </Grid.Column>
+                  <Grid.Column computer={3} mobile={16}>
+                    <div className="footer-section__list">
+                      <a
+                        href="#contact"
+                        className="footer-section__list-header"
+                      >
+                        Contact
+                      </a>
+                    </div>
+                  </Grid.Column>
+                </Grid>
               </CenterDiv>
             </Grid.Row>
           </Grid>
