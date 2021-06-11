@@ -1,0 +1,35 @@
+$width-screen: 350px;
+$width-tablet: 400px;
+$width-mobile: 400px;
+
+@media only screen and (min-width: 724px) {
+      
+    .item {
+        min-height: $width-screen;
+    }
+
+    .item-layer {
+        min-height: $width-screen;
+    }
+  }
+
+  @media only screen and (min-width: 601px) and (max-width: 723px){
+      
+    .item {
+        min-height: $width-tablet;
+    }
+
+    .item-layer {
+        min-height: $width-tablet;
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .item {
+        min-height: $width-mobile;
+    }
+
+    .item-layer {
+        min-height: $width-mobile;
+    }
+  }

@@ -63,9 +63,10 @@ const Portfolio = () => {
         </Grid>
         <MarginDiv className="mt-60" />
         
-        <button className="btn__ghost-btn mb-50 ">
+        <button className="btn__ghost-btn ">
           <a href="#">More Projects</a>
         </button>
+        <div className="mb-50"></div>
       </CenterDiv>
     </div>
   );

@@ -1,5 +1,6 @@
 import React from "react";
 import "./Portfolio.scss";
+import "./Item.scss";
 import CenterDiv from '../../utils/CenterDiv';
 
 const Item = (props) => {
@@ -9,16 +10,16 @@ const Item = (props) => {
       <div
         style={{
           backgroundImage: "url(" + background + ")",
-          height: "350px",
           width: "100%",
           backgroundPosition: "center",
           backgroundSize: "cover",
         }}
+
+        className="item"
       >
         <div
-          className="dark-layer"
+          className="dark-layer item-layer"
           style={{
-            height: "350px",
             width: "100%",
           }}
         >
