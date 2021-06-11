@@ -18,18 +18,18 @@ const genderOptions = [
 
 const Contact = () => {
   return (
-    <div className="contact">
+    <div className="contact pl-60 pr-60">
       <CenterDiv>
-        <p className="contact-section__intro">Contact</p>
-        <i className="contact-section__subintro">
+        <p className="contact-section__intro text-center">Contact</p>
+        <i className="contact-section__subintro text-center">
           "XXXXXXXXXXX"
           <br />
           -XXXXXXXXXXXX
         </i>
-        <Container style={{width: "80%"}}>
-          <Grid verticalAlign='middle' columns={2} centered>
+        <Container style={{ width: "80%" }} className="pr-60 pl-60">
+          <Grid verticalAlign="middle" columns={2} centered>
             <Grid.Row>
-              <Grid.Column width={6}>
+              <Grid.Column computer={8} tablet={8} mobile={16}>
                 <p className="contact-section__header">Reaching out to me</p>
                 <p>
                   Don't be afraid to contact me! I'm happy to answer any
@@ -47,37 +47,35 @@ const Contact = () => {
                   XXXXXX@gmail.com
                 </p>
               </Grid.Column>
-              <Grid.Column width={6}>
-                  <div className="mt-50"></div>
-                  <Form>
-                    <Form.Group widths="equal">
-                      <Form.Field
-                        id="form-input-control-first-name"
-                        control={Input}
-                        label="First name *"
-                        placeholder="First name"
-                      />
-                      <Form.Field
-                        id="form-input-control-last-name"
-                        control={Input}
-                        label="Last name *"
-                        placeholder="Last name"
-                      />
-                    </Form.Group>
+              <Grid.Column computer={8} tablet={8} mobile={16}>
+                <div className="mt-50"></div>
+                <form>
+                    <Grid>
+                        <Grid.Column computer={8} tablet={8} mobile={16}>
+                            <p className="contact-section__form-title">First Name *</p>
+                            <input className="contact-section__form-input" />
+                        </Grid.Column>
 
-                    <Form.Input label="Email" placeholder="joe@schmoe.com" />
+                        <Grid.Column computer={8} tablet={8} mobile={16}>
+                        <p className="contact-section__form-title">Last Name *</p>
+                            <input className="contact-section__form-input" />
+                        </Grid.Column>
 
-                    <Form.Field
-                      id="form-textarea-control-opinion"
-                      control={TextArea}
-                      label="Message *"
-                      placeholder="Message"
-                    />
-                  </Form>
-                  <CenterDiv>
+                        <Grid.Column computer={16} tablet={16} mobile={16}>
+                        <p className="contact-section__form-title">Email *</p>
+                            <input className="contact-section__form-input" />
+                        </Grid.Column>
+
+                        <Grid.Column computer={16} tablet={16} mobile={16}>
+                        <p className="contact-section__form-title">Message *</p>
+                            <input className="contact-section__form-input" />
+                        </Grid.Column>
+                    </Grid>
+                </form>
+                <CenterDiv>
                   <div className="mt-60"></div>
                   <button className="btn__ghost-btn mb-50 ">
-                    <a href="#">More Projects</a>
+                    <a href="#">Submit</a>
                   </button>
                 </CenterDiv>
               </Grid.Column>

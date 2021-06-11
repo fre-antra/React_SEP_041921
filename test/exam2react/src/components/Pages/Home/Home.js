@@ -99,9 +99,9 @@ const Home = () => {
               minHeight: "600px",
             }}
           >
-            <Grid>
+            <Grid centered>
               <Grid.Row>
-                <Grid.Column computer={8} tablet={8} mobile={16}>
+                <Grid.Column computer={7} tablet={8} mobile={16}>
                   <CenterDivColumnRow>
                     <Grid>
                       <Grid.Column computer={3} tablet={6} mobile={16}>
@@ -127,7 +127,7 @@ const Home = () => {
                   </CenterDivColumnRow>
                 </Grid.Column>
 
-                <Grid.Column computer={8} tablet={8} mobile={16}>
+                <Grid.Column computer={7} tablet={8} mobile={16}>
                   <CenterDivColumnRow>
                     <Grid>
                       <Grid.Column computer={3} tablet={6} mobile={16}>
@@ -157,7 +157,7 @@ const Home = () => {
               </Grid.Row>
               <div className="mb-50"></div>
               <Grid.Row>
-                <Grid.Column computer={8} tablet={8} mobile={16}>
+                <Grid.Column computer={7} tablet={8} mobile={16}>
                   <CenterDivColumnRow>
                     <Grid>
                       <Grid.Column computer={3} tablet={6} mobile={16}>
@@ -184,7 +184,7 @@ const Home = () => {
                   </CenterDivColumnRow>
                 </Grid.Column>
 
-                <Grid.Column computer={8} tablet={8} mobile={16}>
+                <Grid.Column computer={7} tablet={8} mobile={16}>
                   <CenterDivColumnRow>
                     <Grid>
                       <Grid.Column computer={3} tablet={6} mobile={16}>
