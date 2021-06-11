@@ -1,0 +1,144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Contact render without any errors 1`] = `
+<div>
+  <div
+    class="contact pl-60 pr-60"
+  >
+    <div
+      class="center-div undefined"
+    >
+      <p
+        class="contact-section__intro text-center"
+        data-testid="contact-header"
+      >
+        Contact
+      </p>
+      <i
+        class="contact-section__subintro text-center"
+      >
+        "XXXXXXXXXXX"
+        <br />
+        -XXXXXXXXXXXX
+      </i>
+      <div
+        class="ui container pr-60 pl-60"
+        style="width: 80%;"
+      >
+        <div
+          class="ui centered middle aligned two column grid"
+        >
+          <div
+            class="row"
+          >
+            <div
+              class="eight wide computer sixteen wide mobile eight wide tablet column"
+            >
+              <p
+                class="contact-section__header"
+              >
+                Reaching out to me
+              </p>
+              <p>
+                Don't be afraid to contact me! I'm happy to answer any questions, provide more information, or just have a nice conversation! Fill out the form below to being reaching out to me. If you prefer another email client other than your default, which will appear after clicking the button and have all of the information you just entered, you can email me at XXXXX.
+              </p>
+              <p
+                class="contact-section__header"
+              >
+                Contact Information
+              </p>
+              <p>
+                XXXX 
+                <br />
+                 XXXX 
+                <br />
+                 (XXXX)-445-7747 
+                <br />
+                 
+                XXXXXX@gmail.com
+              </p>
+            </div>
+            <div
+              class="eight wide computer sixteen wide mobile eight wide tablet column"
+            >
+              <div
+                class="mt-50"
+              />
+              <form>
+                <div
+                  class="ui grid"
+                >
+                  <div
+                    class="eight wide computer sixteen wide mobile eight wide tablet column"
+                  >
+                    <p
+                      class="contact-section__form-title"
+                    >
+                      First Name *
+                    </p>
+                    <input
+                      class="contact-section__form-input"
+                    />
+                  </div>
+                  <div
+                    class="eight wide computer sixteen wide mobile eight wide tablet column"
+                  >
+                    <p
+                      class="contact-section__form-title"
+                    >
+                      Last Name *
+                    </p>
+                    <input
+                      class="contact-section__form-input"
+                    />
+                  </div>
+                  <div
+                    class="sixteen wide computer sixteen wide mobile sixteen wide tablet column"
+                  >
+                    <p
+                      class="contact-section__form-title"
+                    >
+                      Email *
+                    </p>
+                    <input
+                      class="contact-section__form-input"
+                    />
+                  </div>
+                  <div
+                    class="sixteen wide computer sixteen wide mobile sixteen wide tablet column"
+                  >
+                    <p
+                      class="contact-section__form-title"
+                    >
+                      Message *
+                    </p>
+                    <input
+                      class="contact-section__form-input"
+                    />
+                  </div>
+                </div>
+              </form>
+              <div
+                class="center-div undefined"
+              >
+                <div
+                  class="mt-60"
+                />
+                <button
+                  class="btn__ghost-btn mb-50 "
+                >
+                  <a
+                    href="#"
+                  >
+                    Submit
+                  </a>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
