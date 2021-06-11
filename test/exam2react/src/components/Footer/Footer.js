@@ -9,7 +9,6 @@ import emailLogo from "../../images/email.svg";
 
 const Contact = () => {
   return (
-    <div>
       <div className="footer-section">
         <CenterDiv>
           <div className="mt-50"></div>
@@ -18,19 +17,19 @@ const Contact = () => {
               <Grid>
                 <Grid.Row>
                   <Grid.Column computer={4} mobile={16}>
-                    <img className="icon" src={fbLogo} alt="logo" />
+                    <img className="icon" src={fbLogo} alt="logo" data-testid="1" />
                   </Grid.Column>
 
                   <Grid.Column computer={4} mobile={16}>
-                    <img className="icon" src={liLogo} alt="logo" />
+                    <img className="icon" src={liLogo} alt="logo" data-testid="2" />
                   </Grid.Column>
 
                   <Grid.Column computer={4} mobile={16}>
-                    <img className="icon" src={pinLogo} alt="logo" />
+                    <img className="icon" src={pinLogo} alt="logo" data-testid="3"/>
                   </Grid.Column>
 
                   <Grid.Column computer={4} mobile={16}>
-                    <img className="icon" src={emailLogo} alt="logo" />
+                    <img className="icon" src={emailLogo} alt="logo" data-testid="4"/>
                   </Grid.Column>
                 </Grid.Row>
               </Grid>
@@ -49,7 +48,7 @@ const Contact = () => {
 
             <Grid.Row centered>
               <CenterDiv>
-                <Grid>
+                <Grid  data-testid="grid">
                   <Grid.Column computer={3} mobile={16}>
                     <div className="footer-section__list">
                       <a className="footer-section__list-header">XXXXXX</a>
@@ -105,7 +104,6 @@ const Contact = () => {
           </Grid>
         </CenterDiv>
       </div>
-    </div>
   );
 };
 

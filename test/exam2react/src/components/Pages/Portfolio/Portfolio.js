@@ -41,7 +41,7 @@ const Portfolio = () => {
     <div className="portfolio mb-60">
       <div className="pt-60"></div>
       <CenterDiv>
-        <p className="portfolio-section__intro">Projects and Portfolio</p>
+        <p className="portfolio-section__intro" data-testid="portfolio-header">Projects and Portfolio</p>
 
         <i className="portfolio-section__subintro mb-50">
           Sharing my endeavors and passions...
@@ -49,13 +49,14 @@ const Portfolio = () => {
         <MarginDiv className="mb-50" />
 
         <Grid container columns={items.length}>
-          {items.map((item) => {
+          {items.map((item, index) => {
             return (
-              <Grid.Column computer={5} tablet={8} mobile={16}>
+              <Grid.Column key={index} computer={5} tablet={8} mobile={16}>
                 <Item
                   background={item.backgroundImg}
                   header={item.centerDiv.header}
                   body={item.centerDiv.body}
+                  key={index}
                 ></Item>
               </Grid.Column>
             );

@@ -20,7 +20,7 @@ const Contact = () => {
   return (
     <div className="contact pl-60 pr-60">
       <CenterDiv>
-        <p className="contact-section__intro text-center">Contact</p>
+        <p className="contact-section__intro text-center" data-testid="contact-header">Contact</p>
         <i className="contact-section__subintro text-center">
           "XXXXXXXXXXX"
           <br />

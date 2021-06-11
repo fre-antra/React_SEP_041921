@@ -17,7 +17,7 @@ import Contact from "../Contact/Contact";
 
 const Home = () => {
   return (
-    <div id="home">
+    <div id="home" data-testid="home-section">
       <section className="hero-section">
         <div className="hero-section__background">
           <MyParallax bgImage={heroImage}>
