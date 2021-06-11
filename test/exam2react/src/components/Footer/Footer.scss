@@ -5,13 +5,13 @@
   color: $white;
   background-color: $black;
 
-
   .icon {
     width: $icon-width;
     height: $icon-height;
     background-color: $light-grey;
     cursor: pointer;
     transition: all 0.4s;
+    margin-bottom: 50px;
   }
 
   .icon:hover {
@@ -32,5 +32,12 @@
 
   .footer-section__list a {
     color: $white;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .icon {
+      width: 200px;
+      height: 20px;
+    }
   }
 }
