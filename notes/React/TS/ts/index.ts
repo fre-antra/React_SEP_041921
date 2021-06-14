@@ -6,7 +6,7 @@ let str: string;
 str = 'str';
 let bl: boolean;
 bl = true;
-let u: undefined;
+let u: undefined;     // we have but not defined it yet   null is we dont have something 
 u = undefined;
 let n: null;
 n = null;
@@ -23,21 +23,23 @@ let strArr: string[] = ['str'];
 // strArr.push(5)
 // strArr[0].slice();
 
-// function foo(name: string, age?: number): Person {
+// function foo(name: string, age?: number): Person {   // ? mean optional
 //   return {
 //     name: name,
 //     age: age ? age : -1,
 //   };
 // }
 
+// foo() is error  in js is not 
 // console.log(foo('patrick'));
 
-interface IPerson {
+interface IPerson {     // if no constructor function, then use interface better
   name: string;
   age: number;
 }
+// if you just want use it for the type, use interface
 
-class Person {
+class Person {          // or you need use new keyword use this
   name: string;
   age: number;
   constructor(name, age) {
@@ -75,6 +77,7 @@ class Animal {
   public name: string;
   // protected name: string;
   //  private name: string;
+  // protected    can be used by this and subclass
   constructor(name: string) {
     this.name = name;
   }
@@ -102,7 +105,7 @@ class Cat extends Animal {
 }
 
 let myAn = new Animal('pat');
-console.log(myAn.name);
+console.log(myAn.name);     //private & protected can not do this
 console.log(myAn.run());
 
 let MyCuteCat = new Cat('Ana', CatType.CuteCat);
@@ -122,13 +125,13 @@ interface BatterWithRadio extends Radio {
 }
 
 class Car implements BatterWithRadio {
-  openRadio() {}
-  batteryStatus() {}
+  openRadio() { }
+  batteryStatus() { }
 }
 
 class Cellphone implements BatterWithRadio {
-  openRadio() {}
-  batteryStatus() {}
+  openRadio() { }
+  batteryStatus() { }
 }
 
 // function toNumberArray(x: number, y: number): number[] {
@@ -138,9 +141,11 @@ class Cellphone implements BatterWithRadio {
 // function toStringArray(x: string, y: string): string[] {
 //   return [x, y];
 // }
-function toArray<T>(x: T, y: T): T[] {
+function toArray<T>(x: T, y: T): T[] {    //generic type    let user to choose which type to use
   return [x, y];
 }
+
+// toArray<F,S>(x:F,y:S):[F,s]
 
 let toStrArr = toArray<string>('a', 'b');
 let toPersonArr = toArray<Person>(

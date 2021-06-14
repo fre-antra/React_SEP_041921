@@ -1,11 +1,11 @@
 {
   "compilerOptions": {
     "module": "system",
-    "noImplicitAny": false,
+    "noImplicitAny": false,       // :any is need (pc will not help us to declare any)
     "removeComments": true,
     "preserveConstEnums": true,
     "outFile": "js/main.js",
-    "sourceMap": true
+    "sourceMap": true     // help us debug know which js file we should looking
   },
   "include": ["ts/**/*"],
   "exclude": ["node_modules", "**/*.spec.ts"]
