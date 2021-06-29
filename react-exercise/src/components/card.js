@@ -1,22 +1,20 @@
-const Card = ({ title, paragraph, btnColor, setHeaderColor }) => {
+const Card = ({ title, paragraph, btnColor, handleClick }) => {
   let styling = {
     backgroundColor: btnColor,
+    color: "white",
   };
-  let wrapperStyle = {
+
+  let cardWrapper = {
     width: "400px",
     fontSize: "1rem",
     border: "1px solid white",
   };
 
-  const handleHeaderColor = e => {
-    setHeaderColor(e.target.style.backgroundColor);
-  };
-
   return (
-    <div style={wrapperStyle}>
+    <div style={cardWrapper}>
       <h1>{title}</h1>
       <p>{paragraph}</p>
-      <button style={styling} onClick={handleHeaderColor}>
+      <button style={styling} onClick={handleClick}>
         See more
       </button>
     </div>

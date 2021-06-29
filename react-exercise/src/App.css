@@ -1,8 +1,0 @@
-.flex {
-  display: flex;
-  flex-wrap: wrap;
-  background-color: grey;
-  justify-content: center;
-  width: 50%;
-  margin: auto;
-}

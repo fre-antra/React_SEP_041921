@@ -1,5 +1,4 @@
 import { useState } from "react";
-import "./App.css";
 import Card from "./components/card";
 import { data } from "./data";
 
@@ -10,19 +9,32 @@ function App() {
     color: headerColor,
   };
 
+  let layoutWrapper = {
+    display: "flex",
+    flexWrap: "wrap",
+    backgroundColor: "grey",
+    justifyContent: "center",
+    width: "50%",
+    margin: "auto",
+  };
+
+  const handleClick = e => {
+    setHeaderColor(e.target.style.backgroundColor);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
         <h1 style={headerStyle}>hello</h1>
-        <div className="flex">
+        <div style={layoutWrapper}>
           {data.map(item => (
             <Card
               key={item.title}
               title={item.title}
               paragraph={item.paragraph}
               btnColor={item.color}
-              setHeaderColor={setHeaderColor}
-            ></Card>
+              handleClick={handleClick}
+            />
           ))}
         </div>
       </header>
