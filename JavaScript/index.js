@@ -20,14 +20,18 @@
 //                 this.promiseState = 'fulfilled';
 //                 this.curData = data;
 //                 while (this.thenCbQueue.length) {
-//                     const curThenCb = this.thenCbQueue.shift();
-//                     if (this.curData instanceof MyPromise) {
-//                         this.curData.then((promiseData) => {
-//                             curThenCb(promiseData);
-//                         });
-//                     } else {
-//                         this.curData = curThenCb(this.curData);
-//                     }
+                        // const cb = this.thenCallBackQueue.shift();
+
+                        // if (this.currentdata instanceof MyPromise) {
+                        //     this.currentdata.then(promiseData => {
+                        //         this.currentdata = cb(promiseData);
+                        //     }).catch(error => {
+                        //         this.reject(error);
+                        //     });
+
+                        // } else {
+                        //     this.currentdata = cb(this.currentdata);
+                        // }
 //                 }
 //             } catch (error) {
 //                 this.reject(error);
@@ -332,3 +336,87 @@
 // }
 // call stack
 
+class MyPromise {
+    thenCallBackQueue = [];
+    catchCallBackQueue = [];
+    currentdata;
+    promiseState = 'pending';
+
+    constructor(executor) {
+        try {
+            executor(this.resolve, this.reject.bind(this));
+        } catch (error) {
+            this.reject(error);
+        }
+    }
+
+    resolve = resolvedata => {
+        try {
+            setTimeout(() => {
+                if (this.promiseState !== 'pending') return;
+
+                this.currentdata = resolvedata;
+                while (this.thenCallBackQueue.length) {
+                    const cb = this.thenCallBackQueue.shift();
+                    if (this.currentdata instanceof MyPromise) {
+                        this.currentdata.then(promiseData => {
+                            this.currentdata = cb(promiseData);
+                        }).catch(error => {
+                            this.reject(error);
+                        });
+                    } else {
+                        this.currentdata = cb(this.currentdata);
+                    }
+                }
+            }, 0);
+        } catch (error) {
+            this.reject(error);
+        }
+    }
+    reject(rejectdata) {
+        this.promiseState = 'rejected';
+        setTimeout(() => {
+            if (!this.catchCallBackQueue.length) return;
+            const cb = this.catchCallBackQueue.shift();
+            cb(rejectdata);
+        }, 0);
+    }
+
+    then(resolvefn) {
+        if (this.promiseState === 'pending') {
+            this.thenCallBackQueue.push(resolvefn);
+        }
+        return this;
+    }
+    catch(rejectfn) {
+
+        this.catchCallBackQueue.push(rejectfn);
+        return this;
+    }
+}
+// // console.log(1);
+const getRandomNumber = () => Math.floor(Math.random() * 6); // 0 - 5
+
+const p = new MyPromise((resolve, reject) => {
+    const time = getRandomNumber();
+    console.log(`time: ${time}`);
+    if (time > 3) {
+        resolve('resolve data');
+    } else {
+        reject(' smaller then 3 ');
+    }
+})
+    .then(data => {
+        console.log(data);
+        // return 'eee';
+        return new MyPromise((res, rej) => {
+            rej('return promise');
+        })
+            .catch(data => console.log('hello'));
+    })
+    .then(data => console.log(data))
+    .catch(data => {
+        console.log(data);
+        return 'after catch';
+    })
+    .catch(data => console.log(data));
